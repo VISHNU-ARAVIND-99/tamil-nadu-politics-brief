@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-10-31T18:21:19.413396+05:30",
+  "last_updated_ist": "2026-10-31T18:33:23.976926+05:30",
   "system_status": "operational",
-  "status_message": "Latest evening edition published at 2026-10-31T18:21:19.413396+05:30.",
+  "status_message": "Latest morning edition published at 2026-10-31T18:33:23.976926+05:30.",
   "morning": {
     "edition_id": "2026-10-31-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 31 October 2026",
@@ -10,8 +10,8 @@
     "is_test_sample": false,
     "status": "published_delayed",
     "scheduled_time_ist": "2026-10-31T06:00:00+05:30",
-    "generated_at_ist": "2026-10-31T18:13:49.504937+05:30",
-    "published_at_ist": "2026-10-31T18:13:49.505549+05:30",
+    "generated_at_ist": "2026-10-31T18:33:23.976315+05:30",
+    "published_at_ist": "2026-10-31T18:33:23.976926+05:30",
     "coverage_start_ist": "2026-10-30T18:00:00+05:30",
     "coverage_end_ist": "2026-10-31T06:00:00+05:30",
     "reading_time_minutes": 14,
