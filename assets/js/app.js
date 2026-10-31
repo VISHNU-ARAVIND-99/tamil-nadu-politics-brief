@@ -324,7 +324,18 @@ async function initHomePage() {
             renderEditionCard(data.morning, "Morning Brief (6:00 AM IST)") +
             renderEditionCard(data.evening, "Evening Brief (6:00 PM IST)");
 
-        const mostRecent = data.evening || data.morning;
+        let mostRecent = null;
+        if (data.evening && data.morning) {
+            if (data.evening.date > data.morning.date) {
+                mostRecent = data.evening;
+            } else if (data.morning.date > data.evening.date) {
+                mostRecent = data.morning;
+            } else {
+                mostRecent = data.evening;
+            }
+        } else {
+            mostRecent = data.evening || data.morning;
+        }
         if (mostRecent && mostRecent.json_path && inlineEditionEl) {
             const edRes = await fetch(mostRecent.json_path, { cache: "no-store" });
             const edFull = await edRes.json();

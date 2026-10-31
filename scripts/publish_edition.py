@@ -5,6 +5,7 @@ Main Orchestrator CLI (Steps 1 through 12):
 - Automatically allows updating test samples and legacy robotic fallback editions
 - Records honest generation and publication timestamps (marks delayed runs transparently)
 - Updates failure status in data/latest-editions.json if an unrecoverable error occurs
+- Supports auto-detection of morning vs evening edition based on current IST time
 """
 
 import argparse
@@ -12,6 +13,12 @@ import json
 import sys
 import time
 from datetime import datetime
+
+if sys.stdout and hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="backslashreplace")
+if sys.stderr and hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="backslashreplace")
+
 from scripts.collect_news import collect_all_sources
 from scripts.config import (
     ARCHIVE_DIR,
@@ -23,6 +30,15 @@ from scripts.deduplicate_news import deduplicate_and_filter
 from scripts.generate_summary import generate_edition_summary
 from scripts.update_archive import record_pipeline_log, save_edition_and_update_indexes
 from scripts.verify_news import verify_and_rank_clusters
+
+
+def auto_detect_edition_type() -> str:
+    """
+    Auto-detect edition type based on current IST time:
+    - 00:00 to 11:59 IST -> morning edition (covers 18:00 yesterday to 06:00 today)
+    - 12:00 to 23:59 IST -> evening edition (covers 06:00 today to 18:00 today)
+    """
+    return "morning" if get_ist_now().hour < 12 else "evening"
 
 
 def edition_already_exists(edition_id: str, date_str: str) -> bool:
@@ -67,8 +83,12 @@ def mark_edition_failed(window_meta: dict, error_msg: str) -> None:
         json.dump(latest_data, f, indent=2, ensure_ascii=False)
 
 
-def run_pipeline(edition_type: str, target_date: str | None = None, force: bool = False) -> int:
+def run_pipeline(edition_type: str = "auto", target_date: str | None = None, force: bool = False) -> int:
     start_timer = time.time()
+    if edition_type == "auto":
+        edition_type = auto_detect_edition_type()
+        print(f"[INFO] Auto-detected edition type based on current IST time: {edition_type}")
+
     window_meta = compute_coverage_window(edition_type, target_date)
     edition_id = window_meta["edition_id"]
 
@@ -153,9 +173,10 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Publish Tamil Nadu Politics Brief Edition")
     parser.add_argument(
         "--edition",
-        choices=["morning", "evening"],
-        required=True,
-        help="Target edition to generate ('morning' or 'evening')",
+        choices=["morning", "evening", "auto"],
+        default="auto",
+        required=False,
+        help="Target edition to generate ('morning', 'evening', or 'auto' based on current IST time)",
     )
     parser.add_argument(
         "--date",

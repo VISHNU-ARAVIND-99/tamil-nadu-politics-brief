@@ -14,7 +14,7 @@ on:
         description: "Force overwrite if edition already exists"
         required: false
         type: boolean
-        default: false
+        default: true
 
 permissions:
   contents: write
@@ -44,16 +44,19 @@ jobs:
 
       - name: Run Morning Edition Pipeline
         env:
+          PYTHONIOENCODING: "utf-8"
           AI_PROVIDER: ${{ vars.AI_PROVIDER || 'gemini' }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.0-flash' }}
         run: |
           ARGS="--edition morning"
           if [ -n "${{ github.event.inputs.target_date }}" ]; then
             ARGS="$ARGS --date ${{ github.event.inputs.target_date }}"
           fi
-          if [ "${{ github.event.inputs.force_regenerate }}" = "true" ]; then
-            ARGS="$ARGS --force"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ "${{ github.event.inputs.force_regenerate }}" != "false" ]; then
+              ARGS="$ARGS --force"
+            fi
           fi
           python3 -m scripts.publish_edition $ARGS
 

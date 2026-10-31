@@ -10,11 +10,17 @@ Step 2 & Step 3 of Pipeline:
 
 import email.utils
 import json
+import sys
 import urllib.parse
 import urllib.request
 import urllib.robotparser
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
+
+if sys.stdout and hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="backslashreplace")
+if sys.stderr and hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="backslashreplace")
 
 try:
     import feedparser

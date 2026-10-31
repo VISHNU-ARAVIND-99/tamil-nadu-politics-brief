@@ -7,7 +7,14 @@ Step 10 & Step 11 Helper:
 """
 
 import json
+import sys
 from pathlib import Path
+
+if sys.stdout and hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="backslashreplace")
+if sys.stderr and hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="backslashreplace")
+
 from scripts.config import (
     ARCHIVE_DIR,
     ARCHIVE_INDEX_FILE,
@@ -204,9 +211,27 @@ def save_edition_and_update_indexes(
     }
 
     latest_data[clean_edition["edition_type"]] = latest_card
+
+    # Determine which edition is the latest chronologically
+    morning_card = latest_data.get("morning")
+    evening_card = latest_data.get("evening")
+    if morning_card and evening_card:
+        if evening_card["date"] > morning_card["date"]:
+            active_card = evening_card
+        elif morning_card["date"] > evening_card["date"]:
+            active_card = morning_card
+        else:
+            # Same date: evening brief is chronologically newer
+            active_card = evening_card
+    else:
+        active_card = evening_card or morning_card or latest_card
+
     latest_data["last_updated_ist"] = clean_edition["published_at_ist"]
     latest_data["system_status"] = "operational"
-    latest_data["status_message"] = f"Latest {clean_edition['edition_type']} edition published at {clean_edition['published_at_ist']}."
+    latest_data["status_message"] = (
+        f"Latest {active_card['edition_type']} edition ({active_card['date']}) published. "
+        f"Updated at {clean_edition['published_at_ist']}."
+    )
 
     with open(latest_editions_file, "w", encoding="utf-8") as f:
         json.dump(latest_data, f, indent=2, ensure_ascii=False)

@@ -2,7 +2,8 @@
 """
 Step 7, Step 8 & Step 9 of Pipeline:
 - Translates Tamil news into natural English using Gemini Free Tier
-- Disables thinking token overhead on gemini-2.5-flash so JSON responses never truncate
+- Retries across active free models (gemini-2.0-flash, gemini-1.5-flash, gemini-2.5-flash)
+- Disables thinking token overhead where applicable so JSON responses never truncate
 - Eliminates robotic fallback boilerplate even when running without an API key
 """
 
@@ -201,7 +202,7 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
         for c in top_clusters
     ]
 
-    models_to_try = ["gemini-2.5-flash", "gemini-2.5-flash-lite", GEMINI_MODEL]
+    models_to_try = [GEMINI_MODEL, "gemini-2.0-flash", "gemini-1.5-flash", "gemini-2.5-flash"]
     seen_models = []
     for m in models_to_try:
         if m and m not in seen_models:
