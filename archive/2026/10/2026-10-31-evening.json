@@ -1,0 +1,706 @@
+{
+  "edition_id": "2026-10-31-evening",
+  "title": "Tamil Nadu Politics – Evening Brief – 31 October 2026",
+  "date": "2026-10-31",
+  "edition_type": "evening",
+  "is_test_sample": false,
+  "status": "published",
+  "scheduled_time_ist": "2026-10-31T18:00:00+05:30",
+  "generated_at_ist": "2026-10-31T18:21:19.412573+05:30",
+  "published_at_ist": "2026-10-31T18:21:19.413396+05:30",
+  "coverage_start_ist": "2026-10-31T06:00:00+05:30",
+  "coverage_end_ist": "2026-10-31T18:00:00+05:30",
+  "reading_time_minutes": 28,
+  "word_count": 3913,
+  "headline": "DMK women cadre protest across Tamil Nadu over price rise, law and order",
+  "parties": [
+    "AMMK",
+    "DMK",
+    "INC",
+    "TVK",
+    "VCK"
+  ],
+  "topics": [
+    "Agriculture & Water",
+    "Assembly, Courts & Policy",
+    "Education & NEET",
+    "Elections",
+    "Government & Administration",
+    "Infrastructure & Economy",
+    "Public Protests & Labour"
+  ],
+  "districts": [
+    "Chennai",
+    "Coimbatore",
+    "Cuddalore",
+    "Madurai",
+    "Salem",
+    "Theni",
+    "Viluppuram"
+  ],
+  "sections": {
+    "big_picture": "Key developments in this 12-hour briefing include: DMK women cadre protest across Tamil Nadu over price rise, law and order; Theni jailbreak: Tamil Nadu CM Vijay orders suspension of Theni district jail superintendent in-charge; Tamil Nadu CM Vijay announces 3% DA hike for 16 lakh employees, pensioners ahead of Deepavali; AMMK Dhinakaran targets Vijay govt over power cuts, questions energy minister's continuance.",
+    "top_developments": [
+      {
+        "headline": "DMK women cadre protest across Tamil Nadu over price rise, law and order",
+        "verification_badge": "Multi-Source Verified (Tamil & English)",
+        "who_is_involved": "DMK, TVK",
+        "summary": "DMK MP Kanimozhi accused CM Vijay of seeking children’s support to mobilise votes without ensuring their safety",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "DMK women cadre protest across Tamil Nadu over price rise, law and order",
+            "publisher": "The Hindu (Tamil Nadu)",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T14:42:23+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.thehindu.com/news/national/tamil-nadu/dmk-women-cadre-protest-across-tamil-nadu-over-price-rise-law-and-order/article71648544.ece",
+            "snippet": "DMK MP Kanimozhi accused CM Vijay of seeking children’s support to mobilise votes without ensuring their safety"
+          },
+          {
+            "title": "Stalin urges CM Vijay to heed women’s protest over rising prices, law and order",
+            "publisher": "The Hindu (Tamil Nadu)",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T14:34:19+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.thehindu.com/news/national/tamil-nadu/stalin-urges-cm-vijay-to-heed-womens-protest-over-rising-prices-deteriorating-law-and-order/article71648766.ece",
+            "snippet": "“The women have rung the bell. The government, which is hunting down its critics and preparing for a show in the byelection, should pay attention to governance,” he said in a social media post"
+          },
+          {
+            "title": "DMK Protest Again TVK Govt | \"அன்பு தம்பி.. Sweet Bro Vijay கேட்டாரு..\" - கனிமொழி சரமாரி கேள்வி",
+            "publisher": "News18 Tamil Nadu",
+            "language": "ta",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T10:52:20+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://tamil.news18.com/videos/tamil-nadu/dmk-protest-again-tvk-govt-sweet-bro-vijay-2242974.html",
+            "snippet": "\"பெண்களுக்கு எதிரான குற்றங்கள்; தவெகவினர்தான் அதிகம்\" - Kanimozhi MP | DMK Protest Again TVK Govt"
+          }
+        ]
+      },
+      {
+        "headline": "Theni jailbreak: Tamil Nadu CM Vijay orders suspension of Theni district jail superintendent in-charge",
+        "verification_badge": "Multi-Source Verified (Tamil & English)",
+        "who_is_involved": "TVK",
+        "summary": "R. Krishnaraj, Superintendent of Madurai Central Prison, has been transferred and posted as Superintendent of Salem Central Prison",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "Theni jailbreak: Tamil Nadu CM Vijay orders suspension of Theni district jail superintendent in-charge",
+            "publisher": "The Hindu (Tamil Nadu)",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T13:45:35+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.thehindu.com/news/national/tamil-nadu/theni-jailbreak-tamil-nadu-cm-vijay-orders-suspension-of-superintendent-in-charge-over-security-lapse/article71648506.ece",
+            "snippet": "R. Krishnaraj, Superintendent of Madurai Central Prison, has been transferred and posted as Superintendent of Salem Central Prison"
+          },
+          {
+            "title": "Tamil Nadu CM Vijay cracks down after 17 prisoners break out of Theni sub-jail; deputy jailor suspended, senior officials transferred",
+            "publisher": "The Times of India (Chennai/TN)",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T12:37:08+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-cm-vijay-cracks-down-after-17-prisoners-break-out-of-theni-sub-jail-deputy-jailor-suspended-senior-officials-transferred/articleshow/135392128.cms",
+            "snippet": "Chennai's Chief Minister C Joseph Vijay has ordered the suspension of the deputy jail superintendent in charge of Thekkampatti sub-jail. This action stems from significant security lapses that allowed 17 prisoners to escape after overpowering guards. The Tamil Nadu Police quickly recaptured all escapees through a coordinated operation, which included using drones. The government has also initiated severe punitive measures against negligent prison personnel and transferred several senior officials."
+          },
+          {
+            "title": "Today Headlines - 31 October 2026 | காலை 10 மணி தலைப்புச் செய்திகள்",
+            "publisher": "News18 Tamil Nadu",
+            "language": "ta",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T10:25:04+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://tamil.news18.com/videos/tamil-nadu/today-headlines-31-october-2026-10-tamil-news-2242961.html",
+            "snippet": "தங்கம் விலை சவரனுக்கு 2 ஆயிரத்து 480 ரூபாய் குறைந்து ஒரு லட்சத்து ஆயிரத்து 840 ரூபாய்க்கு விற்பனை....இரண்டு நாட்களில் 4 ஆயிரத்து 720 ரூபாய் குறைந்ததால் பொதுமக்கள் மகிழ்ச்சி... வெள்ளி விலை கிராமுக்கு 10 ரூபாய் சரிவு....ஒரு கிலோ 2 லட்சம் ரூபாய்க்கு விற்பனைதேனி மாவட்ட சிறை கண்காணிப்பாளர் பொறுப்பை வகித்துவந்த நாகேஸ்வரன் பணியிடை நீக்கம்.....17 கைதிகள் தப்பியோடிய நிலையில் முதலமைச்சர் விஜய் உத்தரவு....Today Headlines - 31 October 2026 | காலை 10 மணி தலைப்புச் செய்திகள்"
+          },
+          {
+            "title": "Today Headlines - 31 October 2026 | காலை 9 மணி தலைப்புச் செய்திகள்",
+            "publisher": "News18 Tamil Nadu",
+            "language": "ta",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T09:27:56+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://tamil.news18.com/videos/tamil-nadu/today-headlines-31-october-2026-9-tamil-news-2242918.html",
+            "snippet": "தேனி மாவட்ட சிறை கண்காணிப்பாளர் பொறுப்பை வகித்துவந்த நாகேஸ்வரன் பணியிடை நீக்கம் - 17 கைதிகள் தப்பியோடிய நிலையில் முதலமைச்சர் விஜய் உத்தரவு.சிறை நிர்வாகத்தில் பாதுகாப்பு நடவடிக்கைகளை வலுப்படுத்தும் கையில் மதுரை சிறை கண்காணிப்பாளர் கிருஷ்ணராஜ் சேலம் மத்திய சிறைக்கு மாற்றம்....பணியில் மெத்தனமாகவோ, கவனக்குறைவாகவோ செயல்படும் அதிகாரிகள் மீது கடும் நடவடிக்கை எடுக்க முதலமைச்சர் விஜய் உத்தவுகோவையில் சிறையில் அடைக்க அழைத்து செல்லப்பட்ட கைதி ராகவன் தப்பிஓட்டம்....அன்னூர் காவல்நிலைய காவலர்கள் கைதுசெய்து நீதிமன்றத்தில் ஆஜர்படுத்திய பிறகு சிறைக்கு அழைத்து..."
+          },
+          {
+            "title": "BREAKING NEWS | மதுரை சிறை கண்காணிப்பாளர் பணியிட மாற்றம்",
+            "publisher": "News18 Tamil Nadu",
+            "language": "ta",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T08:50:13+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://tamil.news18.com/videos/tamil-nadu/breaking-news-theni-jail-prisioner-escaped-cm-vijay-2242891.html",
+            "snippet": "Breaking News | தேனி சம்பவத்தைத் தொடர்ந்து முதலமைச்சர் விஜய் உத்தரவின்பேரில் நடவடிக்கை"
+          }
+        ]
+      },
+      {
+        "headline": "Tamil Nadu CM Vijay announces 3% DA hike for 16 lakh employees, pensioners ahead of Deepavali",
+        "verification_badge": "Multi-Source Verified",
+        "who_is_involved": "TVK",
+        "summary": "Tamil Nadu's chief minister Joseph Vijay announced a 3% increase in Dearness Allowance for employees and pensioners. The hike will raise the allowance from 60% to 63%, effective retroactively from July 1. This change aligns the state government’s DA with the recent increase for central government employees. Around 16 lakh individuals will benefit from this 3% increase in Dearness Allowance.",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "Tamil Nadu CM Vijay announces 3% DA hike for 16 lakh employees, pensioners ahead of Deepavali",
+            "publisher": "The Times of India (Chennai/TN)",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T17:03:44+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-cm-vijay-announces-3-da-hike-for-16-lakh-employees-pensioners-ahead-of-deepavali/articleshow/135399550.cms",
+            "snippet": "Tamil Nadu's chief minister Joseph Vijay announced a 3% increase in Dearness Allowance for employees and pensioners. The hike will raise the allowance from 60% to 63%, effective retroactively from July 1. This change aligns the state government’s DA with the recent increase for central government employees. Around 16 lakh individuals will benefit from this 3% increase in Dearness Allowance."
+          },
+          {
+            "title": "Exclusive: Vijay To Be 1st Tamil Nadu Chief Minister To Attend Davos Summit",
+            "publisher": "NDTV South",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T15:47:37+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.ndtv.com/india-news/exclusive-vijay-to-be-1st-tamil-nadu-chief-minister-to-attend-davos-summit-12263248#publisher=newsstand",
+            "snippet": "Tamil Nadu Chief Minister Vijay"
+          }
+        ]
+      },
+      {
+        "headline": "AMMK Dhinakaran targets Vijay govt over power cuts, questions energy minister's continuance",
+        "verification_badge": "Single-Source Report",
+        "who_is_involved": "AMMK, TVK",
+        "summary": "T T V Dhinakaran has publicly confronted the Tamil Nadu government for persistent power outages he attributes to gross administrative incompetence. He pointed out chronic issues like sudden power cuts and billing discrepancies, which significantly impact residents. Citing the outage at Meenakshi Amman temple as a critical example, Dhinakaran demanded urgent reforms in the electricity sector and called on Chief Minister Joseph Vijay to take decisive action against negligent officials.",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "AMMK Dhinakaran targets Vijay govt over power cuts, questions energy minister's continuance",
+            "publisher": "The Times of India (Chennai/TN)",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T15:05:41+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://timesofindia.indiatimes.com/city/chennai/ammk-dhinakaran-targets-vijay-govt-over-power-cuts-questions-energy-ministers-continuance/articleshow/135396249.cms",
+            "snippet": "T T V Dhinakaran has publicly confronted the Tamil Nadu government for persistent power outages he attributes to gross administrative incompetence. He pointed out chronic issues like sudden power cuts and billing discrepancies, which significantly impact residents. Citing the outage at Meenakshi Amman temple as a critical example, Dhinakaran demanded urgent reforms in the electricity sector and called on Chief Minister Joseph Vijay to take decisive action against negligent officials."
+          }
+        ]
+      },
+      {
+        "headline": "அம்பாசமுத்திரம் செல்லும் முதலமைச்சர் விஜய்... 'இடைத்தேர்தல்' நடக்கவுள்ள தொகுதிகளில் நவம்பர் பிளான்!",
+        "verification_badge": "Single-Source Report",
+        "who_is_involved": "DMK, TVK",
+        "summary": "அண்மையில் திமுக தலைவர் மு.க.ஸ்டாலின் இடைத்தேர்தல் தொடர்பாக கட்சியின் மூத்த நிர்வாகிகள் மற்றும் தொகுதி நிர்வாகிகளுடன் பேச்சுவார்த்தை நடத்தினார்.",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "அம்பாசமுத்திரம் செல்லும் முதலமைச்சர் விஜய்... 'இடைத்தேர்தல்' நடக்கவுள்ள தொகுதிகளில் நவம்பர் பிளான்!",
+            "publisher": "News18 Tamil Nadu",
+            "language": "ta",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T09:12:55+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://tamil.news18.com/tamil-nadu/cm-vijay-november-plans-he-set-to-visits-ambasamudram-before-by-election-nw-mma-ws-bl-2242860.html",
+            "snippet": "அண்மையில் திமுக தலைவர் மு.க.ஸ்டாலின் இடைத்தேர்தல் தொடர்பாக கட்சியின் மூத்த நிர்வாகிகள் மற்றும் தொகுதி நிர்வாகிகளுடன் பேச்சுவார்த்தை நடத்தினார்."
+          }
+        ]
+      },
+      {
+        "headline": "Tamil Nadu Congress, VCK mobilise cadres for Nov. 1 INDIA bloc protest in New Delhi",
+        "verification_badge": "Single-Source Report",
+        "who_is_involved": "INC, VCK",
+        "summary": "“We expect more than five lakh Congress cadres to participate. From Tamil Nadu, we are expecting at least 100 party workers to reach New Delhi from each district,” says MP R. Sudha",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "Tamil Nadu Congress, VCK mobilise cadres for Nov. 1 INDIA bloc protest in New Delhi",
+            "publisher": "The Hindu (Tamil Nadu)",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T12:18:48+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-congress-vck-mobilise-cadres-for-nov-1-india-bloc-protest-in-new-delhi/article71646455.ece",
+            "snippet": "“We expect more than five lakh Congress cadres to participate. From Tamil Nadu, we are expecting at least 100 party workers to reach New Delhi from each district,” says MP R. Sudha"
+          }
+        ]
+      },
+      {
+        "headline": "DMK Paranthamen | தவெக ஐடி விங்க் பொறுப்புணர்வுடன் செயல்பட வேண்டும்: பரந்தாமன்",
+        "verification_badge": "Single-Source Report",
+        "who_is_involved": "DMK, TVK",
+        "summary": "தவெக ஐடி விங்க் பொறுப்புணர்வுடன் செயல்பட வேண்டும்: பரந்தாமன்",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "DMK Paranthamen | தவெக ஐடி விங்க் பொறுப்புணர்வுடன் செயல்பட வேண்டும்: பரந்தாமன்",
+            "publisher": "News18 Tamil Nadu",
+            "language": "ta",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T15:37:14+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://tamil.news18.com/videos/tamil-nadu/dmk-paranthamen-tvk-cm-vijay-2243174.html",
+            "snippet": "தவெக ஐடி விங்க் பொறுப்புணர்வுடன் செயல்பட வேண்டும்: பரந்தாமன்"
+          }
+        ]
+      },
+      {
+        "headline": "JUST NOW | \"மின்சாரத்துறைக்கு வெளிச்சம் வருவது எப்போது? \" - தினகரன் சரமாரி கேள்வி",
+        "verification_badge": "Single-Source Report",
+        "who_is_involved": "AMMK, TVK",
+        "summary": "\"மின்சாரத்துறைக்கு வெளிச்சம் வருவது எப்போது?\" - தவெக அரசுக்கு அமமுக பொதுச்செயலாளர் டிடிவி தினகரன் கேள்வி | JUST NOW",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "JUST NOW | \"மின்சாரத்துறைக்கு வெளிச்சம் வருவது எப்போது? \" - தினகரன் சரமாரி கேள்வி",
+            "publisher": "News18 Tamil Nadu",
+            "language": "ta",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T11:55:39+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://tamil.news18.com/videos/tamil-nadu/just-now-ammk-tvk-2243011.html",
+            "snippet": "\"மின்சாரத்துறைக்கு வெளிச்சம் வருவது எப்போது?\" - தவெக அரசுக்கு அமமுக பொதுச்செயலாளர் டிடிவி தினகரன் கேள்வி | JUST NOW"
+          }
+        ]
+      }
+    ],
+    "government_and_administration": "Refer to the top developments and linked official releases below for departmental updates.",
+    "political_parties_and_opposition": "Refer to the top developments above for statements from DMK, AIADMK, BJP, TVK, NTK, and allied parties.",
+    "assembly_courts_and_policy": "Judicial and legislative developments from this window are listed in the primary source links below.",
+    "district_developments": "Regional reporting in this window covered: Chennai, Coimbatore, Cuddalore, Madurai, Salem, Theni, Viluppuram.",
+    "claims_vs_facts": [],
+    "what_to_watch_next": "Next automated edition publishes at the next 6:00 AM / 6:00 PM IST cycle.",
+    "all_sources": [
+      {
+        "title": "DMK women cadre protest across Tamil Nadu over price rise, law and order",
+        "publisher": "The Hindu (Tamil Nadu)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T14:42:23+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/dmk-women-cadre-protest-across-tamil-nadu-over-price-rise-law-and-order/article71648544.ece",
+        "snippet": "DMK MP Kanimozhi accused CM Vijay of seeking children’s support to mobilise votes without ensuring their safety"
+      },
+      {
+        "title": "Stalin urges CM Vijay to heed women’s protest over rising prices, law and order",
+        "publisher": "The Hindu (Tamil Nadu)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T14:34:19+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/stalin-urges-cm-vijay-to-heed-womens-protest-over-rising-prices-deteriorating-law-and-order/article71648766.ece",
+        "snippet": "“The women have rung the bell. The government, which is hunting down its critics and preparing for a show in the byelection, should pay attention to governance,” he said in a social media post"
+      },
+      {
+        "title": "DMK Protest Again TVK Govt | \"அன்பு தம்பி.. Sweet Bro Vijay கேட்டாரு..\" - கனிமொழி சரமாரி கேள்வி",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T10:52:20+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/dmk-protest-again-tvk-govt-sweet-bro-vijay-2242974.html",
+        "snippet": "\"பெண்களுக்கு எதிரான குற்றங்கள்; தவெகவினர்தான் அதிகம்\" - Kanimozhi MP | DMK Protest Again TVK Govt"
+      },
+      {
+        "title": "Theni jailbreak: Tamil Nadu CM Vijay orders suspension of Theni district jail superintendent in-charge",
+        "publisher": "The Hindu (Tamil Nadu)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T13:45:35+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/theni-jailbreak-tamil-nadu-cm-vijay-orders-suspension-of-superintendent-in-charge-over-security-lapse/article71648506.ece",
+        "snippet": "R. Krishnaraj, Superintendent of Madurai Central Prison, has been transferred and posted as Superintendent of Salem Central Prison"
+      },
+      {
+        "title": "Tamil Nadu CM Vijay cracks down after 17 prisoners break out of Theni sub-jail; deputy jailor suspended, senior officials transferred",
+        "publisher": "The Times of India (Chennai/TN)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T12:37:08+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-cm-vijay-cracks-down-after-17-prisoners-break-out-of-theni-sub-jail-deputy-jailor-suspended-senior-officials-transferred/articleshow/135392128.cms",
+        "snippet": "Chennai's Chief Minister C Joseph Vijay has ordered the suspension of the deputy jail superintendent in charge of Thekkampatti sub-jail. This action stems from significant security lapses that allowed 17 prisoners to escape after overpowering guards. The Tamil Nadu Police quickly recaptured all escapees through a coordinated operation, which included using drones. The government has also initiated severe punitive measures against negligent prison personnel and transferred several senior officials."
+      },
+      {
+        "title": "Today Headlines - 31 October 2026 | காலை 10 மணி தலைப்புச் செய்திகள்",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T10:25:04+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/today-headlines-31-october-2026-10-tamil-news-2242961.html",
+        "snippet": "தங்கம் விலை சவரனுக்கு 2 ஆயிரத்து 480 ரூபாய் குறைந்து ஒரு லட்சத்து ஆயிரத்து 840 ரூபாய்க்கு விற்பனை....இரண்டு நாட்களில் 4 ஆயிரத்து 720 ரூபாய் குறைந்ததால் பொதுமக்கள் மகிழ்ச்சி... வெள்ளி விலை கிராமுக்கு 10 ரூபாய் சரிவு....ஒரு கிலோ 2 லட்சம் ரூபாய்க்கு விற்பனைதேனி மாவட்ட சிறை கண்காணிப்பாளர் பொறுப்பை வகித்துவந்த நாகேஸ்வரன் பணியிடை நீக்கம்.....17 கைதிகள் தப்பியோடிய நிலையில் முதலமைச்சர் விஜய் உத்தரவு....Today Headlines - 31 October 2026 | காலை 10 மணி தலைப்புச் செய்திகள்"
+      },
+      {
+        "title": "Today Headlines - 31 October 2026 | காலை 9 மணி தலைப்புச் செய்திகள்",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T09:27:56+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/today-headlines-31-october-2026-9-tamil-news-2242918.html",
+        "snippet": "தேனி மாவட்ட சிறை கண்காணிப்பாளர் பொறுப்பை வகித்துவந்த நாகேஸ்வரன் பணியிடை நீக்கம் - 17 கைதிகள் தப்பியோடிய நிலையில் முதலமைச்சர் விஜய் உத்தரவு.சிறை நிர்வாகத்தில் பாதுகாப்பு நடவடிக்கைகளை வலுப்படுத்தும் கையில் மதுரை சிறை கண்காணிப்பாளர் கிருஷ்ணராஜ் சேலம் மத்திய சிறைக்கு மாற்றம்....பணியில் மெத்தனமாகவோ, கவனக்குறைவாகவோ செயல்படும் அதிகாரிகள் மீது கடும் நடவடிக்கை எடுக்க முதலமைச்சர் விஜய் உத்தவுகோவையில் சிறையில் அடைக்க அழைத்து செல்லப்பட்ட கைதி ராகவன் தப்பிஓட்டம்....அன்னூர் காவல்நிலைய காவலர்கள் கைதுசெய்து நீதிமன்றத்தில் ஆஜர்படுத்திய பிறகு சிறைக்கு அழைத்து..."
+      },
+      {
+        "title": "BREAKING NEWS | மதுரை சிறை கண்காணிப்பாளர் பணியிட மாற்றம்",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T08:50:13+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/breaking-news-theni-jail-prisioner-escaped-cm-vijay-2242891.html",
+        "snippet": "Breaking News | தேனி சம்பவத்தைத் தொடர்ந்து முதலமைச்சர் விஜய் உத்தரவின்பேரில் நடவடிக்கை"
+      },
+      {
+        "title": "Tamil Nadu CM Vijay announces 3% DA hike for 16 lakh employees, pensioners ahead of Deepavali",
+        "publisher": "The Times of India (Chennai/TN)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T17:03:44+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-cm-vijay-announces-3-da-hike-for-16-lakh-employees-pensioners-ahead-of-deepavali/articleshow/135399550.cms",
+        "snippet": "Tamil Nadu's chief minister Joseph Vijay announced a 3% increase in Dearness Allowance for employees and pensioners. The hike will raise the allowance from 60% to 63%, effective retroactively from July 1. This change aligns the state government’s DA with the recent increase for central government employees. Around 16 lakh individuals will benefit from this 3% increase in Dearness Allowance."
+      },
+      {
+        "title": "Exclusive: Vijay To Be 1st Tamil Nadu Chief Minister To Attend Davos Summit",
+        "publisher": "NDTV South",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T15:47:37+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.ndtv.com/india-news/exclusive-vijay-to-be-1st-tamil-nadu-chief-minister-to-attend-davos-summit-12263248#publisher=newsstand",
+        "snippet": "Tamil Nadu Chief Minister Vijay"
+      },
+      {
+        "title": "AMMK Dhinakaran targets Vijay govt over power cuts, questions energy minister's continuance",
+        "publisher": "The Times of India (Chennai/TN)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T15:05:41+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/ammk-dhinakaran-targets-vijay-govt-over-power-cuts-questions-energy-ministers-continuance/articleshow/135396249.cms",
+        "snippet": "T T V Dhinakaran has publicly confronted the Tamil Nadu government for persistent power outages he attributes to gross administrative incompetence. He pointed out chronic issues like sudden power cuts and billing discrepancies, which significantly impact residents. Citing the outage at Meenakshi Amman temple as a critical example, Dhinakaran demanded urgent reforms in the electricity sector and called on Chief Minister Joseph Vijay to take decisive action against negligent officials."
+      },
+      {
+        "title": "அம்பாசமுத்திரம் செல்லும் முதலமைச்சர் விஜய்... 'இடைத்தேர்தல்' நடக்கவுள்ள தொகுதிகளில் நவம்பர் பிளான்!",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T09:12:55+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/tamil-nadu/cm-vijay-november-plans-he-set-to-visits-ambasamudram-before-by-election-nw-mma-ws-bl-2242860.html",
+        "snippet": "அண்மையில் திமுக தலைவர் மு.க.ஸ்டாலின் இடைத்தேர்தல் தொடர்பாக கட்சியின் மூத்த நிர்வாகிகள் மற்றும் தொகுதி நிர்வாகிகளுடன் பேச்சுவார்த்தை நடத்தினார்."
+      },
+      {
+        "title": "Tamil Nadu Congress, VCK mobilise cadres for Nov. 1 INDIA bloc protest in New Delhi",
+        "publisher": "The Hindu (Tamil Nadu)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T12:18:48+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-congress-vck-mobilise-cadres-for-nov-1-india-bloc-protest-in-new-delhi/article71646455.ece",
+        "snippet": "“We expect more than five lakh Congress cadres to participate. From Tamil Nadu, we are expecting at least 100 party workers to reach New Delhi from each district,” says MP R. Sudha"
+      },
+      {
+        "title": "DMK Paranthamen | தவெக ஐடி விங்க் பொறுப்புணர்வுடன் செயல்பட வேண்டும்: பரந்தாமன்",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T15:37:14+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/dmk-paranthamen-tvk-cm-vijay-2243174.html",
+        "snippet": "தவெக ஐடி விங்க் பொறுப்புணர்வுடன் செயல்பட வேண்டும்: பரந்தாமன்"
+      },
+      {
+        "title": "JUST NOW | \"மின்சாரத்துறைக்கு வெளிச்சம் வருவது எப்போது? \" - தினகரன் சரமாரி கேள்வி",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T11:55:39+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/just-now-ammk-tvk-2243011.html",
+        "snippet": "\"மின்சாரத்துறைக்கு வெளிச்சம் வருவது எப்போது?\" - தவெக அரசுக்கு அமமுக பொதுச்செயலாளர் டிடிவி தினகரன் கேள்வி | JUST NOW"
+      },
+      {
+        "title": "\"மனிதாபிமானமற்ற கட்சி எதுவென்றால், அது தவெக தான்...\" - திமுக எம்பி கனிமொழி விமர்சனம்!",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T11:32:16+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/tamil-nadu/dmk-mp-kanimozhi-criticizes-tvk-as-inhuman-party-at-chennai-protest-nw-mma-ws-bl-2242985.html",
+        "snippet": "சட்டம்-ஒழுங்கு சீர்கேட்டைக் கண்டித்து தவெக அரசுக்கு எதிராக சென்னையில் திமுக மகளிர் அணி சார்பில் கண்டன ஆர்ப்பாட்டம் நடைபெற்றது."
+      },
+      {
+        "title": "How significant is the TVK-led regime’s move to hold Social Justice Survey? | Explained",
+        "publisher": "The Hindu (Tamil Nadu)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T17:57:22+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/how-significant-is-the-tvk-led-regimes-move-to-hold-social-justice-survey-explained/article71649252.ece",
+        "snippet": "The feature of an ‘open column’, where respondents can state their caste during the second phase of the Census, to be carried out in most parts of the country during February next year, has forced many parties and other stakeholders to express concerns over the utility of the whole exercise"
+      },
+      {
+        "title": "Palaniswami slams TVK-led government over convict’s escape in Coimbatore",
+        "publisher": "The Hindu (Tamil Nadu)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T16:52:51+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/palaniswami-slams-tvk-led-government-over-convicts-escape-in-coimbatore/article71648552.ece",
+        "snippet": ""
+      },
+      {
+        "title": "Today Headlines - 31.10.2026 | மாலை 5 மணி தலைப்புச் செய்திகள்",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T17:45:26+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/today-headlines-31-10-2026-5-cm-vijay-gingee-girl-2243320.html",
+        "snippet": "தமிழ்நாடு அரசுப் பணிகளில் நேரடி நியமனத்திற்கு நிர்ணயிக்கப்பட்ட வயது உச்சவரம்பு 5 ஆண்டுகள் வரை உயர்வு. தேர்வர்களின் தொடர் கோரிக்கையை ஏற்று முதலமைச்சர் விஜய் உத்தரவு.---------பொதுப் பிரிவினர் குரூப் 1 தேர்வினை 32 வயதுக்கு பதிலாக 37 வயது வரை எழுதலாம் என தமிழ்நாடு அரசு அறிவிப்பு. குரூப் 2, 2ஏ தேர்வினை பொதுப்பிரிவினர் எழுதுவதற்கான வயது உச்சவரம்பு 30 வயதில் இருந்து 35 வயதாக உயர்வு.---------அந்தமான் கடல் பகுதிகளில் உருவான காற்றழுத்த தாழ்வு பகுதி, இன்று காற்றழுத்த தாழ்வு மண்டலமாக வலுபெறும்.அடுத்த 2 நாட்களில், ஆந்திரா கடற்கரையை நோக்கி நகரும் என வானிலை..."
+      },
+      {
+        "title": "Today Headlines - 31.10.2026 | மாலை 4 மணி தலைப்புச் செய்திகள்",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T16:31:24+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/today-headlines-31-10-2026-4-cm-vijay-gingee-girl-2243259.html",
+        "snippet": "தமிழ்நாடு அரசுப் பணிகளில் நேரடி நியமனத்திற்கு நிர்ணயிக்கப்பட்ட வயது உச்சவரம்பு 5 ஆண்டுகள் வரை உயர்வு. தேர்வர்களின் தொடர் கோரிக்கையை ஏற்று முதலமைச்சர் விஜய் உத்தரவு.---------பொதுப் பிரிவினர் குரூப் 1 தேர்வினை 32 வயதுக்கு பதிலாக 37 வயது வரை எழுதலாம் என தமிழ்நாடு அரசு அறிவிப்பு. குரூப் 2, 2ஏ தேர்வினை பொதுப்பிரிவினர் எழுதுவதற்கான வயது உச்சவரம்பு 30 வயதில் இருந்து 35 வயதாக உயர்வு.---------அந்தமான் கடல் பகுதிகளில் உருவான காற்றழுத்த தாழ்வு பகுதி, இன்று காற்றழுத்த தாழ்வு மண்டலமாக வலுபெறும்.அடுத்த 2 நாட்களில், ஆந்திரா கடற்கரையை நோக்கி நகரும் என வானிலை..."
+      },
+      {
+        "title": "Today Headlines - 31 October 2026 | காலை 6 மணி தலைப்புச் செய்திகள்",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T06:15:04+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/today-headlines-31-october-2026-6-tamil-news-2242806.html",
+        "snippet": "தமிழ்நாடு அரசுப் பணிகளில் நேரடி நியமனத்திற்கு நிர்ணயிக்கப்பட்ட வயது உச்சவரம்பு 5 ஆண்டுகள் வரை உயர்வு...தேர்வர்களின் தொடர் கோரிக்கையை ஏற்று முதலமைச்சர் விஜய் உத்தரவு....பொதுப் பிரிவினர் குரூப் 1 தேர்வினை 32 வயதுக்கு பதிலாக 37 வயது வரை எழுதலாம் என தமிழ்நாடு அரசு அறிவிப்பு...குரூப் 2, 2ஏ தேர்வினை பொதுப்பிரிவினர் எழுதுவதற்கான வயது உச்சவரம்பு 30 வயதில் இருந்து 35 வயதாக உயர்வு....அந்தமான் கடல் பகுதிகளில் உருவான காற்றழுத்த தாழ்வு பகுதி, இன்று காற்றழுத்த தாழ்வு மண்டலமாக வலுபெறும்...அடுத்த 2 நாட்களில், ஆந்திரா கடற்கரையை நோக்கி நகரும் என வானிலை ஆய்வு..."
+      },
+      {
+        "title": "Delhi | Congress",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T16:53:51+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/delhi-congress-parliament-2243289.html",
+        "snippet": "Delhi | Congress"
+      },
+      {
+        "title": "தமிழ்நாடு அரசு ஊழியர்களுக்கு அகவிலைப்படி 3% உயர்வு - முதல்வர் விஜய் அறிவிப்பு",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T16:12:33+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/tamil-nadu/government-employees-get-3-percentage-da-hike-vjr-ws-l-2243196.html",
+        "snippet": "தமிழ்நாட்டில் அரசு ஊழியர்கள், ஆசிரியர்கள் மற்றும் ஓய்வூதியதாரர்களுக்கு அகவிலைப்படி 3 சதவீதம் உயர்த்தப்பட்டு 63 சதவீதமாக அதிகரிக்கப்பட்டுள்ளது. இதனால் 16 இலட்சம் பேர் பயனடைவர்."
+      },
+      {
+        "title": "CM Vijay Announcement | 30,000 பெண்களுக்கு... ரூ. 109.75 கோடியில் திட்டம் - CM அதிரடி அறிவிப்பு",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T16:06:59+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/cm-vijay-announcement-30-000-109-75-cm-2243204.html",
+        "snippet": "Breaking News | ஆடு வளர்ப்பு திட்டத்தின் கீழ் 30,000 பெண்களுக்கு ஆடுகள் வழங்க ரூ. 109.75 கோடி ஒதுக்கீடு"
+      },
+      {
+        "title": "JUSTNOW | மீண்டும் மீண்டுமா?: திமுக தலைவர் மு.க.ஸ்டாலின் எக்ஸ் பக்கத்தில் பதிவு",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T14:55:22+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/justnow-2243144.html",
+        "snippet": "JUST NOW | மீண்டும் மீண்டுமா?: திமுக தலைவர் மு.க.ஸ்டாலின் எக்ஸ் பக்கத்தில் பதிவு"
+      },
+      {
+        "title": "JUST NOW | CM குறித்து அவதூறு பேச்சு - திமுக MLA-விடம் கிடுக்கிப்பிடி விசாரணை!",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T11:21:47+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/just-now-cm-mla-dmk-vasantham-2242991.html",
+        "snippet": "JUST NOW | CM குறித்து அவதூறு பேச்சு - திமுக MLA-விடம் கிடுக்கிப்பிடி விசாரணை!"
+      },
+      {
+        "title": "MK Stalin Meets OPS | ஓபிஎஸ்ஸை சந்தித்து நலம் விசாரித்த மு.க.ஸ்டாலின்",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T13:10:33+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/mk-stalin-meets-ops-dmk-tamil-news-2243063.html",
+        "snippet": "MK Stalin Meets OPS | ஓபிஎஸ்ஸை சந்தித்து நலம் விசாரித்த மு.க.ஸ்டாலின்"
+      },
+      {
+        "title": "Hungry customers won’t be able to distinguish between ‘Sangeetha’ and ‘Sangetha’: Madras High Court in trademark case",
+        "publisher": "The Hindu (Tamil Nadu)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T16:42:30+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/hungry-customers-wont-be-able-to-distinguish-between-sangeetha-and-sangetha-madras-high-court-in-trademark-case/article71648391.ece",
+        "snippet": "Justice P.B. Balaji quotes Tamil poetess Avvaiyar’s statement, ‘Pasi Vandhal Pathum Paranthu Pogum’, and the Tamil idiom, ‘Pasi Kanna Kattuthu’"
+      },
+      {
+        "title": "Chennai Corporation directs engineers to undertake milling before relaying roads to prevent rise in levels",
+        "publisher": "The Hindu (Tamil Nadu)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T16:14:29+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/cities/chennai/chennai-corporation-directs-engineers-to-undertake-milling-before-relaying-roads-to-prevent-rise-in-levels/article71648415.ece",
+        "snippet": "Repeatedly adding fresh layers of bitumen and raising road levels must be avoided, Commissioner G.S. Sameeran said"
+      },
+      {
+        "title": "Veterinary assistant surgeon suspended in Villupuram after video of him abusing farmer goes viral",
+        "publisher": "The Hindu (Tamil Nadu)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T15:55:26+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/veterinary-assistant-surgeon-suspended-in-villupuram-after-video-of-him-abusing-farmer-goes-viral/article71648384.ece",
+        "snippet": "When the farmer enquired about doctor availability at the dispensary for subsequent visits, the assistant veterinary surgeon allegedly abused him"
+      },
+      {
+        "title": "The great escape from Theni jail",
+        "publisher": "The Hindu (Tamil Nadu)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T09:01:38+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/the-great-escape-from-tamil-nadus-theni-jail/article71645449.ece",
+        "snippet": "On October 26, a group of 17 remand prisoners hatched a plan to escape from the Theni district jail under the cover of darkness. All of them were apprehended within 42 hours in a massive search operation involving various Tamil Nadu police teams and drones. But the jailbreak has raised larger questions about prison overcrowding, staff shortages, security, and the need for reform, reports L. Srikrishna"
+      },
+      {
+        "title": "No GPS, no permits: Tamil Nadu bars mineral transport vehicles without tracking devices from Nov 1",
+        "publisher": "The Times of India (Chennai/TN)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T16:22:31+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/no-gps-no-permits-tamil-nadu-bars-mineral-transport-vehicles-without-tracking-devices-from-nov-1/articleshow/135398343.cms",
+        "snippet": "No vehicles will be allowed to transport minerals without GPS devices installed by November 1. The devices must be integrated with the state's MiMAS portal for real-time location tracking. Currently, around 1.10 lakh vehicles are registered, but only 50,000 actively transport minerals. Lorry owners must purchase devices from approved vendors, with costs now around ₹4000. Failure to comply will result in legal action against lorry owners."
+      },
+      {
+        "title": "ED uncovers Rs 400 crore fund diversion by Dream Makers Global, attaches assets worth Rs 85 crore",
+        "publisher": "The Times of India (Chennai/TN)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T15:28:13+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/ed-uncovers-rs-400-crore-fund-diversion-by-dream-makers-global-attaches-assets-worth-rs-85-crore/articleshow/135397087.cms",
+        "snippet": "Enforcement Directorate has provisionally attached assets worth Rs 85.19 crore linked to Dream Makers Global Pvt Ltd. This action is associated with an alleged investment fraud involving thousands of depositors and high-return promises. The investigation revealed that Rs 400 crore was collected from investors through misleading schemes. Funds were misappropriated, with heavy commissions paid to agents and key personnel."
+      },
+      {
+        "title": "குட்கா முறைகேடு வழக்கு: அறிக்கை தாக்கல் செய்ய சிறப்பு நீதிமன்றத்திற்கு உயர் நீதிமன்றம் உத்தரவு",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T16:33:58+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/tamil-nadu/gutkha-case-report-on-how-to-complete-it-in-3-months-vjr-ws-l-2243220.html",
+        "snippet": "குட்கா முறைகேடு வழக்கை 3 மாதங்களில் முடிக்க கோரிய விவகாரம் குறித்து சிறப்பு நீதிமன்றம் அறிக்கை தாக்கல் செய்ய சென்னை உயர் நீதிமன்றம் உத்தரவிட்டுள்ளது."
+      },
+      {
+        "title": "கயல்விழி அழகிரிக்கு எதிரான வழக்கில் இறுதி அறிக்கை தாக்கல் செய்ய நீதிமன்றம் ஆணை!",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T13:37:14+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/tamil-nadu/high-court-orders-for-submit-final-report-in-kayalvizhi-alagiri-case-within-4-weeks-nw-mma-ws-bl-2243080.html",
+        "snippet": "கயல்விழிக்கு எதிரான வழக்கில் 4 வாரங்களில் இறுதி அறிக்கை தாக்கல் செய்ய சென்னை உயர் நீதிமன்றம் உத்தரவிட்டுள்ளது."
+      },
+      {
+        "title": "Philately Passport? | Tamilnadu",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T15:02:48+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/philately-passport-tamilnadu-2243158.html",
+        "snippet": "Philately Passport? | Tamilnadu"
+      },
+      {
+        "title": "Chennai Diwali Shopping | தீபாவளி நெருங்கிடுச்சு.. சென்னையில் களைகட்டும் ஷாப்பிங்!",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T13:29:39+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/chennai-diwali-shopping-tamil-news-2243081.html",
+        "snippet": "Chennai Diwali Shopping | தீபாவளி நெருங்கிடுச்சு.. சென்னையில் களைகட்டும் ஷாப்பிங்!"
+      },
+      {
+        "title": "Zero Tolerance Day Observed in Chennai | சென்னையில் Zero Tolerance Day கடைபிடிப்பு",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T10:37:21+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/zero-tolerance-day-observed-in-chennai-zero-tolerance-day-tamil-news-2242971.html",
+        "snippet": "Zero Tolerance Day Observed in Chennai | சென்னையில் Zero Tolerance Day கடைபிடிப்பு"
+      },
+      {
+        "title": "School Student Murder | ஆந்திராவில் பள்ளிக்குள் புகுந்து மாணவி கொடூர கொலை",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T13:23:49+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/school-student-murder-andhra-pradesh-2243086.html",
+        "snippet": "Just Now | ஆந்திராவில் பள்ளிக்குள் புகுந்து மாணவி கொடூர கொலை"
+      },
+      {
+        "title": "தமிழக அரசு ஊழியர்களுக்கு குட்நியூஸ்.. சொத்து விவரம் தாக்கல் செய்ய கால அவகாசம் நீட்டிப்பு.!",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T12:13:09+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/tamil-nadu/government-employees-property-details-submission-deadline-extended-upto-2-months-nw-anu-ws-l-2243003.html",
+        "snippet": "அதன்படி, 31.12.2025-ல் முடிந்த ஆண்டுக்கான சொத்து விவரத்தை 31.10.2026-க்குள் தாக்கல் செய்ய வேண்டும் என தெரிவிக்கப்பட்டிருந்த நிலையில், கால அவகாசம் நீட்டிக்கப்பட்டுள்ளது."
+      },
+      {
+        "title": "Cuddalore Fishermen Protest | கடற்கரையில் மீனவர்கள் மனித சங்கிலி போராட்டம்",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T11:47:30+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/cuddalore-fishermen-protest-sipcot-2243008.html",
+        "snippet": "கடலூர் சிப்காட் விரிவாக்கத்தை கண்டித்து கடற்கரையில் மீனவ கிராம மக்கள் மனித சங்கிலிப் போராட்டத்தில் ஈடுபட்டனர்."
+      },
+      {
+        "title": "சிதம்பரம் நடராஜர் கோயில் நிர்வாகம்.. இனி தீட்சிதர்கள் இல்லை.. புதிய குழு அமைப்பு.. சென்னை உயர்நீதிமன்றம் அதிரடி..!",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T11:37:43+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/tamil-nadu/chidambaram-natarajar-temple-administration-high-court-new-committee-nw-anu-ws-l-2242983.html",
+        "snippet": "சிதம்பரம் நடராஜர் கோயில் நிர்வாகம் முறையாக நடைபெறவில்லை என சென்னை உயர்நீதிமன்றம் விமர்சித்துள்ளது. மேலும், கோயிலை நிர்வகிக்க ஓய்வுபெற்ற நீதிபதிகள் தலைமையில் புதிய நிர்வாகக் குழுவை அமைத்து உத்தரவிட்டுள"
+      },
+      {
+        "title": "சென்னை புறநகர் ரயில் சேவைக்கு புதிய கால அட்டவணை - நாளை முதல் அமல்!",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T06:57:19+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/tamil-nadu/chennai-suburban-train-service-new-timetable-starts-tomorrow-nw-mma-ws-bl-2242831.html",
+        "snippet": "சென்னை புறநகர் ரயில் சேவையின் புதிய கால அட்டவணை நாளை முதல் அமலுக்கு வருகிறது. தெற்கு ரயில்வே வெளியிட்டுள்ள இந்த புதிய அட்டவணையில், புதிய ரயில்கள் அறிமுகம் மற்றும் சில ரயில்களின் நீட்டிப்பு உள்ளிட்ட பல மாற்றங்கள் குறித்த விவரங்களை தெரிந்து கொள்ளுங்கள்."
+      }
+    ]
+  }
+}

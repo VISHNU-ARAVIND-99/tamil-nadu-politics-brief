@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-10-31T18:13:49.505549+05:30",
+  "last_updated_ist": "2026-10-31T18:21:19.413396+05:30",
   "system_status": "operational",
-  "status_message": "Latest morning edition published at 2026-10-31T18:13:49.505549+05:30.",
+  "status_message": "Latest evening edition published at 2026-10-31T18:21:19.413396+05:30.",
   "morning": {
     "edition_id": "2026-10-31-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 31 October 2026",
@@ -49,5 +49,49 @@
     "md_path": "archive/2026/10/2026-10-31-morning.md",
     "url": "edition.html?id=2026-10-31-morning"
   },
-  "evening": null
+  "evening": {
+    "edition_id": "2026-10-31-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 31 October 2026",
+    "date": "2026-10-31",
+    "edition_type": "evening",
+    "is_test_sample": false,
+    "status": "published",
+    "scheduled_time_ist": "2026-10-31T18:00:00+05:30",
+    "generated_at_ist": "2026-10-31T18:21:19.412573+05:30",
+    "published_at_ist": "2026-10-31T18:21:19.413396+05:30",
+    "coverage_start_ist": "2026-10-31T06:00:00+05:30",
+    "coverage_end_ist": "2026-10-31T18:00:00+05:30",
+    "reading_time_minutes": 28,
+    "word_count": 3913,
+    "headline": "DMK women cadre protest across Tamil Nadu over price rise, law and order",
+    "big_picture_excerpt": "Key developments in this 12-hour briefing include: DMK women cadre protest across Tamil Nadu over price rise, law and order; Theni jailbreak: Tamil Nadu CM Vijay orders suspension of Theni district jail superintendent in-charge; Tamil Nadu CM Vijay announces 3% DA hike for 16 lakh employees, pensioners ahead of Deepavali; AMMK Dhinakaran targets Vijay govt o...",
+    "parties": [
+      "AMMK",
+      "DMK",
+      "INC",
+      "TVK",
+      "VCK"
+    ],
+    "topics": [
+      "Agriculture & Water",
+      "Assembly, Courts & Policy",
+      "Education & NEET",
+      "Elections",
+      "Government & Administration",
+      "Infrastructure & Economy",
+      "Public Protests & Labour"
+    ],
+    "districts": [
+      "Chennai",
+      "Coimbatore",
+      "Cuddalore",
+      "Madurai",
+      "Salem",
+      "Theni",
+      "Viluppuram"
+    ],
+    "json_path": "archive/2026/10/2026-10-31-evening.json",
+    "md_path": "archive/2026/10/2026-10-31-evening.md",
+    "url": "edition.html?id=2026-10-31-evening"
+  }
 }

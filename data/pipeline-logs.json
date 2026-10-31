@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "run_id": "run-2026-10-31-evening-1793451069",
+      "edition_id": "2026-10-31-evening",
+      "timestamp_ist": "2026-10-31T18:21:19.413306+05:30",
+      "status": "published",
+      "sources_checked": 15,
+      "raw_items_collected": 124,
+      "clusters_verified": 31,
+      "duration_seconds": 9.5,
+      "ai_provider": "fallback:HTTP_404:{\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemin",
+      "tokens_used": 0,
+      "notes": "Saved to archive/2026/10/2026-10-31-evening.json"
+    },
+    {
       "run_id": "run-2026-10-31-morning-1793450619",
       "edition_id": "2026-10-31-morning",
       "timestamp_ist": "2026-10-31T18:13:49.505445+05:30",
