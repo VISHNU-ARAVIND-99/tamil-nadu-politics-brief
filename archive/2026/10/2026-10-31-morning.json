@@ -6,13 +6,13 @@
   "is_test_sample": false,
   "status": "published_delayed",
   "scheduled_time_ist": "2026-10-31T06:00:00+05:30",
-  "generated_at_ist": "2026-10-31T17:57:20.630488+05:30",
-  "published_at_ist": "2026-10-31T17:57:20.631098+05:30",
+  "generated_at_ist": "2026-10-31T18:13:49.504937+05:30",
+  "published_at_ist": "2026-10-31T18:13:49.505549+05:30",
   "coverage_start_ist": "2026-10-30T18:00:00+05:30",
   "coverage_end_ist": "2026-10-31T06:00:00+05:30",
-  "reading_time_minutes": 17,
-  "word_count": 2201,
-  "headline": "Japan’s Omron Healthcare opens first India manufacturing facility near Chennai",
+  "reading_time_minutes": 14,
+  "word_count": 1899,
+  "headline": "Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection",
   "parties": [
     "AIADMK",
     "AMMK",
@@ -41,364 +41,427 @@
     "Thanjavur"
   ],
   "sections": {
-    "big_picture": "Tamil Nadu's political scene in this 12-hour briefing (30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST) was centered on major policy and party actions involving AIADMK, AMMK, BJP, DMK, MDMK, NTK, TVK. Across key administrative and constituency sectors, debates centered on Assembly, Courts & Policy, Centre–State Relations, Education & NEET, Elections, Government & Administration, Infrastructure & Economy, Public Protests & Labour.\n\nSenior stakeholders and district leaders monitored state responses and opposition statements as legislative and regional schedules progress.",
+    "big_picture": "Key developments in this 12-hour briefing include: Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection; Sollathigaram | \"CM விஜயை முதலில் நாங்கள் ஒரு பொருட்டாவே மதிக்கல..\" - மதிமுக அந்திரிதாஸ்; Plea in Madras High Court seeks probe into nationality of Cockroach Janata Party co-convenor Saurav Das; Stalin demands apology from T.N. CM Vijay for MIDS professor’s detention; TVK denies ‘political vendetta’ claim.",
     "top_developments": [
       {
-        "headline": "Japan’s Omron Healthcare opens first India manufacturing facility near Chennai",
-        "verification_badge": "Multi-Source Verified",
-        "summary": "Japan’s Omron Healthcare opens first India manufacturing facility near Chennai\n\nThis development was verified across reporting from The Hindu (Tamil Nadu), The Times of India (Chennai/TN) during the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST IST coverage window.",
-        "what_happened": "Japan’s Omron Healthcare opens first India manufacturing facility near Chennai",
-        "who_is_involved": "State Administration / Public Stakeholders",
-        "verified_facts": "Reported by The Hindu (Tamil Nadu), The Times of India (Chennai/TN) within the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST window (Multi-Source Verified).",
-        "why_it_matters": "Affects Government & Administration across Chennai.",
-        "political_responses": "Consult linked original reporting for full statements from participating political parties.",
-        "what_happens_next": "Further official updates will be tracked in the next 12-hour briefing.",
-        "sources": [
-          {
-            "title": "Japan’s Omron Healthcare opens first India manufacturing facility near Chennai",
-            "publisher": "The Hindu (Tamil Nadu)",
-            "language": "en",
-            "published_date": "2026-10-31",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/japans-omron-healthcare-opens-first-india-manufacturing-facility-near-chennai/article71645749.ece"
-          },
-          {
-            "title": "OMRON Healthcare begins production of devices for the Indian market at its Chennai facility",
-            "publisher": "The Times of India (Chennai/TN)",
-            "language": "en",
-            "published_date": "2026-10-30",
-            "url": "https://timesofindia.indiatimes.com/city/chennai/omron-healthcare-begins-production-of-devices-for-the-indian-market-at-its-chennai-facility/articleshow/135371131.cms"
-          }
-        ]
-      },
-      {
         "headline": "Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection",
-        "verification_badge": "Single-Source Report (Independently Unverified)",
-        "summary": "At an interaction with journalists at Pasumpon after paying tributes to Muthuramalinga Thevar, he wondered why he should not accept their support when he had been yearning for an election victory for long\n\nThis development was verified across reporting from The Hindu (Tamil Nadu) during the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST IST coverage window.",
-        "what_happened": "At an interaction with journalists at Pasumpon after paying tributes to Muthuramalinga Thevar, he wondered why he should not accept their support when he had been yearning for an election victory for long",
+        "verification_badge": "Single-Source Report",
         "who_is_involved": "AIADMK, DMK, NTK",
-        "verified_facts": "Reported by The Hindu (Tamil Nadu) within the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST window (Single-Source Report (Independently Unverified)).",
-        "why_it_matters": "Affects Elections, Infrastructure & Economy across Tamil Nadu.",
-        "political_responses": "Consult linked original reporting for full statements from participating political parties.",
-        "what_happens_next": "Further official updates will be tracked in the next 12-hour briefing.",
+        "summary": "At an interaction with journalists at Pasumpon after paying tributes to Muthuramalinga Thevar, he wondered why he should not accept their support when he had been yearning for an election victory for long",
+        "why_it_matters": "",
         "sources": [
           {
             "title": "Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection",
             "publisher": "The Hindu (Tamil Nadu)",
             "language": "en",
             "published_date": "2026-10-30",
-            "url": "https://www.thehindu.com/news/cities/Madurai/seeman-hints-at-accepting-the-support-of-dmk-and-aiadmk-in-ambasamudram-byelection/article71644538.ece"
+            "published_at_ist": "2026-10-30T22:11:50+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.thehindu.com/news/cities/Madurai/seeman-hints-at-accepting-the-support-of-dmk-and-aiadmk-in-ambasamudram-byelection/article71644538.ece",
+            "snippet": "At an interaction with journalists at Pasumpon after paying tributes to Muthuramalinga Thevar, he wondered why he should not accept their support when he had been yearning for an election victory for long"
           }
         ]
       },
       {
         "headline": "Sollathigaram | \"CM விஜயை முதலில் நாங்கள் ஒரு பொருட்டாவே மதிக்கல..\" - மதிமுக அந்திரிதாஸ்",
-        "verification_badge": "Single-Source Report (Independently Unverified)",
-        "summary": "News18 Tamil Nadu | \"CM விஜயை முதலில் நாங்கள் ஒரு பொருட்டாவே மதிக்கல..\" - மதிமுக அந்திரிதாஸ் பேச பேச எகிறிய Goosebumps\n\nThis development was verified across reporting from News18 Tamil Nadu during the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST IST coverage window.",
-        "what_happened": "News18 Tamil Nadu | \"CM விஜயை முதலில் நாங்கள் ஒரு பொருட்டாவே மதிக்கல..\" - மதிமுக அந்திரிதாஸ் பேச பேச எகிறிய Goosebumps",
+        "verification_badge": "Single-Source Report",
         "who_is_involved": "DMK, MDMK",
-        "verified_facts": "Reported by News18 Tamil Nadu within the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST window (Single-Source Report (Independently Unverified)).",
-        "why_it_matters": "Affects Government & Administration across Tamil Nadu.",
-        "political_responses": "Consult linked original reporting for full statements from participating political parties.",
-        "what_happens_next": "Further official updates will be tracked in the next 12-hour briefing.",
+        "summary": "News18 Tamil Nadu | \"CM விஜயை முதலில் நாங்கள் ஒரு பொருட்டாவே மதிக்கல..\" - மதிமுக அந்திரிதாஸ் பேச பேச எகிறிய Goosebumps",
+        "why_it_matters": "",
         "sources": [
           {
             "title": "Sollathigaram | \"CM விஜயை முதலில் நாங்கள் ஒரு பொருட்டாவே மதிக்கல..\" - மதிமுக அந்திரிதாஸ்",
             "publisher": "News18 Tamil Nadu",
             "language": "ta",
             "published_date": "2026-10-30",
-            "url": "https://tamil.news18.com/videos/tamil-nadu/sollathigaram-cm-cm-vijay-2242761.html"
+            "published_at_ist": "2026-10-30T22:27:12+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://tamil.news18.com/videos/tamil-nadu/sollathigaram-cm-cm-vijay-2242761.html",
+            "snippet": "News18 Tamil Nadu | \"CM விஜயை முதலில் நாங்கள் ஒரு பொருட்டாவே மதிக்கல..\" - மதிமுக அந்திரிதாஸ் பேச பேச எகிறிய Goosebumps"
           }
         ]
       },
       {
         "headline": "Plea in Madras High Court seeks probe into nationality of Cockroach Janata Party co-convenor Saurav Das",
-        "verification_badge": "Single-Source Report (Independently Unverified)",
-        "summary": "Chief Justice Sushrut Arvind Dharmadhikari and Justice G. Arul Murugan order notices to the Centre as well as the CJP leader\n\nThis development was verified across reporting from The Hindu (Tamil Nadu) during the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST IST coverage window.",
-        "what_happened": "Chief Justice Sushrut Arvind Dharmadhikari and Justice G. Arul Murugan order notices to the Centre as well as the CJP leader",
+        "verification_badge": "Single-Source Report",
         "who_is_involved": "BJP",
-        "verified_facts": "Reported by The Hindu (Tamil Nadu) within the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST window (Single-Source Report (Independently Unverified)).",
-        "why_it_matters": "Affects Assembly, Courts & Policy, Centre–State Relations across Tamil Nadu.",
-        "political_responses": "Consult linked original reporting for full statements from participating political parties.",
-        "what_happens_next": "Further official updates will be tracked in the next 12-hour briefing.",
+        "summary": "Chief Justice Sushrut Arvind Dharmadhikari and Justice G. Arul Murugan order notices to the Centre as well as the CJP leader",
+        "why_it_matters": "",
         "sources": [
           {
             "title": "Plea in Madras High Court seeks probe into nationality of Cockroach Janata Party co-convenor Saurav Das",
             "publisher": "The Hindu (Tamil Nadu)",
             "language": "en",
             "published_date": "2026-10-30",
-            "url": "https://www.thehindu.com/news/national/probe-into-nationality-of-cockroach-janata-party-co-convenor-saurav-das-plea-before-madras-high-court/article71643606.ece"
-          }
-        ]
-      },
-      {
-        "headline": "“போதையில்லாத் தமிழகம் என்றீர்களே... இப்போது போதையில் புதையும் தமிழகமா?” – டி.டி.வி. தினகரன்",
-        "verification_badge": "Single-Source Report (Independently Unverified)",
-        "summary": "தருமபுரியில் கஞ்சா போதையில் மகன் தாயைக் கொலை செய்த விவகாரத்தில், தமிழக அரசைக் கண்டித்து அமமுக பொதுச் செயலாளர் டி.டி.வி. தினகரன் கண்டனம் தெரிவித்துள்ளார்.\n\nThis development was verified across reporting from News18 Tamil Nadu during the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST IST coverage window.",
-        "what_happened": "தருமபுரியில் கஞ்சா போதையில் மகன் தாயைக் கொலை செய்த விவகாரத்தில், தமிழக அரசைக் கண்டித்து அமமுக பொதுச் செயலாளர் டி.டி.வி. தினகரன் கண்டனம் தெரிவித்துள்ளார்.",
-        "who_is_involved": "AMMK",
-        "verified_facts": "Reported by News18 Tamil Nadu within the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST window (Single-Source Report (Independently Unverified)).",
-        "why_it_matters": "Affects Government & Administration across Dharmapuri.",
-        "political_responses": "Consult linked original reporting for full statements from participating political parties.",
-        "what_happens_next": "Further official updates will be tracked in the next 12-hour briefing.",
-        "sources": [
-          {
-            "title": "“போதையில்லாத் தமிழகம் என்றீர்களே... இப்போது போதையில் புதையும் தமிழகமா?” – டி.டி.வி. தினகரன்",
-            "publisher": "News18 Tamil Nadu",
-            "language": "ta",
-            "published_date": "2026-10-30",
-            "url": "https://tamil.news18.com/tamil-nadu/is-tamil-nadu-sinking-into-addiction-ttv-dhinakaran-questions-nw-azt-ws-bl-2242710.html"
-          }
-        ]
-      },
-      {
-        "headline": "Work on ‘Gateway of Chennai’ to begin next week as Tamil Nadu government approves 680 road projects",
-        "verification_badge": "Single-Source Report (Independently Unverified)",
-        "summary": "Under the Chief Minister’s Integrated Urban Development Mission (CMIUDM), the stretch from Airport to Kathipara grade separator will get better greenery, lighting and artwork as part of the project\n\nThis development was verified across reporting from The Hindu (Tamil Nadu) during the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST IST coverage window.",
-        "what_happened": "Under the Chief Minister’s Integrated Urban Development Mission (CMIUDM), the stretch from Airport to Kathipara grade separator will get better greenery, lighting and artwork as part of the project",
-        "who_is_involved": "State Administration / Public Stakeholders",
-        "verified_facts": "Reported by The Hindu (Tamil Nadu) within the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST window (Single-Source Report (Independently Unverified)).",
-        "why_it_matters": "Affects Government & Administration, Infrastructure & Economy across Chennai.",
-        "political_responses": "Consult linked original reporting for full statements from participating political parties.",
-        "what_happens_next": "Further official updates will be tracked in the next 12-hour briefing.",
-        "sources": [
-          {
-            "title": "Work on ‘Gateway of Chennai’ to begin next week as Tamil Nadu government approves 680 road projects",
-            "publisher": "The Hindu (Tamil Nadu)",
-            "language": "en",
-            "published_date": "2026-10-30",
-            "url": "https://www.thehindu.com/news/cities/chennai/work-on-gateway-of-chennai-to-begin-next-week-as-tamil-nadu-government-approves-680-road-projects/article71645529.ece"
+            "published_at_ist": "2026-10-30T18:51:17+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.thehindu.com/news/national/probe-into-nationality-of-cockroach-janata-party-co-convenor-saurav-das-plea-before-madras-high-court/article71643606.ece",
+            "snippet": "Chief Justice Sushrut Arvind Dharmadhikari and Justice G. Arul Murugan order notices to the Centre as well as the CJP leader"
           }
         ]
       },
       {
         "headline": "Stalin demands apology from T.N. CM Vijay for MIDS professor’s detention; TVK denies ‘political vendetta’ claim",
-        "verification_badge": "Single-Source Report (Independently Unverified)",
-        "summary": "The ruling TVK said the inquiry was not related to the professor’s remarks on rising rice prices\n\nThis development was verified across reporting from The Hindu (Tamil Nadu) during the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST IST coverage window.",
-        "what_happened": "The ruling TVK said the inquiry was not related to the professor’s remarks on rising rice prices",
+        "verification_badge": "Single-Source Report",
         "who_is_involved": "TVK",
-        "verified_facts": "Reported by The Hindu (Tamil Nadu) within the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST window (Single-Source Report (Independently Unverified)).",
-        "why_it_matters": "Affects Government & Administration across Tamil Nadu.",
-        "political_responses": "Consult linked original reporting for full statements from participating political parties.",
-        "what_happens_next": "Further official updates will be tracked in the next 12-hour briefing.",
+        "summary": "The ruling TVK said the inquiry was not related to the professor’s remarks on rising rice prices",
+        "why_it_matters": "",
         "sources": [
           {
             "title": "Stalin demands apology from T.N. CM Vijay for MIDS professor’s detention; TVK denies ‘political vendetta’ claim",
             "publisher": "The Hindu (Tamil Nadu)",
             "language": "en",
             "published_date": "2026-10-30",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/stalin-demands-apology-from-tamil-nadu-cm-vijay-for-detention-of-mids-professor/article71639187.ece"
+            "published_at_ist": "2026-10-30T18:01:24+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.thehindu.com/news/national/tamil-nadu/stalin-demands-apology-from-tamil-nadu-cm-vijay-for-detention-of-mids-professor/article71639187.ece",
+            "snippet": "The ruling TVK said the inquiry was not related to the professor’s remarks on rising rice prices"
           }
         ]
       },
       {
-        "headline": "TN seeks Centre’s support for Rameswaram to Sri Lanka’s Talaimannar ferry service",
-        "verification_badge": "Single-Source Report (Independently Unverified)",
-        "summary": "Follows the successful operation of the Nagapattinam–Kankesanthurai (near Jaffna) service\n\nThis development was verified across reporting from The Times of India (Chennai/TN) during the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST IST coverage window.",
-        "what_happened": "Follows the successful operation of the Nagapattinam–Kankesanthurai (near Jaffna) service",
-        "who_is_involved": "State Administration / Public Stakeholders",
-        "verified_facts": "Reported by The Times of India (Chennai/TN) within the 30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST window (Single-Source Report (Independently Unverified)).",
-        "why_it_matters": "Affects Centre–State Relations, Infrastructure & Economy across Nagapattinam.",
-        "political_responses": "Consult linked original reporting for full statements from participating political parties.",
-        "what_happens_next": "Further official updates will be tracked in the next 12-hour briefing.",
+        "headline": "Sollathigaram | \"சீமான் பொறுமை இழந்துவிட்டார்..\"",
+        "verification_badge": "Single-Source Report",
+        "who_is_involved": "NTK",
+        "summary": "",
+        "why_it_matters": "",
         "sources": [
           {
-            "title": "TN seeks Centre’s support for Rameswaram to Sri Lanka’s Talaimannar ferry service",
-            "publisher": "The Times of India (Chennai/TN)",
-            "language": "en",
-            "published_date": "2026-10-31",
-            "url": "https://timesofindia.indiatimes.com/city/chennai/tn-seeks-centres-support-for-rameswaram-to-sri-lankas-talaimannar-ferry-service/articleshow/135375539.cms"
+            "title": "Sollathigaram | \"சீமான் பொறுமை இழந்துவிட்டார்..\"",
+            "publisher": "News18 Tamil Nadu",
+            "language": "ta",
+            "published_date": "2026-10-30",
+            "published_at_ist": "2026-10-30T23:06:58+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://tamil.news18.com/videos/tamil-nadu/sollathigaram-ck-mathivanan-ntk-seeman-2242785.html",
+            "snippet": "Sollathigaram | \"சீமான் பொறுமை இழந்துவிட்டார்..\""
+          }
+        ]
+      },
+      {
+        "headline": "Sollathigaram | அம்பை இடைத்தேர்தல்.. \"பொதுவேட்பாளர் என்ற பேச்சுக்கே இடமில்லை..\"",
+        "verification_badge": "Single-Source Report",
+        "who_is_involved": "NTK",
+        "summary": "Sollathigaram | அம்பை இடைத்தேர்தல்.. \"பொதுவேட்பாளர் என்ற பேச்சுக்கே இடமில்லை..\"சீமான் எடுத்த முடிவு.. தெளிவாக விளக்கிய ஜென்ராம்",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "Sollathigaram | அம்பை இடைத்தேர்தல்.. \"பொதுவேட்பாளர் என்ற பேச்சுக்கே இடமில்லை..\"",
+            "publisher": "News18 Tamil Nadu",
+            "language": "ta",
+            "published_date": "2026-10-30",
+            "published_at_ist": "2026-10-30T22:12:23+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://tamil.news18.com/videos/tamil-nadu/sollathigaram-ntk-seeman-2242753.html",
+            "snippet": "Sollathigaram | அம்பை இடைத்தேர்தல்.. \"பொதுவேட்பாளர் என்ற பேச்சுக்கே இடமில்லை..\"சீமான் எடுத்த முடிவு.. தெளிவாக விளக்கிய ஜென்ராம்"
+          },
+          {
+            "title": "Sollathigaram | \"ஆதரவு தருகிறோம் என வருபவர்களை தட்டிக்கழிக்க முடியாது\"",
+            "publisher": "News18 Tamil Nadu",
+            "language": "ta",
+            "published_date": "2026-10-30",
+            "published_at_ist": "2026-10-30T21:29:44+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://tamil.news18.com/videos/tamil-nadu/sollathigaram-ntk-farhana-seeman-2242735.html",
+            "snippet": "Sollathigaram | \"ஆதரவு தருகிறோம் என வருபவர்களை வேண்டாம்ன்னு தட்டிக்கழிக்க முடியாது!\" - இடைத்தேர்தல் நாதக முடிவு.. போட்டுடைத்த ஃபர்ஹானா"
+          }
+        ]
+      },
+      {
+        "headline": "“போதையில்லாத் தமிழகம் என்றீர்களே... இப்போது போதையில் புதையும் தமிழகமா?” – டி.டி.வி. தினகரன்",
+        "verification_badge": "Single-Source Report",
+        "who_is_involved": "AMMK",
+        "summary": "தருமபுரியில் கஞ்சா போதையில் மகன் தாயைக் கொலை செய்த விவகாரத்தில், தமிழக அரசைக் கண்டித்து அமமுக பொதுச் செயலாளர் டி.டி.வி. தினகரன் கண்டனம் தெரிவித்துள்ளார்.",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "“போதையில்லாத் தமிழகம் என்றீர்களே... இப்போது போதையில் புதையும் தமிழகமா?” – டி.டி.வி. தினகரன்",
+            "publisher": "News18 Tamil Nadu",
+            "language": "ta",
+            "published_date": "2026-10-30",
+            "published_at_ist": "2026-10-30T20:57:02+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://tamil.news18.com/tamil-nadu/is-tamil-nadu-sinking-into-addiction-ttv-dhinakaran-questions-nw-azt-ws-bl-2242710.html",
+            "snippet": "தருமபுரியில் கஞ்சா போதையில் மகன் தாயைக் கொலை செய்த விவகாரத்தில், தமிழக அரசைக் கண்டித்து அமமுக பொதுச் செயலாளர் டி.டி.வி. தினகரன் கண்டனம் தெரிவித்துள்ளார்."
+          }
+        ]
+      },
+      {
+        "headline": "CM Vijay | தனது பெரியம்மாவின் உடலுக்கு முதல்வர் விஜய் அஞ்சலி",
+        "verification_badge": "Single-Source Report",
+        "who_is_involved": "TVK",
+        "summary": "",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "CM Vijay | தனது பெரியம்மாவின் உடலுக்கு முதல்வர் விஜய் அஞ்சலி",
+            "publisher": "News18 Tamil Nadu",
+            "language": "ta",
+            "published_date": "2026-10-30",
+            "published_at_ist": "2026-10-30T18:23:09+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://tamil.news18.com/videos/tamil-nadu/cm-vijay-2242578.html",
+            "snippet": "CM Vijay | தனது பெரியம்மாவின் உடலுக்கு முதல்வர் விஜய் அஞ்சலி"
           }
         ]
       }
     ],
-    "government_and_administration": "See verified administrative developments above and consult the primary source links below.",
-    "political_parties_and_opposition": "Developments in this window involved: AIADMK, AMMK, BJP, DMK, MDMK, NTK, TVK.",
-    "assembly_courts_and_policy": "Legislative, judicial, and policy items from this window are indexed in the top developments and source registry.",
-    "district_developments": "Districts referenced in this coverage window: Chennai, Cuddalore, Dharmapuri, Madurai, Nagapattinam, Namakkal, Thanjavur.",
+    "government_and_administration": "Refer to the top developments and linked official releases below for departmental updates.",
+    "political_parties_and_opposition": "Refer to the top developments above for statements from DMK, AIADMK, BJP, TVK, NTK, and allied parties.",
+    "assembly_courts_and_policy": "Judicial and legislative developments from this window are listed in the primary source links below.",
+    "district_developments": "Regional reporting in this window covered: Chennai, Cuddalore, Dharmapuri, Madurai, Nagapattinam, Namakkal, Thanjavur.",
     "claims_vs_facts": [],
-    "what_to_watch_next": "Ongoing monitoring continues for the next 12-hour IST window.",
+    "what_to_watch_next": "Next automated edition publishes at the next 6:00 AM / 6:00 PM IST cycle.",
     "all_sources": [
-      {
-        "title": "Japan’s Omron Healthcare opens first India manufacturing facility near Chennai",
-        "publisher": "The Hindu (Tamil Nadu)",
-        "language": "en",
-        "published_date": "2026-10-31",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/japans-omron-healthcare-opens-first-india-manufacturing-facility-near-chennai/article71645749.ece"
-      },
-      {
-        "title": "OMRON Healthcare begins production of devices for the Indian market at its Chennai facility",
-        "publisher": "The Times of India (Chennai/TN)",
-        "language": "en",
-        "published_date": "2026-10-30",
-        "url": "https://timesofindia.indiatimes.com/city/chennai/omron-healthcare-begins-production-of-devices-for-the-indian-market-at-its-chennai-facility/articleshow/135371131.cms"
-      },
       {
         "title": "Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection",
         "publisher": "The Hindu (Tamil Nadu)",
         "language": "en",
         "published_date": "2026-10-30",
-        "url": "https://www.thehindu.com/news/cities/Madurai/seeman-hints-at-accepting-the-support-of-dmk-and-aiadmk-in-ambasamudram-byelection/article71644538.ece"
+        "published_at_ist": "2026-10-30T22:11:50+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/cities/Madurai/seeman-hints-at-accepting-the-support-of-dmk-and-aiadmk-in-ambasamudram-byelection/article71644538.ece",
+        "snippet": "At an interaction with journalists at Pasumpon after paying tributes to Muthuramalinga Thevar, he wondered why he should not accept their support when he had been yearning for an election victory for long"
       },
       {
         "title": "Sollathigaram | \"CM விஜயை முதலில் நாங்கள் ஒரு பொருட்டாவே மதிக்கல..\" - மதிமுக அந்திரிதாஸ்",
         "publisher": "News18 Tamil Nadu",
         "language": "ta",
         "published_date": "2026-10-30",
-        "url": "https://tamil.news18.com/videos/tamil-nadu/sollathigaram-cm-cm-vijay-2242761.html"
+        "published_at_ist": "2026-10-30T22:27:12+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/sollathigaram-cm-cm-vijay-2242761.html",
+        "snippet": "News18 Tamil Nadu | \"CM விஜயை முதலில் நாங்கள் ஒரு பொருட்டாவே மதிக்கல..\" - மதிமுக அந்திரிதாஸ் பேச பேச எகிறிய Goosebumps"
       },
       {
         "title": "Plea in Madras High Court seeks probe into nationality of Cockroach Janata Party co-convenor Saurav Das",
         "publisher": "The Hindu (Tamil Nadu)",
         "language": "en",
         "published_date": "2026-10-30",
-        "url": "https://www.thehindu.com/news/national/probe-into-nationality-of-cockroach-janata-party-co-convenor-saurav-das-plea-before-madras-high-court/article71643606.ece"
-      },
-      {
-        "title": "“போதையில்லாத் தமிழகம் என்றீர்களே... இப்போது போதையில் புதையும் தமிழகமா?” – டி.டி.வி. தினகரன்",
-        "publisher": "News18 Tamil Nadu",
-        "language": "ta",
-        "published_date": "2026-10-30",
-        "url": "https://tamil.news18.com/tamil-nadu/is-tamil-nadu-sinking-into-addiction-ttv-dhinakaran-questions-nw-azt-ws-bl-2242710.html"
-      },
-      {
-        "title": "Work on ‘Gateway of Chennai’ to begin next week as Tamil Nadu government approves 680 road projects",
-        "publisher": "The Hindu (Tamil Nadu)",
-        "language": "en",
-        "published_date": "2026-10-30",
-        "url": "https://www.thehindu.com/news/cities/chennai/work-on-gateway-of-chennai-to-begin-next-week-as-tamil-nadu-government-approves-680-road-projects/article71645529.ece"
+        "published_at_ist": "2026-10-30T18:51:17+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/probe-into-nationality-of-cockroach-janata-party-co-convenor-saurav-das-plea-before-madras-high-court/article71643606.ece",
+        "snippet": "Chief Justice Sushrut Arvind Dharmadhikari and Justice G. Arul Murugan order notices to the Centre as well as the CJP leader"
       },
       {
         "title": "Stalin demands apology from T.N. CM Vijay for MIDS professor’s detention; TVK denies ‘political vendetta’ claim",
         "publisher": "The Hindu (Tamil Nadu)",
         "language": "en",
         "published_date": "2026-10-30",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/stalin-demands-apology-from-tamil-nadu-cm-vijay-for-detention-of-mids-professor/article71639187.ece"
-      },
-      {
-        "title": "TN seeks Centre’s support for Rameswaram to Sri Lanka’s Talaimannar ferry service",
-        "publisher": "The Times of India (Chennai/TN)",
-        "language": "en",
-        "published_date": "2026-10-31",
-        "url": "https://timesofindia.indiatimes.com/city/chennai/tn-seeks-centres-support-for-rameswaram-to-sri-lankas-talaimannar-ferry-service/articleshow/135375539.cms"
+        "published_at_ist": "2026-10-30T18:01:24+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/stalin-demands-apology-from-tamil-nadu-cm-vijay-for-detention-of-mids-professor/article71639187.ece",
+        "snippet": "The ruling TVK said the inquiry was not related to the professor’s remarks on rising rice prices"
       },
       {
         "title": "Sollathigaram | \"சீமான் பொறுமை இழந்துவிட்டார்..\"",
         "publisher": "News18 Tamil Nadu",
         "language": "ta",
         "published_date": "2026-10-30",
-        "url": "https://tamil.news18.com/videos/tamil-nadu/sollathigaram-ck-mathivanan-ntk-seeman-2242785.html"
+        "published_at_ist": "2026-10-30T23:06:58+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/sollathigaram-ck-mathivanan-ntk-seeman-2242785.html",
+        "snippet": "Sollathigaram | \"சீமான் பொறுமை இழந்துவிட்டார்..\""
       },
       {
         "title": "Sollathigaram | அம்பை இடைத்தேர்தல்.. \"பொதுவேட்பாளர் என்ற பேச்சுக்கே இடமில்லை..\"",
         "publisher": "News18 Tamil Nadu",
         "language": "ta",
         "published_date": "2026-10-30",
-        "url": "https://tamil.news18.com/videos/tamil-nadu/sollathigaram-ntk-seeman-2242753.html"
+        "published_at_ist": "2026-10-30T22:12:23+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/sollathigaram-ntk-seeman-2242753.html",
+        "snippet": "Sollathigaram | அம்பை இடைத்தேர்தல்.. \"பொதுவேட்பாளர் என்ற பேச்சுக்கே இடமில்லை..\"சீமான் எடுத்த முடிவு.. தெளிவாக விளக்கிய ஜென்ராம்"
       },
       {
         "title": "Sollathigaram | \"ஆதரவு தருகிறோம் என வருபவர்களை தட்டிக்கழிக்க முடியாது\"",
         "publisher": "News18 Tamil Nadu",
         "language": "ta",
         "published_date": "2026-10-30",
-        "url": "https://tamil.news18.com/videos/tamil-nadu/sollathigaram-ntk-farhana-seeman-2242735.html"
+        "published_at_ist": "2026-10-30T21:29:44+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/sollathigaram-ntk-farhana-seeman-2242735.html",
+        "snippet": "Sollathigaram | \"ஆதரவு தருகிறோம் என வருபவர்களை வேண்டாம்ன்னு தட்டிக்கழிக்க முடியாது!\" - இடைத்தேர்தல் நாதக முடிவு.. போட்டுடைத்த ஃபர்ஹானா"
+      },
+      {
+        "title": "“போதையில்லாத் தமிழகம் என்றீர்களே... இப்போது போதையில் புதையும் தமிழகமா?” – டி.டி.வி. தினகரன்",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-30",
+        "published_at_ist": "2026-10-30T20:57:02+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/tamil-nadu/is-tamil-nadu-sinking-into-addiction-ttv-dhinakaran-questions-nw-azt-ws-bl-2242710.html",
+        "snippet": "தருமபுரியில் கஞ்சா போதையில் மகன் தாயைக் கொலை செய்த விவகாரத்தில், தமிழக அரசைக் கண்டித்து அமமுக பொதுச் செயலாளர் டி.டி.வி. தினகரன் கண்டனம் தெரிவித்துள்ளார்."
       },
       {
         "title": "CM Vijay | தனது பெரியம்மாவின் உடலுக்கு முதல்வர் விஜய் அஞ்சலி",
         "publisher": "News18 Tamil Nadu",
         "language": "ta",
         "published_date": "2026-10-30",
-        "url": "https://tamil.news18.com/videos/tamil-nadu/cm-vijay-2242578.html"
+        "published_at_ist": "2026-10-30T18:23:09+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/cm-vijay-2242578.html",
+        "snippet": "CM Vijay | தனது பெரியம்மாவின் உடலுக்கு முதல்வர் விஜய் அஞ்சலி"
       },
       {
         "title": "Victim of crime should never become victim of process: Madras High Court Chief Justice",
         "publisher": "The Hindu (Tamil Nadu)",
         "language": "en",
         "published_date": "2026-10-30",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/victim-of-crime-should-never-become-victim-of-process-madras-high-court-chief-justice/article71645359.ece"
+        "published_at_ist": "2026-10-30T22:19:52+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/victim-of-crime-should-never-become-victim-of-process-madras-high-court-chief-justice/article71645359.ece",
+        "snippet": "Legal and administrative procedures must never inflict fresh trauma on those who are really broken, they must offer immediate support, public care, and unconditional dignity, Justice Dharmadhikari said"
       },
       {
-        "title": "Cuddalore Collector inspects development works in Chidambaram",
+        "title": "Work on ‘Gateway of Chennai’ to begin next week as Tamil Nadu government approves 680 road projects",
         "publisher": "The Hindu (Tamil Nadu)",
         "language": "en",
         "published_date": "2026-10-30",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/cuddalore-collector-inspects-development-works-in-chidambaram/article71644529.ece"
+        "published_at_ist": "2026-10-30T21:03:41+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/cities/chennai/work-on-gateway-of-chennai-to-begin-next-week-as-tamil-nadu-government-approves-680-road-projects/article71645529.ece",
+        "snippet": "Under the Chief Minister’s Integrated Urban Development Mission (CMIUDM), the stretch from Airport to Kathipara grade separator will get better greenery, lighting and artwork as part of the project"
       },
       {
-        "title": "Chennai court order on police plea of Anbil Mahesh on Nov 2",
+        "title": "TN seeks Centre’s support for Rameswaram to Sri Lanka’s Talaimannar ferry service",
         "publisher": "The Times of India (Chennai/TN)",
         "language": "en",
-        "published_date": "2026-10-30",
-        "url": "https://timesofindia.indiatimes.com/city/chennai/chennai-court-order-on-police-plea-of-anbil-mahesh-on-nov-2/articleshow/135372730.cms"
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T00:25:12+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/tn-seeks-centres-support-for-rameswaram-to-sri-lankas-talaimannar-ferry-service/articleshow/135375539.cms",
+        "snippet": "Follows the successful operation of the Nagapattinam–Kankesanthurai (near Jaffna) service"
       },
       {
-        "title": "Chennai Corporation | சென்னை நகரில் 36 புதிய பூங்காக்களை மாநகராட்சி அமைக்கத் திட்டம்",
-        "publisher": "News18 Tamil Nadu",
-        "language": "ta",
-        "published_date": "2026-10-30",
-        "url": "https://tamil.news18.com/videos/tamil-nadu/chennai-corporation-36-parks-2242757.html"
-      },
-      {
-        "title": "“2 நிமிடம்தான் மின் தடை ஏற்பட்டது” – அமைச்சர் நிர்மல் குமார் விளக்கம்",
-        "publisher": "News18 Tamil Nadu",
-        "language": "ta",
-        "published_date": "2026-10-30",
-        "url": "https://tamil.news18.com/tamil-nadu/only-two-minutes-of-power-outage-minister-nirmal-kumar-explanation-nw-azt-ws-bl-2242746.html"
-      },
-      {
-        "title": "Egg Price Hike Namakkal | முட்டை விலை கிடுகிடு உயர்வு..!",
-        "publisher": "News18 Tamil Nadu",
-        "language": "ta",
-        "published_date": "2026-10-30",
-        "url": "https://tamil.news18.com/videos/tamil-nadu/egg-price-hike-namakkal-necc-egg-price-surge-tamil-news-2242593.html"
-      },
-      {
-        "title": "Periyar Statue | தஞ்சை அருகே கோயில் நிலத்தில் உள்ள பெரியார் சிலையை அகற்ற நீதிமன்றம் ஆணை",
-        "publisher": "News18 Tamil Nadu",
-        "language": "ta",
-        "published_date": "2026-10-30",
-        "url": "https://tamil.news18.com/videos/tamil-nadu/periyar-statue-2242551.html"
+        "title": "Japan’s Omron Healthcare opens first India manufacturing facility near Chennai",
+        "publisher": "The Hindu (Tamil Nadu)",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "published_at_ist": "2026-10-31T01:09:53+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/japans-omron-healthcare-opens-first-india-manufacturing-facility-near-chennai/article71645749.ece",
+        "snippet": ""
       },
       {
         "title": "Tasmac revises liquor prices from November 1, links refund to bottle returns",
         "publisher": "The Hindu (Tamil Nadu)",
         "language": "en",
         "published_date": "2026-10-31",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/tasmac-revises-liquor-prices-from-november-1-links-refund-to-bottle-returns/article71646333.ece"
+        "published_at_ist": "2026-10-31T00:16:22+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/tasmac-revises-liquor-prices-from-november-1-links-refund-to-bottle-returns/article71646333.ece",
+        "snippet": "Environment cess to be added to the existing maximum retail price of Indian Made Foreign Liquor, beer, wine, liquor from other States and imported liquor; those who return the bottles will get a refund of ₹10"
       },
       {
         "title": "Villagers protest against unregulated silt extraction from irrigation tank",
         "publisher": "The Hindu (Tamil Nadu)",
         "language": "en",
         "published_date": "2026-10-30",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/villagers-protest-against-unregulated-silt-extraction-from-irrigation-tank/article71645232.ece"
+        "published_at_ist": "2026-10-30T23:54:38+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/villagers-protest-against-unregulated-silt-extraction-from-irrigation-tank/article71645232.ece",
+        "snippet": "Spread over 25 acres, Pavoor tank is one of the oldest irrigation tanks in the region"
       },
       {
         "title": "Takshashila University conducts Induction ceremony for MBBS students",
         "publisher": "The Hindu (Tamil Nadu)",
         "language": "en",
         "published_date": "2026-10-30",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/takshashila-university-conducts-induction-ceremony-for-mbbs-students/article71644576.ece"
+        "published_at_ist": "2026-10-30T21:15:55+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/takshashila-university-conducts-induction-ceremony-for-mbbs-students/article71644576.ece",
+        "snippet": ""
+      },
+      {
+        "title": "Cuddalore Collector inspects development works in Chidambaram",
+        "publisher": "The Hindu (Tamil Nadu)",
+        "language": "en",
+        "published_date": "2026-10-30",
+        "published_at_ist": "2026-10-30T21:15:32+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/cuddalore-collector-inspects-development-works-in-chidambaram/article71644529.ece",
+        "snippet": ""
       },
       {
         "title": "Tamil Nadu raises upper age limit for direct recruitment into government services by five years",
         "publisher": "The Hindu (Tamil Nadu)",
         "language": "en",
         "published_date": "2026-10-30",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-raises-upper-age-limit-for-direct-recruitment-into-government-services-by-five-years/article71644573.ece"
+        "published_at_ist": "2026-10-30T19:22:22+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-raises-upper-age-limit-for-direct-recruitment-into-government-services-by-five-years/article71644573.ece",
+        "snippet": "It will be in addition to the existing age concessions available to candidates belonging to the BC, BC (Muslims), MBC/DNC, SC, ST, and destitute widows, the release said"
+      },
+      {
+        "title": "Chennai court order on police plea of Anbil Mahesh on Nov 2",
+        "publisher": "The Times of India (Chennai/TN)",
+        "language": "en",
+        "published_date": "2026-10-30",
+        "published_at_ist": "2026-10-30T23:09:25+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/chennai-court-order-on-police-plea-of-anbil-mahesh-on-nov-2/articleshow/135372730.cms",
+        "snippet": ""
       },
       {
         "title": "Sollathigaram | பொதுவேட்பாளர் என்ற பேச்சுக்கே இடமில்லை..\"",
         "publisher": "News18 Tamil Nadu",
         "language": "ta",
         "published_date": "2026-10-30",
-        "url": "https://tamil.news18.com/videos/tamil-nadu/sollathigaram-ntk-seeman-2242781.html"
+        "published_at_ist": "2026-10-30T23:06:50+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/sollathigaram-ntk-seeman-2242781.html",
+        "snippet": "Sollathigaram Debate | சொல்லதிகாரம் For More Updates"
+      },
+      {
+        "title": "Chennai Corporation | சென்னை நகரில் 36 புதிய பூங்காக்களை மாநகராட்சி அமைக்கத் திட்டம்",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-30",
+        "published_at_ist": "2026-10-30T22:25:42+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/chennai-corporation-36-parks-2242757.html",
+        "snippet": "சென்னை நகரில் 36 புதிய பூங்காக்களை அமைக்கத் திட்டம்- மாநகராட்சி"
+      },
+      {
+        "title": "“2 நிமிடம்தான் மின் தடை ஏற்பட்டது” – அமைச்சர் நிர்மல் குமார் விளக்கம்",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-30",
+        "published_at_ist": "2026-10-30T21:57:25+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/tamil-nadu/only-two-minutes-of-power-outage-minister-nirmal-kumar-explanation-nw-azt-ws-bl-2242746.html",
+        "snippet": "மதுரை மீனாட்சி அம்மன் கோயிலில் குடியரசுத் துணைத் தலைவர் சி.பி. ராதாகிருஷ்ணன் சாமி தரிசனம் செய்தபோது ஏற்பட்ட மின் தடை 2 நிமிடங்களில் சரிசெய்யப்பட்டது என அமைச்சர் நிர்மல் குமார் விளக்கம் அளித்துள்ளார்."
+      },
+      {
+        "title": "Egg Price Hike Namakkal | முட்டை விலை கிடுகிடு உயர்வு..!",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-30",
+        "published_at_ist": "2026-10-30T18:23:40+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/egg-price-hike-namakkal-necc-egg-price-surge-tamil-news-2242593.html",
+        "snippet": "News18 Tamil Nadu | நாமக்கல்: முட்டை மொத்த விலை 20 பைசா உயர்ந்து ரூ.5.90ஆக நிர்ணயம்"
       },
       {
         "title": "Dhanush Breaking News | தனுஷ் நற்பணி இயக்கத்தின் சார்பில் 3,000 சட்ட ஆலோசகர்களை நியமிக்க திட்டம்",
         "publisher": "News18 Tamil Nadu",
         "language": "ta",
         "published_date": "2026-10-30",
-        "url": "https://tamil.news18.com/videos/tamil-nadu/dhanush-breaking-news-3-000-2242561.html"
+        "published_at_ist": "2026-10-30T18:02:29+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/dhanush-breaking-news-3-000-2242561.html",
+        "snippet": "Breaking News | தமிழ்நாடு முழுவதும் தனுஷ் நற்பணி இயக்கத்தின் சார்பில் 3,000 சட்ட ஆலோசகர்களை நியமிக்க திட்டம்"
+      },
+      {
+        "title": "Periyar Statue | தஞ்சை அருகே கோயில் நிலத்தில் உள்ள பெரியார் சிலையை அகற்ற நீதிமன்றம் ஆணை",
+        "publisher": "News18 Tamil Nadu",
+        "language": "ta",
+        "published_date": "2026-10-30",
+        "published_at_ist": "2026-10-30T18:01:36+05:30",
+        "reliability_tier": "tier_1_editorial",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/periyar-statue-2242551.html",
+        "snippet": "தஞ்சை அருகே கோயில் நிலத்தில் உள்ள பெரியார் சிலையை அகற்ற நீதிமன்றம் ஆணை"
       }
     ]
   }
