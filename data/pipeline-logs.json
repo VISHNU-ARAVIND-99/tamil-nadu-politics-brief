@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "run_id": "run-2026-10-31-morning-1793448749",
+      "edition_id": "2026-10-31-morning",
+      "timestamp_ist": "2026-10-31T17:42:38.312309+05:30",
+      "status": "published_delayed",
+      "sources_checked": 15,
+      "raw_items_collected": 83,
+      "clusters_verified": 23,
+      "duration_seconds": 8.73,
+      "ai_provider": "extractive_fallback (http_404)",
+      "tokens_used": 0,
+      "notes": "Saved to archive/2026/10/2026-10-31-morning.json"
+    },
+    {
       "run_id": "run-2026-10-31-morning-1793446827",
       "edition_id": "2026-10-31-morning",
       "timestamp_ist": "2026-10-31T17:10:34.719980+05:30",
