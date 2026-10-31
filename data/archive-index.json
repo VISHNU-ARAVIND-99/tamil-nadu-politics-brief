@@ -1,7 +1,53 @@
 {
   "total_editions": 2,
-  "last_updated_ist": "2026-10-31T18:33:23.976926+05:30",
+  "last_updated_ist": "2026-10-31T22:38:46.873554+05:30",
   "editions": [
+    {
+      "edition_id": "2026-10-31-evening",
+      "title": "Tamil Nadu Politics – Evening Brief – 31 October 2026",
+      "date": "2026-10-31",
+      "edition_type": "evening",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-10-31T22:38:46.873554+05:30",
+      "coverage_window": "2026-10-31T10:38:37.039980+05:30 to 2026-10-31T22:38:37.039980+05:30",
+      "reading_time_minutes": 29,
+      "headline": "DMK women cadre protest across Tamil Nadu over price rise, law and order",
+      "summary_text": "DMK women cadre protest across Tamil Nadu over price rise, law and order Key developments in this 12-hour briefing include: DMK women cadre protest across Tamil Nadu over price rise, law and order; Theni jailbreak: Tamil Nadu CM Vijay orders suspension of Theni district jail superintendent in-charge; Tamil Nadu CM Vijay announces 3% DA hike for 16 lakh employees, pensioners ahead of Deepavali; AMMK Dhinakaran targets Vijay govt over power cuts, questions energy minister's continuance. DMK women cadre protest across Tamil Nadu over price rise, law and order Theni jailbreak: Tamil Nadu CM Vijay orders suspension of Theni district jail superintendent in-charge Tamil Nadu CM Vijay announces 3% DA hike for 16 lakh employees, pensioners ahead of Deepavali AMMK Dhinakaran targets Vijay govt over power cuts, questions energy minister's continuance Tamil Nadu Congress, VCK mobilise cadres for Nov",
+      "parties": [
+        "AIADMK",
+        "AMMK",
+        "BJP",
+        "DMK",
+        "INC",
+        "NTK",
+        "TVK",
+        "VCK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Assembly, Courts & Policy",
+        "Education & NEET",
+        "Elections",
+        "Government & Administration",
+        "Infrastructure & Economy",
+        "Public Protests & Labour"
+      ],
+      "districts": [
+        "Chennai",
+        "Coimbatore",
+        "Cuddalore",
+        "Madurai",
+        "Pudukkottai",
+        "Salem",
+        "Theni",
+        "Tiruchirappalli",
+        "Tiruvannamalai",
+        "Viluppuram"
+      ],
+      "url": "edition.html?id=2026-10-31-evening",
+      "json_path": "archive/2026/10/2026-10-31-evening.json"
+    },
     {
       "edition_id": "2026-10-31-morning",
       "title": "Tamil Nadu Politics – Morning Brief – 31 October 2026",
@@ -43,46 +89,6 @@
       ],
       "url": "edition.html?id=2026-10-31-morning",
       "json_path": "archive/2026/10/2026-10-31-morning.json"
-    },
-    {
-      "edition_id": "2026-10-31-evening",
-      "title": "Tamil Nadu Politics – Evening Brief – 31 October 2026",
-      "date": "2026-10-31",
-      "edition_type": "evening",
-      "is_test_sample": false,
-      "status": "published",
-      "published_at_ist": "2026-10-31T18:21:19.413396+05:30",
-      "coverage_window": "2026-10-31T06:00:00+05:30 to 2026-10-31T18:00:00+05:30",
-      "reading_time_minutes": 28,
-      "headline": "DMK women cadre protest across Tamil Nadu over price rise, law and order",
-      "summary_text": "DMK women cadre protest across Tamil Nadu over price rise, law and order Key developments in this 12-hour briefing include: DMK women cadre protest across Tamil Nadu over price rise, law and order; Theni jailbreak: Tamil Nadu CM Vijay orders suspension of Theni district jail superintendent in-charge; Tamil Nadu CM Vijay announces 3% DA hike for 16 lakh employees, pensioners ahead of Deepavali; AMMK Dhinakaran targets Vijay govt over power cuts, questions energy minister's continuance. DMK women cadre protest across Tamil Nadu over price rise, law and order Theni jailbreak: Tamil Nadu CM Vijay orders suspension of Theni district jail superintendent in-charge Tamil Nadu CM Vijay announces 3% DA hike for 16 lakh employees, pensioners ahead of Deepavali AMMK Dhinakaran targets Vijay govt over power cuts, questions energy minister's continuance அம்பாசமுத்திரம் செல்லும் முதலமைச்சர் விஜய்... 'இ",
-      "parties": [
-        "AMMK",
-        "DMK",
-        "INC",
-        "TVK",
-        "VCK"
-      ],
-      "topics": [
-        "Agriculture & Water",
-        "Assembly, Courts & Policy",
-        "Education & NEET",
-        "Elections",
-        "Government & Administration",
-        "Infrastructure & Economy",
-        "Public Protests & Labour"
-      ],
-      "districts": [
-        "Chennai",
-        "Coimbatore",
-        "Cuddalore",
-        "Madurai",
-        "Salem",
-        "Theni",
-        "Viluppuram"
-      ],
-      "url": "edition.html?id=2026-10-31-evening",
-      "json_path": "archive/2026/10/2026-10-31-evening.json"
     }
   ]
 }
