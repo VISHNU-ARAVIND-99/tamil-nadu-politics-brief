@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "run_id": "run-2026-10-31-evening-1793468553",
+      "edition_id": "2026-10-31-evening",
+      "timestamp_ist": "2026-10-31T23:16:45.546126+05:30",
+      "status": "published_delayed",
+      "sources_checked": 16,
+      "raw_items_collected": 707,
+      "clusters_verified": 185,
+      "duration_seconds": 252.32,
+      "ai_provider": "fallback:HTTP Error 404: Not Found",
+      "tokens_used": 0,
+      "notes": "Saved to archive/2026/10/2026-10-31-evening.json"
+    },
+    {
       "run_id": "run-2026-10-31-evening-1793466517",
       "edition_id": "2026-10-31-evening",
       "timestamp_ist": "2026-10-31T22:38:46.873463+05:30",
