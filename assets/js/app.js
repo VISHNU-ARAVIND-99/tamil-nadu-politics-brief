@@ -40,6 +40,29 @@ function escapeHtml(str) {
 }
 
 /**
+ * Format ISO datetime string into human-friendly IST: e.g. "31 Oct 2026, 5:10 PM IST"
+ */
+function formatReadableIST(isoStr) {
+    if (!isoStr) return "";
+    try {
+        const d = new Date(isoStr);
+        if (isNaN(d.getTime())) return String(isoStr);
+        const formatted = d.toLocaleString("en-IN", {
+            timeZone: "Asia/Kolkata",
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+            hour: "numeric",
+            minute: "2-digit",
+            hour12: true
+        });
+        return `${formatted} IST`;
+    } catch {
+        return String(isoStr);
+    }
+}
+
+/**
  * Safely converts basic Markdown (**bold**, bullet lists, and paragraph breaks) into clean HTML.
  */
 function formatEditorialText(str) {
@@ -150,7 +173,7 @@ function renderEditionCard(ed, slotLabel) {
       <div style="margin-bottom:0.5rem;">${sampleBadge}</div>
       <h2><a href="${escapeHtml(ed.url)}">${escapeHtml(ed.headline)}</a></h2>
       <p class="meta-line">
-        Published: ${escapeHtml(ed.published_at_ist)} &bull;
+        Published: ${escapeHtml(formatReadableIST(ed.published_at_ist))} &bull;
         Reading time: ~${escapeHtml(ed.reading_time_minutes)} min
       </p>
       <p style="margin-bottom:0.85rem;">${escapeHtml(ed.big_picture_excerpt || "")}</p>
@@ -171,24 +194,46 @@ function renderFullEditionView(container, ed) {
         : "";
 
     const devsHtml = (sec.top_developments || []).map((d, i) => {
-        const srcLinks = (d.sources || []).map(s =>
-            `<a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.publisher)}: ${escapeHtml(s.title)} (${escapeHtml(s.language.toUpperCase())})</a>`
+        // Deduplicate source links within each story
+        const seenSrc = new Set();
+        const uniqueSources = [];
+        for (const s of (d.sources || [])) {
+            const key = (s.url || s.title || "").trim();
+            if (key && !seenSrc.has(key)) {
+                seenSrc.add(key);
+                uniqueSources.push(s);
+            }
+        }
+
+        const srcLinks = uniqueSources.map(s =>
+            `<a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.publisher)}: ${escapeHtml(s.title)} (${escapeHtml((s.language || "en").toUpperCase())})</a>`
         ).join(" &bull; ");
 
+        const storyBody = formatEditorialText(d.summary || d.what_happened || "");
+        const whyMatters = d.why_it_matters
+            ? `<div class="story-field" style="margin-top:0.75rem;padding:0.6rem 0.85rem;background:var(--bg-subtle);border-left:3px solid var(--accent-red);font-size:0.95rem;">
+                 <strong>Why it matters:</strong> ${escapeHtml(d.why_it_matters)}
+               </div>`
+            : "";
+        const nextSteps = d.what_happens_next
+            ? `<div class="story-field" style="margin-top:0.5rem;font-size:0.92rem;color:var(--text-secondary);">
+                 <strong>Next Steps:</strong> ${escapeHtml(d.what_happens_next)}
+               </div>`
+            : "";
+
         return `
-      <div class="story-item">
+      <article class="story-item">
         <span class="badge badge-verified">${escapeHtml(d.verification_badge || "Verified")}</span>
         <h3>${i + 1}. ${escapeHtml(d.headline)}</h3>
-        <div class="story-field"><strong>What happened?</strong> ${escapeHtml(d.what_happened)}</div>
-        <div class="story-field"><strong>Who is involved?</strong> ${escapeHtml(d.who_is_involved)}</div>
-        <div class="story-field"><strong>Verified facts:</strong> ${escapeHtml(d.verified_facts)}</div>
-        <div class="story-field"><strong>Why does it matter?</strong> ${escapeHtml(d.why_it_matters)}</div>
-        <div class="story-field"><strong>Political responses:</strong> ${escapeHtml(d.political_responses)}</div>
-        <div class="story-field"><strong>What happens next?</strong> ${escapeHtml(d.what_happens_next)}</div>
-        <div class="story-field" style="margin-top:0.75rem;font-family:var(--font-sans);font-size:0.84rem;">
-          <strong>Original Sources:</strong> ${srcLinks || "None"}
+        <div class="story-body" style="margin:0.75rem 0;">
+          ${storyBody}
         </div>
-      </div>
+        ${whyMatters}
+        ${nextSteps}
+        <div class="story-field" style="margin-top:0.75rem;font-family:var(--font-sans);font-size:0.84rem;">
+          <strong>Sources:</strong> ${srcLinks || "None"}
+        </div>
+      </article>
     `;
     }).join("");
 
@@ -199,10 +244,21 @@ function renderFullEditionView(container, ed) {
     </div>
   `).join("") || "<p>No disputed political claims flagged in this coverage window.</p>";
 
-    const sourcesHtml = (sec.all_sources || []).map(s => `
+    // Deduplicate all sources list
+    const seenAllSrc = new Set();
+    const uniqueAllSources = [];
+    for (const s of (sec.all_sources || [])) {
+        const key = (s.url || s.title || "").trim();
+        if (key && !seenAllSrc.has(key)) {
+            seenAllSrc.add(key);
+            uniqueAllSources.push(s);
+        }
+    }
+
+    const sourcesHtml = uniqueAllSources.map(s => `
     <li style="margin-bottom:0.45rem;">
       <a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.title)}</a>
-      &mdash; <strong>${escapeHtml(s.publisher)}</strong> (${escapeHtml(s.published_date)}, ${escapeHtml(s.language.toUpperCase())})
+      &mdash; <strong>${escapeHtml(s.publisher)}</strong> (${escapeHtml(s.published_date)}, ${escapeHtml((s.language || "en").toUpperCase())})
     </li>
   `).join("");
 
@@ -239,9 +295,9 @@ function renderFullEditionView(container, ed) {
           <h1 style="font-size:2rem;line-height:1.25;margin:0.4rem 0 0.75rem;">${escapeHtml(ed.headline)}</h1>
           <p class="meta-line">
             <strong>Edition Title:</strong> ${escapeHtml(ed.title)}<br>
-            <strong>Coverage Window:</strong> ${escapeHtml(ed.coverage_start_ist)} to ${escapeHtml(ed.coverage_end_ist)}<br>
-            <strong>Generated:</strong> ${escapeHtml(ed.generated_at_ist)} &bull;
-            <strong>Published:</strong> ${escapeHtml(ed.published_at_ist)} &bull;
+            <strong>Coverage Window:</strong> ${escapeHtml(formatReadableIST(ed.coverage_start_ist))} to ${escapeHtml(formatReadableIST(ed.coverage_end_ist))}<br>
+            <strong>Generated:</strong> ${escapeHtml(formatReadableIST(ed.generated_at_ist))} &bull;
+            <strong>Published:</strong> ${escapeHtml(formatReadableIST(ed.published_at_ist))} &bull;
             <strong>Status:</strong> ${escapeHtml(ed.status)} &bull;
             <strong>Reading Time:</strong> ~${escapeHtml(ed.reading_time_minutes)} min
           </p>
@@ -403,7 +459,7 @@ async function initArchivePage() {
       <article class="card" style="margin-bottom:1rem;">
         <div class="card-kicker">${escapeHtml(ed.date)} &bull; ${escapeHtml(ed.edition_type.toUpperCase())} EDITION</div>
         <h3><a href="${escapeHtml(ed.url)}">${escapeHtml(ed.headline)}</a></h3>
-        <p class="meta-line">Coverage: ${escapeHtml(ed.coverage_window)} &bull; ~${escapeHtml(ed.reading_time_minutes)} min read</p>
+        <p class="meta-line">Published: ${escapeHtml(formatReadableIST(ed.published_at_ist))} &bull; ~${escapeHtml(ed.reading_time_minutes)} min read</p>
         <p style="margin-bottom:0.65rem;">${escapeHtml(ed.summary_text)}</p>
         <div>
           ${(ed.parties || []).map(p => `<span class="badge badge-tag">${escapeHtml(p)}</span>`).join("")}

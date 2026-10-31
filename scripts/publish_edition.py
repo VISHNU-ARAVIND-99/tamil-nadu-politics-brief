@@ -2,6 +2,7 @@
 """
 Main Orchestrator CLI (Steps 1 through 12):
 - Prevents duplicate edition generation unless --force is passed
+- Automatically allows updating test samples and legacy robotic fallback editions
 - Records honest generation and publication timestamps (marks delayed runs transparently)
 - Updates failure status in data/latest-editions.json if an unrecoverable error occurs
 """
@@ -25,7 +26,10 @@ from scripts.verify_news import verify_and_rank_clusters
 
 
 def edition_already_exists(edition_id: str, date_str: str) -> bool:
-    """Check if the target edition JSON already exists and is non-test data."""
+    """
+    Check if the target edition JSON already exists and is non-test data.
+    Automatically permits overwriting initial test samples or legacy robotic editions.
+    """
     year, month, _ = date_str.split("-")
     json_path = ARCHIVE_DIR / year / month / f"{edition_id}.json"
     if not json_path.exists():
@@ -33,8 +37,14 @@ def edition_already_exists(edition_id: str, date_str: str) -> bool:
     try:
         with open(json_path, "r", encoding="utf-8") as f:
             existing = json.load(f)
-        # Allow overwriting initial sample test data automatically on real runs
-        return not existing.get("is_test_sample", False)
+        # Allow overwriting initial sample test data automatically
+        if existing.get("is_test_sample", False):
+            return False
+        # Overwrite legacy robotic editions containing boilerplate text
+        big_pic = existing.get("sections", {}).get("big_picture", "")
+        if "distinct political and policy developments were tracked" in big_pic:
+            return False
+        return True
     except Exception:
         return False
 

@@ -235,8 +235,8 @@ def compute_coverage_window(edition_type: str, target_date_str: str | None = Non
 
 def sanitize_untrusted_text(text: str, max_length: int = 650) -> str:
     """
-    Strip HTML tags, neutralize prompt injection phrases, and cap snippet length
-    so full copyrighted articles are never stored and malicious prompts are defused.
+    Strip HTML tags, neutralize prompt injection phrases, strip YouTube/TV SEO pipe spam,
+    and cap snippet length so full copyrighted articles are never stored and malicious prompts are defused.
     """
     if not text:
         return ""
@@ -245,8 +245,29 @@ def sanitize_untrusted_text(text: str, max_length: int = 650) -> str:
     # Neutralize prompt injection attempts
     for pattern in PROMPT_INJECTION_PATTERNS:
         cleaned = pattern.sub("[REDACTED_INSTRUCTION]", cleaned)
-    # Collapse whitespace
+
+    # Cut off anything after WATCH LIVE, Follow US, ID_VV, or URLs
+    cutoff_match = re.search(r"(?i)\b(watch\s+live|follow\s+us|id_vv)\b|https?://", cleaned)
+    if cutoff_match:
+        cleaned = cleaned[:cutoff_match.start()]
+
+    # Remove emojis (e.g. 👉, 🔴, 🔥, etc.) and promotional unicode symbols
+    cleaned = re.sub(r"[\U00010000-\U0010ffff\u2600-\u27ff\u2b50\ufe0f\u200d👉-🔽🔴⚡🔥📢▶️]", " ", cleaned)
+
+    # Collapse empty or repeated pipes like '| | |'
+    cleaned = re.sub(r"(\s*\|\s*){2,}", " | ", cleaned)
+
+    # If there are 3+ '|' pipes, keep only the first two segments
+    segments = [seg.strip() for seg in cleaned.split("|") if seg.strip()]
+    if len(segments) >= 3:
+        cleaned = " | ".join(segments[:2])
+    else:
+        cleaned = " | ".join(segments)
+
+    # Collapse whitespace and strip dangling punctuation/pipes
+    cleaned = cleaned.strip(" |:-")
     cleaned = re.sub(r"\s+", " ", cleaned).strip()
+
     if len(cleaned) > max_length:
         cleaned = cleaned[:max_length].rsplit(" ", 1)[0] + "..."
     return cleaned
