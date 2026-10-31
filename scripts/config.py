@@ -24,7 +24,7 @@ IST = timezone(timedelta(hours=5, minutes=30))
 # Environment Settings (strictly zero-cost defaults)
 AI_PROVIDER = os.getenv("AI_PROVIDER", "gemini").strip().lower()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash").strip()
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
 MAX_API_CALLS_PER_RUN = int(os.getenv("MAX_API_CALLS_PER_RUN", "2"))
 HTTP_TIMEOUT_SECONDS = int(os.getenv("HTTP_TIMEOUT_SECONDS", "15"))
 USER_AGENT = os.getenv(
@@ -214,8 +214,14 @@ def compute_coverage_window(edition_type: str, target_date_str: str | None = Non
     else:
         raise ValueError(f"Invalid edition_type '{edition_type}'. Expected 'morning' or 'evening'.")
 
-    date_str = end_dt.strftime("%Y-%m-%d")
-    human_date = end_dt.strftime("%-d %B %Y") if os.name != "nt" else end_dt.strftime("%d %B %Y").lstrip("0")
+    # If running more than 30 minutes after scheduled cutoff without a manual past date,
+    # expand window to now_ist so manual or delayed runs do not drop breaking articles
+    if target_date_str is None and (now_ist - end_dt).total_seconds() > 1800:
+        end_dt = now_ist
+        start_dt = now_ist - timedelta(hours=12)
+
+    date_str = scheduled_dt.strftime("%Y-%m-%d")
+    human_date = scheduled_dt.strftime("%-d %B %Y") if os.name != "nt" else scheduled_dt.strftime("%d %B %Y").lstrip("0")
     edition_id = f"{date_str}-{edition_type}"
 
     return {

@@ -47,7 +47,7 @@ jobs:
           PYTHONIOENCODING: "utf-8"
           AI_PROVIDER: ${{ vars.AI_PROVIDER || 'gemini' }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.0-flash' }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
         run: |
           ARGS="--edition morning"
           if [ -n "${{ github.event.inputs.target_date }}" ]; then
