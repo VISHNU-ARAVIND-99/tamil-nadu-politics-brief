@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """
 Central configuration, IST timezone calculation, Tamil & English political taxonomies,
-district registries, and security/prompt-injection guardrails.
+district registries, and automatic Tamil-to-English translation helper.
 """
 
+import json
 import os
 import re
+import urllib.parse
+import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-# Base paths
 ROOT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT_DIR / "data"
 ARCHIVE_DIR = ROOT_DIR / "archive"
@@ -18,10 +20,8 @@ LATEST_EDITIONS_FILE = DATA_DIR / "latest-editions.json"
 ARCHIVE_INDEX_FILE = DATA_DIR / "archive-index.json"
 PIPELINE_LOGS_FILE = DATA_DIR / "pipeline-logs.json"
 
-# IST Timezone (UTC+5:30)
 IST = timezone(timedelta(hours=5, minutes=30))
 
-# Environment Settings (strictly zero-cost defaults)
 AI_PROVIDER = os.getenv("AI_PROVIDER", "gemini").strip().lower()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
@@ -29,18 +29,17 @@ MAX_API_CALLS_PER_RUN = int(os.getenv("MAX_API_CALLS_PER_RUN", "2"))
 HTTP_TIMEOUT_SECONDS = int(os.getenv("HTTP_TIMEOUT_SECONDS", "15"))
 USER_AGENT = os.getenv(
     "USER_AGENT",
-    "TamilNaduPoliticsBriefBot/1.0 (+https://github.com/tn-politics-brief; public-interest-research)",
+    "Mozilla/5.0 (compatible; TamilNaduPoliticsBrief/2.0; +https://github.com/tn-politics-brief)",
 )
 
-# Comprehensive Tamil Nadu Political Party Taxonomy (English + Tamil keywords)
 PARTY_TAXONOMY = {
     "DMK": [
         "dmk", "dravida munnetra kazhagam", "mk stalin", "m.k. stalin", "udhayanidhi stalin",
-        "திமுக", "திராவிட முன்னேற்றக் கழகம்", "மு.க.ஸ்டாலின்", "ஸ்டாலின்", "உதயநிதி"
+        "kanimozhi", "திமுக", "திராவிட முன்னேற்றக் கழகம்", "மு.க.ஸ்டாலின்", "ஸ்டாலின்", "உதயநிதி"
     ],
     "AIADMK": [
         "aiadmk", "admk", "all india anna dravida munnetra kazhagam", "edappadi palaniswami",
-        "eps", "அதிமுக", "அண்ணா திராவிட முன்னேற்றக் கழகம்", "எடப்பாடி பழனிசாமி", "இபிஎஸ்"
+        "eps", "ops", "அதிமுக", "அண்ணா திராவிட முன்னேற்றக் கழகம்", "எடப்பாடி பழனிசாமி", "இபிஎஸ்"
     ],
     "BJP": [
         "bjp", "bharatiya janata party", "annamalai", "nainar nagendran", "l murugan",
@@ -83,48 +82,46 @@ PARTY_TAXONOMY = {
     ],
 }
 
-# Topic Taxonomy (English + Tamil keywords)
 TOPIC_TAXONOMY = {
     "Government & Administration": [
         "cabinet", "chief minister", "secretariat", "government order", "collector",
-        "welfare scheme", "kalaignar", "magalir urimai", " தலைமைச் செயலகம்", "அமைச்சரவை",
-        "அரசாணை", "முதலமைச்சர்", "திட்டம்"
+        "welfare scheme", "kalaignar", "magalir urimai", "da hike", "salary", "police",
+        "தலைமைச் செயலகம்", "அமைச்சரவை", "அரசாணை", "முதலமைச்சர்", "திட்டம்"
     ],
     "Political Parties": [
         "alliance", "general council", "executive committee", "party meeting",
-        "public meeting", "conference", "கூட்டணி", "பொதுக்குழு", "செயற்குழு", "மாநாடு"
+        "public meeting", "conference", "cadre", "கூட்டணி", "பொதுக்குழு", "செயற்குழு", "மாநாடு"
     ],
     "Assembly, Courts & Policy": [
-        "assembly", "speaker", "madras high court", "supreme court", "bill",
+        "assembly", "speaker", "madras high court", "supreme court", "bill", "plea",
         "governor", "election commission", "சட்டப்பேரவை", "உயர் நீதிமன்றம்", "ஆளுநர்"
     ],
     "Elections": [
-        "election", "by-election", "constituency", "voter list", "electoral roll",
+        "election", "by-election", "byelection", "constituency", "voter list", "electoral roll",
         "booth", "candidate", "தேர்தல்", "வாக்காளர்", "தொகுதி", "வேட்பாளர்"
     ],
     "Education & NEET": [
         "neet", "school education", "higher education", "university", "ugc",
-        "board exam", "நீட்", "கல்வி", "பல்கலைக்கழகம்", "பள்ளி"
+        "board exam", "student", "நீட்", "கல்வி", "பல்கலைக்கழகம்", "பள்ளி"
     ],
     "Agriculture & Water": [
         "farmer", "cauvery", "mullaperiyar", "kuruvai", "samba", "paddy",
-        "procurement", "delta", "விவசாயி", "காவிரி", "முல்லைப் பெரியாறு", "நெல்", "டெல்டா"
+        "procurement", "delta", "reservoir", "விவசாயி", "காவிரி", "முல்லைப் பெரியாறு", "நெல்", "டெல்டா"
     ],
     "Public Protests & Labour": [
         "protest", "demonstration", "strike", "detained", "sanitation workers",
-        "transport workers", "போராட்டம்", "ஆர்ப்பாட்டம்", "வேலைநிறுத்தம்"
+        "transport workers", "prison", "jail", "போராட்டம்", "ஆர்ப்பாட்டம்", "வேலைநிறுத்தம்"
     ],
     "Centre–State Relations": [
         "union government", "centre", "gst", "finance commission", "delimitation",
-        "language policy", "மத்திய அரசு", "ஒன்றிய அரசு", "நிதி பகிர்வு", "தொகுதி மறுசீரமைப்பு"
+        "language policy", "india bloc", "மத்திய அரசு", "ஒன்றிய அரசு", "நிதி பகிர்வு", "தொகுதி மறுசீரமைப்பு"
     ],
     "Infrastructure & Economy": [
-        "metro rail", "highway", "port", "industrial", "investment", "sipcot",
-        "tangedco", "tneb", "மெட்ரோ", "மின்சாரம்", "தொழிற்சாலை", "முதலீடு"
+        "metro rail", "highway", "port", "industrial", "investment", "sipcot", "power cut",
+        "tangedco", "tneb", "electricity", "மெட்ரோ", "மின்சாரம்", "தொழிற்சாலை", "முதலீடு"
     ],
 }
 
-# All 38 Districts of Tamil Nadu (English + Tamil names)
 TN_DISTRICTS = {
     "Ariyalur": ["ariyalur", "அரியலூர்"],
     "Chengalpattu": ["chengalpattu", "செங்கல்பட்டு"],
@@ -166,14 +163,12 @@ TN_DISTRICTS = {
     "Virudhunagar": ["virudhunagar", "விருதுநகர்"],
 }
 
-# General Tamil Nadu political relevance markers
 TN_RELEVANCE_KEYWORDS = [
     "tamil nadu", "tamilnadu", "chennai", "assembly", "minister", "collector",
     "government", "policy", "court", "party", "election", "scheme",
     "தமிழ்நாடு", "தமிழகம்", "அரசு", "அமைச்சர்", "முதலமைச்சர்", "மாவட்டம்", "நீதிமன்றம்"
 ]
 
-# Prompt Injection Sanitization Patterns
 PROMPT_INJECTION_PATTERNS = [
     re.compile(r"ignore\s+(all\s+)?(previous|prior|above)\s+instructions", re.IGNORECASE),
     re.compile(r"system\s+prompt", re.IGNORECASE),
@@ -182,18 +177,14 @@ PROMPT_INJECTION_PATTERNS = [
     re.compile(r"<\s*/?\s*(script|iframe|style|system|instruction)[^>]*>", re.IGNORECASE),
 ]
 
+TAMIL_UNICODE_RE = re.compile(r"[\u0B80-\u0BFF]")
+
 
 def get_ist_now() -> datetime:
-    """Return current timezone-aware datetime in Asia/Kolkata (IST)."""
     return datetime.now(IST)
 
 
 def compute_coverage_window(edition_type: str, target_date_str: str | None = None) -> dict:
-    """
-    Calculate strict 12-hour coverage window in IST.
-    - Morning edition (6:00 AM IST on D): covers (D - 1 day) 18:00:00 IST to D 06:00:00 IST.
-    - Evening edition (6:00 PM IST on D): covers D 06:00:00 IST to D 18:00:00 IST.
-    """
     now_ist = get_ist_now()
     if target_date_str:
         year, month, day = map(int, target_date_str.split("-"))
@@ -212,10 +203,9 @@ def compute_coverage_window(edition_type: str, target_date_str: str | None = Non
         scheduled_dt = end_dt
         label = "Evening Brief"
     else:
-        raise ValueError(f"Invalid edition_type '{edition_type}'. Expected 'morning' or 'evening'.")
+        raise ValueError(f"Invalid edition_type '{edition_type}'.")
 
-    # If running more than 30 minutes after scheduled cutoff without a manual past date,
-    # expand window to now_ist so manual or delayed runs do not drop breaking articles
+    # If triggered manually > 30 mins after scheduled time, capture latest 12 hours up to now
     if target_date_str is None and (now_ist - end_dt).total_seconds() > 1800:
         end_dt = now_ist
         start_dt = now_ist - timedelta(hours=12)
@@ -240,40 +230,51 @@ def compute_coverage_window(edition_type: str, target_date_str: str | None = Non
 
 
 def sanitize_untrusted_text(text: str, max_length: int = 650) -> str:
-    """
-    Strip HTML tags, neutralize prompt injection phrases, strip YouTube/TV SEO pipe spam,
-    and cap snippet length so full copyrighted articles are never stored and malicious prompts are defused.
-    """
     if not text:
         return ""
-    # Remove HTML tags
     cleaned = re.sub(r"<[^>]+>", " ", str(text))
-    # Neutralize prompt injection attempts
+    cleaned = re.split(
+        r"(?:WATCH\s+LIVE|Follow\s+US|Subscribe\s+to|ID_[A-Z0-9]+|https?://\S+)",
+        cleaned,
+        flags=re.IGNORECASE,
+    )[0]
+    cleaned = re.sub(r"[👉🔴📺▶️⚡🔔]+", " ", cleaned)
+    cleaned = re.sub(r"^(?:JUST\s+NOW|BREAKING\s+NEWS|\d+\s*-\s*)\s*[\|:\-–—]?\s*", "", cleaned, flags=re.IGNORECASE)
+
+    if cleaned.count("|") >= 2:
+        parts = [p.strip() for p in cleaned.split("|") if len(p.strip()) > 3]
+        cleaned = " — ".join(parts[:2]) if parts else cleaned
+
+    cleaned = re.sub(r"(\|\s*){1,}", " ", cleaned)
     for pattern in PROMPT_INJECTION_PATTERNS:
         cleaned = pattern.sub("[REDACTED_INSTRUCTION]", cleaned)
 
-    # Cut off anything after WATCH LIVE, Follow US, ID_VV, or URLs
-    cutoff_match = re.search(r"(?i)\b(watch\s+live|follow\s+us|id_vv)\b|https?://", cleaned)
-    if cutoff_match:
-        cleaned = cleaned[:cutoff_match.start()]
-
-    # Remove emojis (e.g. 👉, 🔴, 🔥, etc.) and promotional unicode symbols
-    cleaned = re.sub(r"[\U00010000-\U0010ffff\u2600-\u27ff\u2b50\ufe0f\u200d👉-🔽🔴⚡🔥📢▶️]", " ", cleaned)
-
-    # Collapse empty or repeated pipes like '| | |'
-    cleaned = re.sub(r"(\s*\|\s*){2,}", " | ", cleaned)
-
-    # If there are 3+ '|' pipes, keep only the first two segments
-    segments = [seg.strip() for seg in cleaned.split("|") if seg.strip()]
-    if len(segments) >= 3:
-        cleaned = " | ".join(segments[:2])
-    else:
-        cleaned = " | ".join(segments)
-
-    # Collapse whitespace and strip dangling punctuation/pipes
-    cleaned = cleaned.strip(" |:-")
-    cleaned = re.sub(r"\s+", " ", cleaned).strip()
-
+    cleaned = re.sub(r"\s+", " ", cleaned).strip(" |-–—:")
     if len(cleaned) > max_length:
         cleaned = cleaned[:max_length].rsplit(" ", 1)[0] + "..."
     return cleaned
+
+
+def has_tamil_script(text: str) -> bool:
+    return bool(text and TAMIL_UNICODE_RE.search(text))
+
+
+def translate_tamil_to_english(text: str) -> str:
+    """Translate any Tamil or mixed Tamil-English text into 100% Pure English."""
+    if not text:
+        return ""
+    if not has_tamil_script(text):
+        return sanitize_untrusted_text(text)
+
+    try:
+        q = urllib.parse.quote(text[:900])
+        url = f"https://translate.googleapis.com/translate_a/single?client=gtx&sl=ta&tl=en&dt=t&q={q}"
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        with urllib.request.urlopen(req, timeout=8) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        translated_parts = [seg[0] for seg in data[0] if seg and seg[0]]
+        result = "".join(translated_parts).strip()
+        return sanitize_untrusted_text(result, max_length=650)
+    except Exception:
+        ascii_only = TAMIL_UNICODE_RE.sub(" ", text)
+        return sanitize_untrusted_text(ascii_only, max_length=650)

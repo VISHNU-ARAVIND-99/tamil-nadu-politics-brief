@@ -3,18 +3,11 @@
 Step 10 & Step 11 Helper:
 - Renders the Markdown twin of an edition
 - Saves both .json and .md files into archive/YYYY/MM/
-- Updates data/archive-index.json and data/latest-editions.json without losing past editions
+- Updates data/archive-index.json and data/latest-editions.json with bulleted card excerpts
 """
 
 import json
-import sys
 from pathlib import Path
-
-if sys.stdout and hasattr(sys.stdout, "reconfigure"):
-    sys.stdout.reconfigure(encoding="utf-8", errors="backslashreplace")
-if sys.stderr and hasattr(sys.stderr, "reconfigure"):
-    sys.stderr.reconfigure(encoding="utf-8", errors="backslashreplace")
-
 from scripts.config import (
     ARCHIVE_DIR,
     ARCHIVE_INDEX_FILE,
@@ -25,7 +18,6 @@ from scripts.config import (
 
 
 def render_edition_markdown(edition: dict) -> str:
-    """Convert structured edition JSON into a clean, permanent Markdown document."""
     sec = edition.get("sections", {})
     lines = [
         f"# {edition['title']}",
@@ -33,17 +25,15 @@ def render_edition_markdown(edition: dict) -> str:
         f"- **Edition ID:** `{edition['edition_id']}`",
         f"- **Date:** {edition['date']} ({edition['edition_type'].capitalize()} Edition)",
         f"- **Coverage Period:** {edition['coverage_start_ist']} to {edition['coverage_end_ist']}",
-        f"- **Scheduled Time (IST):** {edition['scheduled_time_ist']}",
-        f"- **Generated At (IST):** {edition['generated_at_ist']}",
         f"- **Published At (IST):** {edition['published_at_ist']}",
         f"- **Estimated Reading Time:** {edition['reading_time_minutes']} minutes",
         "",
         f"## Headline: {edition['headline']}",
         "",
-        "## B. The Big Picture",
+        "## The Big Picture",
         sec.get("big_picture", ""),
         "",
-        "## C. Top Political Developments",
+        "## Top Political Developments",
     ]
 
     for idx, dev in enumerate(sec.get("top_developments", []), start=1):
@@ -51,56 +41,29 @@ def render_edition_markdown(edition: dict) -> str:
             [
                 f"### {idx}. {dev.get('headline', '')}",
                 f"- **Verification Status:** {dev.get('verification_badge', 'Verified')}",
-                f"- **What happened?** {dev.get('what_happened', '')}",
-                f"- **Who is involved?** {dev.get('who_is_involved', '')}",
-                f"- **What are the verified facts?** {dev.get('verified_facts', '')}",
-                f"- **Why does it matter?** {dev.get('why_it_matters', '')}",
-                f"- **Political responses:** {dev.get('political_responses', '')}",
-                f"- **What happens next?** {dev.get('what_happens_next', '')}",
+                f"{dev.get('summary', dev.get('what_happened', ''))}",
             ]
         )
-        src_links = [f"[{s['publisher']}: {s['title']}]({s['url']})" for s in dev.get("sources", [])]
+        if dev.get("why_it_matters"):
+            lines.append(f"- **Why it matters:** {dev.get('why_it_matters')}")
+        src_links = [f"[{s['publisher']}]({s['url']})" for s in dev.get("sources", [])]
         lines.append(f"- **Sources:** {' | '.join(src_links)}")
         lines.append("")
 
-    lines.extend(
-        [
-            "## D. Government and Administration",
-            sec.get("government_and_administration", ""),
-            "",
-            "## E. Political Parties and Opposition",
-            sec.get("political_parties_and_opposition", ""),
-            "",
-            "## F. Assembly, Courts, and Policy",
-            sec.get("assembly_courts_and_policy", ""),
-            "",
-            "## G. District-Level Developments",
-            sec.get("district_developments", ""),
-            "",
-            "## H. Claims Versus Verified Facts",
-        ]
-    )
+    for heading, key in [
+        ("Government and Administration", "government_and_administration"),
+        ("Political Parties and Opposition", "political_parties_and_opposition"),
+        ("Assembly, Courts, and Policy", "assembly_courts_and_policy"),
+        ("District-Level Developments", "district_developments"),
+        ("What to Watch Next", "what_to_watch_next"),
+    ]:
+        val = (sec.get(key) or "").strip()
+        if val:
+            lines.extend([f"## {heading}", val, ""])
 
-    for cf in sec.get("claims_vs_facts", []):
-        lines.extend(
-            [
-                f"- **Claim ({cf.get('claimant', 'Statement')}):** {cf.get('claim', '')}",
-                f"  - **Verified Evidence:** {cf.get('verified_evidence', '')}",
-            ]
-        )
-
-    lines.extend(
-        [
-            "",
-            "## I. What to Watch Next",
-            sec.get("what_to_watch_next", ""),
-            "",
-            "## J. Sources and Further Reading",
-        ]
-    )
-
+    lines.append("## Sources and Further Reading")
     for s in sec.get("all_sources", []):
-        lines.append(f"- [{s['title']}]({s['url']}) — *{s['publisher']}* ({s['published_date']})")
+        lines.append(f"- **{s['publisher']}:** [{s['title']}]({s['url']}) ({s['published_date']})")
 
     return "\n".join(lines) + "\n"
 
@@ -111,7 +74,6 @@ def save_edition_and_update_indexes(
     archive_index_file: Path = ARCHIVE_INDEX_FILE,
     latest_editions_file: Path = LATEST_EDITIONS_FILE,
 ) -> dict:
-    """Save Markdown & JSON files and atomically update archive-index.json and latest-editions.json."""
     year, month, _ = edition["date"].split("-")
     target_folder = archive_dir / year / month
     target_folder.mkdir(parents=True, exist_ok=True)
@@ -123,7 +85,6 @@ def save_edition_and_update_indexes(
     json_full_path = archive_dir / year / month / f"{edition_id}.json"
     md_full_path = archive_dir / year / month / f"{edition_id}.md"
 
-    # Strip internal telemetry before saving edition file
     clean_edition = {k: v for k, v in edition.items() if not k.startswith("_")}
     clean_edition["published_at_ist"] = get_ist_now().isoformat()
 
@@ -134,19 +95,16 @@ def save_edition_and_update_indexes(
     with open(md_full_path, "w", encoding="utf-8") as f:
         f.write(md_content)
 
-    # Update archive-index.json (preserving all past editions)
     if archive_index_file.exists():
         with open(archive_index_file, "r", encoding="utf-8") as f:
             index_data = json.load(f)
     else:
         index_data = {"total_editions": 0, "last_updated_ist": "", "editions": []}
 
-    summary_blob = " ".join(
-        [
-            clean_edition["headline"],
-            clean_edition["sections"].get("big_picture", ""),
-            " ".join(d.get("headline", "") for d in clean_edition["sections"].get("top_developments", [])),
-        ]
+    bullet_headlines = "\n".join(
+        f"- {d.get('headline', '')}"
+        for d in clean_edition["sections"].get("top_developments", [])[:4]
+        if d.get("headline")
     )
 
     index_entry = {
@@ -160,7 +118,7 @@ def save_edition_and_update_indexes(
         "coverage_window": f"{clean_edition['coverage_start_ist']} to {clean_edition['coverage_end_ist']}",
         "reading_time_minutes": clean_edition["reading_time_minutes"],
         "headline": clean_edition["headline"],
-        "summary_text": summary_blob[:900],
+        "summary_text": bullet_headlines[:900],
         "parties": clean_edition["parties"],
         "topics": clean_edition["topics"],
         "districts": clean_edition["districts"],
@@ -179,7 +137,6 @@ def save_edition_and_update_indexes(
     with open(archive_index_file, "w", encoding="utf-8") as f:
         json.dump(index_data, f, indent=2, ensure_ascii=False)
 
-    # Update latest-editions.json
     if latest_editions_file.exists():
         with open(latest_editions_file, "r", encoding="utf-8") as f:
             latest_data = json.load(f)
@@ -201,7 +158,7 @@ def save_edition_and_update_indexes(
         "reading_time_minutes": clean_edition["reading_time_minutes"],
         "word_count": clean_edition["word_count"],
         "headline": clean_edition["headline"],
-        "big_picture_excerpt": clean_edition["sections"].get("big_picture", "")[:360] + "...",
+        "big_picture_excerpt": bullet_headlines,
         "parties": clean_edition["parties"],
         "topics": clean_edition["topics"],
         "districts": clean_edition["districts"],
@@ -211,27 +168,9 @@ def save_edition_and_update_indexes(
     }
 
     latest_data[clean_edition["edition_type"]] = latest_card
-
-    # Determine which edition is the latest chronologically
-    morning_card = latest_data.get("morning")
-    evening_card = latest_data.get("evening")
-    if morning_card and evening_card:
-        if evening_card["date"] > morning_card["date"]:
-            active_card = evening_card
-        elif morning_card["date"] > evening_card["date"]:
-            active_card = morning_card
-        else:
-            # Same date: evening brief is chronologically newer
-            active_card = evening_card
-    else:
-        active_card = evening_card or morning_card or latest_card
-
     latest_data["last_updated_ist"] = clean_edition["published_at_ist"]
     latest_data["system_status"] = "operational"
-    latest_data["status_message"] = (
-        f"Latest {active_card['edition_type']} edition ({active_card['date']}) published. "
-        f"Updated at {clean_edition['published_at_ist']}."
-    )
+    latest_data["status_message"] = f"Latest {clean_edition['edition_type']} edition published at {clean_edition['published_at_ist']}."
 
     with open(latest_editions_file, "w", encoding="utf-8") as f:
         json.dump(latest_data, f, indent=2, ensure_ascii=False)
@@ -240,7 +179,6 @@ def save_edition_and_update_indexes(
 
 
 def record_pipeline_log(log_entry: dict, logs_file: Path = PIPELINE_LOGS_FILE) -> None:
-    """Append pipeline telemetry log and cap history at 100 entries to keep repo lean."""
     if logs_file.exists():
         try:
             with open(logs_file, "r", encoding="utf-8") as f:
