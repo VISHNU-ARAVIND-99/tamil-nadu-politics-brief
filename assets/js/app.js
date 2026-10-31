@@ -1,6 +1,6 @@
 /**
  * Tamil Nadu Politics Brief - Client-Side Application Engine
- * Handles edition rendering, archive filtering, client-side search, and theme persistence.
+ * Handles edition rendering, archive filtering, client-side search, theme persistence, and social sharing.
  */
 
 const TN_PARTIES = [
@@ -39,6 +39,42 @@ function escapeHtml(str) {
         .replace(/"/g, "&quot;");
 }
 
+/**
+ * Safely converts basic Markdown (**bold**, bullet lists, and paragraph breaks) into clean HTML.
+ */
+function formatEditorialText(str) {
+    if (!str) return "";
+    const escaped = escapeHtml(str);
+    const formattedBold = escaped.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+
+    return formattedBold
+        .split(/\n{2,}/)
+        .map(block => {
+            const lines = block.trim().split("\n");
+            const isBulletList = lines.every(line => /^[-*•]\s+/.test(line.trim()));
+            if (isBulletList) {
+                const items = lines
+                    .map(line => `<li>${line.trim().replace(/^[-*•]\s+/, "")}</li>`)
+                    .join("");
+                return `<ul style="padding-left:1.25rem;margin-bottom:0.85rem;">${items}</ul>`;
+            }
+            return `<p style="margin-bottom:0.85rem;">${lines.join("<br>")}</p>`;
+        })
+        .join("");
+}
+
+/**
+ * One-click WhatsApp & Copy Link helper
+ */
+function shareEditionUrl(editionId, headline) {
+    const url = `${window.location.origin}${window.location.pathname.replace(/[^/]*$/, "")}edition.html?id=${encodeURIComponent(editionId)}`;
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(`${headline} — ${url}`);
+        alert("Edition link copied to clipboard!");
+    }
+}
+window.shareEditionUrl = shareEditionUrl;
+
 function initTheme() {
     const saved = localStorage.getItem("tnpb_theme") || "light";
     document.documentElement.setAttribute("data-theme", saved);
@@ -64,6 +100,28 @@ function initTheme() {
             timeZone: "Asia/Kolkata"
         }) + " (IST)";
     }
+}
+
+function initBackToTop() {
+    const btn = document.createElement("button");
+    btn.id = "back-to-top";
+    btn.className = "back-to-top-btn";
+    btn.innerHTML = "&#8593; Top";
+    btn.setAttribute("aria-label", "Back to top");
+    btn.style.display = "none";
+    document.body.appendChild(btn);
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 350) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    });
+
+    btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 }
 
 function renderEditionCard(ed, slotLabel) {
@@ -148,6 +206,9 @@ function renderFullEditionView(container, ed) {
     </li>
   `).join("");
 
+    const shareUrl = `${window.location.origin}${window.location.pathname.replace(/[^/]*$/, "")}edition.html?id=${encodeURIComponent(ed.edition_id)}`;
+    const whatsAppText = encodeURIComponent(`${ed.headline} — ${shareUrl}`);
+
     container.innerHTML = `
     ${sampleBanner}
     <div class="edition-layout">
@@ -166,7 +227,11 @@ function renderFullEditionView(container, ed) {
           <li><a href="#sec-j">J. Full Source List</a></li>
         </ul>
         <hr style="margin:0.85rem 0;border:none;border-top:1px solid var(--border-color);">
-        <button onclick="window.print()" class="theme-btn" style="width:100%;">Print / Save PDF</button>
+        <div style="display:flex;flex-direction:column;gap:0.45rem;">
+          <a href="https://api.whatsapp.com/send?text=${whatsAppText}" target="_blank" rel="noopener noreferrer" class="theme-btn" style="text-align:center;text-decoration:none;display:block;background-color:#25D366;color:#ffffff;border-color:#25D366;">Share on WhatsApp</a>
+          <button type="button" onclick="shareEditionUrl('${escapeHtml(ed.edition_id)}', '${escapeHtml(ed.headline.replace(/'/g, "\\'"))}')" class="theme-btn" style="width:100%;">Copy Edition Link</button>
+          <button type="button" onclick="window.print()" class="theme-btn" style="width:100%;">Print / Save PDF</button>
+        </div>
       </aside>
       <div class="reading-column">
         <section id="sec-a" class="section-block">
@@ -184,7 +249,7 @@ function renderFullEditionView(container, ed) {
 
         <section id="sec-b" class="section-block">
           <h2>B. The Big Picture</h2>
-          <p>${escapeHtml(sec.big_picture)}</p>
+          ${formatEditorialText(sec.big_picture)}
         </section>
 
         <section id="sec-c" class="section-block">
@@ -194,22 +259,22 @@ function renderFullEditionView(container, ed) {
 
         <section id="sec-d" class="section-block">
           <h2>D. Government and Administration</h2>
-          <p>${escapeHtml(sec.government_and_administration)}</p>
+          ${formatEditorialText(sec.government_and_administration)}
         </section>
 
         <section id="sec-e" class="section-block">
           <h2>E. Political Parties and Opposition</h2>
-          <p>${escapeHtml(sec.political_parties_and_opposition)}</p>
+          ${formatEditorialText(sec.political_parties_and_opposition)}
         </section>
 
         <section id="sec-f" class="section-block">
           <h2>F. Assembly, Courts, and Policy</h2>
-          <p>${escapeHtml(sec.assembly_courts_and_policy)}</p>
+          ${formatEditorialText(sec.assembly_courts_and_policy)}
         </section>
 
         <section id="sec-g" class="section-block">
           <h2>G. District-Level Developments</h2>
-          <p>${escapeHtml(sec.district_developments)}</p>
+          ${formatEditorialText(sec.district_developments)}
         </section>
 
         <section id="sec-h" class="section-block">
@@ -219,7 +284,7 @@ function renderFullEditionView(container, ed) {
 
         <section id="sec-i" class="section-block">
           <h2>I. What to Watch Next</h2>
-          <p>${escapeHtml(sec.what_to_watch_next)}</p>
+          ${formatEditorialText(sec.what_to_watch_next)}
         </section>
 
         <section id="sec-j" class="section-block">
@@ -238,7 +303,7 @@ async function initHomePage() {
     if (!cardsEl) return;
 
     try {
-        const res = await fetch("data/latest-editions.json");
+        const res = await fetch("data/latest-editions.json", { cache: "no-store" });
         const data = await res.json();
 
         if (statusEl) {
@@ -251,7 +316,7 @@ async function initHomePage() {
 
         const mostRecent = data.evening || data.morning;
         if (mostRecent && mostRecent.json_path && inlineEditionEl) {
-            const edRes = await fetch(mostRecent.json_path);
+            const edRes = await fetch(mostRecent.json_path, { cache: "no-store" });
             const edFull = await edRes.json();
             renderFullEditionView(inlineEditionEl, edFull);
         }
@@ -268,7 +333,7 @@ async function initEditionPage() {
     const editionId = params.get("id");
 
     try {
-        const idxRes = await fetch("data/archive-index.json");
+        const idxRes = await fetch("data/archive-index.json", { cache: "no-store" });
         const idxData = await idxRes.json();
         const editions = idxData.editions || [];
         const target = editionId
@@ -280,7 +345,7 @@ async function initEditionPage() {
             return;
         }
 
-        const edRes = await fetch(target.json_path);
+        const edRes = await fetch(target.json_path, { cache: "no-store" });
         const edData = await edRes.json();
         document.title = `${edData.title} | Tamil Nadu Politics Brief`;
         renderFullEditionView(container, edData);
@@ -309,7 +374,7 @@ async function initArchivePage() {
     populateSelect(topicSelect, TN_TOPICS, "All Topics");
     populateSelect(districtSelect, TN_DISTRICTS, "All 38 Districts");
 
-    const res = await fetch("data/archive-index.json");
+    const res = await fetch("data/archive-index.json", { cache: "no-store" });
     const data = await res.json();
     const allEditions = data.editions || [];
 
@@ -360,7 +425,7 @@ async function initSearchPage() {
     const resultsEl = document.getElementById("search-results-list");
     if (!inputEl || !resultsEl) return;
 
-    const res = await fetch("data/archive-index.json");
+    const res = await fetch("data/archive-index.json", { cache: "no-store" });
     const data = await res.json();
     const editions = data.editions || [];
 
@@ -411,6 +476,7 @@ async function initSearchPage() {
 
 document.addEventListener("DOMContentLoaded", () => {
     initTheme();
+    initBackToTop();
     initHomePage();
     initEditionPage();
     initArchivePage();
