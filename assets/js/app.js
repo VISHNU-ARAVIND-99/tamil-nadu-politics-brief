@@ -1,6 +1,6 @@
 /**
- * Tamil Nadu Politics Brief - Client-Side Application Engine
- * Handles edition rendering, archive filtering, client-side search, theme persistence, and social sharing.
+ * Tamil Nadu Politics Brief - Clean Newspaper UI Engine
+ * Removes repetitive Q&A labels and formats all timestamps into readable IST.
  */
 
 const TN_PARTIES = [
@@ -39,32 +39,31 @@ function escapeHtml(str) {
         .replace(/"/g, "&quot;");
 }
 
-/**
- * Format ISO datetime string into human-friendly IST: e.g. "31 Oct 2026, 5:10 PM IST"
- */
 function formatReadableIST(isoStr) {
     if (!isoStr) return "";
-    try {
-        const d = new Date(isoStr);
-        if (isNaN(d.getTime())) return String(isoStr);
-        const formatted = d.toLocaleString("en-IN", {
-            timeZone: "Asia/Kolkata",
-            day: "numeric",
-            month: "short",
-            year: "numeric",
-            hour: "numeric",
-            minute: "2-digit",
-            hour12: true
-        });
-        return `${formatted} IST`;
-    } catch {
-        return String(isoStr);
-    }
+    const dt = new Date(isoStr);
+    if (isNaN(dt.getTime())) return escapeHtml(isoStr);
+    return dt.toLocaleString("en-IN", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true,
+        timeZone: "Asia/Kolkata"
+    }) + " IST";
 }
 
-/**
- * Safely converts basic Markdown (**bold**, bullet lists, and paragraph breaks) into clean HTML.
- */
+function formatStatusLabel(status) {
+    const map = {
+        "published": "Verified Edition",
+        "published_delayed": "Published Edition",
+        "published_quiet_window": "Quiet Window",
+        "published_extractive_fallback": "Live Feed Edition"
+    };
+    return map[status] || "Published Edition";
+}
+
 function formatEditorialText(str) {
     if (!str) return "";
     const escaped = escapeHtml(str);
@@ -86,20 +85,24 @@ function formatEditorialText(str) {
         .join("");
 }
 
-/**
- * One-click WhatsApp & Copy Link helper
- */
-function shareEditionUrl(editionId, headline) {
-    const url = `${window.location.origin}${window.location.pathname.replace(/[^/]*$/, "")}edition.html?id=${encodeURIComponent(editionId)}`;
+function shareOnWhatsApp(editionId, headline) {
+    const baseUrl = window.location.origin + window.location.pathname.replace(/[^/]*$/, "");
+    const fullUrl = `${baseUrl}edition.html?id=${encodeURIComponent(editionId)}`;
+    const text = `${headline} — Read on Tamil Nadu Politics Brief: ${fullUrl}`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+}
+
+function copyEditionLink(editionId) {
+    const baseUrl = window.location.origin + window.location.pathname.replace(/[^/]*$/, "");
+    const fullUrl = `${baseUrl}edition.html?id=${encodeURIComponent(editionId)}`;
     if (navigator.clipboard) {
-        navigator.clipboard.writeText(`${headline} — ${url}`);
+        navigator.clipboard.writeText(fullUrl);
         alert("Edition link copied to clipboard!");
     }
 }
-window.shareEditionUrl = shareEditionUrl;
 
 function initTheme() {
-    const saved = localStorage.getItem("tnpb_theme") || "light";
+    const saved = localStorage.getItem("tnpb_theme") || "dark";
     document.documentElement.setAttribute("data-theme", saved);
     const btn = document.getElementById("theme-toggle");
     if (btn) {
@@ -114,8 +117,7 @@ function initTheme() {
     }
     const clockEl = document.getElementById("ist-date-display");
     if (clockEl) {
-        const now = new Date();
-        clockEl.textContent = now.toLocaleDateString("en-IN", {
+        clockEl.textContent = new Date().toLocaleDateString("en-IN", {
             weekday: "long",
             year: "numeric",
             month: "long",
@@ -123,28 +125,6 @@ function initTheme() {
             timeZone: "Asia/Kolkata"
         }) + " (IST)";
     }
-}
-
-function initBackToTop() {
-    const btn = document.createElement("button");
-    btn.id = "back-to-top";
-    btn.className = "back-to-top-btn";
-    btn.innerHTML = "&#8593; Top";
-    btn.setAttribute("aria-label", "Back to top");
-    btn.style.display = "none";
-    document.body.appendChild(btn);
-
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 350) {
-            btn.style.display = "block";
-        } else {
-            btn.style.display = "none";
-        }
-    });
-
-    btn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
 }
 
 function renderEditionCard(ed, slotLabel) {
@@ -158,9 +138,9 @@ function renderEditionCard(ed, slotLabel) {
       </div>
     `;
     }
-    const sampleBadge = ed.is_test_sample
+    const badge = ed.is_test_sample
         ? `<span class="badge badge-warn">SAMPLE TEST DATA</span>`
-        : `<span class="badge badge-verified">${escapeHtml(ed.status.toUpperCase())}</span>`;
+        : `<span class="badge badge-verified">${escapeHtml(formatStatusLabel(ed.status))}</span>`;
 
     const partyBadges = (ed.parties || [])
         .slice(0, 6)
@@ -170,11 +150,10 @@ function renderEditionCard(ed, slotLabel) {
     return `
     <article class="card">
       <div class="card-kicker">${escapeHtml(slotLabel)} &bull; ${escapeHtml(ed.date)}</div>
-      <div style="margin-bottom:0.5rem;">${sampleBadge}</div>
+      <div style="margin-bottom:0.5rem;">${badge}</div>
       <h2><a href="${escapeHtml(ed.url)}">${escapeHtml(ed.headline)}</a></h2>
       <p class="meta-line">
-        Published: ${escapeHtml(formatReadableIST(ed.published_at_ist))} &bull;
-        Reading time: ~${escapeHtml(ed.reading_time_minutes)} min
+        Updated: ${formatReadableIST(ed.published_at_ist)} &bull; ~${escapeHtml(ed.reading_time_minutes)} min read
       </p>
       <p style="margin-bottom:0.85rem;">${escapeHtml(ed.big_picture_excerpt || "")}</p>
       <div style="margin-bottom:0.85rem;">${partyBadges}</div>
@@ -187,51 +166,45 @@ function renderEditionCard(ed, slotLabel) {
 
 function renderFullEditionView(container, ed) {
     const sec = ed.sections || {};
-    const sampleBanner = ed.is_test_sample
-        ? `<div class="status-banner sample-warning">
-         SAMPLE TEST DATA NOTICE: This edition is clearly marked test verification data and does not represent live political news.
-       </div>`
-        : "";
 
     const devsHtml = (sec.top_developments || []).map((d, i) => {
-        // Deduplicate source links within each story
-        const seenSrc = new Set();
-        const uniqueSources = [];
-        for (const s of (d.sources || [])) {
-            const key = (s.url || s.title || "").trim();
-            if (key && !seenSrc.has(key)) {
-                seenSrc.add(key);
-                uniqueSources.push(s);
-            }
-        }
+        const rawBody = (d.summary || d.what_happened || "").trim();
+        const headlineClean = (d.headline || "").trim();
+
+        // Never repeat the headline as the body text if the RSS snippet was identical to the title
+        const hasDistinctBody = rawBody && rawBody.toLowerCase() !== headlineClean.toLowerCase();
+
+        const seenUrls = new Set();
+        const uniqueSources = (d.sources || []).filter(s => {
+            if (!s.url || seenUrls.has(s.url)) return false;
+            seenUrls.add(s.url);
+            return true;
+        });
 
         const srcLinks = uniqueSources.map(s =>
-            `<a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.publisher)}: ${escapeHtml(s.title)} (${escapeHtml((s.language || "en").toUpperCase())})</a>`
+            `<a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.publisher)}: ${escapeHtml(s.title)}</a>`
         ).join(" &bull; ");
 
-        const storyBody = formatEditorialText(d.summary || d.what_happened || "");
-        const whyMatters = d.why_it_matters
-            ? `<div class="story-field" style="margin-top:0.75rem;padding:0.6rem 0.85rem;background:var(--bg-subtle);border-left:3px solid var(--accent-red);font-size:0.95rem;">
-                 <strong>Why it matters:</strong> ${escapeHtml(d.why_it_matters)}
-               </div>`
+        // Show clean Context tags only if useful and non-generic
+        const involved = d.who_is_involved && d.who_is_involved !== "State Administration / Public Stakeholders"
+            ? `<span class="badge badge-tag">${escapeHtml(d.who_is_involved)}</span>`
             : "";
-        const nextSteps = d.what_happens_next
-            ? `<div class="story-field" style="margin-top:0.5rem;font-size:0.92rem;color:var(--text-secondary);">
-                 <strong>Next Steps:</strong> ${escapeHtml(d.what_happens_next)}
-               </div>`
+
+        const whyMatters = d.why_it_matters && !d.why_it_matters.startsWith("Affects ") && !d.why_it_matters.startsWith("Relates to ")
+            ? `<p style="border-left:3px solid var(--accent-blue);padding-left:0.75rem;margin:0.65rem 0;color:var(--text-secondary);font-size:0.95rem;"><strong>Why it matters:</strong> ${escapeHtml(d.why_it_matters)}</p>`
             : "";
 
         return `
       <article class="story-item">
-        <span class="badge badge-verified">${escapeHtml(d.verification_badge || "Verified")}</span>
-        <h3>${i + 1}. ${escapeHtml(d.headline)}</h3>
-        <div class="story-body" style="margin:0.75rem 0;">
-          ${storyBody}
+        <div style="margin-bottom:0.45rem;">
+          <span class="badge badge-verified">${escapeHtml(d.verification_badge || "Verified Report")}</span>
+          ${involved}
         </div>
+        <h3 style="margin-bottom:0.6rem;">${i + 1}. ${escapeHtml(headlineClean)}</h3>
+        ${hasDistinctBody ? `<div style="margin-bottom:0.65rem;">${formatEditorialText(rawBody)}</div>` : ""}
         ${whyMatters}
-        ${nextSteps}
-        <div class="story-field" style="margin-top:0.75rem;font-family:var(--font-sans);font-size:0.84rem;">
-          <strong>Sources:</strong> ${srcLinks || "None"}
+        <div class="meta-line" style="margin-bottom:0;padding-top:0.4rem;border-top:1px solid var(--border-color);">
+          <strong>Source:</strong> ${srcLinks || "Official feed"}
         </div>
       </article>
     `;
@@ -242,31 +215,16 @@ function renderFullEditionView(container, ed) {
       <div class="story-field"><strong>Claim (${escapeHtml(c.claimant)}):</strong> ${escapeHtml(c.claim)}</div>
       <div class="story-field"><strong>Verified Evidence:</strong> ${escapeHtml(c.verified_evidence)}</div>
     </div>
-  `).join("") || "<p>No disputed political claims flagged in this coverage window.</p>";
+  `).join("") || "<p>No disputed partisan claims flagged in this window.</p>";
 
-    // Deduplicate all sources list
-    const seenAllSrc = new Set();
-    const uniqueAllSources = [];
-    for (const s of (sec.all_sources || [])) {
-        const key = (s.url || s.title || "").trim();
-        if (key && !seenAllSrc.has(key)) {
-            seenAllSrc.add(key);
-            uniqueAllSources.push(s);
-        }
-    }
-
-    const sourcesHtml = uniqueAllSources.map(s => `
+    const sourcesHtml = (sec.all_sources || []).map(s => `
     <li style="margin-bottom:0.45rem;">
       <a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.title)}</a>
-      &mdash; <strong>${escapeHtml(s.publisher)}</strong> (${escapeHtml(s.published_date)}, ${escapeHtml((s.language || "en").toUpperCase())})
+      &mdash; <strong>${escapeHtml(s.publisher)}</strong> (${escapeHtml(s.published_date)})
     </li>
   `).join("");
 
-    const shareUrl = `${window.location.origin}${window.location.pathname.replace(/[^/]*$/, "")}edition.html?id=${encodeURIComponent(ed.edition_id)}`;
-    const whatsAppText = encodeURIComponent(`${ed.headline} — ${shareUrl}`);
-
     container.innerHTML = `
-    ${sampleBanner}
     <div class="edition-layout">
       <aside class="toc-sidebar">
         <h4>Edition Contents</h4>
@@ -283,22 +241,18 @@ function renderFullEditionView(container, ed) {
           <li><a href="#sec-j">J. Full Source List</a></li>
         </ul>
         <hr style="margin:0.85rem 0;border:none;border-top:1px solid var(--border-color);">
-        <div style="display:flex;flex-direction:column;gap:0.45rem;">
-          <a href="https://api.whatsapp.com/send?text=${whatsAppText}" target="_blank" rel="noopener noreferrer" class="theme-btn" style="text-align:center;text-decoration:none;display:block;background-color:#25D366;color:#ffffff;border-color:#25D366;">Share on WhatsApp</a>
-          <button type="button" onclick="shareEditionUrl('${escapeHtml(ed.edition_id)}', '${escapeHtml(ed.headline.replace(/'/g, "\\'"))}')" class="theme-btn" style="width:100%;">Copy Edition Link</button>
-          <button type="button" onclick="window.print()" class="theme-btn" style="width:100%;">Print / Save PDF</button>
-        </div>
+        <button onclick="shareOnWhatsApp('${escapeHtml(ed.edition_id)}', '${escapeHtml(ed.headline.replace(/'/g, "\\'"))}')" class="theme-btn" style="width:100%;background:#1f8b4c;color:#fff;border:none;padding:0.5rem;margin-bottom:0.45rem;font-weight:600;">Share on WhatsApp</button>
+        <button onclick="copyEditionLink('${escapeHtml(ed.edition_id)}')" class="theme-btn" style="width:100%;padding:0.45rem;margin-bottom:0.45rem;">Copy Edition Link</button>
+        <button onclick="window.print()" class="theme-btn" style="width:100%;padding:0.45rem;">Print / Save PDF</button>
       </aside>
       <div class="reading-column">
         <section id="sec-a" class="section-block">
           <div class="card-kicker">${escapeHtml(ed.edition_type.toUpperCase())} EDITION &bull; ${escapeHtml(ed.date)}</div>
           <h1 style="font-size:2rem;line-height:1.25;margin:0.4rem 0 0.75rem;">${escapeHtml(ed.headline)}</h1>
           <p class="meta-line">
-            <strong>Edition Title:</strong> ${escapeHtml(ed.title)}<br>
-            <strong>Coverage Window:</strong> ${escapeHtml(formatReadableIST(ed.coverage_start_ist))} to ${escapeHtml(formatReadableIST(ed.coverage_end_ist))}<br>
-            <strong>Generated:</strong> ${escapeHtml(formatReadableIST(ed.generated_at_ist))} &bull;
-            <strong>Published:</strong> ${escapeHtml(formatReadableIST(ed.published_at_ist))} &bull;
-            <strong>Status:</strong> ${escapeHtml(ed.status)} &bull;
+            <strong>Edition:</strong> ${escapeHtml(ed.title)}<br>
+            <strong>Coverage Window:</strong> ${formatReadableIST(ed.coverage_start_ist)} &ndash; ${formatReadableIST(ed.coverage_end_ist)}<br>
+            <strong>Published:</strong> ${formatReadableIST(ed.published_at_ist)} &bull;
             <strong>Reading Time:</strong> ~${escapeHtml(ed.reading_time_minutes)} min
           </p>
         </section>
@@ -363,7 +317,7 @@ async function initHomePage() {
         const data = await res.json();
 
         if (statusEl) {
-            statusEl.textContent = data.status_message || "Automated twice-daily publishing active.";
+            statusEl.textContent = `Latest edition updated on ${formatReadableIST(data.last_updated_ist)}`;
         }
 
         cardsEl.innerHTML =
@@ -377,7 +331,7 @@ async function initHomePage() {
             renderFullEditionView(inlineEditionEl, edFull);
         }
     } catch (err) {
-        cardsEl.innerHTML = `<div class="card"><p>Unable to load latest editions metadata: ${escapeHtml(err.message)}</p></div>`;
+        cardsEl.innerHTML = `<div class="card"><p>Unable to load latest editions: ${escapeHtml(err.message)}</p></div>`;
     }
 }
 
@@ -397,7 +351,7 @@ async function initEditionPage() {
             : editions[0];
 
         if (!target) {
-            container.innerHTML = `<div class="card"><h2>Edition Not Found</h2><p>Requested edition ID "${escapeHtml(editionId)}" does not exist in the historical archive.</p></div>`;
+            container.innerHTML = `<div class="card"><h2>Edition Not Found</h2></div>`;
             return;
         }
 
@@ -459,11 +413,9 @@ async function initArchivePage() {
       <article class="card" style="margin-bottom:1rem;">
         <div class="card-kicker">${escapeHtml(ed.date)} &bull; ${escapeHtml(ed.edition_type.toUpperCase())} EDITION</div>
         <h3><a href="${escapeHtml(ed.url)}">${escapeHtml(ed.headline)}</a></h3>
-        <p class="meta-line">Published: ${escapeHtml(formatReadableIST(ed.published_at_ist))} &bull; ~${escapeHtml(ed.reading_time_minutes)} min read</p>
-        <p style="margin-bottom:0.65rem;">${escapeHtml(ed.summary_text)}</p>
+        <p class="meta-line">Published: ${formatReadableIST(ed.published_at_ist)} &bull; ~${escapeHtml(ed.reading_time_minutes)} min read</p>
         <div>
           ${(ed.parties || []).map(p => `<span class="badge badge-tag">${escapeHtml(p)}</span>`).join("")}
-          ${(ed.districts || []).map(d => `<span class="badge badge-tag">${escapeHtml(d)}</span>`).join("")}
         </div>
       </article>
     `).join("");
@@ -488,18 +440,14 @@ async function initSearchPage() {
     function runSearch() {
         const q = inputEl.value.trim().toLowerCase();
         if (!q) {
-            resultsEl.innerHTML = `<p class="meta-line">Enter a keyword above (e.g., DMK, AIADMK, TVK, BJP, NEET, Assembly, Cauvery, Chennai, Madurai) to search all historical briefings.</p>`;
+            resultsEl.innerHTML = `<p class="meta-line">Enter a keyword above to search all historical briefings.</p>`;
             return;
         }
 
         const matches = editions.filter(ed => {
             const haystack = [
-                ed.title,
-                ed.headline,
-                ed.summary_text,
-                ...(ed.parties || []),
-                ...(ed.topics || []),
-                ...(ed.districts || [])
+                ed.title, ed.headline, ed.summary_text,
+                ...(ed.parties || []), ...(ed.topics || []), ...(ed.districts || [])
             ].join(" ").toLowerCase();
             return haystack.includes(q);
         });
@@ -509,15 +457,13 @@ async function initSearchPage() {
             return;
         }
 
-        resultsEl.innerHTML = `<p class="meta-line">Found ${matches.length} edition(s) matching "${escapeHtml(q)}":</p>` +
-            matches.map(ed => `
-        <article class="card" style="margin-bottom:1rem;">
-          <div class="card-kicker">${escapeHtml(ed.date)} &bull; ${escapeHtml(ed.edition_type.toUpperCase())}</div>
-          <h3><a href="${escapeHtml(ed.url)}">${escapeHtml(ed.headline)}</a></h3>
-          <p style="margin-bottom:0.5rem;">${escapeHtml(ed.summary_text)}</p>
-          <a href="${escapeHtml(ed.url)}">Open Permanent Edition &rarr;</a>
-        </article>
-      `).join("");
+        resultsEl.innerHTML = matches.map(ed => `
+      <article class="card" style="margin-bottom:1rem;">
+        <div class="card-kicker">${escapeHtml(ed.date)} &bull; ${escapeHtml(ed.edition_type.toUpperCase())}</div>
+        <h3><a href="${escapeHtml(ed.url)}">${escapeHtml(ed.headline)}</a></h3>
+        <a href="${escapeHtml(ed.url)}">Open Edition &rarr;</a>
+      </article>
+    `).join("");
     }
 
     inputEl.addEventListener("input", runSearch);
@@ -532,7 +478,6 @@ async function initSearchPage() {
 
 document.addEventListener("DOMContentLoaded", () => {
     initTheme();
-    initBackToTop();
     initHomePage();
     initEditionPage();
     initArchivePage();
