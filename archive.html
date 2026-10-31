@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Archive | Tamil Nadu Politics Brief</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-top">
+                <span id="ist-date-display">Asia/Kolkata (IST)</span>
+                <span>Permanent Historical Repository</span>
+                <button id="theme-toggle" class="theme-btn" type="button">Dark Mode</button>
+            </div>
+            <h1 class="masthead-title"><a href="index.html">Tamil Nadu Politics Brief</a></h1>
+            <p class="masthead-tagline">"Understand Tamil Nadu Politics. One Briefing at a Time."</p>
+            <nav class="nav-bar" aria-label="Primary Navigation">
+                <a href="index.html">Latest Briefings</a>
+                <a href="edition.html">Full Edition View</a>
+                <a href="archive.html" class="active">Historical Archive</a>
+                <a href="search.html">Keyword Search</a>
+                <a href="about.html">About &amp; Methodology</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 style="margin-bottom:0.75rem;">Permanent Historical Archive</h2>
+        <p class="meta-line" style="margin-bottom:1.25rem;">
+            Filter past editions by calendar date, Morning/Evening cycle, political party, policy topic, or any of Tamil
+            Nadu's 38 districts.
+        </p>
+
+        <div class="filter-bar">
+            <div>
+                <label for="filter-date">Calendar Date</label>
+                <input type="date" id="filter-date">
+            </div>
+            <div>
+                <label for="filter-type">Edition Cycle</label>
+                <select id="filter-type">
+                    <option value="">Morning &amp; Evening</option>
+                    <option value="morning">Morning (6:00 AM IST)</option>
+                    <option value="evening">Evening (6:00 PM IST)</option>
+                </select>
+            </div>
+            <div>
+                <label for="filter-party">Political Party</label>
+                <select id="filter-party"></select>
+            </div>
+            <div>
+                <label for="filter-topic">Policy Topic</label>
+                <select id="filter-topic"></select>
+            </div>
+            <div>
+                <label for="filter-district">District</label>
+                <select id="filter-district"></select>
+            </div>
+        </div>
+
+        <div id="archive-results"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Every published edition is stored permanently as Markdown and JSON in the public repository.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

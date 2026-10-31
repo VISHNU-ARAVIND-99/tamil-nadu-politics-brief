@@ -1,0 +1,186 @@
+#!/usr/bin/env python3
+"""
+Step 4 & Step 5 of Pipeline:
+- Tags each collected item with Tamil Nadu Political Parties, Topics, and Districts
+- Filters out stories with no Tamil Nadu political or public-policy relevance
+- Deduplicates and clusters stories reporting the same event across Tamil and English outlets
+"""
+
+import re
+from scripts.config import (
+    PARTY_TAXONOMY,
+    TN_DISTRICTS,
+    TN_RELEVANCE_KEYWORDS,
+    TOPIC_TAXONOMY,
+)
+
+STOPWORDS = {
+    "the", "and", "for", "that", "with", "from", "this", "over", "into", "after",
+    "before", "under", "says", "said", "amid", "will", "have", "has", "been",
+    "tamil", "nadu", "chennai", "news", "report", "state", "government"
+}
+
+
+def extract_tags(text: str) -> dict:
+    """Identify matching political parties, topics, and TN districts in Tamil or English text."""
+    lowered = text.lower()
+    parties = []
+    for party, keywords in PARTY_TAXONOMY.items():
+        if any(kw.lower() in lowered for kw in keywords):
+            parties.append(party)
+
+    topics = []
+    for topic, keywords in TOPIC_TAXONOMY.items():
+        if any(kw.lower() in lowered for kw in keywords):
+            topics.append(topic)
+
+    districts = []
+    for district, keywords in TN_DISTRICTS.items():
+        if any(kw.lower() in lowered for kw in keywords):
+            districts.append(district)
+
+    return {
+        "parties": sorted(set(parties)),
+        "topics": sorted(set(topics)),
+        "districts": sorted(set(districts)),
+    }
+
+
+def is_politically_relevant(item: dict, tags: dict) -> bool:
+    """Ensure story relates to Tamil Nadu politics, governance, policy, courts, or districts."""
+    if tags["parties"] or tags["topics"]:
+        return True
+    combined = f"{item.get('title', '')} {item.get('snippet', '')}".lower()
+    if tags["districts"] and any(kw in combined for kw in TN_RELEVANCE_KEYWORDS):
+        return True
+    return False
+
+
+def tokenize_for_similarity(text: str) -> set[str]:
+    """Extract normalized word tokens and entity tags for similarity comparison."""
+    words = re.findall(r"[a-zA-Z0-9\u0B80-\u0BFF]{3,}", text.lower())
+    return {w for w in words if w not in STOPWORDS}
+
+
+def compute_cluster_similarity(item_a: dict, item_b: dict) -> float:
+    """
+    Compute cross-lingual and monolingual similarity score between two stories
+    using token Jaccard similarity plus shared party, district, and topic tags.
+    """
+    tokens_a = item_a["_tokens"]
+    tokens_b = item_b["_tokens"]
+    jaccard = 0.0
+    if tokens_a and tokens_b:
+        intersection = len(tokens_a & tokens_b)
+        union = len(tokens_a | tokens_b)
+        jaccard = intersection / union if union else 0.0
+
+    # Shared entity bonus (enables Tamil + English clustering of the same event)
+    shared_parties = set(item_a["parties"]) & set(item_b["parties"])
+    shared_districts = set(item_a["districts"]) & set(item_b["districts"])
+    shared_topics = set(item_a["topics"]) & set(item_b["topics"])
+
+    entity_score = 0.0
+    if shared_parties and shared_districts:
+        entity_score += 0.45
+    elif shared_parties and shared_topics:
+        entity_score += 0.30
+    elif shared_districts and shared_topics:
+        entity_score += 0.30
+
+    return min(1.0, jaccard + entity_score)
+
+
+def deduplicate_and_filter(raw_items: list[dict]) -> list[dict]:
+    """
+    Filter relevant Tamil Nadu political stories and cluster duplicate coverage
+    into unified story clusters with combined source attributions.
+    """
+    relevant_items = []
+    seen_urls = set()
+
+    for item in raw_items:
+        url = item["url"]
+        if url in seen_urls:
+            continue
+        seen_urls.add(url)
+
+        combined_text = f"{item.get('title', '')} {item.get('snippet', '')}"
+        tags = extract_tags(combined_text)
+        if not is_politically_relevant(item, tags):
+            continue
+
+        enriched = dict(item)
+        enriched["parties"] = tags["parties"]
+        enriched["topics"] = tags["topics"] or ["Government & Administration"]
+        enriched["districts"] = tags["districts"]
+        enriched["_tokens"] = tokenize_for_similarity(combined_text)
+        relevant_items.append(enriched)
+
+    clusters: list[dict] = []
+    for item in relevant_items:
+        matched_cluster = None
+        best_sim = 0.0
+        for cluster in clusters:
+            rep = cluster["representative"]
+            sim = compute_cluster_similarity(item, rep)
+            if sim >= 0.42 and sim > best_sim:
+                best_sim = sim
+                matched_cluster = cluster
+
+        if matched_cluster is not None:
+            matched_cluster["items"].append(item)
+            matched_cluster["parties"] = sorted(set(matched_cluster["parties"]) | set(item["parties"]))
+            matched_cluster["topics"] = sorted(set(matched_cluster["topics"]) | set(item["topics"]))
+            matched_cluster["districts"] = sorted(set(matched_cluster["districts"]) | set(item["districts"]))
+            matched_cluster["publishers"].add(item["publisher"])
+            matched_cluster["languages"].add(item["language"])
+        else:
+            clusters.append(
+                {
+                    "representative": item,
+                    "items": [item],
+                    "parties": list(item["parties"]),
+                    "topics": list(item["topics"]),
+                    "districts": list(item["districts"]),
+                    "publishers": {item["publisher"]},
+                    "languages": {item["language"]},
+                }
+            )
+
+    # Clean internal token sets and serialize sets
+    finalized = []
+    for idx, cluster in enumerate(clusters, start=1):
+        sources = []
+        seen_source_urls = set()
+        for it in cluster["items"]:
+            it.pop("_tokens", None)
+            if it["url"] not in seen_source_urls:
+                seen_source_urls.add(it["url"])
+                sources.append(
+                    {
+                        "title": it["title"],
+                        "publisher": it["publisher"],
+                        "language": it["language"],
+                        "published_date": it["published_date"],
+                        "published_at_ist": it["published_at_ist"],
+                        "reliability_tier": it["reliability_tier"],
+                        "url": it["url"],
+                        "snippet": it["snippet"],
+                    }
+                )
+
+        finalized.append(
+            {
+                "cluster_id": f"story-{idx}",
+                "primary_title": cluster["representative"]["title"],
+                "parties": cluster["parties"],
+                "topics": cluster["topics"],
+                "districts": cluster["districts"],
+                "publisher_count": len(cluster["publishers"]),
+                "languages": sorted(cluster["languages"]),
+                "sources": sources,
+            }
+        )
+
+    return finalized

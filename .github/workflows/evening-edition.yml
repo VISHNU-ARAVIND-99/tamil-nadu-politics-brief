@@ -1,0 +1,71 @@
+name: Publish Evening Edition (6:00 PM IST)
+
+on:
+  schedule:
+    # 12:22 UTC = 05:52 PM IST (avoids top-of-hour queue congestion)
+    - cron: "22 12 * * *"
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: "Optional date in YYYY-MM-DD (defaults to today in IST)"
+        required: false
+        default: ""
+      force_regenerate:
+        description: "Force overwrite if edition already exists"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-edition-evening
+  cancel-in-progress: false
+
+jobs:
+  generate-and-publish-evening:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Evening Edition Pipeline
+        env:
+          AI_PROVIDER: ${{ vars.AI_PROVIDER || 'gemini' }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
+        run: |
+          ARGS="--edition evening"
+          if [ -n "${{ github.event.inputs.target_date }}" ]; then
+            ARGS="$ARGS --date ${{ github.event.inputs.target_date }}"
+          fi
+          if [ "${{ github.event.inputs.force_regenerate }}" = "true" ]; then
+            ARGS="$ARGS --force"
+          fi
+          python3 -m scripts.publish_edition $ARGS
+
+      - name: Commit and Push Updated Archive to GitHub Pages
+        run: |
+          git config user.name "tn-politics-brief-bot[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add archive/ data/
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore(edition): publish evening brief $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            git pull --rebase origin main
+            git push origin main
+          fi

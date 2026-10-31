@@ -1,0 +1,137 @@
+{
+    "version": "1.0.0",
+    "last_updated": "2026-10-31T06:00:00+05:30",
+    "description": "Configurable registry of legally accessible RSS feeds and official public pages for Tamil Nadu politics.",
+    "sources": [
+        {
+            "id": "the-hindu-tn",
+            "name": "The Hindu (Tamil Nadu)",
+            "language": "en",
+            "category": "english_newspaper",
+            "reliability_tier": "tier_1_editorial",
+            "feed_url": "https://www.thehindu.com/news/national/tamil-nadu/feeder/default.rss",
+            "website_url": "https://www.thehindu.com/news/national/tamil-nadu/",
+            "enabled": true
+        },
+        {
+            "id": "tnie-tn",
+            "name": "The New Indian Express (Tamil Nadu)",
+            "language": "en",
+            "category": "english_newspaper",
+            "reliability_tier": "tier_1_editorial",
+            "feed_url": "https://www.newindianexpress.com/States/Tamil-Nadu/rssfeed/?id=173&getXmlFeed=true",
+            "website_url": "https://www.newindianexpress.com/states/tamil-nadu",
+            "enabled": true
+        },
+        {
+            "id": "indian-express-chennai",
+            "name": "The Indian Express (Chennai)",
+            "language": "en",
+            "category": "english_newspaper",
+            "reliability_tier": "tier_1_editorial",
+            "feed_url": "https://indianexpress.com/section/cities/chennai/feed/",
+            "website_url": "https://indianexpress.com/section/cities/chennai/",
+            "enabled": true
+        },
+        {
+            "id": "times-of-india-chennai",
+            "name": "The Times of India (Chennai/TN)",
+            "language": "en",
+            "category": "english_newspaper",
+            "reliability_tier": "tier_1_editorial",
+            "feed_url": "https://timesofindia.indiatimes.com/rssfeeds/2950623.cms",
+            "website_url": "https://timesofindia.indiatimes.com/city/chennai",
+            "enabled": true
+        },
+        {
+            "id": "the-news-minute-tn",
+            "name": "The News Minute",
+            "language": "en",
+            "category": "digital_news",
+            "reliability_tier": "tier_1_editorial",
+            "feed_url": "https://www.thenewsminute.com/story.rss",
+            "website_url": "https://www.thenewsminute.com/tamil-nadu",
+            "enabled": true
+        },
+        {
+            "id": "ndtv-south",
+            "name": "NDTV South",
+            "language": "en",
+            "category": "television_digital",
+            "reliability_tier": "tier_1_editorial",
+            "feed_url": "https://feeds.feedburner.com/ndtvnews-south",
+            "website_url": "https://www.ndtv.com/south",
+            "enabled": true
+        },
+        {
+            "id": "hindu-tamil-thisai",
+            "name": "Hindu Tamil Thisai (இந்து தமிழ் திசை)",
+            "language": "ta",
+            "category": "tamil_newspaper",
+            "reliability_tier": "tier_1_editorial",
+            "feed_url": "https://www.hindutamil.in/feed/tamilnadu.xml",
+            "website_url": "https://www.hindutamil.in/news/tamilnadu",
+            "enabled": true
+        },
+        {
+            "id": "dinamani-tn",
+            "name": "Dinamani (தினமணி)",
+            "language": "ta",
+            "category": "tamil_newspaper",
+            "reliability_tier": "tier_1_editorial",
+            "feed_url": "https://www.dinamani.com/Tamil-Nadu/rssfeed/?id=350&getXmlFeed=true",
+            "website_url": "https://www.dinamani.com/tamil-nadu",
+            "enabled": true
+        },
+        {
+            "id": "dinamalar-tn",
+            "name": "Dinamalar (தினமலர்)",
+            "language": "ta",
+            "category": "tamil_newspaper",
+            "reliability_tier": "tier_1_editorial",
+            "feed_url": "https://feeds.feedburner.com/dinamalar/front_page_news",
+            "website_url": "https://www.dinamalar.com",
+            "enabled": true
+        },
+        {
+            "id": "daily-thanthi",
+            "name": "Daily Thanthi (தினத்தந்தி)",
+            "language": "ta",
+            "category": "tamil_newspaper",
+            "reliability_tier": "tier_1_editorial",
+            "feed_url": "https://www.dailythanthi.com/rss/news/state",
+            "website_url": "https://www.dailythanthi.com/News/State",
+            "enabled": true
+        },
+        {
+            "id": "puthiya-thalaimurai",
+            "name": "Puthiya Thalaimurai (புதிய தலைமுறை)",
+            "language": "ta",
+            "category": "tamil_television",
+            "reliability_tier": "tier_1_editorial",
+            "feed_url": "https://www.puthiyathalaimurai.com/feed",
+            "website_url": "https://www.puthiyathalaimurai.com/tamilnadu",
+            "enabled": true
+        },
+        {
+            "id": "news18-tamil",
+            "name": "News18 Tamil Nadu",
+            "language": "ta",
+            "category": "tamil_television",
+            "reliability_tier": "tier_1_editorial",
+            "feed_url": "https://tamil.news18.com/commonfeeds/v1/tam/rss/tamil-nadu.xml",
+            "website_url": "https://tamil.news18.com/tamil-nadu/",
+            "enabled": true
+        },
+        {
+            "id": "pib-india-regional",
+            "name": "Press Information Bureau (Official Government Releases)",
+            "language": "en",
+            "category": "official_government",
+            "reliability_tier": "primary_official",
+            "feed_url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+            "website_url": "https://pib.gov.in",
+            "enabled": true
+        }
+    ]
+}

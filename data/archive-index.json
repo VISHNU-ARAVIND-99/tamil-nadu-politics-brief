@@ -1,0 +1,48 @@
+{
+    "total_editions": 1,
+    "last_updated_ist": "2026-10-31T06:04:12+05:30",
+    "editions": [
+        {
+            "edition_id": "2026-10-31-morning",
+            "title": "[SAMPLE TEST EDITION] Tamil Nadu Politics – Morning Brief – 31 October 2026",
+            "date": "2026-10-31",
+            "edition_type": "morning",
+            "is_test_sample": true,
+            "status": "published",
+            "published_at_ist": "2026-10-31T06:04:12+05:30",
+            "coverage_window": "30 Oct 2026, 6:00 PM IST – 31 Oct 2026, 6:00 AM IST",
+            "reading_time_minutes": 14,
+            "headline": "[SAMPLE DATA] Northeast Monsoon Preparedness Review, Assembly Committee Schedules, and All-Party Constituency Consultations",
+            "summary_text": "SAMPLE TEST DATA FOR SYSTEM VERIFICATION. Covers templates for Northeast Monsoon administrative review in Chennai and coastal districts, opposition representations from AIADMK, BJP, TVK, NTK, PMK, VCK, INC, Left parties, Cauvery delta agricultural drainage monitoring in Thanjavur, and court policy tracking.",
+            "parties": [
+                "DMK",
+                "AIADMK",
+                "BJP",
+                "INC",
+                "TVK",
+                "PMK",
+                "NTK",
+                "VCK",
+                "MDMK",
+                "CPI(M)"
+            ],
+            "topics": [
+                "Government & Administration",
+                "Public Infrastructure",
+                "Elections",
+                "Agriculture",
+                "Education"
+            ],
+            "districts": [
+                "Chennai",
+                "Coimbatore",
+                "Madurai",
+                "Tiruchirappalli",
+                "Thanjavur",
+                "Salem"
+            ],
+            "url": "edition.html?id=2026-10-31-morning",
+            "json_path": "archive/2026/10/2026-10-31-morning.json"
+        }
+    ]
+}

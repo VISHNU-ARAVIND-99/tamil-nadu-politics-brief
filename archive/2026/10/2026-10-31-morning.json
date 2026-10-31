@@ -1,0 +1,142 @@
+{
+    "edition_id": "2026-10-31-morning",
+    "title": "[SAMPLE TEST EDITION] Tamil Nadu Politics – Morning Brief – 31 October 2026",
+    "date": "2026-10-31",
+    "edition_type": "morning",
+    "is_test_sample": true,
+    "status": "published",
+    "scheduled_time_ist": "2026-10-31T06:00:00+05:30",
+    "generated_at_ist": "2026-10-31T06:03:45+05:30",
+    "published_at_ist": "2026-10-31T06:04:12+05:30",
+    "coverage_start_ist": "2026-10-30T18:00:00+05:30",
+    "coverage_end_ist": "2026-10-31T06:00:00+05:30",
+    "reading_time_minutes": 14,
+    "word_count": 1650,
+    "headline": "[SAMPLE DATA] Northeast Monsoon Preparedness Review, Assembly Committee Schedules, and All-Party Constituency Consultations",
+    "parties": [
+        "DMK",
+        "AIADMK",
+        "BJP",
+        "INC",
+        "TVK",
+        "PMK",
+        "NTK",
+        "VCK",
+        "MDMK",
+        "CPI(M)"
+    ],
+    "topics": [
+        "Government & Administration",
+        "Public Infrastructure",
+        "Elections",
+        "Agriculture",
+        "Education"
+    ],
+    "districts": [
+        "Chennai",
+        "Coimbatore",
+        "Madurai",
+        "Tiruchirappalli",
+        "Thanjavur",
+        "Salem"
+    ],
+    "sections": {
+        "big_picture": "**[NOTICE: THIS EDITION IS CLEARLY LABELED SAMPLE TEST DATA TO VERIFY WEBSITE FUNCTIONALITY. IT DOES NOT REPRESENT LIVE NEWS.]**\n\nIn a live production cycle covering 6:00 PM to 6:00 AM IST, this section synthesizes the overarching trajectory of Tamil Nadu's governance and party politics over the preceding 12 hours. Key focal themes modeled in this verification edition include state administrative readiness for seasonal monsoon infrastructure across coastal and delta districts, ongoing organisational consultations across ruling and opposition parties (DMK, AIADMK, BJP, INC, TVK, PMK, NTK, VCK, MDMK, DMDK, and Left parties), and legislative/judicial policy tracking.",
+        "top_developments": [
+            {
+                "headline": "[SAMPLE] State Revenue and Disaster Management Department Reviews Monsoon Control Rooms",
+                "verification_badge": "Multi-Source Template",
+                "what_happened": "This sample entry demonstrates how state-level administrative directives and disaster preparedness reviews are summarized in clear, plain English without sensationalism.",
+                "who_is_involved": "Department of Revenue and Disaster Management, Greater Chennai Corporation, District Collectors across coastal districts.",
+                "verified_facts": "In live editions, only confirmed Government Orders (GOs), official press releases from the Directorate of Information and Public Relations (DIPR), and multi-source verified reporting appear here.",
+                "why_it_matters": "Stormwater drain maintenance, reservoir storage protocols, and relief center readiness directly affect urban commuters and agricultural workers in delta districts.",
+                "political_responses": "Opposition parties including AIADMK, BJP, PMK, NTK, and TVK regularly submit ward-level and district-level representations demanding faster desilting and transparent contract audits; the ruling DMK administration cites completed canal works and nodal officer deployments.",
+                "what_happens_next": "District monitoring officers conduct scheduled field inspections ahead of seasonal rainfall forecasts.",
+                "sources": [
+                    {
+                        "title": "The Hindu – Tamil Nadu State News Portal",
+                        "publisher": "The Hindu",
+                        "language": "en",
+                        "published_date": "2026-10-31",
+                        "url": "https://www.thehindu.com/news/national/tamil-nadu/"
+                    },
+                    {
+                        "title": "Hindu Tamil Thisai – Tamil Nadu Section",
+                        "publisher": "Hindu Tamil Thisai",
+                        "language": "ta",
+                        "published_date": "2026-10-31",
+                        "url": "https://www.hindutamil.in/news/tamilnadu"
+                    }
+                ]
+            },
+            {
+                "headline": "[SAMPLE] Multi-Party Organisational Drives and Booth-Level Review Meetings Across Districts",
+                "verification_badge": "Cross-Checked Tamil & English Template",
+                "what_happened": "Demonstrates how parallel political activities across Tamil Nadu's major and emerging political parties are covered neutrally and proportionally in one unified briefing.",
+                "who_is_involved": "DMK, AIADMK, BJP, Indian National Congress (INC), Tamilaga Vettri Kazhagam (TVK), PMK, Naam Tamilar Katchi (NTK), VCK, MDMK, DMDK, AMMK, CPI, and CPI(M).",
+                "verified_facts": "Official party headquarters statements confirm schedule dates for district secretaries' meetings, electoral roll verification camps, and membership drives.",
+                "why_it_matters": "Booth-level committee restructuring and alliance coordination shape constituency-level agendas well ahead of local body and legislative elections.",
+                "political_responses": "Each party highlights its own grassroots outreach while questioning the policy priorities of rival formations.",
+                "what_happens_next": "Regional zonal conferences and electoral roll revision camps continue as scheduled by the Election Commission of India.",
+                "sources": [
+                    {
+                        "title": "Dinamani – Tamil Nadu News",
+                        "publisher": "Dinamani",
+                        "language": "ta",
+                        "published_date": "2026-10-31",
+                        "url": "https://www.dinamani.com/tamil-nadu"
+                    },
+                    {
+                        "title": "The New Indian Express – Tamil Nadu Section",
+                        "publisher": "The New Indian Express",
+                        "language": "en",
+                        "published_date": "2026-10-31",
+                        "url": "https://www.newindianexpress.com/states/tamil-nadu"
+                    }
+                ]
+            }
+        ],
+        "government_and_administration": "**[SAMPLE TEST SECTION]** In live briefings, this section details Cabinet decisions, Chief Minister and ministerial review meetings, newly issued Government Orders (GOs), welfare scheme disbursements (such as women's basic income support, breakfast schemes, and student higher-education incentives), and senior bureaucratic transfers.",
+        "political_parties_and_opposition": "**[SAMPLE TEST SECTION]** Tracks statements, internal organisational appointments, alliance discussions, and public demonstrations held by DMK, AIADMK, BJP, INC, TVK, PMK, NTK, VCK, MDMK, DMDK, AMMK, CPI, and CPI(M) without editorial bias.",
+        "assembly_courts_and_policy": "**[SAMPLE TEST SECTION]** Summarizes Tamil Nadu Legislative Assembly committee sittings, bills, Madras High Court (Principal Seat and Madurai Bench) directives on state policies, NEET and education policy litigation, and Election Commission notifications.",
+        "district_developments": "**[SAMPLE TEST SECTION]** Highlights regional developments across Chennai, Coimbatore, Madurai, Tiruchirappalli, Salem, Tirunelveli, Thanjavur, Erode, Vellore, Thoothukudi, and other districts—including farmers' grievances on paddy procurement in the Cauvery delta and industrial infrastructure updates in western and southern corridors.",
+        "claims_vs_facts": [
+            {
+                "claim": "[SAMPLE CLAIM] Example political claim regarding percentage completion of urban infrastructure projects.",
+                "claimant": "Sample Political Spokesperson / Department Statement",
+                "verified_evidence": "In live editions, the pipeline compares political statements against official department data, Comptroller and Auditor General (CAG) reports, or independent multi-source field reporting, explicitly noting when independent verification is unavailable."
+            }
+        ],
+        "what_to_watch_next": "**[SAMPLE TEST SECTION]** Lists confirmed upcoming events: scheduled departmental review meetings, Madras High Court hearing dates, Election Commission roll revision deadlines, and announced party executive committee meetings.",
+        "all_sources": [
+            {
+                "title": "The Hindu – Tamil Nadu News",
+                "publisher": "The Hindu",
+                "language": "en",
+                "published_date": "2026-10-31",
+                "url": "https://www.thehindu.com/news/national/tamil-nadu/"
+            },
+            {
+                "title": "Hindu Tamil Thisai – Tamil Nadu Section",
+                "publisher": "Hindu Tamil Thisai",
+                "language": "ta",
+                "published_date": "2026-10-31",
+                "url": "https://www.hindutamil.in/news/tamilnadu"
+            },
+            {
+                "title": "Dinamani – State News",
+                "publisher": "Dinamani",
+                "language": "ta",
+                "published_date": "2026-10-31",
+                "url": "https://www.dinamani.com/tamil-nadu"
+            },
+            {
+                "title": "Press Information Bureau – Regional Releases",
+                "publisher": "PIB India",
+                "language": "en",
+                "published_date": "2026-10-31",
+                "url": "https://pib.gov.in"
+            }
+        ]
+    }
+}

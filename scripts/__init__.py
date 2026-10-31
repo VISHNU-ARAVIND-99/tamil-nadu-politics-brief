@@ -1,0 +1,1 @@
+"""Tamil Nadu Politics Brief - Automated Zero-Cost News Research & Publishing Pipeline."""

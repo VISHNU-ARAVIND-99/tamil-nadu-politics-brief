@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Briefings | Tamil Nadu Politics Brief</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-top">
+                <span id="ist-date-display">Asia/Kolkata (IST)</span>
+                <span>Zero-Cost Client-Side Archive Search</span>
+                <button id="theme-toggle" class="theme-btn" type="button">Dark Mode</button>
+            </div>
+            <h1 class="masthead-title"><a href="index.html">Tamil Nadu Politics Brief</a></h1>
+            <p class="masthead-tagline">"Understand Tamil Nadu Politics. One Briefing at a Time."</p>
+            <nav class="nav-bar" aria-label="Primary Navigation">
+                <a href="index.html">Latest Briefings</a>
+                <a href="edition.html">Full Edition View</a>
+                <a href="archive.html">Historical Archive</a>
+                <a href="search.html" class="active">Keyword Search</a>
+                <a href="about.html">About &amp; Methodology</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 style="margin-bottom:0.75rem;">Search Historical Briefings</h2>
+        <div class="filter-bar" style="grid-template-columns:1fr;">
+            <div>
+                <label for="search-query-input">Search by Party, Leader, Policy, Issue, or District</label>
+                <input type="search" id="search-query-input"
+                    placeholder="Type DMK, AIADMK, TVK, BJP, Chief Minister, NEET, Assembly, Agriculture, Chennai...">
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.4rem;">
+                <button type="button" class="theme-btn quick-chip" data-keyword="DMK">DMK</button>
+                <button type="button" class="theme-btn quick-chip" data-keyword="AIADMK">AIADMK</button>
+                <button type="button" class="theme-btn quick-chip" data-keyword="TVK">TVK</button>
+                <button type="button" class="theme-btn quick-chip" data-keyword="BJP">BJP</button>
+                <button type="button" class="theme-btn quick-chip" data-keyword="INC">Congress</button>
+                <button type="button" class="theme-btn quick-chip" data-keyword="PMK">PMK</button>
+                <button type="button" class="theme-btn quick-chip" data-keyword="NTK">NTK</button>
+                <button type="button" class="theme-btn quick-chip" data-keyword="VCK">VCK</button>
+                <button type="button" class="theme-btn quick-chip" data-keyword="NEET">NEET</button>
+                <button type="button" class="theme-btn quick-chip" data-keyword="Assembly">Tamil Nadu Assembly</button>
+                <button type="button" class="theme-btn quick-chip" data-keyword="Agriculture">Agriculture</button>
+                <button type="button" class="theme-btn quick-chip" data-keyword="Chennai">Chennai</button>
+            </div>
+        </div>
+
+        <div id="search-results-list"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Search runs entirely in your browser against <code>data/archive-index.json</code> at ₹0 server cost.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
