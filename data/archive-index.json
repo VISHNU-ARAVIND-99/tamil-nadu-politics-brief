@@ -1,48 +1,50 @@
 {
-    "total_editions": 1,
-    "last_updated_ist": "2026-10-31T06:04:12+05:30",
-    "editions": [
-        {
-            "edition_id": "2026-10-31-morning",
-            "title": "[SAMPLE TEST EDITION] Tamil Nadu Politics – Morning Brief – 31 October 2026",
-            "date": "2026-10-31",
-            "edition_type": "morning",
-            "is_test_sample": true,
-            "status": "published",
-            "published_at_ist": "2026-10-31T06:04:12+05:30",
-            "coverage_window": "30 Oct 2026, 6:00 PM IST – 31 Oct 2026, 6:00 AM IST",
-            "reading_time_minutes": 14,
-            "headline": "[SAMPLE DATA] Northeast Monsoon Preparedness Review, Assembly Committee Schedules, and All-Party Constituency Consultations",
-            "summary_text": "SAMPLE TEST DATA FOR SYSTEM VERIFICATION. Covers templates for Northeast Monsoon administrative review in Chennai and coastal districts, opposition representations from AIADMK, BJP, TVK, NTK, PMK, VCK, INC, Left parties, Cauvery delta agricultural drainage monitoring in Thanjavur, and court policy tracking.",
-            "parties": [
-                "DMK",
-                "AIADMK",
-                "BJP",
-                "INC",
-                "TVK",
-                "PMK",
-                "NTK",
-                "VCK",
-                "MDMK",
-                "CPI(M)"
-            ],
-            "topics": [
-                "Government & Administration",
-                "Public Infrastructure",
-                "Elections",
-                "Agriculture",
-                "Education"
-            ],
-            "districts": [
-                "Chennai",
-                "Coimbatore",
-                "Madurai",
-                "Tiruchirappalli",
-                "Thanjavur",
-                "Salem"
-            ],
-            "url": "edition.html?id=2026-10-31-morning",
-            "json_path": "archive/2026/10/2026-10-31-morning.json"
-        }
-    ]
+  "total_editions": 1,
+  "last_updated_ist": "2026-10-31T17:10:34.720089+05:30",
+  "editions": [
+    {
+      "edition_id": "2026-10-31-morning",
+      "title": "Tamil Nadu Politics – Morning Brief – 31 October 2026",
+      "date": "2026-10-31",
+      "edition_type": "morning",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-10-31T17:10:34.720089+05:30",
+      "coverage_window": "2026-10-30T18:00:00+05:30 to 2026-10-31T06:00:00+05:30",
+      "reading_time_minutes": 21,
+      "headline": "Sollathigaram | \"CM விஜயை முதலில் நாங்கள் ஒரு பொருட்டாவே மதிக்கல..\" - மதிமுக அந்திரிதாஸ் | CM Vijay",
+      "summary_text": "Sollathigaram | \"CM விஜயை முதலில் நாங்கள் ஒரு பொருட்டாவே மதிக்கல..\" - மதிமுக அந்திரிதாஸ் | CM Vijay During the coverage period (30 Oct 2026, 06:00 PM IST – 31 Oct 2026, 06:00 AM IST), 23 distinct political and policy developments were tracked across 40 source articles. Key political entities mentioned include AIADMK, AMMK, BJP, DMK, MDMK, NTK, TVK, covering Assembly, Courts & Policy, Centre–State Relations, Education & NEET, Elections, Government & Administration, Infrastructure & Economy, Public Protests & Labour. Sollathigaram | \"CM விஜயை முதலில் நாங்கள் ஒரு பொருட்டாவே மதிக்கல..\" - மதிமுக அந்திரிதாஸ் | CM Vijay Japan’s Omron Healthcare opens first India manufacturing facility near Chennai Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection Sollathigaram | அம்பை இடைத்தேர்தல்.. \"பொதுவேட்பாளர் என்ற பேச்சுக்கே இடமில்லை..\" | NTK Seeman Sollathigaram | \"சீமான் ",
+      "parties": [
+        "AIADMK",
+        "AMMK",
+        "BJP",
+        "DMK",
+        "MDMK",
+        "NTK",
+        "TVK"
+      ],
+      "topics": [
+        "Assembly, Courts & Policy",
+        "Centre–State Relations",
+        "Education & NEET",
+        "Elections",
+        "Government & Administration",
+        "Infrastructure & Economy",
+        "Public Protests & Labour"
+      ],
+      "districts": [
+        "Chennai",
+        "Cuddalore",
+        "Dharmapuri",
+        "Madurai",
+        "Nagapattinam",
+        "Namakkal",
+        "Nilgiris",
+        "Thanjavur",
+        "Tiruchirappalli"
+      ],
+      "url": "edition.html?id=2026-10-31-morning",
+      "json_path": "archive/2026/10/2026-10-31-morning.json"
+    }
+  ]
 }

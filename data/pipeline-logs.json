@@ -1,17 +1,30 @@
 {
-    "runs": [
-        {
-            "run_id": "init-verification-2026-10-31-morning",
-            "edition_id": "2026-10-31-morning",
-            "timestamp_ist": "2026-10-31T06:04:12+05:30",
-            "status": "success_test_seed",
-            "sources_checked": 13,
-            "raw_items_collected": 0,
-            "clusters_verified": 5,
-            "duration_seconds": 1.2,
-            "ai_provider": "seed_verification",
-            "tokens_used": 0,
-            "notes": "Initial test sample seeded to verify UI, search, and archive filters."
-        }
-    ]
+  "runs": [
+    {
+      "run_id": "run-2026-10-31-morning-1793446827",
+      "edition_id": "2026-10-31-morning",
+      "timestamp_ist": "2026-10-31T17:10:34.719980+05:30",
+      "status": "published_delayed",
+      "sources_checked": 13,
+      "raw_items_collected": 84,
+      "clusters_verified": 23,
+      "duration_seconds": 7.13,
+      "ai_provider": "extractive_fallback (http_404)",
+      "tokens_used": 0,
+      "notes": "Saved to archive/2026/10/2026-10-31-morning.json"
+    },
+    {
+      "run_id": "init-verification-2026-10-31-morning",
+      "edition_id": "2026-10-31-morning",
+      "timestamp_ist": "2026-10-31T06:04:12+05:30",
+      "status": "success_test_seed",
+      "sources_checked": 13,
+      "raw_items_collected": 0,
+      "clusters_verified": 5,
+      "duration_seconds": 1.2,
+      "ai_provider": "seed_verification",
+      "tokens_used": 0,
+      "notes": "Initial test sample seeded to verify UI, search, and archive filters."
+    }
+  ]
 }
