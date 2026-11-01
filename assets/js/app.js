@@ -1,8 +1,8 @@
 /**
  * Tamil Nadu Politics Brief - Pure-English Newspaper UI Engine
- * - Preserves newline breaks (\n) so bullet points never collapse into a wall of text
- * - Strips any legacy '&nbsp;' or robotic boilerplate sentences on render
- * - Displays fixed 6:00 AM / 6:00 PM IST coverage windows across all pages including Archive
+ * - Removes duplicate 'The Big Picture' section so 'Top Political Developments' leads directly
+ * - Removes duplicate #1 bullet point inside Morning/Evening summary cards
+ * - Displays compact Date & Day in header and full-width layout on Desktop & Android
  */
 
 const TN_PARTIES = [
@@ -44,6 +44,8 @@ const PLACEHOLDER_PHRASES = [
     "regional reporting in this window covered:"
 ];
 
+const NON_POLITICAL_NOISE_RE = /runaway schoolgirls|wearing headphones killed|country-made guns|vijaya\s+deepika|vijayawada|uddhav\s+thackeray|kishan\s+reddy/i;
+
 function escapeHtml(str) {
     if (!str) return "";
     return String(str)
@@ -53,17 +55,13 @@ function escapeHtml(str) {
         .replace(/"/g, "&quot;");
 }
 
-/**
- * Cleans text while PRESERVING newline breaks (\n) so bullet lists work properly!
- * Also strips any legacy '&nbsp;' bundles or robotic filler sentences from older JSON files.
- */
 function ensurePureEnglish(str) {
     if (!str) return "";
     return String(str)
         .replace(/\r\n/g, "\n")
         .split("\n")
         .map(line => {
-            let l = line
+            return line
                 .replace(/&nbsp;.*$/gi, "")
                 .replace(/&#x[0-9a-f]+;?/gi, "")
                 .replace(/The development directly involves [^.]+\./gi, "")
@@ -74,9 +72,8 @@ function ensurePureEnglish(str) {
                 .replace(/\s*\|\s*/g, " ")
                 .replace(/[ \t]{2,}/g, " ")
                 .trim();
-            return l;
         })
-        .filter(Boolean)
+        .filter(line => line && !NON_POLITICAL_NOISE_RE.test(line))
         .join("\n");
 }
 
@@ -104,21 +101,17 @@ function formatReadableIST(isoStr) {
     }) + " IST";
 }
 
-/**
- * Always displays the official fixed 12-hour Coverage Window for an edition
- * (6:00 PM prev day - 6:00 AM for Morning; 6:00 AM - 6:00 PM for Evening)
- */
 function getFixedCoverageWindowText(dateStr, editionType) {
     if (!dateStr) return "";
     const [y, m, d] = dateStr.split("-").map(Number);
     if (!y || !m || !d) return escapeHtml(dateStr);
     if (editionType === "morning") {
-        const endDt = new Date(Date.UTC(y, m - 1, d, 0, 30, 0)); // 6:00 AM IST
-        const startDt = new Date(endDt.getTime() - 12 * 3600 * 1000); // 6:00 PM prev day IST
+        const endDt = new Date(Date.UTC(y, m - 1, d, 0, 30, 0));
+        const startDt = new Date(endDt.getTime() - 12 * 3600 * 1000);
         return `${formatReadableIST(startDt.toISOString())} – ${formatReadableIST(endDt.toISOString())}`;
     } else {
-        const startDt = new Date(Date.UTC(y, m - 1, d, 0, 30, 0)); // 6:00 AM IST
-        const endDt = new Date(Date.UTC(y, m - 1, d, 12, 30, 0)); // 6:00 PM IST
+        const startDt = new Date(Date.UTC(y, m - 1, d, 0, 30, 0));
+        const endDt = new Date(Date.UTC(y, m - 1, d, 12, 30, 0));
         return `${formatReadableIST(startDt.toISOString())} – ${formatReadableIST(endDt.toISOString())}`;
     }
 }
@@ -139,16 +132,28 @@ function formatInlineMarkdown(escapedStr) {
         .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
 }
 
-function formatEditorialText(str, forceBullets = false) {
+function formatEditorialText(str, forceBullets = false, excludeHeadline = "") {
     if (!str) return "";
     let cleaned = ensurePureEnglish(str);
 
-    // Split any inline " - **Headline:**" or ". - Title:" that got merged into a single line
     cleaned = cleaned
         .replace(/\.\s+-\s+(?=[A-Z*])/g, ".\n- ")
         .replace(/\s+-\s+\*\*/g, "\n- **");
 
-    const lines = cleaned.split("\n").map(l => l.trim()).filter(Boolean);
+    const normExclude = excludeHeadline.toLowerCase().replace(/\W+/g, "");
+
+    const lines = cleaned
+        .split("\n")
+        .map(l => l.trim())
+        .filter(l => {
+            if (!l) return false;
+            if (normExclude) {
+                const normLine = l.replace(/^[-*•]\s+/, "").toLowerCase().replace(/\W+/g, "");
+                if (normLine === normExclude || normLine.startsWith(normExclude)) return false;
+            }
+            return true;
+        });
+
     if (!lines.length) return "";
 
     const isBulletList = forceBullets || lines.some(l => /^[-*•]\s+/.test(l));
@@ -156,14 +161,14 @@ function formatEditorialText(str, forceBullets = false) {
         const items = lines
             .map(l => {
                 const stripped = l.replace(/^[-*•]\s+/, "").trim();
-                return `<li style="margin-bottom:0.75rem;line-height:1.65;">${formatInlineMarkdown(escapeHtml(stripped))}</li>`;
+                return `<li style="margin-bottom:0.65rem;line-height:1.6;">${formatInlineMarkdown(escapeHtml(stripped))}</li>`;
             })
             .join("");
-        return `<ul style="padding-left:1.35rem;margin-bottom:0.85rem;">${items}</ul>`;
+        return `<ul style="padding-left:1.3rem;margin-bottom:0.75rem;">${items}</ul>`;
     }
 
     return lines
-        .map(l => `<p style="margin-bottom:0.85rem;">${formatInlineMarkdown(escapeHtml(l))}</p>`)
+        .map(l => `<p style="margin-bottom:0.75rem;">${formatInlineMarkdown(escapeHtml(l))}</p>`)
         .join("");
 }
 
@@ -184,7 +189,7 @@ function copyEditionLink(editionId) {
 }
 
 function initTheme() {
-    const saved = localStorage.getItem("tnpb_theme") || "dark";
+    const saved = localStorage.getItem("tnpb_theme") || "light";
     document.documentElement.setAttribute("data-theme", saved);
     const btn = document.getElementById("theme-toggle");
     if (btn) {
@@ -199,11 +204,12 @@ function initTheme() {
     }
     const clockEl = document.getElementById("ist-date-display");
     if (clockEl) {
+        // Compact date & day format as requested in PDF ("Small Date & day")
         clockEl.textContent = new Date().toLocaleDateString("en-IN", {
-            weekday: "long",
-            year: "numeric",
-            month: "long",
+            weekday: "short",
             day: "numeric",
+            month: "short",
+            year: "numeric",
             timeZone: "Asia/Kolkata"
         }) + " (IST)";
     }
@@ -231,20 +237,21 @@ function renderEditionCard(ed, slotLabel) {
     const cleanHeadline = ensurePureEnglish(ed.headline) || "Tamil Nadu Political Briefing";
     const fixedWindow = getFixedCoverageWindowText(ed.date, ed.edition_type);
 
+    // Pass cleanHeadline as excludeHeadline so Bullet #1 never repeats the card's main heading!
+    const otherBulletsHtml = formatEditorialText(ed.big_picture_excerpt || "", true, cleanHeadline);
+
     return `
     <article class="card">
       <div class="card-kicker">${escapeHtml(slotLabel)} &bull; ${escapeHtml(ed.date)}</div>
-      <div style="margin-bottom:0.5rem;">${badge}</div>
+      <div style="margin-bottom:0.45rem;">${badge}</div>
       <h2><a href="${escapeHtml(ed.url)}">${escapeHtml(cleanHeadline)}</a></h2>
       <p class="meta-line">
         <strong>Window:</strong> ${fixedWindow}<br>
         <strong>Published:</strong> ${formatReadableIST(ed.published_at_ist)} &bull; ~${escapeHtml(ed.reading_time_minutes)} min read
       </p>
-      <div style="margin-bottom:0.85rem;font-size:0.95rem;">
-        ${formatEditorialText(ed.big_picture_excerpt || "", true)}
-      </div>
+      ${otherBulletsHtml ? `<div style="margin-bottom:0.85rem;font-size:0.93rem;">${otherBulletsHtml}</div>` : ""}
       <div style="margin-bottom:0.85rem;">${partyBadges}</div>
-      <a href="${escapeHtml(ed.url)}" style="font-family:var(--font-sans);font-weight:600;font-size:0.9rem;">
+      <a href="${escapeHtml(ed.url)}" style="font-family:var(--font-sans);font-weight:600;font-size:0.88rem;">
         Read Full Briefing &rarr;
       </a>
     </article>
@@ -256,7 +263,7 @@ function renderFullEditionView(container, ed) {
 
     const validDevs = (sec.top_developments || []).filter(d => {
         const h = ensurePureEnglish(d.headline);
-        return h && h.length >= 12 && !/vijaya\s+deepika|vijayawada|uddhav\s+thackeray|kishan\s+reddy/i.test(h);
+        return h && h.length >= 12 && !NON_POLITICAL_NOISE_RE.test(h);
     });
 
     const devsHtml = validDevs.map((d, i) => {
@@ -281,7 +288,6 @@ function renderFullEditionView(container, ed) {
             ? `<span class="badge badge-tag">${escapeHtml(d.who_is_involved)}</span>`
             : "";
 
-        // Hide generic computer-generated "This development shapes..." lines
         const whyClean = ensurePureEnglish(d.why_it_matters || "");
         const showWhy = whyClean && !/^this development shapes|^affects |^relates to /i.test(whyClean);
         const whyHtml = showWhy
@@ -290,12 +296,12 @@ function renderFullEditionView(container, ed) {
 
         return `
       <article class="story-item">
-        <div style="margin-bottom:0.45rem;">
+        <div style="margin-bottom:0.4rem;">
           <span class="badge badge-verified">${escapeHtml(d.verification_badge || "Verified Report")}</span>
           ${involved}
         </div>
-        <h3 style="margin-bottom:0.6rem;">${i + 1}. ${escapeHtml(headlineClean)}</h3>
-        ${hasDistinctBody ? `<div style="margin-bottom:0.65rem;">${formatEditorialText(rawBody)}</div>` : ""}
+        <h3 style="margin-bottom:0.55rem;">${i + 1}. ${escapeHtml(headlineClean)}</h3>
+        ${hasDistinctBody ? `<div style="margin-bottom:0.6rem;">${formatEditorialText(rawBody)}</div>` : ""}
         ${whyHtml}
         <div class="meta-line" style="margin-bottom:0;padding-top:0.4rem;border-top:1px solid var(--border-color);">
           <strong>Source:</strong> ${shortSources.join(" &bull; ") || "Official Release"}
@@ -304,18 +310,6 @@ function renderFullEditionView(container, ed) {
     `;
     }).join("");
 
-    // Build concise, clean bulleted Big Picture
-    const bigPictureBullets = validDevs.slice(0, 5).map(d => {
-        const h = ensurePureEnglish(d.headline).replace(/\.$/, "");
-        const s = ensurePureEnglish(d.summary || d.what_happened || "").split(". ")[0].replace(/\.$/, "");
-        const bodyPart = s && s.toLowerCase() !== h.toLowerCase() ? ` — ${s}.` : ".";
-        return `<li style="margin-bottom:0.7rem;line-height:1.6;"><strong>${escapeHtml(h)}</strong>${escapeHtml(bodyPart)}</li>`;
-    }).join("");
-    const bigPictureHtml = bigPictureBullets
-        ? `<ul style="padding-left:1.35rem;margin-bottom:0.85rem;">${bigPictureBullets}</ul>`
-        : formatEditorialText(sec.big_picture, true);
-
-    // Bottom Sources section: ONLY list sources from the top stories shown on the page (max 15)
     const citedSources = [];
     const seenSourceUrls = new Set();
     for (const d of validDevs) {
@@ -333,12 +327,13 @@ function renderFullEditionView(container, ed) {
             .replace(/\s*\(.*?\)\s*/g, "")
             .trim();
         const cleanTitle = ensurePureEnglish(s.title || shortPub);
-        const shortTitle = cleanTitle.length > 72 ? cleanTitle.slice(0, 69) + "..." : cleanTitle;
+        const shortTitle = cleanTitle.length > 78 ? cleanTitle.slice(0, 75) + "..." : cleanTitle;
         return `<li style="margin-bottom:0.45rem;"><strong>${escapeHtml(shortPub)}:</strong> <a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(shortTitle)}</a></li>`;
     }).join("");
 
     const fixedWindow = getFixedCoverageWindowText(ed.date, ed.edition_type);
 
+    // 'The Big Picture' is removed so 'Top Political Developments' leads immediately without duplication
     const dynamicSections = [
         {
             id: "sec-info",
@@ -346,22 +341,14 @@ function renderFullEditionView(container, ed) {
             title: null,
             html: `
         <div class="card-kicker">${escapeHtml(ed.edition_type.toUpperCase())} EDITION &bull; ${escapeHtml(ed.date)}</div>
-        <h1 style="font-size:2rem;line-height:1.25;margin:0.4rem 0 0.75rem;">${escapeHtml(ensurePureEnglish(ed.headline))}</h1>
-        <p class="meta-line">
-          <strong>Edition:</strong> ${escapeHtml(ed.title)}<br>
-          <strong>Coverage Window:</strong> ${fixedWindow}<br>
+        <h1 style="font-size:1.75rem;line-height:1.25;margin:0.3rem 0 0.6rem;">${escapeHtml(ed.title)}</h1>
+        <p class="meta-line" style="margin-bottom:0;">
+          <strong>Coverage Window:</strong> ${fixedWindow} &bull;
           <strong>Published:</strong> ${formatReadableIST(ed.published_at_ist)} &bull;
           <strong>Reading Time:</strong> ~${escapeHtml(ed.reading_time_minutes)} min
         </p>
       `,
             show: true
-        },
-        {
-            id: "sec-big-picture",
-            toc: "The Big Picture",
-            title: "The Big Picture",
-            html: bigPictureHtml,
-            show: Boolean(bigPictureHtml)
         },
         {
             id: "sec-top-devs",
@@ -427,10 +414,11 @@ function renderFullEditionView(container, ed) {
       <aside class="toc-sidebar">
         <h4>Edition Contents</h4>
         <ul>${tocHtml}</ul>
-        <hr style="margin:0.85rem 0;border:none;border-top:1px solid var(--border-color);">
-        <button onclick="shareOnWhatsApp('${escapeHtml(ed.edition_id)}', '${escapeHtml(ensurePureEnglish(ed.headline).replace(/'/g, "\\'"))}')" class="theme-btn" style="width:100%;background:#1f8b4c;color:#fff;border:none;padding:0.5rem;margin-bottom:0.45rem;font-weight:600;">Share on WhatsApp</button>
-        <button onclick="copyEditionLink('${escapeHtml(ed.edition_id)}')" class="theme-btn" style="width:100%;padding:0.45rem;margin-bottom:0.45rem;">Copy Edition Link</button>
-        <button onclick="window.print()" class="theme-btn" style="width:100%;padding:0.45rem;">Print / Save PDF</button>
+        <div class="share-actions">
+          <button onclick="shareOnWhatsApp('${escapeHtml(ed.edition_id)}', '${escapeHtml(ensurePureEnglish(ed.headline).replace(/'/g, "\\'"))}')" class="theme-btn" style="width:100%;background:#1f8b4c;color:#fff;border:none;padding:0.5rem;font-weight:600;">WhatsApp</button>
+          <button onclick="copyEditionLink('${escapeHtml(ed.edition_id)}')" class="theme-btn" style="width:100%;padding:0.45rem;">Copy Link</button>
+          <button onclick="window.print()" class="theme-btn" style="width:100%;padding:0.45rem;">Save PDF</button>
+        </div>
       </aside>
       <div class="reading-column">
         ${bodySectionsHtml}
