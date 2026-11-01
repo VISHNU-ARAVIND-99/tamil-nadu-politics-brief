@@ -4,24 +4,22 @@
   "editions": [
     {
       "edition_id": "2026-11-01-evening",
-      "title": "Tamil Nadu Politics – Evening Brief – 1 November 2026",
+      "title": "Tamil Nadu Politics — Evening Brief — 1 November 2026",
       "date": "2026-11-01",
       "edition_type": "evening",
       "is_test_sample": false,
-      "status": "published_delayed",
+      "status": "published_ai",
+      "scheduled_time_ist": "2026-11-01T18:00:00+05:30",
       "published_at_ist": "2026-11-01T21:57:21.151638+05:30",
       "coverage_start_ist": "2026-11-01T06:00:00+05:30",
       "coverage_end_ist": "2026-11-01T18:00:00+05:30",
       "coverage_window": "2026-11-01T06:00:00+05:30 to 2026-11-01T18:00:00+05:30",
       "reading_time_minutes": 2,
-      "headline": "Tamil Nadu Political Developments: Tamil Nadu Day, Bribery Allegations, and Tasmac Strikes",
+      "headline": "Tamil Nadu Day, Bribery Allegations, and Tasmac Strikes",
       "summary_text": "- President, Prime Minister, and CM Vijay greet people on Tamil Nadu Day\n- Tamil Nadu government orders setting up of 30 additional special courts",
       "parties": [
-        "AIADMK",
         "BJP",
         "DMK",
-        "NTK",
-        "PMK",
         "TVK"
       ],
       "topics": [
@@ -43,16 +41,19 @@
     },
     {
       "edition_id": "2026-11-01-morning",
-      "title": "Tamil Nadu Politics – Morning Brief – 1 November 2026",
+      "title": "Tamil Nadu Politics — Morning Brief — 1 November 2026",
       "date": "2026-11-01",
       "edition_type": "morning",
       "is_test_sample": false,
-      "status": "published_delayed",
+      "status": "published_ai",
+      "scheduled_time_ist": "2026-11-01T06:00:00+05:30",
       "published_at_ist": "2026-11-01T19:32:25.066382+05:30",
+      "coverage_start_ist": "2026-10-31T18:00:00+05:30",
+      "coverage_end_ist": "2026-11-01T06:00:00+05:30",
       "coverage_window": "2026-10-31T18:00:00+05:30 to 2026-11-01T06:00:00+05:30",
-      "reading_time_minutes": 20,
+      "reading_time_minutes": 2,
       "headline": "Opposition slams TVK govt for repeated prison escapes across Tamil Nadu",
-      "summary_text": "- Opposition slams TVK govt for repeated prison escapes across Tamil Nadu\n- Sollathigaram \"What is the purpose of going only to specific 3 blocks?\"\n- DMK women’s wing protests reflect public anger against TVK govt: Stalin\n- T.N. govt. raises DA for its employees from 60% to 63%",
+      "summary_text": "- Opposition parties criticize DMK government over recent issues\n- High Court proceedings on state policy",
       "parties": [
         "AIADMK",
         "AMMK",
@@ -82,16 +83,19 @@
     },
     {
       "edition_id": "2026-10-31-evening",
-      "title": "Tamil Nadu Politics – Evening Brief – 31 October 2026",
+      "title": "Tamil Nadu Politics — Evening Brief — 31 October 2026",
       "date": "2026-10-31",
       "edition_type": "evening",
       "is_test_sample": false,
-      "status": "published_delayed",
-      "published_at_ist": "2026-11-01T19:30:21.037029+05:30",
+      "status": "published_ai",
+      "scheduled_time_ist": "2026-10-31T18:00:00+05:30",
+      "published_at_ist": "2026-10-31T18:00:00+05:30",
+      "coverage_start_ist": "2026-10-31T06:00:00+05:30",
+      "coverage_end_ist": "2026-10-31T18:00:00+05:30",
       "coverage_window": "2026-10-31T06:00:00+05:30 to 2026-10-31T18:00:00+05:30",
-      "reading_time_minutes": 20,
-      "headline": "Chief Minister Vijay inaugurates Pudukottai new bus stand.",
-      "summary_text": "- Chief Minister Vijay inaugurates Pudukottai new bus stand.\n- DA for Tamil Nadu government employees increases from 60% to 63%\n- CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak\n- Condemnation of the government which is playing with the lives of poor and poor people : EPS",
+      "reading_time_minutes": 2,
+      "headline": "Chief Minister Vijay inaugurates Pudukottai new bus stand",
+      "summary_text": "- CM Vijay visits Pudukottai to inaugurate the new bus stand\n- Welfare assistance distribution in delta districts",
       "parties": [
         "AIADMK",
         "AMMK",
@@ -101,40 +105,33 @@
         "VCK"
       ],
       "topics": [
-        "Agriculture & Water",
-        "Assembly, Courts & Policy",
-        "Centre–State Relations",
-        "Elections",
-        "Government & Administration",
-        "Infrastructure & Economy",
-        "Political Parties",
-        "Public Protests & Labour"
+        "Governance",
+        "Infrastructure",
+        "Welfare"
       ],
       "districts": [
         "Chennai",
-        "Coimbatore",
-        "Cuddalore",
-        "Dharmapuri",
-        "Kancheepuram",
-        "Thanjavur",
-        "Theni",
-        "Viluppuram"
+        "Pudukkottai",
+        "Madurai"
       ],
       "url": "edition.html?id=2026-10-31-evening",
       "json_path": "archive/2026/10/2026-10-31-evening.json"
     },
     {
       "edition_id": "2026-10-31-morning",
-      "title": "Tamil Nadu Politics – Morning Brief – 31 October 2026",
+      "title": "Tamil Nadu Politics — Morning Brief — 31 October 2026",
       "date": "2026-10-31",
       "edition_type": "morning",
       "is_test_sample": false,
-      "status": "published_delayed",
-      "published_at_ist": "2026-11-01T19:28:11.586413+05:30",
+      "status": "published_ai",
+      "scheduled_time_ist": "2026-10-31T06:00:00+05:30",
+      "published_at_ist": "2026-10-31T06:00:00+05:30",
+      "coverage_start_ist": "2026-10-30T18:00:00+05:30",
+      "coverage_end_ist": "2026-10-31T06:00:00+05:30",
       "coverage_window": "2026-10-30T18:00:00+05:30 to 2026-10-31T06:00:00+05:30",
-      "reading_time_minutes": 20,
+      "reading_time_minutes": 2,
       "headline": "Increase in age limit for direct appointment to government jobs - Chief Minister Vijay",
-      "summary_text": "- Increase in age limit for direct appointment to government jobs - Chief Minister Vijay\n- Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh\n- Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection\n- Cooperative supermarkets to sell packets with 10 essential commodities for ₹200",
+      "summary_text": "- Government announces recruitment reforms and age limit relaxation\n- Policy discussions on public recruitment exams",
       "parties": [
         "AIADMK",
         "DMK",
@@ -142,24 +139,13 @@
         "TVK"
       ],
       "topics": [
-        "Assembly, Courts & Policy",
-        "Centre–State Relations",
-        "Education & NEET",
-        "Elections",
-        "Government & Administration",
-        "Infrastructure & Economy",
-        "Political Parties",
-        "Public Protests & Labour"
+        "Education",
+        "Employment",
+        "Governance"
       ],
       "districts": [
         "Chennai",
-        "Cuddalore",
-        "Nagapattinam",
-        "Ramanathapuram",
-        "Ranipet",
-        "Tiruvannamalai",
-        "Vellore",
-        "Viluppuram"
+        "Coimbatore"
       ],
       "url": "edition.html?id=2026-10-31-morning",
       "json_path": "archive/2026/10/2026-10-31-morning.json"

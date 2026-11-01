@@ -503,7 +503,7 @@ function renderEditionCard(ed, slotLabel, isActive = false) {
   `;
 }
 
-function renderFullEditionView(container, ed) {
+function renderFullEditionView(container, ed, pagination = null) {
     const sec = ed.sections || {};
     const allSourcesPool = sec.all_sources || [];
 
@@ -514,8 +514,9 @@ function renderFullEditionView(container, ed) {
         return h && h.length >= 15 && b && b.length >= 25 && !NON_POLITICAL_NOISE_RE.test(h) && !NON_POLITICAL_NOISE_RE.test(b);
     });
 
+    let storyCounter = 1;
     const devsHtml = validDevs
-        .map((d, i) => renderStoryCardHtml(d, i + 1, "Top Story"))
+        .map(d => renderStoryCardHtml(d, storyCounter++, "Top Story"))
         .join("");
 
     const govCards = parseSectionIntoStoryCards(sec.government_and_administration, "Government & Admin", allSourcesPool);
@@ -534,10 +535,10 @@ function renderFullEditionView(container, ed) {
         }
     }
 
-    const govHtml = govCards.map((c, i) => renderStoryCardHtml(c, i + 1, "Government & Admin")).join("");
-    const partiesHtml = partyCards.map((c, i) => renderStoryCardHtml(c, i + 1, "Political Parties")).join("");
-    const courtsHtml = courtCards.map((c, i) => renderStoryCardHtml(c, i + 1, "Assembly & Courts")).join("");
-    const districtsHtml = distCards.map((c, i) => renderStoryCardHtml(c, i + 1, "District News")).join("");
+    const govHtml = govCards.map(c => renderStoryCardHtml(c, storyCounter++, "Government & Admin")).join("");
+    const partiesHtml = partyCards.map(c => renderStoryCardHtml(c, storyCounter++, "Political Parties")).join("");
+    const courtsHtml = courtCards.map(c => renderStoryCardHtml(c, storyCounter++, "Assembly & Courts")).join("");
+    const districtsHtml = distCards.map(c => renderStoryCardHtml(c, storyCounter++, "District News")).join("");
 
     const citedSources = [];
     const seenSourceUrls = new Set();
@@ -652,6 +653,12 @@ function renderFullEditionView(container, ed) {
       </aside>
       <div class="reading-column">
         ${bodySectionsHtml}
+        ${pagination && (pagination.prevEdition || pagination.nextEdition) ? `
+          <nav class="edition-pagination" aria-label="Edition Navigation">
+            ${pagination.prevEdition ? `<a href="${escapeHtml(pagination.prevEdition.url)}" class="pagination-link prev-link">&larr; Previous Edition (${escapeHtml(pagination.prevEdition.date)} &bull; ${escapeHtml(pagination.prevEdition.edition_type)})</a>` : `<span></span>`}
+            ${pagination.nextEdition ? `<a href="${escapeHtml(pagination.nextEdition.url)}" class="pagination-link next-link">Next Edition (${escapeHtml(pagination.nextEdition.date)} &bull; ${escapeHtml(pagination.nextEdition.edition_type)}) &rarr;</a>` : `<span></span>`}
+          </nav>
+        ` : ""}
       </div>
     </div>
   `;
@@ -711,9 +718,20 @@ async function initHomePage() {
                 </div>
               </div>
             `;
+            let prevEdition = null;
+            try {
+                const idxRes = await fetch("data/archive-index.json", { cache: "no-store" });
+                const idxData = await idxRes.json();
+                const editions = idxData.editions || [];
+                const curIdx = editions.findIndex(e => e.edition_id === mostRecent.edition_id);
+                if (curIdx >= 0 && curIdx < editions.length - 1) {
+                    prevEdition = editions[curIdx + 1];
+                }
+            } catch (_) {}
+
             inlineEditionEl.innerHTML = activeBannerHtml + '<div id="lead-edition-inner"></div>';
             const innerContainer = document.getElementById("lead-edition-inner");
-            renderFullEditionView(innerContainer, edFull);
+            renderFullEditionView(innerContainer, edFull, { prevEdition });
         }
     } catch (err) {
         cardsEl.innerHTML = `<div class="card"><p>Unable to load latest editions: ${escapeHtml(err.message)}</p></div>`;
@@ -740,10 +758,14 @@ async function initEditionPage() {
             return;
         }
 
+        const targetIndex = editions.findIndex(e => e.edition_id === target.edition_id);
+        const prevEdition = (targetIndex >= 0 && targetIndex < editions.length - 1) ? editions[targetIndex + 1] : null;
+        const nextEdition = (targetIndex > 0) ? editions[targetIndex - 1] : null;
+
         const edRes = await fetch(target.json_path, { cache: "no-store" });
         const edData = await edRes.json();
         document.title = `${edData.title} | Tamil Nadu Politics Brief`;
-        renderFullEditionView(container, edData);
+        renderFullEditionView(container, edData, { prevEdition, nextEdition });
     } catch (err) {
         container.innerHTML = `<div class="card"><p>Error loading edition: ${escapeHtml(err.message)}</p></div>`;
     }
@@ -800,24 +822,40 @@ async function initArchivePage() {
             return;
         }
 
-        listEl.innerHTML = filtered.map(ed => `
+        listEl.innerHTML = filtered.map(ed => {
+            const cleanHeadline = cleanHeadlineText(ed.headline);
+            const readMin = getReadingTimeMinutes(ed);
+            return `
       <article class="card" style="margin-bottom:1rem;">
-        <div class="card-kicker">${escapeHtml(ed.date)} &bull; ${escapeHtml(ed.edition_type.toUpperCase())} EDITION</div>
-        <h3><a href="${escapeHtml(ed.url)}">${escapeHtml(ensurePureEnglish(ed.headline))}</a></h3>
+        <div class="card-kicker">${escapeHtml(ed.date)} &bull; ${escapeHtml((ed.edition_type || "").toUpperCase())} EDITION</div>
+        <h3><a href="${escapeHtml(ed.url)}">${escapeHtml(cleanHeadline)}</a></h3>
         <p class="meta-line">
           <strong>Coverage Window:</strong> ${getFixedCoverageWindowText(ed.date, ed.edition_type)}<br>
-          <strong>Published:</strong> ${formatReadableIST(ed.published_at_ist)} &bull; ~${escapeHtml(ed.reading_time_minutes || 15)} min read
+          <strong>Published:</strong> ${formatReadableIST(ed.published_at_ist)} &bull; ~${readMin} min read
         </p>
         <div>
           ${(ed.parties || []).map(p => `<span class="badge badge-tag">${escapeHtml(p)}</span>`).join("")}
         </div>
       </article>
-    `).join("");
+    `;
+        }).join("");
     }
 
     [dateInput, typeSelect, partySelect, topicSelect, districtSelect].forEach(el => {
         if (el) el.addEventListener("input", applyFilters);
     });
+
+    const resetBtn = document.getElementById("reset-filters-btn");
+    if (resetBtn) {
+        resetBtn.addEventListener("click", () => {
+            if (dateInput) dateInput.value = "";
+            if (typeSelect) typeSelect.value = "";
+            if (partySelect) partySelect.value = "";
+            if (topicSelect) topicSelect.value = "";
+            if (districtSelect) districtSelect.value = "";
+            applyFilters();
+        });
+    }
 
     applyFilters();
 }
@@ -837,10 +875,53 @@ async function initSearchPage() {
         return;
     }
 
+    // Add match counts next to quick-filter pills (DMK, TVK, BJP, etc.)
+    document.querySelectorAll(".quick-chip").forEach(btn => {
+        const kw = (btn.getAttribute("data-keyword") || "").trim();
+        if (!kw) return;
+        const kwLower = kw.toLowerCase();
+        const count = editions.filter(ed => {
+            const haystack = [
+                ed.title, ed.headline, ed.summary_text,
+                ...(ed.parties || []), ...(ed.topics || []), ...(ed.districts || [])
+            ].join(" ").toLowerCase();
+            return haystack.includes(kwLower);
+        }).length;
+        const baseLabel = btn.textContent.trim().replace(/\s*\(\d+\)$/, "");
+        btn.textContent = `${baseLabel} (${count})`;
+    });
+
+    function renderSearchResultCard(ed) {
+        const cleanHeadline = cleanHeadlineText(ed.headline);
+        const readMin = getReadingTimeMinutes(ed);
+        const partyTags = (ed.parties || [])
+            .map(p => `<span class="badge badge-tag">${escapeHtml(p)}</span>`)
+            .join(" ");
+
+        return `
+          <article class="card" style="margin-bottom:1rem;">
+            <div class="card-kicker">${escapeHtml(ed.date)} &bull; ${escapeHtml((ed.edition_type || "").toUpperCase())} EDITION</div>
+            <h3><a href="${escapeHtml(ed.url)}">${escapeHtml(cleanHeadline)}</a></h3>
+            <p class="meta-line">
+              <strong>Coverage Window:</strong> ${getFixedCoverageWindowText(ed.date, ed.edition_type)} &bull;
+              <strong>Published:</strong> ${formatReadableIST(ed.published_at_ist)} &bull; ~${readMin} min read
+            </p>
+            <div style="margin-bottom:0.65rem;">
+              ${partyTags}
+            </div>
+            <a href="${escapeHtml(ed.url)}" style="font-family:var(--font-sans);font-weight:600;font-size:0.88rem;">Open Full Briefing &rarr;</a>
+          </article>
+        `;
+    }
+
     function runSearch() {
         const q = inputEl.value.trim().toLowerCase();
         if (!q) {
-            resultsEl.innerHTML = `<p class="meta-line">Enter a keyword above to search all historical briefings.</p>`;
+            // Display recent stories by default instead of blank prompt
+            resultsEl.innerHTML = `
+              <p class="meta-line" style="margin-bottom:1rem;font-weight:600;">Recent Historical Briefings (showing all available editions &bull; type above or click a filter pill to narrow):</p>
+              ${editions.map(ed => renderSearchResultCard(ed)).join("")}
+            `;
             return;
         }
 
@@ -857,14 +938,10 @@ async function initSearchPage() {
             return;
         }
 
-        resultsEl.innerHTML = matches.map(ed => `
-      <article class="card" style="margin-bottom:1rem;">
-        <div class="card-kicker">${escapeHtml(ed.date)} &bull; ${escapeHtml(ed.edition_type.toUpperCase())}</div>
-        <h3><a href="${escapeHtml(ed.url)}">${escapeHtml(ensurePureEnglish(ed.headline))}</a></h3>
-        <p class="meta-line">Coverage Window: ${getFixedCoverageWindowText(ed.date, ed.edition_type)}</p>
-        <a href="${escapeHtml(ed.url)}">Open Edition &rarr;</a>
-      </article>
-    `).join("");
+        resultsEl.innerHTML = `
+          <p class="meta-line" style="margin-bottom:1rem;">Found ${matches.length} edition${matches.length > 1 ? "s" : ""} matching "<strong>${escapeHtml(q)}</strong>":</p>
+          ${matches.map(ed => renderSearchResultCard(ed)).join("")}
+        `;
     }
 
     inputEl.addEventListener("input", runSearch);
