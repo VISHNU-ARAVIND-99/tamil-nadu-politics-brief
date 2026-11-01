@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "run_id": "run-2026-11-01-evening-1793540928",
+      "edition_id": "2026-11-01-evening",
+      "timestamp_ist": "2026-11-01T19:22:41.848890+05:30",
+      "status": "published_delayed",
+      "sources_checked": 14,
+      "raw_items_collected": 106,
+      "clusters_verified": 22,
+      "duration_seconds": 233.22,
+      "ai_provider": "inshorts_extractive:HTTP Error 404: Not Found - {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"models/gemini-1.5-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.\",\n    \"s",
+      "tokens_used": 0,
+      "notes": "Saved to archive/2026/11/2026-11-01-evening.json"
+    },
+    {
       "run_id": "run-2026-11-01-evening-1793537156",
       "edition_id": "2026-11-01-evening",
       "timestamp_ist": "2026-11-01T18:18:13.290156+05:30",
