@@ -1,7 +1,48 @@
 {
-  "total_editions": 3,
-  "last_updated_ist": "2026-11-01T17:50:29.125109+05:30",
+  "total_editions": 4,
+  "last_updated_ist": "2026-11-01T17:56:25.956182+05:30",
   "editions": [
+    {
+      "edition_id": "2026-11-01-evening",
+      "title": "Tamil Nadu Politics – Evening Brief – 1 November 2026",
+      "date": "2026-11-01",
+      "edition_type": "evening",
+      "is_test_sample": false,
+      "status": "published",
+      "published_at_ist": "2026-11-01T17:56:25.956182+05:30",
+      "coverage_window": "2026-11-01T06:00:00+05:30 to 2026-11-01T18:00:00+05:30",
+      "reading_time_minutes": 20,
+      "headline": "Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts",
+      "summary_text": "- Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts\n- Pudukottai brought under heavy security cover for CM’s visit on Monday\n- TN to introduce weekly traditional attire day in government offices; CM Vijay to head Secretariat Tamil Sangam\n- How significant is the TVK-led regime’s move to hold Social Justice Survey? Explained",
+      "parties": [
+        "TVK",
+        "VCK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Centre–State Relations",
+        "Education & NEET",
+        "Government & Administration",
+        "Public Protests & Labour"
+      ],
+      "districts": [
+        "Chengalpattu",
+        "Chennai",
+        "Cuddalore",
+        "Erode",
+        "Kanniyakumari",
+        "Karur",
+        "Krishnagiri",
+        "Madurai",
+        "Ramanathapuram",
+        "Thoothukudi",
+        "Tiruvallur",
+        "Vellore",
+        "Viluppuram"
+      ],
+      "url": "edition.html?id=2026-11-01-evening",
+      "json_path": "archive/2026/11/2026-11-01-evening.json"
+    },
     {
       "edition_id": "2026-10-31-evening",
       "title": "Tamil Nadu Politics – Evening Brief – 31 October 2026",

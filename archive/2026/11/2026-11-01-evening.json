@@ -6,15 +6,16 @@
   "is_test_sample": false,
   "status": "published",
   "scheduled_time_ist": "2026-11-01T18:00:00+05:30",
-  "generated_at_ist": "2026-11-01T17:03:57.209725+05:30",
-  "published_at_ist": "2026-11-01T17:03:57.213171+05:30",
+  "generated_at_ist": "2026-11-01T17:56:25.950646+05:30",
+  "published_at_ist": "2026-11-01T17:56:25.956182+05:30",
   "coverage_start_ist": "2026-11-01T06:00:00+05:30",
   "coverage_end_ist": "2026-11-01T18:00:00+05:30",
-  "reading_time_minutes": 17,
-  "word_count": 1830,
-  "headline": "Postponement of college exam for CM’s visit in Pudukottai triggers row",
+  "reading_time_minutes": 20,
+  "word_count": 2877,
+  "headline": "Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts",
   "parties": [
-    "TVK"
+    "TVK",
+    "VCK"
   ],
   "topics": [
     "Agriculture & Water",
@@ -24,36 +25,26 @@
     "Public Protests & Labour"
   ],
   "districts": [
+    "Chengalpattu",
     "Chennai",
     "Cuddalore",
+    "Erode",
+    "Kanniyakumari",
+    "Karur",
+    "Krishnagiri",
+    "Madurai",
     "Ramanathapuram",
+    "Thoothukudi",
+    "Tiruvallur",
+    "Vellore",
     "Viluppuram"
   ],
   "sections": {
     "big_picture": "",
     "top_developments": [
       {
-        "headline": "Postponement of college exam for CM’s visit in Pudukottai triggers row",
-        "verification_badge": "Single-Source Report",
-        "who_is_involved": "TVK",
-        "summary": "PUDUKOTTAI With Chief Minister C. Joseph Vijay scheduled to visit Pudukottai on November 2, to inaugurate the new bus stand and distribute welfare measure, semester examinations scheduled for the day at the Kalaignar Karunanidhi Government Arts College for Women, an autonomous institution in the town, has been postponed, triggering a row. The examinations in the college started on October 30 and are to conclude on November 19.",
-        "why_it_matters": "",
-        "sources": [
-          {
-            "title": "Postponement of college exam for CM’s visit in Pudukottai triggers row",
-            "publisher": "The Hindu",
-            "language": "en",
-            "published_date": "2026-11-01",
-            "published_at_ist": "2026-11-01T16:55:25+05:30",
-            "reliability_tier": "tier_1_editorial",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/postponement-of-college-exam-for-cms-visit-in-pudukottai-triggers-row/article71649447.ece",
-            "snippet": "PUDUKOTTAI With Chief Minister C. Joseph Vijay scheduled to visit Pudukottai on November 2, to inaugurate the new bus stand and distribute welfare measure, semester examinations scheduled for the day at the Kalaignar Karunanidhi Government Arts College for Women, an autonomous institution in the town, has been postponed, triggering a row. The examinations in the college started on October 30 and are to conclude on November 19."
-          }
-        ]
-      },
-      {
         "headline": "Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts",
-        "verification_badge": "Single-Source Report",
+        "verification_badge": "Multi-Source Verified",
         "who_is_involved": "TVK",
         "summary": "Chennai Tamil Nadu Chief Minister C. Joseph Vijay has ordered the establishment of 26 courts under the Protection of Children from Sexual Offences (POCSO) Act, 2012, and four courts under the Narcotic Drugs and Psychotropic Substances (NDPS) Act, 1985, to expedite the trial of cases registered under these laws. A State government press release issued on Sunday (November 1, 2026) said during a review meeting on cases registered under the POCSO Act, the Chief Minister had stressed the need to ensure justice for victims by speeding up trials.",
         "why_it_matters": "",
@@ -67,6 +58,64 @@
             "reliability_tier": "tier_1_editorial",
             "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-to-set-up-26-pocso-act-courts-and-four-ndps-courts/article71652310.ece",
             "snippet": "Chennai Tamil Nadu Chief Minister C. Joseph Vijay has ordered the establishment of 26 courts under the Protection of Children from Sexual Offences (POCSO) Act, 2012, and four courts under the Narcotic Drugs and Psychotropic Substances (NDPS) Act, 1985, to expedite the trial of cases registered under these laws. A State government press release issued on Sunday (November 1, 2026) said during a review meeting on cases registered under the POCSO Act, the Chief Minister had stressed the need to ensure justice for victims by speeding up trials."
+          },
+          {
+            "title": "Govt mulls medical college at Tambaram hospital; Nalam AI to ease medicine collection at government hospitals",
+            "publisher": "DT Next",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T15:43:07+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.dtnext.in/news/tamilnadu/govt-mulls-medical-college-at-tambaram-hospital-nalam-ai-to-ease-medicine-collection-at-government-hospitals",
+            "snippet": "The Tamil Nadu government is considering upgrading the Tambaram District Government Hospital into a medical college, while exploring the expansion of its Nalam AI digital health platform to enable patients to schedule medicine collection and avoid long queues at government hospitals, Health and Family Welfare Minister K G Arunraj said on Sunday..Talking to reporters at airport here, the Minister said the proposal to establish a medical college at Tambaram was under consideration and would be discussed with Chief Minister C Joseph Vijay before a formal announcement.Addressing complaints about prolonged waiting times at hospital..."
+          }
+        ]
+      },
+      {
+        "headline": "Pudukottai brought under heavy security cover for CM’s visit on Monday",
+        "verification_badge": "Single-Source Report",
+        "who_is_involved": "TVK",
+        "summary": "PUDUKOTTAI Pudukottai has been brought under a heavy security cover as Chief Minister C. Joseph Vijay is to visit the town on Monday to participate in a government function. Vijay’s maiden visit to Pudukottai after becoming the Chief Minister. Separate security schemes have been drafted by the Tiruchi City Police, Tiruchi Rural Police, and the Pudukottai district police as the Chief Minister is to reach Pudukottai by road from the Tiruchi International Airport. Additional strength has been drawn from other districts to tighten security in and around Pudukottai.",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "Pudukottai brought under heavy security cover for CM’s visit on Monday",
+            "publisher": "The Hindu",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T17:33:01+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.thehindu.com/news/national/tamil-nadu/pudukottai-brought-under-heavy-security-cover-for-cms-visit-on-monday/article71652676.ece",
+            "snippet": "PUDUKOTTAI Pudukottai has been brought under a heavy security cover as Chief Minister C. Joseph Vijay is to visit the town on Monday to participate in a government function. Vijay’s maiden visit to Pudukottai after becoming the Chief Minister. Separate security schemes have been drafted by the Tiruchi City Police, Tiruchi Rural Police, and the Pudukottai district police as the Chief Minister is to reach Pudukottai by road from the Tiruchi International Airport. Additional strength has been drawn from other districts to tighten security in and around Pudukottai."
+          },
+          {
+            "title": "Postponement of college exam for CM’s visit in Pudukottai triggers row",
+            "publisher": "The Hindu",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T16:55:25+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.thehindu.com/news/national/tamil-nadu/postponement-of-college-exam-for-cms-visit-in-pudukottai-triggers-row/article71649447.ece",
+            "snippet": "PUDUKOTTAI With Chief Minister C. Joseph Vijay scheduled to visit Pudukottai on November 2, to inaugurate the new bus stand and distribute welfare measure, semester examinations scheduled for the day at the Kalaignar Karunanidhi Government Arts College for Women, an autonomous institution in the town, has been postponed, triggering a row. The examinations in the college started on October 30 and are to conclude on November 19."
+          }
+        ]
+      },
+      {
+        "headline": "TN to introduce weekly traditional attire day in government offices; CM Vijay to head Secretariat Tamil Sangam",
+        "verification_badge": "Single-Source Report",
+        "who_is_involved": "TVK",
+        "summary": "Tamil Nadu will introduce a weekly traditional attire day across government offices, with Ministers and government employees required to wear veshti and shirt or saree on a designated day, School Education and Tamil Development Minister Rajmohan announced on Sunday, in a move aimed at promoting Tamil culture and supporting the handloom sector..Speaking at the Tamil Nadu Day celebrations at the Government Museum in Egmore here, Rajmohan said Chief Minister C Joseph Vijay had approved the proposal, which would cover the Secretariat and other government offices.The Minister also announced that a Tamil Sangam would be established at the...",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "TN to introduce weekly traditional attire day in government offices; CM Vijay to head Secretariat Tamil Sangam",
+            "publisher": "DT Next",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T16:16:02+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.dtnext.in/news/tamilnadu/tn-to-introduce-weekly-traditional-attire-day-in-government-offices-cm-vijay-to-head-secretariat-tamil-sangam",
+            "snippet": "Tamil Nadu will introduce a weekly traditional attire day across government offices, with Ministers and government employees required to wear veshti and shirt or saree on a designated day, School Education and Tamil Development Minister Rajmohan announced on Sunday, in a move aimed at promoting Tamil culture and supporting the handloom sector..Speaking at the Tamil Nadu Day celebrations at the Government Museum in Egmore here, Rajmohan said Chief Minister C Joseph Vijay had approved the proposal, which would cover the Secretariat and other government offices.The Minister also announced that a Tamil Sangam would be established at the..."
           }
         ]
       },
@@ -86,6 +135,25 @@
             "reliability_tier": "tier_1_editorial",
             "url": "https://www.thehindu.com/news/national/tamil-nadu/how-significant-is-the-tvk-led-regimes-move-to-hold-social-justice-survey-explained/article71649252.ece",
             "snippet": "The feature of an ‘open column’, where respondents can state their caste during the second phase of the Census, to be carried out in most parts of the country during February next year, has forced many parties and other stakeholders to express concerns over the utility of the whole exercise"
+          }
+        ]
+      },
+      {
+        "headline": "VCK functionary hacked to death in TN's Thoothukudi",
+        "verification_badge": "Single-Source Report",
+        "who_is_involved": "VCK",
+        "summary": "TUTICORIN (TN): A 40-year-old VCK functionary was hacked to death by an unidentified gang at a petrol bunk here on Sunday morning, police said..The incident triggered protests and tension in the area.The deceased was identified as Balamurugan, a resident of Sottaiyan Thoppu under the Mappillaiurani village panchayat.Police said he operated a vegetable shop and also worked as a van driver.After returning from the market and unloading vegetables at his shop, Balamurugan went to a fuel outlet on Davispuram Road to refuel his two-wheeler.",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "VCK functionary hacked to death in TN's Thoothukudi",
+            "publisher": "DT Next",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T15:47:52+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.dtnext.in/news/tamilnadu/vck-functionary-hacked-to-death-in-tns-tuticorin",
+            "snippet": "TUTICORIN (TN): A 40-year-old VCK functionary was hacked to death by an unidentified gang at a petrol bunk here on Sunday morning, police said..The incident triggered protests and tension in the area.The deceased was identified as Balamurugan, a resident of Sottaiyan Thoppu under the Mappillaiurani village panchayat.Police said he operated a vegetable shop and also worked as a van driver.After returning from the market and unloading vegetables at his shop, Balamurugan went to a fuel outlet on Davispuram Road to refuel his two-wheeler."
           }
         ]
       },
@@ -145,60 +213,15 @@
             "snippet": "Chennai The Greater Chennai Corporation (GCC) will develop 36 new parks at an estimated cost of ₹34.45 crore and 11 new playgrounds at ₹9.52 crore in the first phase of the Chief Minister’s Integrated Urban Development Mission (CMIUDM), 2026–2031. CM announces ₹1,850-cr for road repairs in Chennai and other urban areas CM announces ₹1,850-cr for road repairs in Chennai and other urban areas CM announces ₹1,850-cr for road repairs in Chennai and other urban areas storyline 1 The GCC is currently undertaking the tendering process for the parks and playgrounds."
           }
         ]
-      },
-      {
-        "headline": "Woman with disability dies in midnight fire at Korattur apartment",
-        "verification_badge": "Single-Source Report",
-        "who_is_involved": "",
-        "summary": "CHENNAI A 48-year-old woman with a disability died after being trapped in a fire that broke out at her apartment in Periyar Nagar, Korattur, in the early hours of Sunday (November 1, 2026). Her husband and son escaped with burn injuries. The deceased has been identified as Akila, 48. Police said the incident occurred while the family of three was asleep. An air-conditioner and a refrigerator, among other electrical appliances, reportedly exploded as the fire spread rapidly through the house.",
-        "why_it_matters": "",
-        "sources": [
-          {
-            "title": "Woman with disability dies in midnight fire at Korattur apartment",
-            "publisher": "The Hindu",
-            "language": "en",
-            "published_date": "2026-11-01",
-            "published_at_ist": "2026-11-01T11:46:12+05:30",
-            "reliability_tier": "tier_1_editorial",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/woman-with-disability-dies-in-midnight-fire-at-korattur-apartment/article71652193.ece",
-            "snippet": "CHENNAI A 48-year-old woman with a disability died after being trapped in a fire that broke out at her apartment in Periyar Nagar, Korattur, in the early hours of Sunday (November 1, 2026). Her husband and son escaped with burn injuries. The deceased has been identified as Akila, 48. Police said the incident occurred while the family of three was asleep. An air-conditioner and a refrigerator, among other electrical appliances, reportedly exploded as the fire spread rapidly through the house."
-          }
-        ]
-      },
-      {
-        "headline": "Minister inaugurates modern paddy storage facilities in Cuddalore district",
-        "verification_badge": "Single-Source Report",
-        "who_is_involved": "",
-        "summary": "CUDDALORE Tamil Nadu Minister for Food and Civil Supplies P. Venkataramanan on Saturday (October 31, 2026) inaugurated two paddy storage facilities, with structural roofing built at a total cost of ₹11.56 crore in Srimushnam taluk in Cuddalore district. The facilities, constructed with financial assistance under the National Bank for Agriculture and Rural Development (NABARD), have a combined storage capacity of 7,000 tonnes. The Melapalayur facility, with a capacity of 2,000 tonnes, was built at a cost of ₹3.83 crore, while the 5,000-tonne facility at Thethampattu cost ₹7.73 crore.",
-        "why_it_matters": "",
-        "sources": [
-          {
-            "title": "Minister inaugurates modern paddy storage facilities in Cuddalore district",
-            "publisher": "The Hindu",
-            "language": "en",
-            "published_date": "2026-11-01",
-            "published_at_ist": "2026-11-01T10:17:03+05:30",
-            "reliability_tier": "tier_1_editorial",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/minister-inaugurates-modern-paddy-storage-facilities-in-cuddalore-district/article71652117.ece",
-            "snippet": "CUDDALORE Tamil Nadu Minister for Food and Civil Supplies P. Venkataramanan on Saturday (October 31, 2026) inaugurated two paddy storage facilities, with structural roofing built at a total cost of ₹11.56 crore in Srimushnam taluk in Cuddalore district. The facilities, constructed with financial assistance under the National Bank for Agriculture and Rural Development (NABARD), have a combined storage capacity of 7,000 tonnes. The Melapalayur facility, with a capacity of 2,000 tonnes, was built at a cost of ₹3.83 crore, while the 5,000-tonne facility at Thethampattu cost ₹7.73 crore."
-          }
-        ]
       }
     ],
-    "government_and_administration": "",
-    "political_parties_and_opposition": "",
+    "government_and_administration": "- **Woman with disability dies in midnight fire at Korattur apartment:** CHENNAI A 48-year-old woman with a disability died after being trapped in a fire that broke out at her apartment in Periyar Nagar, Korattur, in the early hours of Sunday (November 1, 2026). Her husband and son escaped with burn injuries. The deceased has been identified as Akila, 48. Police said the incident occurred while the family of three was asleep. An air-conditioner and a refrigerator, among other electrical appliances, reportedly exploded as the fire spread rapidly through the house. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/woman-with-disability-dies-in-midnight-fire-at-korattur-apartment/article71652193.ece))\n- **Minister inaugurates modern paddy storage facilities in Cuddalore district:** CUDDALORE Tamil Nadu Minister for Food and Civil Supplies P. Venkataramanan on Saturday (October 31, 2026) inaugurated two paddy storage facilities, with structural roofing built at a total cost of ₹11.56 crore in Srimushnam taluk in Cuddalore district. The facilities, constructed with financial assistance under the National Bank for Agriculture and Rural Development (NABARD), have a combined storage capacity of 7,000 tonnes. The Melapalayur facility, with a capacity of 2,000 tonnes, was built at a cost of ₹3.83 crore, while the 5,000-tonne facility at Thethampattu cost ₹7.73 crore. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/minister-inaugurates-modern-paddy-storage-facilities-in-cuddalore-district/article71652117.ece))\n- **POCSO accused auto driver who went missing from hospital arrested in Chennai:** A 61-year-old auto-rickshaw driver, accused of sexually harassing an eight-year-old girl, was arrested after he went missing from a government hospital, Greater Chennai Police said on Sunday..The man was accused of sexually harassing the girl while she was travelling in his auto-rickshaw to school on October 30.Following the alleged incident, the girl’s parents and relatives assaulted the driver, leaving him with injuries to his head and back, police said.He was rescued by his son and admitted to the Periyar Nagar Government Hospital. ([DT Next](https://www.dtnext.in/news/tamilnadu/pocso-accused-auto-driver-who-went-missing-from-hospital-arrested-in-chennai))\n- **Candidates worried over OMR sheet signatures at Choolaimedu TNPSC exam centre:** Confusion over the placement of signatures on OMR answer sheets triggered concern among candidates at an examination centre in Choolaimedu during the TNPSC Group 2 and Group 2A examinations held across Tamil Nadu on Sunday. .The issue was reported at the L.M. Dadha Higher Secondary School examination centre, where candidates alleged that room invigilators instructed them to sign above the fingerprint section on their OMR answer sheets.According to the candidates, the usual procedure is to obtain their signatures on the left side of the OMR sheet and thumb impressions in the designated section on the right. ([DT Next](https://www.dtnext.in/news/chennai/candidates-worried-over-omr-sheet-signatures-at-choolaimedu-tnpsc-exam-centre))\n- **Cramped truck, no food or water: 25 cattle being taken to Keralam for slaughter rescued:** On Saturday, police and animal welfare activists rescued 25 cattle from a cramped truck near Maraimalai Nagar. The animals were being transported to Keralam for slaughter without appropriate documentation or care. Activist Sai Vignesh observed the cramped conditions and notified the authorities about the situation. After the police raided the truck, the cattle were sent to a government goshala for urgent care. ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/cramped-truck-no-food-or-water-25-cattle-being-taken-to-keralam-for-slaughter-rescued/articleshow/135426110.cms))",
+    "political_parties_and_opposition": "- **TASMAC shops shut in several districts as workers protest bottle buy-back scheme:** TASMAC liquor shops remained shut in Chennai and several other districts on Sunday as employees launched a protest against the implementation of the empty-bottle buy-back scheme, citing increased workload, lack of basic facilities and inadequate arrangements to handle returned bottles..More than 50 employees took part in a protest outside the TASMAC depot in Ambattur, representing unions of Chennai district TASMAC workers. Shops were also reported closed in districts including Tiruvallur, Madurai, Erode, Karur, Vellore, Kanyakumari and Krishnagiri. ([DT Next](https://www.dtnext.in/news/tamilnadu/tasmac-shops-shut-in-several-districts-as-workers-protest-bottle-buy-back-scheme))",
     "assembly_courts_and_policy": "",
     "district_developments": "",
     "claims_vs_facts": [],
     "what_to_watch_next": "",
     "all_sources": [
-      {
-        "title": "Postponement of college exam for CM’s visit in Pudukottai triggers row",
-        "publisher": "The Hindu",
-        "language": "en",
-        "published_date": "2026-11-01",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/postponement-of-college-exam-for-cms-visit-in-pudukottai-triggers-row/article71649447.ece"
-      },
       {
         "title": "Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts",
         "publisher": "The Hindu",
@@ -207,11 +230,46 @@
         "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-to-set-up-26-pocso-act-courts-and-four-ndps-courts/article71652310.ece"
       },
       {
+        "title": "Govt mulls medical college at Tambaram hospital; Nalam AI to ease medicine collection at government hospitals",
+        "publisher": "DT Next",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://www.dtnext.in/news/tamilnadu/govt-mulls-medical-college-at-tambaram-hospital-nalam-ai-to-ease-medicine-collection-at-government-hospitals"
+      },
+      {
+        "title": "Pudukottai brought under heavy security cover for CM’s visit on Monday",
+        "publisher": "The Hindu",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/pudukottai-brought-under-heavy-security-cover-for-cms-visit-on-monday/article71652676.ece"
+      },
+      {
+        "title": "Postponement of college exam for CM’s visit in Pudukottai triggers row",
+        "publisher": "The Hindu",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/postponement-of-college-exam-for-cms-visit-in-pudukottai-triggers-row/article71649447.ece"
+      },
+      {
+        "title": "TN to introduce weekly traditional attire day in government offices; CM Vijay to head Secretariat Tamil Sangam",
+        "publisher": "DT Next",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://www.dtnext.in/news/tamilnadu/tn-to-introduce-weekly-traditional-attire-day-in-government-offices-cm-vijay-to-head-secretariat-tamil-sangam"
+      },
+      {
         "title": "How significant is the TVK-led regime’s move to hold Social Justice Survey? Explained",
         "publisher": "The Hindu",
         "language": "en",
         "published_date": "2026-11-01",
         "url": "https://www.thehindu.com/news/national/tamil-nadu/how-significant-is-the-tvk-led-regimes-move-to-hold-social-justice-survey-explained/article71649252.ece"
+      },
+      {
+        "title": "VCK functionary hacked to death in TN's Thoothukudi",
+        "publisher": "DT Next",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://www.dtnext.in/news/tamilnadu/vck-functionary-hacked-to-death-in-tns-tuticorin"
       },
       {
         "title": "1,172 candidates receive offer letters at job fair held in Villupuram",
@@ -247,6 +305,34 @@
         "language": "en",
         "published_date": "2026-11-01",
         "url": "https://www.thehindu.com/news/national/tamil-nadu/minister-inaugurates-modern-paddy-storage-facilities-in-cuddalore-district/article71652117.ece"
+      },
+      {
+        "title": "POCSO accused auto driver who went missing from hospital arrested in Chennai",
+        "publisher": "DT Next",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://www.dtnext.in/news/tamilnadu/pocso-accused-auto-driver-who-went-missing-from-hospital-arrested-in-chennai"
+      },
+      {
+        "title": "TASMAC shops shut in several districts as workers protest bottle buy-back scheme",
+        "publisher": "DT Next",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://www.dtnext.in/news/tamilnadu/tasmac-shops-shut-in-several-districts-as-workers-protest-bottle-buy-back-scheme"
+      },
+      {
+        "title": "Candidates worried over OMR sheet signatures at Choolaimedu TNPSC exam centre",
+        "publisher": "DT Next",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://www.dtnext.in/news/chennai/candidates-worried-over-omr-sheet-signatures-at-choolaimedu-tnpsc-exam-centre"
+      },
+      {
+        "title": "Cramped truck, no food or water: 25 cattle being taken to Keralam for slaughter rescued",
+        "publisher": "The Times of India",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/cramped-truck-no-food-or-water-25-cattle-being-taken-to-keralam-for-slaughter-rescued/articleshow/135426110.cms"
       }
     ]
   }
