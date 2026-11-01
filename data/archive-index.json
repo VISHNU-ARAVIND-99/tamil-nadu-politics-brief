@@ -1,6 +1,6 @@
 {
   "total_editions": 4,
-  "last_updated_ist": "2026-11-01T19:22:41.848985+05:30",
+  "last_updated_ist": "2026-11-01T19:27:44.790157+05:30",
   "editions": [
     {
       "edition_id": "2026-11-01-evening",
@@ -9,11 +9,11 @@
       "edition_type": "evening",
       "is_test_sample": false,
       "status": "published_delayed",
-      "published_at_ist": "2026-11-01T19:22:41.848985+05:30",
+      "published_at_ist": "2026-11-01T19:27:44.790157+05:30",
       "coverage_window": "2026-11-01T06:00:00+05:30 to 2026-11-01T18:00:00+05:30",
-      "reading_time_minutes": 20,
-      "headline": "Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts",
-      "summary_text": "- Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts\n- Pudukottai brought under heavy security cover for CM’s visit on Monday\n- How significant is the TVK-led regime’s move to hold Social Justice Survey? Explained\n- VCK functionary hacked to death in TN's Thoothukudi",
+      "reading_time_minutes": 10,
+      "headline": "Tamil Nadu Politics Brief: Tamil Nadu Day Celebrated, Pudukottai Exam Postponement Sparks Row, and VCK Functionary Hacked to Death",
+      "summary_text": "- Tamil Nadu Day Celebrated Amid Political Row Over Date\n- Postponement of College Exams for Chief Minister's Visit Triggers Controversy\n- VCK Functionary Hacked to Death in Thoothukudi, Causing Local Tension",
       "parties": [
         "DMK",
         "TVK",
@@ -36,6 +36,7 @@
         "Karur",
         "Krishnagiri",
         "Madurai",
+        "Pudukkottai",
         "Ramanathapuram",
         "Thoothukudi",
         "Tiruvallur",
