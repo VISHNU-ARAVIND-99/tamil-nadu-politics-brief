@@ -1,6 +1,6 @@
 {
   "total_editions": 3,
-  "last_updated_ist": "2026-11-01T10:22:23.214020+05:30",
+  "last_updated_ist": "2026-11-01T11:10:19.213573+05:30",
   "editions": [
     {
       "edition_id": "2026-11-01-morning",
@@ -9,20 +9,15 @@
       "edition_type": "morning",
       "is_test_sample": false,
       "status": "published_delayed",
-      "published_at_ist": "2026-11-01T10:22:23.214020+05:30",
-      "coverage_window": "2026-10-31T22:19:39.720407+05:30 to 2026-11-01T10:19:39.720407+05:30",
-      "reading_time_minutes": 55,
-      "headline": "Take action against officials who arrested MIDS professor, Stalin urges T.N. government",
-      "summary_text": "- Take action against officials who arrested MIDS professor, Stalin urges T.N. government\n- Vijay’s plan to tour three districts sets off rumour mills on TVK prep for impending bypolls\n- Vijaya Deepika\n- ‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami",
+      "published_at_ist": "2026-11-01T11:10:19.213573+05:30",
+      "coverage_window": "2026-10-31T18:00:00+05:30 to 2026-11-01T06:00:00+05:30",
+      "reading_time_minutes": 11,
+      "headline": "‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami",
+      "summary_text": "- ‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami\n- Palaniswami slams TVK-led government over convict’s escape in Coimbatore\n- Opposition slams TVK govt for repeated prison escapes across Tamil Nadu\n- DMK women’s wing protests reflect public anger against TVK govt: Stalin",
       "parties": [
         "AIADMK",
         "AMMK",
-        "BJP",
         "DMK",
-        "INC",
-        "Left Parties",
-        "NTK",
-        "PMK",
         "TVK"
       ],
       "topics": [
@@ -31,20 +26,15 @@
         "Centre–State Relations",
         "Education & NEET",
         "Elections",
-        "Government & Administration",
-        "Infrastructure & Economy",
-        "Public Protests & Labour"
+        "Government & Administration"
       ],
       "districts": [
+        "Chengalpattu",
         "Chennai",
         "Coimbatore",
         "Cuddalore",
-        "Madurai",
-        "Pudukkottai",
         "Salem",
         "Theni",
-        "Tiruppur",
-        "Tiruvannamalai",
         "Vellore"
       ],
       "url": "edition.html?id=2026-11-01-morning",
