@@ -1,7 +1,44 @@
 {
   "total_editions": 3,
-  "last_updated_ist": "2026-11-01T11:43:12.082349+05:30",
+  "last_updated_ist": "2026-11-01T11:52:52.882056+05:30",
   "editions": [
+    {
+      "edition_id": "2026-10-31-evening",
+      "title": "Tamil Nadu Politics – Evening Brief – 31 October 2026",
+      "date": "2026-10-31",
+      "edition_type": "evening",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-01T11:52:52.882056+05:30",
+      "coverage_window": "2026-10-31T06:00:00+05:30 to 2026-10-31T18:00:00+05:30",
+      "reading_time_minutes": 8,
+      "headline": "CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak",
+      "summary_text": "- CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak\n- DMK women cadre protest across Tamil Nadu over price rise, law and order\n- Tamil Nadu Congress, VCK mobilise cadres for Nov. 1 INDIA bloc protest in New Delhi\n- Stalin urges CM Vijay to heed women’s protest over rising prices, law and order",
+      "parties": [
+        "DMK",
+        "INC",
+        "TVK",
+        "VCK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Assembly, Courts & Policy",
+        "Centre–State Relations",
+        "Elections",
+        "Government & Administration",
+        "Political Parties",
+        "Public Protests & Labour"
+      ],
+      "districts": [
+        "Coimbatore",
+        "Madurai",
+        "Salem",
+        "Theni",
+        "Viluppuram"
+      ],
+      "url": "edition.html?id=2026-10-31-evening",
+      "json_path": "archive/2026/10/2026-10-31-evening.json"
+    },
     {
       "edition_id": "2026-11-01-morning",
       "title": "Tamil Nadu Politics – Morning Brief – 1 November 2026",
@@ -73,51 +110,6 @@
       ],
       "url": "edition.html?id=2026-10-31-morning",
       "json_path": "archive/2026/10/2026-10-31-morning.json"
-    },
-    {
-      "edition_id": "2026-10-31-evening",
-      "title": "Tamil Nadu Politics – Evening Brief – 31 October 2026",
-      "date": "2026-10-31",
-      "edition_type": "evening",
-      "is_test_sample": false,
-      "status": "published_delayed",
-      "published_at_ist": "2026-10-31T23:29:21.229168+05:30",
-      "coverage_window": "2026-10-31T11:26:43.708013+05:30 to 2026-10-31T23:26:43.708013+05:30",
-      "reading_time_minutes": 29,
-      "headline": "Tamil Nadu CM Vijay is completely out of touch, lacks independent decision-making: EPS",
-      "summary_text": "- Tamil Nadu CM Vijay is completely out of touch, lacks independent decision-making: EPS\n- Theni jailbreak: Tamil Nadu CM Vijay orders suspension of Theni district jail superintendent in-charge\n- DMK women cadre protest across Tamil Nadu over price rise, law and order\n- Tamil Nadu Congress, VCK mobilise cadres for Nov. 1 INDIA bloc protest in New Delhi",
-      "parties": [
-        "AIADMK",
-        "AMMK",
-        "BJP",
-        "DMK",
-        "INC",
-        "TVK",
-        "VCK"
-      ],
-      "topics": [
-        "Agriculture & Water",
-        "Assembly, Courts & Policy",
-        "Centre–State Relations",
-        "Education & NEET",
-        "Elections",
-        "Government & Administration",
-        "Infrastructure & Economy",
-        "Political Parties",
-        "Public Protests & Labour"
-      ],
-      "districts": [
-        "Chennai",
-        "Coimbatore",
-        "Cuddalore",
-        "Madurai",
-        "Salem",
-        "Theni",
-        "Tiruvannamalai",
-        "Viluppuram"
-      ],
-      "url": "edition.html?id=2026-10-31-evening",
-      "json_path": "archive/2026/10/2026-10-31-evening.json"
     }
   ]
 }

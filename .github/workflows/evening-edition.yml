@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       target_date:
-        description: "Optional date in YYYY-MM-DD"
+        description: "Optional date in YYYY-MM-DD (defaults to today in IST)"
         required: false
         default: ""
       force_regenerate:
@@ -58,11 +58,18 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
         run: |
-          if [ "${{ github.event_name }}" = "schedule" ]; then
-            python3 -m scripts.publish_edition --edition evening
-          else
-            python3 -m scripts.publish_edition --edition auto --force
+          ARGS="--edition evening"
+          if [ "${{ github.event_name }}" = "push" ]; then
+            ARGS="--edition auto --force"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ -n "${{ github.event.inputs.target_date }}" ]; then
+              ARGS="$ARGS --date ${{ github.event.inputs.target_date }}"
+            fi
+            if [ "${{ github.event.inputs.force_regenerate }}" != "false" ]; then
+              ARGS="$ARGS --force"
+            fi
           fi
+          python3 -m scripts.publish_edition $ARGS
 
       - name: Commit and Push Updated Archive to GitHub Pages
         run: |

@@ -124,12 +124,15 @@ def compute_cluster_similarity(item_a: dict, item_b: dict) -> float:
 
     shared_parties = set(item_a["parties"]) & set(item_b["parties"])
     shared_districts = set(item_a["districts"]) & set(item_b["districts"])
+    shared_topics = set(item_a["topics"]) & set(item_b["topics"])
 
     bonus = 0.0
-    if jaccard >= 0.18 and shared_parties and shared_districts:
-        bonus = 0.25
-    elif jaccard >= 0.22 and shared_parties:
-        bonus = 0.15
+    if shared_parties and shared_districts:
+        bonus += 0.30
+    elif shared_parties and shared_topics:
+        bonus += 0.20
+    elif shared_districts and shared_topics:
+        bonus += 0.15
 
     return min(1.0, jaccard + bonus)
 
@@ -156,7 +159,14 @@ def deduplicate_and_filter(raw_items: list[dict]) -> list[dict]:
         enriched["parties"] = tags["parties"]
         enriched["topics"] = tags["topics"] or ["Government & Administration"]
         enriched["districts"] = tags["districts"]
-        enriched["_tokens"] = tokenize_for_similarity(combined_text)
+        tokens = tokenize_for_similarity(combined_text)
+        for p in tags["parties"]:
+            tokens.add(f"entity_party_{p.lower()}")
+        for d in tags["districts"]:
+            tokens.add(f"entity_district_{d.lower()}")
+        for t in tags["topics"]:
+            tokens.add(f"entity_topic_{t.lower()}")
+        enriched["_tokens"] = tokens
         relevant_items.append(enriched)
 
     clusters: list[dict] = []
