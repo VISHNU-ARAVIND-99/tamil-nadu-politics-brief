@@ -2,8 +2,12 @@ name: Publish Evening Edition (6:00 PM IST)
 
 on:
   schedule:
-    # 12:22 UTC = 05:52 PM IST (avoids top-of-hour queue congestion)
+    # 12:22 UTC = 05:52 PM IST (Primary evening release)
     - cron: "22 12 * * *"
+    # 12:52 UTC = 06:22 PM IST (1st backup retry if GitHub dropped 12:22)
+    - cron: "52 12 * * *"
+    # 13:22 UTC = 06:52 PM IST (2nd backup retry)
+    - cron: "22 13 * * *"
   workflow_dispatch:
     inputs:
       target_date:

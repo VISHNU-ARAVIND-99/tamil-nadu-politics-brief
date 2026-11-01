@@ -1,6 +1,32 @@
 {
   "runs": [
     {
+      "run_id": "run-2026-11-01-morning-1793508579",
+      "edition_id": "2026-11-01-morning",
+      "timestamp_ist": "2026-11-01T10:22:23.209838+05:30",
+      "status": "published_delayed",
+      "sources_checked": 16,
+      "raw_items_collected": 384,
+      "clusters_verified": 111,
+      "duration_seconds": 163.52,
+      "ai_provider": "fallback:missing_key",
+      "tokens_used": 0,
+      "notes": "Saved to archive/2026/11/2026-11-01-morning.json"
+    },
+    {
+      "run_id": "run-2026-11-01-morning-1793508547",
+      "edition_id": "2026-11-01-morning",
+      "timestamp_ist": "2026-11-01T10:19:07.243599+05:30",
+      "status": "published_delayed",
+      "sources_checked": 16,
+      "raw_items_collected": 0,
+      "clusters_verified": 0,
+      "duration_seconds": 0.08,
+      "ai_provider": "fallback:quiet_window",
+      "tokens_used": 0,
+      "notes": "Saved to archive/2026/11/2026-11-01-morning.json"
+    },
+    {
       "run_id": "run-2026-10-31-evening-1793469403",
       "edition_id": "2026-10-31-evening",
       "timestamp_ist": "2026-10-31T23:29:21.229074+05:30",

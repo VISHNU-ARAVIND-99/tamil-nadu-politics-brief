@@ -2,8 +2,12 @@ name: Publish Morning Edition (6:00 AM IST)
 
 on:
   schedule:
-    # 00:22 UTC = 05:52 AM IST (avoids top-of-hour queue congestion)
+    # 00:22 UTC = 05:52 AM IST (Primary morning release)
     - cron: "22 0 * * *"
+    # 00:52 UTC = 06:22 AM IST (1st backup retry if GitHub dropped 00:22)
+    - cron: "52 0 * * *"
+    # 01:22 UTC = 06:52 AM IST (2nd backup retry)
+    - cron: "22 1 * * *"
   workflow_dispatch:
     inputs:
       target_date:
