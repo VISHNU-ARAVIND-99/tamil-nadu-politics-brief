@@ -15,6 +15,7 @@ from scripts.config import (
     GEMINI_API_KEY,
     GEMINI_MODEL,
     HTTP_TIMEOUT_SECONDS,
+    USER_AGENT,
     get_ist_now,
     has_tamil_script,
     translate_tamil_to_english,
@@ -247,6 +248,26 @@ def validate_and_sanitize_ai_output(ai_data: dict, allowed_urls: set[str], fallb
     return ai_data
 
 
+def discover_gemini_flash_models(api_key: str) -> list[str]:
+    """Queries Google Generative Language API to dynamically list all models supporting generateContent."""
+    url = f"https://generativelanguage.googleapis.com/v1beta/models?key={api_key}"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT_SECONDS) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        models = []
+        for m in data.get("models", []):
+            name = m.get("name", "").replace("models/", "")
+            methods = m.get("supportedGenerationMethods", [])
+            if "generateContent" in methods:
+                models.append(name)
+        flash_models = [m for m in models if "flash" in m.lower()]
+        other_models = [m for m in models if "flash" not in m.lower() and "pro" not in m.lower()]
+        return flash_models + other_models
+    except Exception as exc:
+        print(f"[DEBUG] Dynamic model discovery: {exc}")
+        return []
+
 def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -> dict:
     if not verified_clusters:
         return build_extractive_fallback_edition(window_meta, [], "quiet_window")
@@ -289,12 +310,15 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
         for c in top_clusters
     ]
 
+    discovered = discover_gemini_flash_models(GEMINI_API_KEY)
     models_to_try = [
         GEMINI_MODEL,
+        *discovered,
         "gemini-1.5-flash",
         "gemini-1.5-flash-latest",
         "gemini-1.5-flash-8b",
         "gemini-2.0-flash",
+        "gemini-2.5-flash",
         "gemini-1.5-pro",
     ]
     models_to_try = list(dict.fromkeys(m for m in models_to_try if m))
