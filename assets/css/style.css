@@ -104,33 +104,32 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    margin: 0.25rem 0 0.4rem;
+    margin: 0.35rem auto 0.45rem;
+    width: 100%;
 }
 
-.masthead-brand-link {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.65rem;
-    color: var(--text-primary);
-    text-decoration: none;
-}
-
-.masthead-brand-link:hover {
-    color: var(--accent-red);
+.masthead-logo-link {
+    display: inline-block;
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+    margin: 0 auto 0.5rem;
 }
 
 .masthead-logo {
-    width: 78px;
-    height: 78px;
+    display: block;
+    margin: 0 auto;
+    width: 76px;
+    height: 76px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.masthead-brand-link:hover .masthead-logo {
+.masthead-logo-link:hover .masthead-logo {
     transform: scale(1.05);
     box-shadow: 0 6px 18px rgba(139, 30, 30, 0.25);
 }
@@ -142,11 +141,17 @@ a:hover {
     letter-spacing: -0.5px;
     line-height: 1.15;
     margin: 0;
+    width: 100%;
 }
 
 .masthead-title a {
-    color: var(--text-primary);
-    text-decoration: none;
+    color: var(--text-primary) !important;
+    text-decoration: none !important;
+}
+
+.masthead-title a:hover {
+    color: var(--accent-red) !important;
+    text-decoration: none !important;
 }
 
 .masthead-tagline {
