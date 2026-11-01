@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-01T17:03:57.213171+05:30",
+  "last_updated_ist": "2026-11-01T17:50:29.125109+05:30",
   "system_status": "operational",
-  "status_message": "Latest evening edition published at 2026-11-01T17:03:57.213171+05:30.",
+  "status_message": "Latest evening edition published at 2026-11-01T17:50:29.125109+05:30.",
   "morning": {
     "edition_id": "2026-11-01-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 1 November 2026",
@@ -10,19 +10,70 @@
     "is_test_sample": false,
     "status": "published_delayed",
     "scheduled_time_ist": "2026-11-01T06:00:00+05:30",
-    "generated_at_ist": "2026-11-01T16:41:58.417825+05:30",
-    "published_at_ist": "2026-11-01T16:41:58.420900+05:30",
+    "generated_at_ist": "2026-11-01T17:42:28.380050+05:30",
+    "published_at_ist": "2026-11-01T17:42:28.442510+05:30",
     "coverage_start_ist": "2026-10-31T18:00:00+05:30",
     "coverage_end_ist": "2026-11-01T06:00:00+05:30",
-    "reading_time_minutes": 13,
-    "word_count": 1977,
-    "headline": "CM Vijay urges protection of Tamil language, heritage in Tamil Nadu Day message",
-    "big_picture_excerpt": "- CM Vijay urges protection of Tamil language, heritage in Tamil Nadu Day message\n- ‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami\n- VCK functionary hacked to death in TN's Tuticorin\n- Standing together... Greetings Edappadi Palaniswami on Tamil Nadu Day!",
+    "reading_time_minutes": 20,
+    "word_count": 4328,
+    "headline": "Take action against officials who arrested MIDS professor, Stalin urges T.N. government",
+    "big_picture_excerpt": "- Take action against officials who arrested MIDS professor, Stalin urges T.N. government\n- \"My good time joined Thalapathy\" - Minister KA Sengottaiyan\n- DMK women’s wing protests reflect public anger against TVK govt: Stalin\n- Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts",
+    "parties": [
+      "AIADMK",
+      "BJP",
+      "DMK",
+      "NTK",
+      "PMK",
+      "TVK",
+      "VCK"
+    ],
+    "topics": [
+      "Assembly, Courts & Policy",
+      "Centre–State Relations",
+      "Education & NEET",
+      "Elections",
+      "Government & Administration",
+      "Infrastructure & Economy",
+      "Political Parties",
+      "Public Protests & Labour"
+    ],
+    "districts": [
+      "Chengalpattu",
+      "Chennai",
+      "Coimbatore",
+      "Cuddalore",
+      "Erode",
+      "Madurai",
+      "Ramanathapuram",
+      "Theni",
+      "Thoothukudi",
+      "Viluppuram"
+    ],
+    "json_path": "archive/2026/11/2026-11-01-morning.json",
+    "md_path": "archive/2026/11/2026-11-01-morning.md",
+    "url": "edition.html?id=2026-11-01-morning"
+  },
+  "evening": {
+    "edition_id": "2026-10-31-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 31 October 2026",
+    "date": "2026-10-31",
+    "edition_type": "evening",
+    "is_test_sample": false,
+    "status": "published_delayed",
+    "scheduled_time_ist": "2026-10-31T18:00:00+05:30",
+    "generated_at_ist": "2026-11-01T17:50:29.088683+05:30",
+    "published_at_ist": "2026-11-01T17:50:29.125109+05:30",
+    "coverage_start_ist": "2026-10-31T06:00:00+05:30",
+    "coverage_end_ist": "2026-10-31T18:00:00+05:30",
+    "reading_time_minutes": 20,
+    "word_count": 3165,
+    "headline": "DA for Tamil Nadu government employees increases from 60% to 63%",
+    "big_picture_excerpt": "- DA for Tamil Nadu government employees increases from 60% to 63%\n- Chief Minister Vijay inaugurates Pudukottai new bus stand.\n- CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak\n- Condemnation of the government which is playing with the lives of poor and poor people : EPS",
     "parties": [
       "AIADMK",
       "AMMK",
-      "BJP",
       "DMK",
+      "INC",
       "TVK",
       "VCK"
     ],
@@ -32,55 +83,22 @@
       "Centre–State Relations",
       "Elections",
       "Government & Administration",
-      "Public Protests & Labour"
-    ],
-    "districts": [
-      "Chengalpattu",
-      "Coimbatore",
-      "Cuddalore",
-      "Salem",
-      "Theni",
-      "Thoothukudi",
-      "Vellore"
-    ],
-    "json_path": "archive/2026/11/2026-11-01-morning.json",
-    "md_path": "archive/2026/11/2026-11-01-morning.md",
-    "url": "edition.html?id=2026-11-01-morning"
-  },
-  "evening": {
-    "edition_id": "2026-11-01-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 1 November 2026",
-    "date": "2026-11-01",
-    "edition_type": "evening",
-    "is_test_sample": false,
-    "status": "published",
-    "scheduled_time_ist": "2026-11-01T18:00:00+05:30",
-    "generated_at_ist": "2026-11-01T17:03:57.209725+05:30",
-    "published_at_ist": "2026-11-01T17:03:57.213171+05:30",
-    "coverage_start_ist": "2026-11-01T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-01T18:00:00+05:30",
-    "reading_time_minutes": 17,
-    "word_count": 1830,
-    "headline": "Postponement of college exam for CM’s visit in Pudukottai triggers row",
-    "big_picture_excerpt": "- Postponement of college exam for CM’s visit in Pudukottai triggers row\n- Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts\n- How significant is the TVK-led regime’s move to hold Social Justice Survey? Explained\n- 1,172 candidates receive offer letters at job fair held in Villupuram",
-    "parties": [
-      "TVK"
-    ],
-    "topics": [
-      "Agriculture & Water",
-      "Centre–State Relations",
-      "Education & NEET",
-      "Government & Administration",
+      "Infrastructure & Economy",
+      "Political Parties",
       "Public Protests & Labour"
     ],
     "districts": [
       "Chennai",
+      "Coimbatore",
       "Cuddalore",
-      "Ramanathapuram",
+      "Dharmapuri",
+      "Kancheepuram",
+      "Thanjavur",
+      "Theni",
       "Viluppuram"
     ],
-    "json_path": "archive/2026/11/2026-11-01-evening.json",
-    "md_path": "archive/2026/11/2026-11-01-evening.md",
-    "url": "edition.html?id=2026-11-01-evening"
+    "json_path": "archive/2026/10/2026-10-31-evening.json",
+    "md_path": "archive/2026/10/2026-10-31-evening.md",
+    "url": "edition.html?id=2026-10-31-evening"
   }
 }

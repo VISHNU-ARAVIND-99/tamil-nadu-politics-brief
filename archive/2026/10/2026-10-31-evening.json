@@ -6,14 +6,16 @@
   "is_test_sample": false,
   "status": "published_delayed",
   "scheduled_time_ist": "2026-10-31T18:00:00+05:30",
-  "generated_at_ist": "2026-11-01T11:52:52.882056+05:30",
-  "published_at_ist": "2026-11-01T11:52:52.882056+05:30",
+  "generated_at_ist": "2026-11-01T17:50:29.088683+05:30",
+  "published_at_ist": "2026-11-01T17:50:29.125109+05:30",
   "coverage_start_ist": "2026-10-31T06:00:00+05:30",
   "coverage_end_ist": "2026-10-31T18:00:00+05:30",
-  "reading_time_minutes": 8,
-  "word_count": 1264,
-  "headline": "CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak",
+  "reading_time_minutes": 20,
+  "word_count": 3165,
+  "headline": "DA for Tamil Nadu government employees increases from 60% to 63%",
   "parties": [
+    "AIADMK",
+    "AMMK",
     "DMK",
     "INC",
     "TVK",
@@ -25,36 +27,108 @@
     "Centre–State Relations",
     "Elections",
     "Government & Administration",
+    "Infrastructure & Economy",
     "Political Parties",
     "Public Protests & Labour"
   ],
   "districts": [
+    "Chennai",
     "Coimbatore",
-    "Madurai",
-    "Salem",
+    "Cuddalore",
+    "Dharmapuri",
+    "Kancheepuram",
+    "Thanjavur",
     "Theni",
     "Viluppuram"
   ],
   "sections": {
-    "big_picture": "- **TVK — CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak:** R.\n- **DMK, TVK — DMK women cadre protest across Tamil Nadu over price rise, law and order:** DMK MP Kanimozhi accused CM Vijay of seeking children’s support to mobilise votes without ensuring their safety.\n- **INC, VCK — Tamil Nadu Congress, VCK mobilise cadres for Nov. 1 INDIA bloc protest in New Delhi:** “We expect more than five lakh Congress cadres to participate.\n- **TVK — Stalin urges CM Vijay to heed women’s protest over rising prices, law and order:** “The women have rung the bell.\n- **State Update — Hungry customers won’t be able to distinguish between ‘Sangeetha’ and ‘Sangetha’: Madras High Court in trademark case:** Justice P.B.",
+    "big_picture": "",
     "top_developments": [
+      {
+        "headline": "DA for Tamil Nadu government employees increases from 60% to 63%",
+        "verification_badge": "Multi-Source Verified",
+        "who_is_involved": "DMK, TVK",
+        "summary": "CHENNAI Tamil Nadu Chief Minister C. Joseph Vijay on Saturday (October 31, 2026) announced a hike in dearness allowance (DA) for government employees and teachers, following a similar increase for Central government employees. A State government press release said the DA for Central government employees had been increased from 60% to 63% with effect from July 2026. The revised DA would apply to the Tamil Nadu government employees and teachers with effect from the same date. CHENNAI The Dravida Munnetra Kazhagam (DMK) Women’s Wing on Saturday (October 31, 2026) staged protests at district headquarters across Tamil Nadu, accusing the ruling Tamilaga Vettri Kazhagam (TVK) government of failing to maintain law and order, protect women and children, and control the rising cost of essential commodities in the State.",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "DA for Tamil Nadu government employees increases from 60% to 63%",
+            "publisher": "The Hindu",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T17:19:29+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.thehindu.com/news/national/tamil-nadu/da-for-government-employees-increases-from-60-to-63/article71649226.ece",
+            "snippet": "CHENNAI Tamil Nadu Chief Minister C. Joseph Vijay on Saturday (October 31, 2026) announced a hike in dearness allowance (DA) for government employees and teachers, following a similar increase for Central government employees. A State government press release said the DA for Central government employees had been increased from 60% to 63% with effect from July 2026. The revised DA would apply to the Tamil Nadu government employees and teachers with effect from the same date."
+          },
+          {
+            "title": "DMK women cadre protest across Tamil Nadu over price rise, law and order",
+            "publisher": "The Hindu",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T14:42:23+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.thehindu.com/news/national/tamil-nadu/dmk-women-cadre-protest-across-tamil-nadu-over-price-rise-law-and-order/article71648544.ece",
+            "snippet": "CHENNAI The Dravida Munnetra Kazhagam (DMK) Women’s Wing on Saturday (October 31, 2026) staged protests at district headquarters across Tamil Nadu, accusing the ruling Tamilaga Vettri Kazhagam (TVK) government of failing to maintain law and order, protect women and children, and control the rising cost of essential commodities in the State."
+          },
+          {
+            "title": "Stalin urges CM Vijay to heed women’s protest over rising prices, law and order",
+            "publisher": "The Hindu",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T14:34:19+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.thehindu.com/news/national/tamil-nadu/stalin-urges-cm-vijay-to-heed-womens-protest-over-rising-prices-deteriorating-law-and-order/article71648766.ece",
+            "snippet": "CHENNAI DMK president M.K. Stalin on Saturday (October 31, 2026) said Chief Minister C. Joseph Vijay should heed the wake-up call given by the DMK’s women’s wing, which organised a demonstration highlighting the deteriorating law and order situation and spiralling prices of essential commodities. DMK women cadre protest across Tamil Nadu over price rise, law and order storyline 1 “The women have rung the bell."
+          }
+        ]
+      },
+      {
+        "headline": "Chief Minister Vijay inaugurates Pudukottai new bus stand.",
+        "verification_badge": "Multi-Source Verified",
+        "who_is_involved": "AIADMK, DMK, TVK",
+        "summary": "Chief Minister Vijay will visit Pudukottai on the 2nd to inaugurate the new Pudukottai bus stand and provide welfare assistance worth Rs 100 crore to 14000 people. Journalists questioned Minister Parvez, who visited the preparations for this, about the criticism of DMK's former ministers that everything was their plan. Are the programs started in the AIADMK regime not opened in the DMK regime? Chief Minister Vijay's visit! November in Pudukottai. Closure of Liquor Shops in 2. Chief Minister Vijay to visit Ambasamudram on November 14?",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "Chief Minister Vijay inaugurates Pudukottai new bus stand.",
+            "publisher": "Polimer News",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T17:49:41+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.polimernews.com/districtnews/pudukkottai-new-bus-stand-inauguration-cm-vijay-12771564",
+            "snippet": "Chief Minister Vijay will visit Pudukottai on the 2nd to inaugurate the new Pudukottai bus stand and provide welfare assistance worth Rs 100 crore to 14000 people. Journalists questioned Minister Parvez, who visited the preparations for this, about the criticism of DMK's former ministers that everything was their plan. Are the programs started in the AIADMK regime not opened in the DMK regime?"
+          },
+          {
+            "title": "Chief Minister Vijay's visit! November in Pudukottai. Closure of Liquor Shops in 2",
+            "publisher": "DinaMani",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T17:57:01+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQQnFqZ1pCdi1kV2tCNHhsMG12bkN5RHNITHZnQ1NCZm5SVXJqX3gxekVacm1veERtUU1ERFlQS0dIQUpISTdKNl9WSlJOejJTVFZrNU9rci0ta1hoeGhVcFFGZFphck4wZ2x0M0lWOE9OVGpsWmJrVDNIeEhrbmpPeDhvT0xWRXNxVl81VW82WkdFRkY5cDVfNm05dEpWV0ZvczBWZXRwVmJ5S3FCdEoxTXVucmVXaE5Ra3Rz0gHIAUFVX3lxTE5qdW5SMkVHRHl3cHEtYmRTSUYyQU9FdWo1RlUyTXlBZnktWTZHQXhjX1c5b0hQOGtHbXZKTEVkWGthSjFfMjByWmdRUS1qMmJWb3NhV3RMN1hxY1BqTnNpeTJqSnk2ZnZEREVHOTl3b0tjamZsMDg1RVNwTk1pd3lHT3VpUFQyRUlUdnZaaGlkVzc1S3c4RG1oQlZGcXZ0c3h2TkVTVXZaLTlIaU9xRWNoYUZuYlU1QnBLM1l5bWV3b04zUENvYnNR?oc=5",
+            "snippet": "Chief Minister Vijay's visit! November in Pudukottai. Closure of Liquor Shops in 2"
+          },
+          {
+            "title": "Chief Minister Vijay to visit Ambasamudram on November 14? - The midterms are heating up",
+            "publisher": "Hindu Tamil Thisai",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T16:58:01+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQeURsY29aSmY0RjliLTd2YjJHRkZiTXQ2a3Q4U21mTEFEVjVRWk02MXBQYnpfWHdiWC1GeHFRc1BTODNnMml1YkdreXJZQ3RQQUJMRl9sQmlvMncxRURMaDN1YWRHV0trWUVpa3FfX1BmQm1LTldEWDRJS3RzT2JJdU1jUjFqajNPTzFjWU9WUkFwdThWVTE0YlZRcHhzakdXNjBsQzRLeHpvZVhpVHfSAbsBQVVfeXFMUEl5VkZiOENERm80UllreEJBcjRzVDJsM21fUVBMb2hCRjhTYXJvTmxWUUJ6X29KaXBqSVhuNGdBdlRDLTc1LVZ4ZV9FLWJvZTRGLXFlVm0xb1pmSzdNTHN6TkdtS0IzT1pnWDRlZ2ZINkZVSWIwSWFMenZGMlFXNzEwdWo0OXFoaXBmNTVMZXpYQy1GMTM1b1Y4QTcwNmJ5T2ZUQWJMTW1WbWlqUkZ3bUEyVENwZklaUXZEcw?oc=5",
+            "snippet": "Chief Minister Vijay to visit Ambasamudram on November 14? - The midterms are heating up"
+          }
+        ]
+      },
       {
         "headline": "CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak",
         "verification_badge": "Multi-Source Verified",
         "who_is_involved": "TVK",
-        "summary": "R. Krishnaraj, Superintendent of Madurai Central Prison, has been transferred and posted as Superintendent of Salem Central Prison The action includes the immediate suspension of the deputy jail superintendent N Ramalingam and a reshuffle of top prison administrators across the state.",
+        "summary": "The action includes the immediate suspension of the deputy jail superintendent N Ramalingam and a reshuffle of top prison administrators across the state. Theni Jail Superintendent Dismissal, Officers Transferred - Chief Minister Vijay orders. Theni Incident - Dismissal of Jail Superintendent: Chief Minister Vijay orders. CM Vijay Suspends Dy Jail Superintendent Over Theni Jailbreak.",
         "why_it_matters": "",
         "sources": [
-          {
-            "title": "Theni jailbreak: Tamil Nadu CM Vijay orders suspension of Theni district jail superintendent in-charge",
-            "publisher": "The Hindu",
-            "language": "en",
-            "published_date": "2026-10-31",
-            "published_at_ist": "2026-10-31T13:45:35+05:30",
-            "reliability_tier": "tier_1_editorial",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/theni-jailbreak-tamil-nadu-cm-vijay-orders-suspension-of-superintendent-in-charge-over-security-lapse/article71648506.ece",
-            "snippet": "R. Krishnaraj, Superintendent of Madurai Central Prison, has been transferred and posted as Superintendent of Salem Central Prison"
-          },
           {
             "title": "CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak",
             "publisher": "The Indian Express",
@@ -64,25 +138,65 @@
             "reliability_tier": "tier_1_editorial",
             "url": "https://indianexpress.com/article/cities/chennai/cm-vijay-orders-suspension-of-top-official-transfer-of-prison-staff-after-tamil-nadu-theni-jailbreak-10944446/",
             "snippet": "The action includes the immediate suspension of the deputy jail superintendent N Ramalingam and a reshuffle of top prison administrators across the state."
+          },
+          {
+            "title": "Theni Jail Superintendent Dismissal, Officers Transferred - Chief Minister Vijay orders",
+            "publisher": "DinaMani",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T12:36:26+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOdnBQVGpVRnV6T2dyUThNVGRNVjAxRF94TlFjOUp6RUN5dDNzN3RkY2JFYUJmai1QanQzQU5nTXJtZXhBbUczSW50MEZ0OHZTNkxyV0NtNU9tVjdfU2FxMkk5eFVvMHRVa0dRdFZ0UXNvSVVpd3NBcHkwSFI4Y3NBWGtZWkdMdzY3Y2pWWmlOTEwwc29CeE54bGk3bXNqNmRkZmFpU1BCT2ZUa2gwV1NXbGFGcDVpRFcyTnlwU1NJcmXSAc4BQVVfeXFMTXA0dFZ0ZF9abzJYM1V0bHY5U0lSMXVOa1RMSm9wVUxDVVh2eFZMZC1Qa2VIbzdZcVdvZENFYWlBNE5BSnZ5WXpvTlVPUi1tMmNuaEp2b1p3OGlJMUFUelBmM3VIWVBRVm1Dd0RsYl9NVWhVeG9McllfLXhmZU1zMWJMWGJ6TWJqXzZXdkRuLW1rWGJwSC0wcGxyUE5mVkE3R2JMY2JaQmpvT3dhM181VlI1WDdVcnZyMzlESDhBUEZzS3BpSzExWlg2SUhXeGc?oc=5",
+            "snippet": "Theni Jail Superintendent Dismissal, Officers Transferred - Chief Minister Vijay orders"
+          },
+          {
+            "title": "Theni Incident - Dismissal of Jail Superintendent: Chief Minister Vijay orders",
+            "publisher": "Hindu Tamil Thisai",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T10:32:16+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUmdXVVNicUJHNlo0c3lJNVJlamZ1Vks1d1loSTg3b0I1bVpkaFZkUWJoS29XX3g2Y0tNU0FkVTliRk4xMGtRWkR1MW9IUXdpYUU3c0ZTbjZyclNvbk9FVkJOOW8xNUduTWc3TUNGRHBIYXBPaGQzbVNYVF9sX3JZeVlxNmpNOGJrRWVJc2hyaGU1U0VuWnJnWjZTZkdxUGpHWlZnVFRDekFGcVFGNWR5LXQ5TdIBwAFBVV95cUxPa3NqWFU5SW5TQVZJSUJjSEpsVVdUb19BWm1PYU9pTHJUeE15Z181RjRfbkJQQmdlTjJnb0lxaUdJeG9XNTRDTUIyd3BRSkRrbFVUbVRNdzJhYjFiRWpWbHdsdjdlNGRYa01ZSWNnSVhSbFA0U0E5V1NhWWVrdVQ3Mmo5ejBtODJXRk1ubDB6d2RIYXo2OTM0cDFObjh1N2JqUWNQeVRGYlVOeDZIckszckg4a3RaYmZaS2VrVkhCcmk?oc=5",
+            "snippet": "Theni Incident - Dismissal of Jail Superintendent: Chief Minister Vijay orders"
           }
         ]
       },
       {
-        "headline": "DMK women cadre protest across Tamil Nadu over price rise, law and order",
-        "verification_badge": "Single-Source Report",
-        "who_is_involved": "DMK, TVK",
-        "summary": "DMK MP Kanimozhi accused CM Vijay of seeking children’s support to mobilise votes without ensuring their safety",
+        "headline": "Condemnation of the government which is playing with the lives of poor and poor people : EPS",
+        "verification_badge": "Multi-Source Verified",
+        "who_is_involved": "AIADMK",
+        "summary": "How can the prisoners escape so easily? - EPS question — Tamil News. Minister Ramesh Takes Swipe at EPS.",
         "why_it_matters": "",
         "sources": [
           {
-            "title": "DMK women cadre protest across Tamil Nadu over price rise, law and order",
-            "publisher": "The Hindu",
+            "title": "How can the prisoners escape so easily? - EPS Question Tamil News",
+            "publisher": "News18 Tamil Nadu",
             "language": "en",
             "published_date": "2026-10-31",
-            "published_at_ist": "2026-10-31T14:42:23+05:30",
+            "published_at_ist": "2026-10-31T12:08:15+05:30",
             "reliability_tier": "tier_1_editorial",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/dmk-women-cadre-protest-across-tamil-nadu-over-price-rise-law-and-order/article71648544.ece",
-            "snippet": "DMK MP Kanimozhi accused CM Vijay of seeking children’s support to mobilise votes without ensuring their safety"
+            "url": "https://tamil.news18.com/videos/tamil-nadu/just-now-tamil-news-2243030.html",
+            "snippet": "How can the prisoners escape so easily? - EPS question — Tamil News"
+          },
+          {
+            "title": "Condemnation of the government which is playing with the lives of poor and poor people : EPS",
+            "publisher": "DinaMani",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T16:30:00+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPdHlsN0xtdG03SmhWSUpLckdyREFVUFRhclUxQmhkbjBuZnB6QzhkRHc3OXJKTmQ0R1VCVmlhb29HRHhSWk02Ym5oTVpUZHBETHFmNUp4aHl6X2pKYUp4bmt0VEdqUk10RGlTamhReDRvX2pQUEw3ektCUUVSVVFlbGVRUGNJcUdKdzlEUlN1Rl9RYmZYX2RYNUY3QTNKbHlzMEwxVTNtTmV4NzlZRUE3bVFGNUxOMGN2Q0ZzYlZySjdJWVoybjdoSkpicnRESElWcnVJcHI2T2diNEg1VDFZLVhoY0lVR25GYjNoZUdVWmpsVklpN1pUcF9HQ0NpSFRDNmZNetIBkgJBVV95cUxOeEl4YWpQZDlSTGg1U1dkcG9FMTRNYjdwMnN0akl0Zzc0SFlYR1MxNHlIc0M3blR2MWJkZkYwQjRWRTFzMlN4c2tFYTZlaU91cURhUV82bjFUdDFjRjJHeUQzY3JyRVFKOGc2Q3MxeW00VGpQcVU2NkxkT3BqMU1KNG5NdDJYbUFtaHhTaXpLSjVIR3VBRnA0b25vazhSd0hEcHhLUGxBM1RnRE9pLW01aDNOMFVpWkxZZmJ6OG9PV1ROYVF0MFBCcWhFbUNHSFJMbno4eGVMYzlPeEFOZGdjdUR0bllDNVp3REhuZmc2QjNLbmNCSVZ1NjgzN2FiWEJmbGJFNjRIZjVQQWt4OHNtczh3?oc=5",
+            "snippet": "Condemnation of the government which is playing with the lives of poor and poor people : EPS"
+          },
+          {
+            "title": "Minister Ramesh Takes Swipe at EPS",
+            "publisher": "Deccan Chronicle",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T11:15:07+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPbnFtRGpETzQ1VHQ3VGNUN1RVR3hYQ3V2WGhBRmU0ZnVYZHdwYy1sMTh6WHYxT1lqdFhxbThDa0tQRmZCTkpDaEo1eDFReG9NR0VmOXE2ODNpWllPeTFnMTVBOFQwMFhSdnYzb09XRGZuYkFUNE5XdWgybURjYVJ0bUpFejVVUE5NeG4tRm5qMUJvN3k2QjJLam5aQkdBZUwyS0hNMEQwc1LSAagBQVVfeXFMT25xbURqRE80NVR0N1RjVDdUVUd4WEN1dlhoQUZlNGZ1WGR3cGMtbDE4elh2MU9ZanRYcW04Q2tLUEZmQk5KQ2hKNXgxUXhvTUdFZjlxNjgzaVpZT3kxZzE1QThUMDBYUnZ2M29PV0RmbmJBVDROV3VoMm1EY2FSdG1KRXo1VVBOTXhuLUZuajFCbzd5NkIyS2puWkJHQWVMMktITTBEMHNS?oc=5",
+            "snippet": "Minister Ramesh Takes Swipe at EPS"
           }
         ]
       },
@@ -90,7 +204,7 @@
         "headline": "Tamil Nadu Congress, VCK mobilise cadres for Nov. 1 INDIA bloc protest in New Delhi",
         "verification_badge": "Single-Source Report",
         "who_is_involved": "INC, VCK",
-        "summary": "“We expect more than five lakh Congress cadres to participate. From Tamil Nadu, we are expecting at least 100 party workers to reach New Delhi from each district,” says MP R. Sudha",
+        "summary": "CHENNAI Demanding the removal of Chief Election Commissioner (CEC) Gyanesh Kumar, the Tamil Nadu Congress Committee (TNCC) and Viduthalai Chiruthaigal Katchi (VCK) have activated their respective party machineries to mobilise cadres for the INDIA bloc protest to be held on November 1, 2026, in New Delhi. While the bulk of the heavy lifting would be done by the Indian National Congress, which is much stronger in and around New Delhi, the TNCC leaders, on their part, are expected to mobilise at least 150 people from every district in Tamil Nadu.",
         "why_it_matters": "",
         "sources": [
           {
@@ -101,107 +215,141 @@
             "published_at_ist": "2026-10-31T12:18:48+05:30",
             "reliability_tier": "tier_1_editorial",
             "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-congress-vck-mobilise-cadres-for-nov-1-india-bloc-protest-in-new-delhi/article71646455.ece",
-            "snippet": "“We expect more than five lakh Congress cadres to participate. From Tamil Nadu, we are expecting at least 100 party workers to reach New Delhi from each district,” says MP R. Sudha"
+            "snippet": "CHENNAI Demanding the removal of Chief Election Commissioner (CEC) Gyanesh Kumar, the Tamil Nadu Congress Committee (TNCC) and Viduthalai Chiruthaigal Katchi (VCK) have activated their respective party machineries to mobilise cadres for the INDIA bloc protest to be held on November 1, 2026, in New Delhi. While the bulk of the heavy lifting would be done by the Indian National Congress, which is much stronger in and around New Delhi, the TNCC leaders, on their part, are expected to mobilise at least 150 people from every district in Tamil Nadu."
           }
         ]
       },
       {
-        "headline": "Stalin urges CM Vijay to heed women’s protest over rising prices, law and order",
-        "verification_badge": "Single-Source Report",
-        "who_is_involved": "TVK",
-        "summary": "“The women have rung the bell. The government, which is hunting down its critics and preparing for a show in the byelection, should pay attention to governance,” he said in a social media post",
+        "headline": "Will JUSTNOW make a comeback?: DMK chief M.K.Stalin's post on X Page",
+        "verification_badge": "Multi-Source Verified",
+        "who_is_involved": "DMK",
+        "summary": "DMK Paranthamen — IT Wink should act responsibly: Paranthamen. Slanderous talk about CM - DMK MLA to be questioned! \"Unsafe environment for women in Tamil Nadu\" - DMK ex-ministers allege.",
         "why_it_matters": "",
         "sources": [
           {
-            "title": "Stalin urges CM Vijay to heed women’s protest over rising prices, law and order",
-            "publisher": "The Hindu",
+            "title": "DMK Paranthamen — IT Wink should act responsibly: Paranthamen",
+            "publisher": "News18 Tamil Nadu",
             "language": "en",
             "published_date": "2026-10-31",
-            "published_at_ist": "2026-10-31T14:34:19+05:30",
+            "published_at_ist": "2026-10-31T15:37:14+05:30",
             "reliability_tier": "tier_1_editorial",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/stalin-urges-cm-vijay-to-heed-womens-protest-over-rising-prices-deteriorating-law-and-order/article71648766.ece",
-            "snippet": "“The women have rung the bell. The government, which is hunting down its critics and preparing for a show in the byelection, should pay attention to governance,” he said in a social media post"
+            "url": "https://tamil.news18.com/videos/tamil-nadu/dmk-paranthamen-tvk-cm-vijay-2243174.html",
+            "snippet": "DMK Paranthamen — IT Wink should act responsibly: Paranthamen"
+          },
+          {
+            "title": "Will JUSTNOW make a comeback?: DMK chief M.K.Stalin's post on X Page",
+            "publisher": "News18 Tamil Nadu",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T14:55:22+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://tamil.news18.com/videos/tamil-nadu/justnow-2243144.html",
+            "snippet": "Will JUSTNOW make a comeback?: DMK chief M.K.Stalin's post on X Page"
+          },
+          {
+            "title": "Slanderous talk about CM - DMK MLA to be questioned! — Vasantham",
+            "publisher": "News18 Tamil Nadu",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T11:21:47+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://tamil.news18.com/videos/tamil-nadu/just-now-cm-mla-dmk-vasantham-2242991.html",
+            "snippet": "Slanderous talk about CM - DMK MLA to be questioned! — Vasantham"
           }
         ]
       },
       {
-        "headline": "Hungry customers won’t be able to distinguish between ‘Sangeetha’ and ‘Sangetha’: Madras High Court in trademark case",
-        "verification_badge": "Single-Source Report",
-        "who_is_involved": "",
-        "summary": "Justice P.B. Balaji quotes Tamil poetess Avvaiyar’s statement, ‘Pasi Vandhal Pathum Paranthu Pogum’, and the Tamil idiom, ‘Pasi Kanna Kattuthu’",
+        "headline": "MK Stalin Meets OPS — MK Stalin met OPS and inquired about his health",
+        "verification_badge": "Multi-Source Verified",
+        "who_is_involved": "DMK",
+        "summary": "Kaliyarasan's arrest issue! Action against offending officials: M.K. Crimes against women are on the rise in Tamil Nadu: M.K. met OPS and inquired after his well-being.",
         "why_it_matters": "",
         "sources": [
           {
-            "title": "Hungry customers won’t be able to distinguish between ‘Sangeetha’ and ‘Sangetha’: Madras High Court in trademark case",
-            "publisher": "The Hindu",
+            "title": "MK Stalin Meets OPS — MK Stalin met OPS and inquired about his health",
+            "publisher": "News18 Tamil Nadu",
             "language": "en",
             "published_date": "2026-10-31",
-            "published_at_ist": "2026-10-31T16:42:30+05:30",
+            "published_at_ist": "2026-10-31T13:10:33+05:30",
             "reliability_tier": "tier_1_editorial",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/hungry-customers-wont-be-able-to-distinguish-between-sangeetha-and-sangetha-madras-high-court-in-trademark-case/article71648391.ece",
-            "snippet": "Justice P.B. Balaji quotes Tamil poetess Avvaiyar’s statement, ‘Pasi Vandhal Pathum Paranthu Pogum’, and the Tamil idiom, ‘Pasi Kanna Kattuthu’"
+            "url": "https://tamil.news18.com/videos/tamil-nadu/mk-stalin-meets-ops-dmk-tamil-news-2243063.html",
+            "snippet": "MK Stalin Meets OPS — MK Stalin met OPS and inquired about his health"
+          },
+          {
+            "title": "Kaliyarasan's arrest issue! Action against offending officials: M.K. Stalin's insistence",
+            "publisher": "DinaMani",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T16:44:05+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQWnZLTU1NNzktNzFNZDB1eGMwMlFNUnpxZEFQeTZLWTdYSk1XYjgwVmp5dXF4NHF3QWM5Vlk4RGZoNngxektiOUJIblpWN0tkNkx5cDRzUnRMWmItQVVjclZBRXp1SVQ3YkJmWXJrVk14U3FmSFlITndZdjdPc0lkaFpqQndkRWF6alNVSTl1RmZrZXZVbWE4YTZ6RlZjWnBvYXVBcjBBb28tRHdUOFBkUG80Q1ZENkRsbmVObnhsOEFtM3p2SU9MUjNjRUtMWDVEal85X0hHdzlSN3lpNE5mVFVTd0VNa0tfZ1duVjBtd3JDcGlv0gGCAkFVX3lxTFBmVVpISUV3Z3VQeHloN1VNbWh0WTkwWDY2R0VlSVFDTS03Tk5GaExHU3F1aVlGTmVNUDF4M2o1NWI4blNtUFNLNmROdjU4REJNajFtUml3NFRDdmZReHdrODNBXzNxai12MkpLY0FQa1daMHZQUW1sWmtFUTdCWThEVlJTRXdfS0Qyb0tCbDc4R1hYZjNEa3gwN0ViQi1XaG9ybUV6Q0Fnak1XZjNjalE1cHl3VEVXY0pnSEVna2szY0xSczZwTFNGeHQ0ZFpSU3lrSHJiOTVMcGRsYkxPaVBSX2pHVjRTenhxd1QzWDhoX19DNk1GUElVZjNUZVZOTW9SQQ?oc=5",
+            "snippet": "Kaliyarasan's arrest issue! Action against offending officials: M.K. Stalin's insistence"
+          },
+          {
+            "title": "Crimes against women are on the rise in Tamil Nadu: M.K. Stalin",
+            "publisher": "DinaMani",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T13:40:04+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNTXYzeUVTODRsSEZPRWc2SGwtZVpSZTZrV3dLdTlBZnlvd1poYjBTT3JYWXQ4dklfaW9iS2EzZzI3R3VLSGo4Q2ItS3Nhc3BVUVA0VjZpLTRNeGQxRmVkVzlyUlhEMmZMUkJJTzdYdS1VVU0xLXFlTVVROXlCUEVrbFZvSU95NzNoUzFXXzJsUGNSd2x5anlRVzVselBlLS1jS1JfTnVKTm5qTTDSAbgBQVVfeXFMUDRoNzgxNTI4NlIwQlcxOWZBdm5oZWRoZmdoMXVIa1FZc191WjY1cV9Ral9GTkxRcEQyMFg0eFIxUXNHeGxibVo4TDYtTUUxbEdPNC1BaTdPeWFiRlhzVFRJc21RLXNFWFIzN044bU4tT2Nwa1JtVVkxZUpPeGZsbUZuTU9BellISGFxTVJIaXNKdkNNWmdOQklLclo0QWRFZndhUHhrUDBjcjg4Rk1Sbm8zQ3dLVnNYcg?oc=5",
+            "snippet": "Crimes against women are on the rise in Tamil Nadu: M.K. Stalin"
           }
         ]
       },
       {
-        "headline": "Veterinary assistant surgeon suspended in Villupuram after video of him abusing farmer goes viral",
-        "verification_badge": "Single-Source Report",
-        "who_is_involved": "",
-        "summary": "When the farmer enquired about doctor availability at the dispensary for subsequent visits, the assistant veterinary surgeon allegedly abused him",
+        "headline": "\"When will the light come to power industry?\" - Dhinakaran barrage question — AMMK",
+        "verification_badge": "Multi-Source Verified",
+        "who_is_involved": "AMMK",
+        "summary": "\"When will the light come to the electricity industry?\" - AAMUK General Secretary DTV Dhinakaran's question to Thaveka Govt — JUST NOW. When will the light come to the electricity sector that plunged Tamil Nadu into darkness? When will light come to the electricity sector that plunged Tamil Nadu into darkness?",
         "why_it_matters": "",
         "sources": [
           {
-            "title": "Veterinary assistant surgeon suspended in Villupuram after video of him abusing farmer goes viral",
-            "publisher": "The Hindu",
+            "title": "\"When will the light come to power industry?\" - Dhinakaran barrage question — AMMK",
+            "publisher": "News18 Tamil Nadu",
             "language": "en",
             "published_date": "2026-10-31",
-            "published_at_ist": "2026-10-31T15:55:26+05:30",
+            "published_at_ist": "2026-10-31T11:55:39+05:30",
             "reliability_tier": "tier_1_editorial",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/veterinary-assistant-surgeon-suspended-in-villupuram-after-video-of-him-abusing-farmer-goes-viral/article71648384.ece",
-            "snippet": "When the farmer enquired about doctor availability at the dispensary for subsequent visits, the assistant veterinary surgeon allegedly abused him"
-          }
-        ]
-      },
-      {
-        "headline": "The great escape from Theni jail",
-        "verification_badge": "Single-Source Report",
-        "who_is_involved": "",
-        "summary": "On October 26, a group of 17 remand prisoners hatched a plan to escape from the Theni district jail under the cover of darkness. All of them were apprehended within 42 hours in a massive search operation involving various Tamil Nadu police teams and drones. But the jailbreak has raised larger questions about prison overcrowding, staff shortages, security, and the need for reform, reports L. Srikrishna",
-        "why_it_matters": "",
-        "sources": [
+            "url": "https://tamil.news18.com/videos/tamil-nadu/just-now-ammk-tvk-2243011.html",
+            "snippet": "\"When will the light come to the electricity industry?\" - AAMUK General Secretary DTV Dhinakaran's question to Thaveka Govt — JUST NOW"
+          },
           {
-            "title": "The great escape from Theni jail",
-            "publisher": "The Hindu",
+            "title": "When will the light come to the electricity sector that plunged Tamil Nadu into darkness? TTV Dhinakaran",
+            "publisher": "DinaMani",
             "language": "en",
             "published_date": "2026-10-31",
-            "published_at_ist": "2026-10-31T09:01:38+05:30",
+            "published_at_ist": "2026-10-31T12:28:13+05:30",
             "reliability_tier": "tier_1_editorial",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/the-great-escape-from-tamil-nadus-theni-jail/article71645449.ece",
-            "snippet": "On October 26, a group of 17 remand prisoners hatched a plan to escape from the Theni district jail under the cover of darkness. All of them were apprehended within 42 hours in a massive search operation involving various Tamil Nadu police teams and drones. But the jailbreak has raised larger questions about prison overcrowding, staff shortages, security, and the need for reform, reports L. Srikrishna"
+            "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOajBDeVltRmE1MjZtMXl3ZnBiMTlvNEtkTmVZZXRTMVNNdE45SDdIZUV0NFJNMFdiTkpFTTdHTmFGb0pnQmJxQ0JOZ3ZpRHVZZTRDY2ZYRUFWa0sxalY5bjVvbzItdFlrUWY2UWtrMkRVNFM5QUJZaDlYYWt3VnJFcjJvVGhqaWRBS3JVMlBpSzRQX0dBeE1pVkxDOGRvQnZjMi15MFY2c2tyT0FmT2fSAbsBQVVfeXFMT0xwUDRaMUZEVVdpV2dNV2VmWHpRbjJrZ1JrdDJuUHVYbTQ0V1dHRzdObk04TVMtRGhDWkdESXZrUTlhX2lEWXJINWRKVFIwWDFrNy1PN3RlQndCR0UwV0FRc3hOXzlzQUJOWHJ2b3JHZDc2N2J2a2hHMkZMUVZHdlJZM2oyV3hsWGJlWWg4WnQ5OEtwWDk4VXMwMUpIMW85bjI5SmxqeHkwSzJtUzFyaUpTZ2twcVZiZ245TQ?oc=5",
+            "snippet": "When will the light come to the electricity sector that plunged Tamil Nadu into darkness? TTV Dhinakaran"
+          },
+          {
+            "title": "When will light come to the electricity sector that plunged Tamil Nadu into darkness? DTV Dhinakaran",
+            "publisher": "DinaMani",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T12:28:13+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNM0F0UTM4QzU3Rk0yT3AtalNwWjAyWUEzTWNUb2Vubl81SlRzS2p2aDB0QVRmUWppLUpQLVp2aVhqM0NlTmxWUjJSdlM1T3gzZVNhNGgzWGRKYk1HaG5sdE9RZVRNWl9wejdNZGxCUFlxRC1zNllodjJSc1ZONlVveUZPbVAzMTVaZmNtdmJ6SV9mUmFmeDZaYWhfMzExd3BpOU9mN1BOcjVBeFhjdXM2T2t5ONIBwAFBVV95cUxOa3hxdnRPRFFuTTEwaXhLMlZjR3pRaW9kc3Z0RDJlM3NqTEViV2lyT1FhbjdtQU80OEkzd214cFVPcTVnbEFpU2lRWm5VMWdOVmtuTmlLbUJ2VzNPbzlYc01EaDFjTUdVdmZOOGhicy1WUk4wYjFHS1BHQ0NBdTFKQW1Xazg3SjExaENVenR2TFRIOTNCb09QSTduY0RrRFNIOE8zMWlSdTFLWWlPV3FON3B3c1NMX3RTb2tQdmhGNE8?oc=5",
+            "snippet": "When will light come to the electricity sector that plunged Tamil Nadu into darkness? DTV Dhinakaran"
           }
         ]
       }
     ],
-    "government_and_administration": "- **After Theni, another jailbreak in Tamil Nadu — this time in Coimbatore:** A robbery accused, who had escaped from Annur police station the previous evening before being recaptured, fled again while being admitted to Coimbatore prison. The breach comes days after 17 prisoners escaped from Theni jail, prompting a shake-up of the state prison administration. ([The Indian Express](https://indianexpress.com/article/cities/chennai/coimbatore-central-prison-jailbreak-theni-tamil-nadu-10944522/))",
-    "political_parties_and_opposition": "",
-    "assembly_courts_and_policy": "",
-    "district_developments": "",
+    "government_and_administration": "- **People will not have faith in a government that cannot protect prisons: Edappadi K. Palaniswami:** People will not have faith in a government that cannot protect prisons: Edappadi K. ([DinaMani](https://news.google.com/rss/articles/CBMi1wFBVV95cUxNYzBudkc5THk4b3RBQXRQcTdlX2w5enRhbE96WExsRi1iS0VPS0tia0hJUjFaVGFXa2gyX2M5N29xbm5PVnFBRHNsa2E1S05oWnByRV8xTlJuV0FYRjN0eDNvY0tPZkh2RkZ6cHdaaW9mM1VPZUJWakJtWTUtMmFhZEZ2bU9PaUZKVDFxT0h4ampJY1NvMXA1SUJKN3JlVXEzUlhLU2Z1Yko0SGtPeGFQTHFMQkhQcFU0bWM1WGVCUFJJcDJKT1pwU0NVVFgwWUpfUGQweF81VdIB5AFBVV95cUxQZWhETGFmSkh5bndYaEJGSEcyUHJuM3NPb2pHUHlhSFA1REZJNkNITElDZ3h6dTFTbUhwdGhtbkdPaEV3dWptR2prZUY1UjlxdXBtdUpZbTRwRVJwWXRCT08wOTNKdFR0WEtDU0Z2N25EazFfbFRKbGxsOGYzV3h3WkIxZkJmYTV4dnlTOTl3MEIzWjZ6R0twODYxTkZmUUZPZHk5RTZzMDFUNXRTZjI2M0MzVnc2MzhzcmdSX0xCMWJxNjFTeU45X2pncGozRDZuSGVHV1hudlhCYV9CYk1DV0VZU0M?oc=5))\n- **Prisoner escapes from Coimbatore Central Jail:** A prisoner named Raghavan has escaped from the Coimbatore Central Jail complex. Raghavan, who was arrested in Annoor police station in connection with a robbery case, was produced in the court and 4 policemen brought him safely to jail. When the police untied his handcuffs in the jail premises, the police allegedly pushed the four away and fled. All 4 policemen have been suspended for negligence. A robbery accused, who had escaped from Annur police station the previous evening before being recaptured, fled again while being admitted to Coimbatore prison. ([Polimer News](https://www.polimernews.com/districtnews/coimbatore-central-prison-undertrial-prisoner-escapes-12770697))\n- **Veterinary assistant surgeon suspended in Villupuram after video of him abusing farmer goes viral:** VILLUPURAM A veterinary assistant surgeon attached to the veterinary dispensary at Koonimedu near Marakkanam in Villupuram district has been placed under suspension after a video of him verbally abusing and threatening a farmer went viral on social media. According to an official, S. Chandru, of Ambedkar Nagar in Koonimedu, had brought his cow to the Koonimedu veterinary dispensary for treatment. When he enquired about the availability of the doctor at the dispensary for subsequent visits, the exchange escalated, with the assistant veterinary surgeon Sankaranarayanan allegedly abusing the farmer. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/veterinary-assistant-surgeon-suspended-in-villupuram-after-video-of-him-abusing-farmer-goes-viral/article71648384.ece))\n- **The great escape from Theni jail:** On October 26, a group of 17 remand prisoners hatched a plan to escape from the Theni district jail under the cover of darkness. All of them were apprehended within 42 hours in a massive search operation involving various Tamil Nadu police teams and drones. But the jailbreak has raised larger questions about prison overcrowding, staff shortages, security, and the need for reform, reports L. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/the-great-escape-from-tamil-nadus-theni-jail/article71645449.ece))\n- **Kanchipuram: Plantation of 10,000 palm seeds and 400 saplings on the banks of the lake:** In order to protect water bodies and increase the green area in Kanchipuram district, the minister initiated the planting of 10,000 palm seeds and 400 saplings on the banks of Sivankudal lake in Ramanujapuram panchayat. Officials including District Collector Sneha, public and students participated. ([Polimer News](https://www.polimernews.com/districtnews/kanchipuram-lake-bank-10000-palm-seeds-400-saplings-planting-drive-12771539))",
+    "political_parties_and_opposition": "- **Cuddalore Fishermen Protest — Fishermen's human chain protest on the beach:** Fishermen villagers on the coast staged a human chain protest against the expansion of the Cuddalore Chip Cod. ([News18 Tamil Nadu](https://tamil.news18.com/videos/tamil-nadu/cuddalore-fishermen-protest-sipcot-2243008.html))",
+    "assembly_courts_and_policy": "- **Gutka scam case: HC directs special court to file report:** The Madras High Court has directed the special court that hears cases against MPs and MLAs to file a report on how the Gutka malpractice case will be investigated and completed within three months. The CBI has registered a case against a total of 26 high-ranking central and state government officials, including ADMK, former ministers CV Vijayabaskar, PV Ramana, former DGP, TK Rajendran, and former Chennai Metropolitan Police Commissioner S. George, for bribing central and state government officials to allow the sale of banned gutka products. ([News18 Tamil Nadu](https://tamil.news18.com/tamil-nadu/gutkha-case-report-on-how-to-complete-it-in-3-months-vjr-ws-l-2243220.html))\n- **Madras High Court forms judicial panel to take over Chidambaram Nataraja Temple administration:** Madras High Court forms board to oversee Chidambaram Nataraja temple. Madras High Court Appoints Board to Manage Chidambaram Nataraja Temple. ([India Today](https://news.google.com/rss/articles/CBMi1gFBVV95cUxOaFZHVVdxT1JzRk5YNHk5cHFzZnVEWUw5OTFfeXg3UG5xaUVrM1pwX0U1VFR4ZXVYUlV2Qi1zTFNnVXA5RWdzakY5OGZFdDBQY284bW1NaDRLSUw5OHFRUlBIZkxSWHlpY1kwbXB1Wm4xbWNLc2gxV0FZak1oU25FWTMzSk5yN09Yall0bVFGRDdzN0tjazJCb2tWSzZtMldxQkFFM2JIR2FjTXhKdnotQWdEMmcxbXZPZGUyVDBGQnZ0R1lkUkhHM0hKVWpCSjAwalNaMGRn0gHbAUFVX3lxTE5vSm9Fb3N4eHlzWFJrTzkwdVVoQktGeDRqUmNLRGdyRE1vVzJwWlluQmRZNEFyNDAzMTE2NmhRZndYcTN3bXFadGZ6RkFDUFREMWFBeU55WjFxT2NjbkstRnJCV2xIMkF1LVVfTWlramNEeGtYU0d2MlRDRUpkTE1ibG1SbGtwdHZIa2Y4Vk5HWXV6QzFHT0prUXNBOC1SdzZ4TlM2V2N3NVJmcFV2SHlaY2xsVk1pRFQ3YXhoT2JOS2YwZUJBNEdTM3R4eXp6dlJucmdFc2djanhlRQ?oc=5))\n- **Hungry customers won’t be able to distinguish between ‘Sangeetha’ and ‘Sangetha’: Madras High Court in trademark case:** CHENNAI The Madras High Court has restrained a restaurant located opposite the Thanjavur Brihadeeswarar Temple, a UNESCO World Heritage Site, from using the name ‘HOTEL SANGETHAS PURE VEG RESTAURANT’ after observing that hungry customers are likely to be deceived into believing that it belongs to the popular Sangeetha chain of restaurants spread across the world. Why everyone is talking about the Big Temple storyline 1 Justice P.B. Madras High Court Restrains Thanjavur Restaurant From Using 'Sangethas' Name, Quotes Avvaiyar. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/hungry-customers-wont-be-able-to-distinguish-between-sangeetha-and-sangetha-madras-high-court-in-trademark-case/article71648391.ece))\n- **Remove Periyar statue located near temple: Madras HC:** Periyar Statue Near Kandiyur Temple To Be Relocated In Four Weeks, Orders Madras High Court. ([The New Indian Express](https://news.google.com/rss/articles/CBMitAFBVV95cUxOdEZHaElEU2RhNTRIQ2ZxYXNXSzQ1dU1ndm9mTUJ4U1h0V0MtTk1Wd2VOQTlsZkJUVW5KVkVhaUduSWhFdmhVcHYyMUIxNWs1R1dQMUc4Q3lZcm40SFpNR1oxLTA5VmFud3BLRlJIU0ttdHJDUmw4cTJpNHZ0V21VM1IwUDZPSGtWeWFHc2dYcjI0QmRaUVkyc2ZoVV9VeE9SYW50TXhocE9uY21Fel8xQVpuM1nSAcIBQVVfeXFMTndZVHJCZWowWWhkMU5HTGVvWVBSWHJ0cWVQYVMxTVc0Xzlua0djdVVuNHFXUmV1ZnYxWGpZWm4xU3dscHlVU1dja3RoUEE0dlVEdnJIMUxtY3NyQWxWd2huZU9BblBQTEttMm4xZXg2azJPTWllcjROeUIwN3pmT3BsSkR4ZnNBeWtiblFHSHJHeWdqeGx3a3paYl80eTRVeHJRdndvLUFPWl9CVE1uTThiejZXcnl1U29xQWoxUXRHYmc?oc=5))\n- **The court ordered to file the final report in the case against Kayalvizhi Alagiri!:** The Madras High Court has ordered the police to submit a final report within 4 weeks in the case registered against M.K.Azhagiri's daughter Kayalvizhi for slapping the bank manager. SBI Bank is operating in Chennai Adyar area. The branch manager of this bank, Harsheen Singh, contacted the representative of the owner of the building, Kayalvizhi Alagiri, regarding the repair of the faulty elevator. But because he did not answer properly, Kayalvizhi told Alagiri. In this regard, he has come to the Adyar bank branch and spoken to the branch manager. ([News18 Tamil Nadu](https://tamil.news18.com/tamil-nadu/high-court-orders-for-submit-final-report-in-kayalvizhi-alagiri-case-within-4-weeks-nw-mma-ws-bl-2243080.html))",
+    "district_developments": "- **Dharmapuri murder: Did Dharmapuri Devaraj kill his mother under the influence of ganja? Police description of excitement:** Dharmapuri: The police arrested the son who killed the mother who was on bail in Dharmapuri district and sent him to jail. The shocking incident of the son's murder of his own mother in the old Indore area has created a sensation. In this incident, the police have informed about why Devaraj killed his mother. Chinnapappa (42) from old Indore area. His son is Devaraj (19). He is said to be under the influence of ganja, who is working as a laborer. In this case, he killed his mother Chinnapappa, who was at home, by stabbing him with a knife. ([Oneindia Tamil](https://tamil.oneindia.com/news/tamilnadu/police-explains-about-dharmapuri-murder-case-842025.html))",
     "claims_vs_facts": [],
     "what_to_watch_next": "",
     "all_sources": [
       {
-        "title": "Theni jailbreak: Tamil Nadu CM Vijay orders suspension of Theni district jail superintendent in-charge",
+        "title": "DA for Tamil Nadu government employees increases from 60% to 63%",
         "publisher": "The Hindu",
         "language": "en",
         "published_date": "2026-10-31",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/theni-jailbreak-tamil-nadu-cm-vijay-orders-suspension-of-superintendent-in-charge-over-security-lapse/article71648506.ece"
-      },
-      {
-        "title": "CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak",
-        "publisher": "The Indian Express",
-        "language": "en",
-        "published_date": "2026-10-31",
-        "url": "https://indianexpress.com/article/cities/chennai/cm-vijay-orders-suspension-of-top-official-transfer-of-prison-staff-after-tamil-nadu-theni-jailbreak-10944446/"
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/da-for-government-employees-increases-from-60-to-63/article71649226.ece"
       },
       {
         "title": "DMK women cadre protest across Tamil Nadu over price rise, law and order",
@@ -211,6 +359,48 @@
         "url": "https://www.thehindu.com/news/national/tamil-nadu/dmk-women-cadre-protest-across-tamil-nadu-over-price-rise-law-and-order/article71648544.ece"
       },
       {
+        "title": "Chief Minister Vijay inaugurates Pudukottai new bus stand.",
+        "publisher": "Polimer News",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "url": "https://www.polimernews.com/districtnews/pudukkottai-new-bus-stand-inauguration-cm-vijay-12771564"
+      },
+      {
+        "title": "Chief Minister Vijay's visit! November in Pudukottai. Closure of Liquor Shops in 2",
+        "publisher": "DinaMani",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQQnFqZ1pCdi1kV2tCNHhsMG12bkN5RHNITHZnQ1NCZm5SVXJqX3gxekVacm1veERtUU1ERFlQS0dIQUpISTdKNl9WSlJOejJTVFZrNU9rci0ta1hoeGhVcFFGZFphck4wZ2x0M0lWOE9OVGpsWmJrVDNIeEhrbmpPeDhvT0xWRXNxVl81VW82WkdFRkY5cDVfNm05dEpWV0ZvczBWZXRwVmJ5S3FCdEoxTXVucmVXaE5Ra3Rz0gHIAUFVX3lxTE5qdW5SMkVHRHl3cHEtYmRTSUYyQU9FdWo1RlUyTXlBZnktWTZHQXhjX1c5b0hQOGtHbXZKTEVkWGthSjFfMjByWmdRUS1qMmJWb3NhV3RMN1hxY1BqTnNpeTJqSnk2ZnZEREVHOTl3b0tjamZsMDg1RVNwTk1pd3lHT3VpUFQyRUlUdnZaaGlkVzc1S3c4RG1oQlZGcXZ0c3h2TkVTVXZaLTlIaU9xRWNoYUZuYlU1QnBLM1l5bWV3b04zUENvYnNR?oc=5"
+      },
+      {
+        "title": "CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak",
+        "publisher": "The Indian Express",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "url": "https://indianexpress.com/article/cities/chennai/cm-vijay-orders-suspension-of-top-official-transfer-of-prison-staff-after-tamil-nadu-theni-jailbreak-10944446/"
+      },
+      {
+        "title": "Theni Jail Superintendent Dismissal, Officers Transferred - Chief Minister Vijay orders",
+        "publisher": "DinaMani",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOdnBQVGpVRnV6T2dyUThNVGRNVjAxRF94TlFjOUp6RUN5dDNzN3RkY2JFYUJmai1QanQzQU5nTXJtZXhBbUczSW50MEZ0OHZTNkxyV0NtNU9tVjdfU2FxMkk5eFVvMHRVa0dRdFZ0UXNvSVVpd3NBcHkwSFI4Y3NBWGtZWkdMdzY3Y2pWWmlOTEwwc29CeE54bGk3bXNqNmRkZmFpU1BCT2ZUa2gwV1NXbGFGcDVpRFcyTnlwU1NJcmXSAc4BQVVfeXFMTXA0dFZ0ZF9abzJYM1V0bHY5U0lSMXVOa1RMSm9wVUxDVVh2eFZMZC1Qa2VIbzdZcVdvZENFYWlBNE5BSnZ5WXpvTlVPUi1tMmNuaEp2b1p3OGlJMUFUelBmM3VIWVBRVm1Dd0RsYl9NVWhVeG9McllfLXhmZU1zMWJMWGJ6TWJqXzZXdkRuLW1rWGJwSC0wcGxyUE5mVkE3R2JMY2JaQmpvT3dhM181VlI1WDdVcnZyMzlESDhBUEZzS3BpSzExWlg2SUhXeGc?oc=5"
+      },
+      {
+        "title": "How can the prisoners escape so easily? - EPS Question Tamil News",
+        "publisher": "News18 Tamil Nadu",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "url": "https://tamil.news18.com/videos/tamil-nadu/just-now-tamil-news-2243030.html"
+      },
+      {
+        "title": "Condemnation of the government which is playing with the lives of poor and poor people : EPS",
+        "publisher": "DinaMani",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPdHlsN0xtdG03SmhWSUpLckdyREFVUFRhclUxQmhkbjBuZnB6QzhkRHc3OXJKTmQ0R1VCVmlhb29HRHhSWk02Ym5oTVpUZHBETHFmNUp4aHl6X2pKYUp4bmt0VEdqUk10RGlTamhReDRvX2pQUEw3ektCUUVSVVFlbGVRUGNJcUdKdzlEUlN1Rl9RYmZYX2RYNUY3QTNKbHlzMEwxVTNtTmV4NzlZRUE3bVFGNUxOMGN2Q0ZzYlZySjdJWVoybjdoSkpicnRESElWcnVJcHI2T2diNEg1VDFZLVhoY0lVR25GYjNoZUdVWmpsVklpN1pUcF9HQ0NpSFRDNmZNetIBkgJBVV95cUxOeEl4YWpQZDlSTGg1U1dkcG9FMTRNYjdwMnN0akl0Zzc0SFlYR1MxNHlIc0M3blR2MWJkZkYwQjRWRTFzMlN4c2tFYTZlaU91cURhUV82bjFUdDFjRjJHeUQzY3JyRVFKOGc2Q3MxeW00VGpQcVU2NkxkT3BqMU1KNG5NdDJYbUFtaHhTaXpLSjVIR3VBRnA0b25vazhSd0hEcHhLUGxBM1RnRE9pLW01aDNOMFVpWkxZZmJ6OG9PV1ROYVF0MFBCcWhFbUNHSFJMbno4eGVMYzlPeEFOZGdjdUR0bllDNVp3REhuZmc2QjNLbmNCSVZ1NjgzN2FiWEJmbGJFNjRIZjVQQWt4OHNtczh3?oc=5"
+      },
+      {
         "title": "Tamil Nadu Congress, VCK mobilise cadres for Nov. 1 INDIA bloc protest in New Delhi",
         "publisher": "The Hindu",
         "language": "en",
@@ -218,39 +408,67 @@
         "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-congress-vck-mobilise-cadres-for-nov-1-india-bloc-protest-in-new-delhi/article71646455.ece"
       },
       {
-        "title": "Stalin urges CM Vijay to heed women’s protest over rising prices, law and order",
-        "publisher": "The Hindu",
+        "title": "DMK Paranthamen — IT Wink should act responsibly: Paranthamen",
+        "publisher": "News18 Tamil Nadu",
         "language": "en",
         "published_date": "2026-10-31",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/stalin-urges-cm-vijay-to-heed-womens-protest-over-rising-prices-deteriorating-law-and-order/article71648766.ece"
+        "url": "https://tamil.news18.com/videos/tamil-nadu/dmk-paranthamen-tvk-cm-vijay-2243174.html"
       },
       {
-        "title": "Hungry customers won’t be able to distinguish between ‘Sangeetha’ and ‘Sangetha’: Madras High Court in trademark case",
-        "publisher": "The Hindu",
+        "title": "Will JUSTNOW make a comeback?: DMK chief M.K.Stalin's post on X Page",
+        "publisher": "News18 Tamil Nadu",
         "language": "en",
         "published_date": "2026-10-31",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/hungry-customers-wont-be-able-to-distinguish-between-sangeetha-and-sangetha-madras-high-court-in-trademark-case/article71648391.ece"
+        "url": "https://tamil.news18.com/videos/tamil-nadu/justnow-2243144.html"
       },
       {
-        "title": "Veterinary assistant surgeon suspended in Villupuram after video of him abusing farmer goes viral",
-        "publisher": "The Hindu",
+        "title": "MK Stalin Meets OPS — MK Stalin met OPS and inquired about his health",
+        "publisher": "News18 Tamil Nadu",
         "language": "en",
         "published_date": "2026-10-31",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/veterinary-assistant-surgeon-suspended-in-villupuram-after-video-of-him-abusing-farmer-goes-viral/article71648384.ece"
+        "url": "https://tamil.news18.com/videos/tamil-nadu/mk-stalin-meets-ops-dmk-tamil-news-2243063.html"
       },
       {
-        "title": "The great escape from Theni jail",
-        "publisher": "The Hindu",
+        "title": "Kaliyarasan's arrest issue! Action against offending officials: M.K. Stalin's insistence",
+        "publisher": "DinaMani",
         "language": "en",
         "published_date": "2026-10-31",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/the-great-escape-from-tamil-nadus-theni-jail/article71645449.ece"
+        "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQWnZLTU1NNzktNzFNZDB1eGMwMlFNUnpxZEFQeTZLWTdYSk1XYjgwVmp5dXF4NHF3QWM5Vlk4RGZoNngxektiOUJIblpWN0tkNkx5cDRzUnRMWmItQVVjclZBRXp1SVQ3YkJmWXJrVk14U3FmSFlITndZdjdPc0lkaFpqQndkRWF6alNVSTl1RmZrZXZVbWE4YTZ6RlZjWnBvYXVBcjBBb28tRHdUOFBkUG80Q1ZENkRsbmVObnhsOEFtM3p2SU9MUjNjRUtMWDVEal85X0hHdzlSN3lpNE5mVFVTd0VNa0tfZ1duVjBtd3JDcGlv0gGCAkFVX3lxTFBmVVpISUV3Z3VQeHloN1VNbWh0WTkwWDY2R0VlSVFDTS03Tk5GaExHU3F1aVlGTmVNUDF4M2o1NWI4blNtUFNLNmROdjU4REJNajFtUml3NFRDdmZReHdrODNBXzNxai12MkpLY0FQa1daMHZQUW1sWmtFUTdCWThEVlJTRXdfS0Qyb0tCbDc4R1hYZjNEa3gwN0ViQi1XaG9ybUV6Q0Fnak1XZjNjalE1cHl3VEVXY0pnSEVna2szY0xSczZwTFNGeHQ0ZFpSU3lrSHJiOTVMcGRsYkxPaVBSX2pHVjRTenhxd1QzWDhoX19DNk1GUElVZjNUZVZOTW9SQQ?oc=5"
       },
       {
-        "title": "After Theni, another jailbreak in Tamil Nadu — this time in Coimbatore",
-        "publisher": "The Indian Express",
+        "title": "\"When will the light come to power industry?\" - Dhinakaran barrage question — AMMK",
+        "publisher": "News18 Tamil Nadu",
         "language": "en",
         "published_date": "2026-10-31",
-        "url": "https://indianexpress.com/article/cities/chennai/coimbatore-central-prison-jailbreak-theni-tamil-nadu-10944522/"
+        "url": "https://tamil.news18.com/videos/tamil-nadu/just-now-ammk-tvk-2243011.html"
+      },
+      {
+        "title": "When will the light come to the electricity sector that plunged Tamil Nadu into darkness? TTV Dhinakaran",
+        "publisher": "DinaMani",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOajBDeVltRmE1MjZtMXl3ZnBiMTlvNEtkTmVZZXRTMVNNdE45SDdIZUV0NFJNMFdiTkpFTTdHTmFGb0pnQmJxQ0JOZ3ZpRHVZZTRDY2ZYRUFWa0sxalY5bjVvbzItdFlrUWY2UWtrMkRVNFM5QUJZaDlYYWt3VnJFcjJvVGhqaWRBS3JVMlBpSzRQX0dBeE1pVkxDOGRvQnZjMi15MFY2c2tyT0FmT2fSAbsBQVVfeXFMT0xwUDRaMUZEVVdpV2dNV2VmWHpRbjJrZ1JrdDJuUHVYbTQ0V1dHRzdObk04TVMtRGhDWkdESXZrUTlhX2lEWXJINWRKVFIwWDFrNy1PN3RlQndCR0UwV0FRc3hOXzlzQUJOWHJ2b3JHZDc2N2J2a2hHMkZMUVZHdlJZM2oyV3hsWGJlWWg4WnQ5OEtwWDk4VXMwMUpIMW85bjI5SmxqeHkwSzJtUzFyaUpTZ2twcVZiZ245TQ?oc=5"
+      },
+      {
+        "title": "Gutka scam case: HC directs special court to file report",
+        "publisher": "News18 Tamil Nadu",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "url": "https://tamil.news18.com/tamil-nadu/gutkha-case-report-on-how-to-complete-it-in-3-months-vjr-ws-l-2243220.html"
+      },
+      {
+        "title": "People will not have faith in a government that cannot protect prisons: Edappadi K. Palaniswami",
+        "publisher": "DinaMani",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNYzBudkc5THk4b3RBQXRQcTdlX2w5enRhbE96WExsRi1iS0VPS0tia0hJUjFaVGFXa2gyX2M5N29xbm5PVnFBRHNsa2E1S05oWnByRV8xTlJuV0FYRjN0eDNvY0tPZkh2RkZ6cHdaaW9mM1VPZUJWakJtWTUtMmFhZEZ2bU9PaUZKVDFxT0h4ampJY1NvMXA1SUJKN3JlVXEzUlhLU2Z1Yko0SGtPeGFQTHFMQkhQcFU0bWM1WGVCUFJJcDJKT1pwU0NVVFgwWUpfUGQweF81VdIB5AFBVV95cUxQZWhETGFmSkh5bndYaEJGSEcyUHJuM3NPb2pHUHlhSFA1REZJNkNITElDZ3h6dTFTbUhwdGhtbkdPaEV3dWptR2prZUY1UjlxdXBtdUpZbTRwRVJwWXRCT08wOTNKdFR0WEtDU0Z2N25EazFfbFRKbGxsOGYzV3h3WkIxZkJmYTV4dnlTOTl3MEIzWjZ6R0twODYxTkZmUUZPZHk5RTZzMDFUNXRTZjI2M0MzVnc2MzhzcmdSX0xCMWJxNjFTeU45X2pncGozRDZuSGVHV1hudlhCYV9CYk1DV0VZU0M?oc=5"
+      },
+      {
+        "title": "Madras High Court forms board to oversee Chidambaram Nataraja temple",
+        "publisher": "India Today",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOaFZHVVdxT1JzRk5YNHk5cHFzZnVEWUw5OTFfeXg3UG5xaUVrM1pwX0U1VFR4ZXVYUlV2Qi1zTFNnVXA5RWdzakY5OGZFdDBQY284bW1NaDRLSUw5OHFRUlBIZkxSWHlpY1kwbXB1Wm4xbWNLc2gxV0FZak1oU25FWTMzSk5yN09Yall0bVFGRDdzN0tjazJCb2tWSzZtMldxQkFFM2JIR2FjTXhKdnotQWdEMmcxbXZPZGUyVDBGQnZ0R1lkUkhHM0hKVWpCSjAwalNaMGRn0gHbAUFVX3lxTE5vSm9Fb3N4eHlzWFJrTzkwdVVoQktGeDRqUmNLRGdyRE1vVzJwWlluQmRZNEFyNDAzMTE2NmhRZndYcTN3bXFadGZ6RkFDUFREMWFBeU55WjFxT2NjbkstRnJCV2xIMkF1LVVfTWlramNEeGtYU0d2MlRDRUpkTE1ibG1SbGtwdHZIa2Y4Vk5HWXV6QzFHT0prUXNBOC1SdzZ4TlM2V2N3NVJmcFV2SHlaY2xsVk1pRFQ3YXhoT2JOS2YwZUJBNEdTM3R4eXp6dlJucmdFc2djanhlRQ?oc=5"
       }
     ]
   }

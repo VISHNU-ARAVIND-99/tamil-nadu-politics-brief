@@ -292,17 +292,16 @@ def fetch_feed_items(source: dict, window_start: datetime, window_end: datetime)
         clean_title = sanitize_untrusted_text(raw_title, max_length=220)
         raw_summary = normalize_tamil_terms(item.get("summary", ""))
 
-        if "news.google.com" in feed_url:
-            clean_snippet = ""
-        else:
-            clean_snippet = trim_to_inshorts_length(sanitize_untrusted_text(raw_summary, max_length=650))
+        clean_snippet = trim_to_inshorts_length(sanitize_untrusted_text(raw_summary, max_length=650))
+        if not clean_snippet or len(clean_snippet.split()) < 10:
+            clean_snippet = clean_title
 
         link = (item.get("link") or "").strip()
         if not clean_title or not link.startswith(("http://", "https://")):
             continue
 
         # Always try to fetch the real 65-85 word article body when snippet is short (< 45 words)
-        if len(clean_snippet.split()) < 45:
+        if len(clean_snippet.split()) < 45 and not link.startswith("https://news.google.com"):
             real_body = fetch_real_article_summary(link)
             if len(real_body.split()) > len(clean_snippet.split()):
                 clean_snippet = real_body

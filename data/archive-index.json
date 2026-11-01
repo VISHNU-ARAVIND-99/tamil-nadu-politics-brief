@@ -1,78 +1,7 @@
 {
-  "total_editions": 4,
-  "last_updated_ist": "2026-11-01T17:03:57.213171+05:30",
+  "total_editions": 3,
+  "last_updated_ist": "2026-11-01T17:50:29.125109+05:30",
   "editions": [
-    {
-      "edition_id": "2026-11-01-evening",
-      "title": "Tamil Nadu Politics – Evening Brief – 1 November 2026",
-      "date": "2026-11-01",
-      "edition_type": "evening",
-      "is_test_sample": false,
-      "status": "published",
-      "published_at_ist": "2026-11-01T17:03:57.213171+05:30",
-      "coverage_window": "2026-11-01T06:00:00+05:30 to 2026-11-01T18:00:00+05:30",
-      "reading_time_minutes": 17,
-      "headline": "Postponement of college exam for CM’s visit in Pudukottai triggers row",
-      "summary_text": "- Postponement of college exam for CM’s visit in Pudukottai triggers row\n- Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts\n- How significant is the TVK-led regime’s move to hold Social Justice Survey? Explained\n- 1,172 candidates receive offer letters at job fair held in Villupuram",
-      "parties": [
-        "TVK"
-      ],
-      "topics": [
-        "Agriculture & Water",
-        "Centre–State Relations",
-        "Education & NEET",
-        "Government & Administration",
-        "Public Protests & Labour"
-      ],
-      "districts": [
-        "Chennai",
-        "Cuddalore",
-        "Ramanathapuram",
-        "Viluppuram"
-      ],
-      "url": "edition.html?id=2026-11-01-evening",
-      "json_path": "archive/2026/11/2026-11-01-evening.json"
-    },
-    {
-      "edition_id": "2026-11-01-morning",
-      "title": "Tamil Nadu Politics – Morning Brief – 1 November 2026",
-      "date": "2026-11-01",
-      "edition_type": "morning",
-      "is_test_sample": false,
-      "status": "published_delayed",
-      "published_at_ist": "2026-11-01T16:41:58.420900+05:30",
-      "coverage_window": "2026-10-31T18:00:00+05:30 to 2026-11-01T06:00:00+05:30",
-      "reading_time_minutes": 13,
-      "headline": "CM Vijay urges protection of Tamil language, heritage in Tamil Nadu Day message",
-      "summary_text": "- CM Vijay urges protection of Tamil language, heritage in Tamil Nadu Day message\n- ‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami\n- VCK functionary hacked to death in TN's Tuticorin\n- Standing together... Greetings Edappadi Palaniswami on Tamil Nadu Day!",
-      "parties": [
-        "AIADMK",
-        "AMMK",
-        "BJP",
-        "DMK",
-        "TVK",
-        "VCK"
-      ],
-      "topics": [
-        "Agriculture & Water",
-        "Assembly, Courts & Policy",
-        "Centre–State Relations",
-        "Elections",
-        "Government & Administration",
-        "Public Protests & Labour"
-      ],
-      "districts": [
-        "Chengalpattu",
-        "Coimbatore",
-        "Cuddalore",
-        "Salem",
-        "Theni",
-        "Thoothukudi",
-        "Vellore"
-      ],
-      "url": "edition.html?id=2026-11-01-morning",
-      "json_path": "archive/2026/11/2026-11-01-morning.json"
-    },
     {
       "edition_id": "2026-10-31-evening",
       "title": "Tamil Nadu Politics – Evening Brief – 31 October 2026",
@@ -80,12 +9,14 @@
       "edition_type": "evening",
       "is_test_sample": false,
       "status": "published_delayed",
-      "published_at_ist": "2026-11-01T11:52:52.882056+05:30",
+      "published_at_ist": "2026-11-01T17:50:29.125109+05:30",
       "coverage_window": "2026-10-31T06:00:00+05:30 to 2026-10-31T18:00:00+05:30",
-      "reading_time_minutes": 8,
-      "headline": "CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak",
-      "summary_text": "- CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak\n- DMK women cadre protest across Tamil Nadu over price rise, law and order\n- Tamil Nadu Congress, VCK mobilise cadres for Nov. 1 INDIA bloc protest in New Delhi\n- Stalin urges CM Vijay to heed women’s protest over rising prices, law and order",
+      "reading_time_minutes": 20,
+      "headline": "DA for Tamil Nadu government employees increases from 60% to 63%",
+      "summary_text": "- DA for Tamil Nadu government employees increases from 60% to 63%\n- Chief Minister Vijay inaugurates Pudukottai new bus stand.\n- CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak\n- Condemnation of the government which is playing with the lives of poor and poor people : EPS",
       "parties": [
+        "AIADMK",
+        "AMMK",
         "DMK",
         "INC",
         "TVK",
@@ -97,18 +28,68 @@
         "Centre–State Relations",
         "Elections",
         "Government & Administration",
+        "Infrastructure & Economy",
         "Political Parties",
         "Public Protests & Labour"
       ],
       "districts": [
+        "Chennai",
         "Coimbatore",
-        "Madurai",
-        "Salem",
+        "Cuddalore",
+        "Dharmapuri",
+        "Kancheepuram",
+        "Thanjavur",
         "Theni",
         "Viluppuram"
       ],
       "url": "edition.html?id=2026-10-31-evening",
       "json_path": "archive/2026/10/2026-10-31-evening.json"
+    },
+    {
+      "edition_id": "2026-11-01-morning",
+      "title": "Tamil Nadu Politics – Morning Brief – 1 November 2026",
+      "date": "2026-11-01",
+      "edition_type": "morning",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-01T17:42:28.442510+05:30",
+      "coverage_window": "2026-10-31T18:00:00+05:30 to 2026-11-01T06:00:00+05:30",
+      "reading_time_minutes": 20,
+      "headline": "Take action against officials who arrested MIDS professor, Stalin urges T.N. government",
+      "summary_text": "- Take action against officials who arrested MIDS professor, Stalin urges T.N. government\n- \"My good time joined Thalapathy\" - Minister KA Sengottaiyan\n- DMK women’s wing protests reflect public anger against TVK govt: Stalin\n- Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts",
+      "parties": [
+        "AIADMK",
+        "BJP",
+        "DMK",
+        "NTK",
+        "PMK",
+        "TVK",
+        "VCK"
+      ],
+      "topics": [
+        "Assembly, Courts & Policy",
+        "Centre–State Relations",
+        "Education & NEET",
+        "Elections",
+        "Government & Administration",
+        "Infrastructure & Economy",
+        "Political Parties",
+        "Public Protests & Labour"
+      ],
+      "districts": [
+        "Chengalpattu",
+        "Chennai",
+        "Coimbatore",
+        "Cuddalore",
+        "Erode",
+        "Madurai",
+        "Ramanathapuram",
+        "Theni",
+        "Thoothukudi",
+        "Viluppuram"
+      ],
+      "url": "edition.html?id=2026-11-01-morning",
+      "json_path": "archive/2026/11/2026-11-01-morning.json"
     },
     {
       "edition_id": "2026-10-31-morning",
