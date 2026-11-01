@@ -289,7 +289,15 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
         for c in top_clusters
     ]
 
-    models_to_try = ["gemini-2.5-flash", "gemini-2.0-flash"]
+    models_to_try = [
+        GEMINI_MODEL,
+        "gemini-1.5-flash",
+        "gemini-1.5-flash-latest",
+        "gemini-1.5-flash-8b",
+        "gemini-2.0-flash",
+        "gemini-1.5-pro",
+    ]
+    models_to_try = list(dict.fromkeys(m for m in models_to_try if m))
     last_err = "unknown"
 
     for model_name in models_to_try:
@@ -369,6 +377,14 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
                 },
                 "_telemetry": {"ai_provider": f"gemini:{model_name}", "tokens_used": total_tokens},
             }
+        except urllib.error.HTTPError as exc:
+            err_body = ""
+            try:
+                err_body = exc.read().decode("utf-8")
+            except Exception:
+                pass
+            last_err = f"HTTP Error {exc.code}: {exc.reason} - {err_body[:250]}"
+            print(f"[WARN] Model {model_name} failed ({last_err}), trying next...")
         except Exception as exc:
             last_err = str(exc)
             print(f"[WARN] Model {model_name} failed ({last_err}), trying next...")
