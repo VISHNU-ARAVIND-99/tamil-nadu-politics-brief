@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Central configuration, IST timezone calculation, Tamil & English political taxonomies,
-district registries, and automatic Tamil-to-English translation helper.
+Central configuration, fixed 12-hour IST coverage window math,
+and HTML/Google-News bundle sanitizer.
 """
 
+import html
 import json
 import os
 import re
@@ -29,144 +30,132 @@ MAX_API_CALLS_PER_RUN = int(os.getenv("MAX_API_CALLS_PER_RUN", "2"))
 HTTP_TIMEOUT_SECONDS = int(os.getenv("HTTP_TIMEOUT_SECONDS", "15"))
 USER_AGENT = os.getenv(
     "USER_AGENT",
-    "Mozilla/5.0 (compatible; TamilNaduPoliticsBrief/2.0; +https://github.com/tn-politics-brief)",
+    "Mozilla/5.0 (compatible; TamilNaduPoliticsBrief/3.0; +https://github.com/tn-politics-brief)",
 )
 
+# Multi-word or unambiguous Tamil Nadu political party keywords
 PARTY_TAXONOMY = {
     "DMK": [
-        "dmk", "dravida munnetra kazhagam", "mk stalin", "m.k. stalin", "udhayanidhi stalin",
-        "kanimozhi", "திமுக", "திராவிட முன்னேற்றக் கழகம்", "மு.க.ஸ்டாலின்", "ஸ்டாலின்", "உதயநிதி"
+        "dmk", "dravida munnetra kazhagam", "m.k. stalin", "mk stalin", "chief minister stalin",
+        "cm stalin", "udhayanidhi", "kanimozhi", "திமுக", "மு.க.ஸ்டாலின்", "ஸ்டாலின்", "உதயநிதி"
     ],
     "AIADMK": [
-        "aiadmk", "admk", "all india anna dravida munnetra kazhagam", "edappadi palaniswami",
-        "eps", "ops", "அதிமுக", "அண்ணா திராவிட முன்னேற்றக் கழகம்", "எடப்பாடி பழனிசாமி", "இபிஎஸ்"
+        "aiadmk", "admk", "edappadi palaniswami", "palaniswami", "eps", "o. panneerselvam",
+        "அதிமுக", "எடப்பாடி பழனிசாமி", "இபிஎஸ்"
     ],
     "BJP": [
-        "bjp", "bharatiya janata party", "annamalai", "nainar nagendran", "l murugan",
-        "tamilisai", "பாஜக", "பாரதிய ஜனதா", "அண்ணாமலை", "நயினார் நாகேந்திரன்"
+        "bjp", "bharatiya janata party", "annamalai", "nainar nagendran", "l. murugan",
+        "tamilisai", "பாஜக", "அண்ணாமலை", "நயினார் நாகேந்திரன்"
     ],
     "INC": [
-        "congress", "tncc", "indian national congress", "selvaperunthagai", "p chidambaram",
-        "காங்கிரஸ்", "செல்வப்பெருந்தகை", "தமிழ்நாடு காங்கிரஸ்"
+        "tncc", "tamil nadu congress", "selvaperunthagai", "p. chidambaram", "karti chidambaram",
+        "காங்கிரஸ்", "செல்வப்பெருந்தகை"
     ],
     "TVK": [
-        "tvk", "tamilaga vettri kazhagam", "vijay", "thalapathy vijay", "panaiyur",
-        "தவெக", "தமிழக வெற்றிக் கழகம்", "விஜய்"
+        "tvk", "tamilaga vettri kazhagam", "cm vijay", "chief minister vijay", "joseph vijay",
+        "thalapathy vijay", "actor vijay", "vijay govt", "தவெக", "தமிழக வெற்றிக் கழகம்"
     ],
     "PMK": [
-        "pmk", "pattali makkal katchi", "anbumani ramadoss", "ramadoss",
-        "பாமக", "பாட்டாளி மக்கள் கட்சி", "அன்புமணி", "ராமதாஸ்"
+        "pmk", "pattali makkal katchi", "anbumani ramadoss", "s. ramadoss", "sowmiya anbumani",
+        "பாமக", "அன்புமணி", "ராமதாஸ்"
     ],
     "NTK": [
-        "ntk", "naam tamilar katchi", "seeman", "நாம் தமிழர்", "சீமான்", "நாதக"
+        "ntk", "naam tamilar", "seeman", "நாம் தமிழர்", "சீமான்", "நாதக"
     ],
     "VCK": [
-        "vck", "viduthalai chiruthaigal katchi", "thol thirumavalavan", "thirumavalavan",
-        "விசிக", "விடுதலை சிறுத்தைகள்", "திருமாவளவன்"
+        "vck", "viduthalai chiruthaigal", "thirumavalavan", "விசிக", "விடுதலை சிறுத்தைகள்", "திருமாவளவன்"
     ],
     "MDMK": [
-        "mdmk", "marumalarchi dravida munnetra kazhagam", "vaiko", "durai vaiko",
-        "மதிமுக", "வைகோ", "துரை வைகோ"
+        "mdmk", "marumalarchi dravida", "vaiko", "durai vaiko", "மதிமுக", "வைகோ"
     ],
     "DMDK": [
-        "dmdk", "desiya murpokku dravida kazhagam", "premalatha vijayakanth",
-        "தேமுதிக", "பிரேமலதா விஜயகாந்த்"
+        "dmdk", "desiya murpokku", "premalatha vijayakanth", "தேமுதிக", "பிரேமலதா"
     ],
     "AMMK": [
-        "ammk", "amma makkal munnetra kazhagam", "ttv dhinakaran", "dhinakaran",
-        "அமமுக", "டிடிவி தினகரன்", "தினகரன்"
+        "ammk", "amma makkal munnetra", "ttv dhinakaran", "dhinakaran", "அமமுக", "தினகரன்"
     ],
     "Left Parties": [
-        "cpi(m)", "cpim", "cpi", "communist party", "k balakrishnan", "shanmugam",
-        "r mutharasan", "கம்யூனிஸ்ட்", "மார்க்சிஸ்ட்", "சிபிஎம்", "சிபிஐ"
+        "cpi(m)", "cpim", "cpi", "k. balakrishnan", "shanmugam", "mutharasan", "கம்யூனிஸ்ட்", "சிபிஎம்"
     ],
 }
 
 TOPIC_TAXONOMY = {
     "Government & Administration": [
         "cabinet", "chief minister", "secretariat", "government order", "collector",
-        "welfare scheme", "kalaignar", "magalir urimai", "da hike", "salary", "police",
-        "தலைமைச் செயலகம்", "அமைச்சரவை", "அரசாணை", "முதலமைச்சர்", "திட்டம்"
+        "welfare scheme", "da hike", "dearness allowance", "department", "police", "prison", "jailbreak"
     ],
     "Political Parties": [
         "alliance", "general council", "executive committee", "party meeting",
-        "public meeting", "conference", "cadre", "கூட்டணி", "பொதுக்குழு", "செயற்குழு", "மாநாடு"
+        "public meeting", "conference", "cadre", "bypoll", "byelection"
     ],
     "Assembly, Courts & Policy": [
-        "assembly", "speaker", "madras high court", "supreme court", "bill", "plea",
-        "governor", "election commission", "சட்டப்பேரவை", "உயர் நீதிமன்றம்", "ஆளுநர்"
+        "assembly", "speaker", "madras high court", "madras hc", "madurai bench", "supreme court",
+        "bill", "plea", "governor", "election commission", "local body election"
     ],
     "Elections": [
-        "election", "by-election", "byelection", "constituency", "voter list", "electoral roll",
-        "booth", "candidate", "தேர்தல்", "வாக்காளர்", "தொகுதி", "வேட்பாளர்"
+        "election", "by-election", "byelection", "bypoll", "constituency", "voter list",
+        "electoral roll", "delimitation", "candidate"
     ],
     "Education & NEET": [
-        "neet", "school education", "higher education", "university", "ugc",
-        "board exam", "student", "நீட்", "கல்வி", "பல்கலைக்கழகம்", "பள்ளி"
+        "neet", "school education", "higher education", "university", "ugc", "professor", "college"
     ],
     "Agriculture & Water": [
-        "farmer", "cauvery", "mullaperiyar", "kuruvai", "samba", "paddy",
-        "procurement", "delta", "reservoir", "விவசாயி", "காவிரி", "முல்லைப் பெரியாறு", "நெல்", "டெல்டா"
+        "farmer", "cauvery", "mullaperiyar", "kuruvai", "samba", "paddy", "procurement", "delta"
     ],
     "Public Protests & Labour": [
-        "protest", "demonstration", "strike", "detained", "sanitation workers",
-        "transport workers", "prison", "jail", "போராட்டம்", "ஆர்ப்பாட்டம்", "வேலைநிறுத்தம்"
+        "protest", "demonstration", "strike", "detained", "agitators", "women's wing", "fishermen"
     ],
     "Centre–State Relations": [
-        "union government", "centre", "gst", "finance commission", "delimitation",
-        "language policy", "india bloc", "மத்திய அரசு", "ஒன்றிய அரசு", "நிதி பகிர்வு", "தொகுதி மறுசீரமைப்பு"
+        "union government", "centre", "gst", "finance commission", "delimitation", "india bloc"
     ],
     "Infrastructure & Economy": [
-        "metro rail", "highway", "port", "industrial", "investment", "sipcot", "power cut",
-        "tangedco", "tneb", "electricity", "மெட்ரோ", "மின்சாரம்", "தொழிற்சாலை", "முதலீடு"
+        "metro rail", "highway", "industrial", "investment", "sipcot", "power cut", "tangedco", "electricity"
     ],
 }
 
 TN_DISTRICTS = {
-    "Ariyalur": ["ariyalur", "அரியலூர்"],
-    "Chengalpattu": ["chengalpattu", "செங்கல்பட்டு"],
-    "Chennai": ["chennai", "சென்னை"],
-    "Coimbatore": ["coimbatore", "கோவை", "கோயம்புத்தூர்"],
-    "Cuddalore": ["cuddalore", "கடலூர்"],
-    "Dharmapuri": ["dharmapuri", "தர்மபுரி", "தருமபுரி"],
-    "Dindigul": ["dindigul", "திண்டுக்கல்"],
-    "Erode": ["erode", "ஈரோடு"],
-    "Kallakurichi": ["kallakurichi", "கள்ளக்குறிச்சி"],
-    "Kancheepuram": ["kancheepuram", "kanchipuram", "காஞ்சிபுரம்"],
-    "Kanniyakumari": ["kanniyakumari", "kanyakumari", "கன்னியாகுமரி", "குமரி"],
-    "Karur": ["karur", "கரூர்"],
-    "Krishnagiri": ["krishnagiri", "கிருஷ்ணகிரி"],
-    "Madurai": ["madurai", "மதுரை"],
-    "Mayiladuthurai": ["mayiladuthurai", "மயிலாடுதுறை"],
-    "Nagapattinam": ["nagapattinam", "நாகப்பட்டினம்", "நாகை"],
-    "Namakkal": ["namakkal", "நாமக்கல்"],
-    "Nilgiris": ["nilgiris", "ooty", "udhagamandalam", "நீலகிரி", "ஊட்டி"],
-    "Perambalur": ["perambalur", "பெரம்பலூர்"],
-    "Pudukkottai": ["pudukkottai", "புதுக்கோட்டை"],
-    "Ramanathapuram": ["ramanathapuram", "ராமநாதபுரம்", "இராமநாதபுரம்"],
-    "Ranipet": ["ranipet", "ராணிப்பேட்டை"],
-    "Salem": ["salem", "சேலம்"],
-    "Sivaganga": ["sivaganga", "சிவகங்கை"],
-    "Tenkasi": ["tenkasi", "தென்காசி"],
-    "Thanjavur": ["thanjavur", "தஞ்சாவூர்", "தஞ்சை"],
-    "Theni": ["theni", "தேனி"],
-    "Thoothukudi": ["thoothukudi", "tuticorin", "தூத்துக்குடி"],
-    "Tiruchirappalli": ["tiruchirappalli", "trichy", "திருச்சி", "திருச்சிராப்பள்ளி"],
-    "Tirunelveli": ["tirunelveli", "nellai", "திருநெல்வேலி", "நெல்லை"],
-    "Tirupathur": ["tirupathur", "திருப்பத்தூர்"],
-    "Tiruppur": ["tiruppur", "திருப்பூர்"],
-    "Tiruvallur": ["tiruvallur", "thiruvallur", "திருவள்ளூர்"],
-    "Tiruvannamalai": ["tiruvannamalai", "திருவண்ணாமலை"],
-    "Tiruvarur": ["tiruvarur", "thiruvarur", "திருவாரூர்"],
-    "Vellore": ["vellore", "வேலூர்"],
-    "Viluppuram": ["viluppuram", "villupuram", "விழுப்புரம்"],
-    "Virudhunagar": ["virudhunagar", "விருதுநகர்"],
+    "Ariyalur": ["ariyalur"],
+    "Chengalpattu": ["chengalpattu", "chengalpet", "maraimalai nagar"],
+    "Chennai": ["chennai", "ennore", "tambaram", "avadi"],
+    "Coimbatore": ["coimbatore", "kovai"],
+    "Cuddalore": ["cuddalore", "chidambaram"],
+    "Dharmapuri": ["dharmapuri"],
+    "Dindigul": ["dindigul"],
+    "Erode": ["erode"],
+    "Kallakurichi": ["kallakurichi"],
+    "Kancheepuram": ["kancheepuram", "kanchipuram"],
+    "Kanniyakumari": ["kanniyakumari", "kanyakumari"],
+    "Karur": ["karur"],
+    "Krishnagiri": ["krishnagiri", "hosur"],
+    "Madurai": ["madurai"],
+    "Mayiladuthurai": ["mayiladuthurai"],
+    "Nagapattinam": ["nagapattinam"],
+    "Namakkal": ["namakkal"],
+    "Nilgiris": ["nilgiris", "ooty", "udhagamandalam"],
+    "Perambalur": ["perambalur"],
+    "Pudukkottai": ["pudukkottai"],
+    "Ramanathapuram": ["ramanathapuram"],
+    "Ranipet": ["ranipet", "sholinghur"],
+    "Salem": ["salem", "edappadi"],
+    "Sivaganga": ["sivaganga"],
+    "Tenkasi": ["tenkasi"],
+    "Thanjavur": ["thanjavur", "kumbakonam"],
+    "Theni": ["theni", "thekkampatti"],
+    "Thoothukudi": ["thoothukudi", "tuticorin"],
+    "Tiruchirappalli": ["tiruchirappalli", "trichy"],
+    "Tirunelveli": ["tirunelveli", "ambasamudram", "ambai"],
+    "Tirupathur": ["tirupathur"],
+    "Tiruppur": ["tiruppur"],
+    "Tiruvallur": ["tiruvallur", "thiruvallur"],
+    "Tiruvannamalai": ["tiruvannamalai"],
+    "Tiruvarur": ["tiruvarur", "thiruvarur"],
+    "Vellore": ["vellore"],
+    "Viluppuram": ["viluppuram", "villupuram"],
+    "Virudhunagar": ["virudhunagar"],
 }
 
 TN_RELEVANCE_KEYWORDS = [
-    "tamil nadu", "tamilnadu", "chennai", "assembly", "minister", "collector",
-    "government", "policy", "court", "party", "election", "scheme",
-    "தமிழ்நாடு", "தமிழகம்", "அரசு", "அமைச்சர்", "முதலமைச்சர்", "மாவட்டம்", "நீதிமன்றம்"
+    "tamil nadu", "tamilnadu", "t.n.", "tn govt", "tn cm", "madras high court", "madras hc"
 ]
 
 PROMPT_INJECTION_PATTERNS = [
@@ -185,6 +174,12 @@ def get_ist_now() -> datetime:
 
 
 def compute_coverage_window(edition_type: str, target_date_str: str | None = None) -> dict:
+    """
+    Strictly locks the displayed Coverage Window:
+    - Morning Edition: Previous day 6:00 PM IST to Current day 6:00 AM IST.
+    - Evening Edition: Current day 6:00 AM IST to Current day 6:00 PM IST.
+    Never shifts the displayed window to odd manual run minutes (like 10:22 AM or 11:22 PM).
+    """
     now_ist = get_ist_now()
     if target_date_str:
         year, month, day = map(int, target_date_str.split("-"))
@@ -205,10 +200,9 @@ def compute_coverage_window(edition_type: str, target_date_str: str | None = Non
     else:
         raise ValueError(f"Invalid edition_type '{edition_type}'.")
 
-    # If triggered manually > 30 mins after scheduled time, capture latest 12 hours up to now
-    if target_date_str is None and (now_ist - end_dt).total_seconds() > 1800:
-        end_dt = now_ist
-        start_dt = now_ist - timedelta(hours=12)
+    # Fetch window used internally by RSS collector (allows manual runs slightly after 6 AM/6 PM to still read current feeds)
+    fetch_start_dt = start_dt
+    fetch_end_dt = max(end_dt, now_ist) if target_date_str is None else end_dt
 
     date_str = scheduled_dt.strftime("%Y-%m-%d")
     human_date = scheduled_dt.strftime("%-d %B %Y") if os.name != "nt" else scheduled_dt.strftime("%d %B %Y").lstrip("0")
@@ -219,8 +213,8 @@ def compute_coverage_window(edition_type: str, target_date_str: str | None = Non
         "date": date_str,
         "edition_type": edition_type,
         "title": f"Tamil Nadu Politics – {label} – {human_date}",
-        "start_dt": start_dt,
-        "end_dt": end_dt,
+        "start_dt": fetch_start_dt,
+        "end_dt": fetch_end_dt,
         "scheduled_dt": scheduled_dt,
         "coverage_start_ist": start_dt.isoformat(),
         "coverage_end_ist": end_dt.isoformat(),
@@ -230,16 +224,39 @@ def compute_coverage_window(edition_type: str, target_date_str: str | None = Non
 
 
 def sanitize_untrusted_text(text: str, max_length: int = 650) -> str:
+    """
+    Decodes HTML entities (&nbsp;, &#x1f537;), strips Google News multi-headline bundles,
+    and removes TV/YouTube spam.
+    """
     if not text:
         return ""
-    cleaned = re.sub(r"<[^>]+>", " ", str(text))
+
+    raw = str(text)
+    # If this is a Google News HTML bundle (<ol><li> or multiple <a href>), keep only the first item
+    if "<li" in raw.lower():
+        first_li = re.search(r"<li[^>]*>(.*?)</li>", raw, flags=re.IGNORECASE | re.DOTALL)
+        if first_li:
+            raw = first_li.group(1)
+
+    # Cut off at &nbsp; before Google News appends Publisher Name or secondary headlines
+    if "&nbsp;" in raw:
+        raw = raw.split("&nbsp;")[0]
+
+    # Decode HTML entities (&nbsp;, &#x1f537;, &amp;, etc.)
+    cleaned = html.unescape(raw)
+    cleaned = re.sub(r"<[^>]+>", " ", cleaned)
+    cleaned = cleaned.replace("\xa0", " ")
+
+    # Cut off TV channel YouTube boilerplate
     cleaned = re.split(
         r"(?:WATCH\s+LIVE|Follow\s+US|Subscribe\s+to|ID_[A-Z0-9]+|https?://\S+)",
         cleaned,
         flags=re.IGNORECASE,
     )[0]
-    cleaned = re.sub(r"[👉🔴📺▶️⚡🔔]+", " ", cleaned)
-    cleaned = re.sub(r"^(?:JUST\s+NOW|BREAKING\s+NEWS|\d+\s*-\s*)\s*[\|:\-–—]?\s*", "", cleaned, flags=re.IGNORECASE)
+
+    # Remove emojis and symbols
+    cleaned = re.sub(r"[\U00010000-\U0010ffff👉🔴📺▶️⚡🔔]+", " ", cleaned)
+    cleaned = re.sub(r"^(?:JUST\s+NOW|BREAKING\s+NEWS|BREAKING|\d+\s*-\s*)\s*[\|:\-–—]?\s*", "", cleaned, flags=re.IGNORECASE)
 
     if cleaned.count("|") >= 2:
         parts = [p.strip() for p in cleaned.split("|") if len(p.strip()) > 3]
@@ -249,7 +266,7 @@ def sanitize_untrusted_text(text: str, max_length: int = 650) -> str:
     for pattern in PROMPT_INJECTION_PATTERNS:
         cleaned = pattern.sub("[REDACTED_INSTRUCTION]", cleaned)
 
-    cleaned = re.sub(r"\s+", " ", cleaned).strip(" |-–—:")
+    cleaned = re.sub(r"[ \t]+", " ", cleaned).strip(" |-–—:")
     if len(cleaned) > max_length:
         cleaned = cleaned[:max_length].rsplit(" ", 1)[0] + "..."
     return cleaned
@@ -260,7 +277,6 @@ def has_tamil_script(text: str) -> bool:
 
 
 def translate_tamil_to_english(text: str) -> str:
-    """Translate any Tamil or mixed Tamil-English text into 100% Pure English."""
     if not text:
         return ""
     if not has_tamil_script(text):

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 Step 2 & Step 3 of Pipeline:
-- Reads configurable data/sources.json
-- Filters out hourly TV roundup spam ('Today Headlines / தலைப்புச் செய்திகள்')
-- Translates all Tamil headlines and snippets into 100% Pure English
-- Enriches short 1-line RSS blurbs by pulling article descriptions
+- Extracts real newspaper publisher names from Google News RSS items
+  (never shows internal 'TN Secretariat & Policy Wire' labels)
+- Strips Google News secondary headline bundles (&nbsp; Publisher)
+- Uses only clean <meta name="description"> for article enrichment (never scrapes sidebar headlines)
 """
 
 import email.utils
@@ -36,6 +36,8 @@ GENERIC_BULLETIN_PATTERNS = [
     re.compile(r"தலைப்புச்\s*செய்திகள்", re.IGNORECASE),
     re.compile(r"விரைவுச்\s*செய்திகள்", re.IGNORECASE),
     re.compile(r"speed\s+news", re.IGNORECASE),
+    re.compile(r"equity\s+trading\s+insights", re.IGNORECASE),
+    re.compile(r"tvk:ca", re.IGNORECASE),
 ]
 
 
@@ -69,32 +71,42 @@ def parse_rss_xml_fallback(xml_bytes: bytes) -> list[dict]:
         link = item.findtext("link") or ""
         desc = item.findtext("description") or ""
         pub_date = item.findtext("pubDate") or item.findtext("{http://purl.org/dc/elements/1.1/}date") or ""
-        entries.append({"title": title, "link": link, "summary": desc, "published": pub_date})
+        src_el = item.find("source")
+        src_title = src_el.text.strip() if (src_el is not None and src_el.text) else ""
+        entries.append({
+            "title": title,
+            "link": link,
+            "summary": desc,
+            "published": pub_date,
+            "source_title": src_title,
+        })
     return entries
 
 
 def fetch_article_meta_description(url: str) -> str:
-    """Fetch opening paragraphs when an RSS snippet is only 1 line long."""
+    """
+    Safely fetch ONLY the official <meta property="og:description"> or <meta name="description">
+    from direct newspaper URLs. Never scrapes random <p> tags from sidebars.
+    """
     if not url or "news.google.com" in url:
         return ""
     try:
         req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-        with urllib.request.urlopen(req, timeout=6) as resp:
-            raw_html = resp.read(65536).decode("utf-8", errors="ignore")
+        with urllib.request.urlopen(req, timeout=5) as resp:
+            raw_html = resp.read(45000).decode("utf-8", errors="ignore")
         meta_match = re.search(
             r'<meta[^>]+(?:property=["\']og:description["\']|name=["\']description["\'])[^>]+content=["\']([^"\']+)["\']',
             raw_html,
             re.IGNORECASE,
         )
+        if not meta_match:
+            meta_match = re.search(
+                r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property=["\']og:description["\']|name=["\']description["\'])',
+                raw_html,
+                re.IGNORECASE,
+            )
         desc = html.unescape(meta_match.group(1)) if meta_match else ""
-        paragraphs = re.findall(r"<p[^>]*>(.*?)</p>", raw_html, re.IGNORECASE | re.DOTALL)
-        clean_paras = []
-        for p in paragraphs[:4]:
-            txt = sanitize_untrusted_text(html.unescape(p), max_length=350)
-            if len(txt) > 60 and not txt.lower().startswith(("also read", "read more", "subscribe", "follow us")):
-                clean_paras.append(txt)
-        combined = " ".join([desc] + clean_paras[:2]).strip()
-        return sanitize_untrusted_text(combined, max_length=700)
+        return sanitize_untrusted_text(desc, max_length=550)
     except Exception:
         return ""
 
@@ -123,12 +135,19 @@ def fetch_feed_items(source: dict, window_start: datetime, window_end: datetime)
     if feedparser is not None:
         parsed = feedparser.parse(raw_bytes)
         for entry in parsed.entries:
+            src_obj = getattr(entry, "source", None)
+            src_title = ""
+            if isinstance(src_obj, dict):
+                src_title = src_obj.get("title", "")
+            elif hasattr(src_obj, "title"):
+                src_title = getattr(src_obj, "title", "")
             raw_entries.append(
                 {
                     "title": getattr(entry, "title", ""),
                     "link": getattr(entry, "link", ""),
                     "summary": getattr(entry, "summary", getattr(entry, "description", "")),
                     "published": getattr(entry, "published", getattr(entry, "updated", "")),
+                    "source_title": src_title,
                 }
             )
     else:
@@ -143,21 +162,34 @@ def fetch_feed_items(source: dict, window_start: datetime, window_end: datetime)
         if pub_dt is None or not (window_start <= pub_dt <= window_end):
             continue
 
-        raw_title = item.get("title", "")
+        raw_title = html.unescape(item.get("title", "")).strip()
         if any(pat.search(raw_title) for pat in GENERIC_BULLETIN_PATTERNS):
             continue
 
-        clean_title = sanitize_untrusted_text(raw_title, max_length=220)
-        clean_snippet = sanitize_untrusted_text(item.get("summary", ""), max_length=650)
+        # Extract real publisher name from <source> tag or trailing " - Publisher"
+        real_publisher = (item.get("source_title") or "").strip()
+        if " - " in raw_title and ("news.google.com" in feed_url or real_publisher):
+            title_part, trailing_pub = raw_title.rsplit(" - ", 1)
+            raw_title = title_part.strip()
+            if not real_publisher and len(trailing_pub.strip()) < 40:
+                real_publisher = trailing_pub.strip()
 
-        if " - " in clean_title and "news.google.com" in feed_url:
-            clean_title = clean_title.rsplit(" - ", 1)[0].strip()
+        publisher_name = real_publisher or source["name"]
+
+        clean_title = sanitize_untrusted_text(raw_title, max_length=220)
+        raw_summary = item.get("summary", "")
+
+        # Google News RSS descriptions just repeat the title + related links; ignore if it's a Google News feed
+        if "news.google.com" in feed_url:
+            clean_snippet = ""
+        else:
+            clean_snippet = sanitize_untrusted_text(raw_summary, max_length=600)
 
         link = (item.get("link") or "").strip()
         if not clean_title or not link.startswith(("http://", "https://")):
             continue
 
-        if len(clean_snippet) < 140 or clean_snippet.lower().startswith(clean_title[:40].lower()):
+        if len(clean_snippet) < 80 or clean_snippet.lower().startswith(clean_title[:35].lower()):
             extra = fetch_article_meta_description(link)
             if len(extra) > len(clean_snippet):
                 clean_snippet = extra
@@ -167,13 +199,19 @@ def fetch_feed_items(source: dict, window_start: datetime, window_end: datetime)
         if has_tamil_script(clean_snippet):
             clean_snippet = translate_tamil_to_english(clean_snippet)
 
-        if not clean_title or len(clean_title) < 12 or has_tamil_script(clean_title):
+        # Remove trailing publisher name if it remained inside clean_snippet
+        if clean_snippet.endswith(f" {publisher_name}"):
+            clean_snippet = clean_snippet[: -len(publisher_name)].strip(" -–—•|")
+
+        # Require at least 4 alphabetic words so stub titles like "MK Stalin Meets OPS" or "Cuddalore Protest:-????" are skipped
+        alpha_words = re.findall(r"[A-Za-z]{3,}", clean_title)
+        if len(alpha_words) < 4 or has_tamil_script(clean_title):
             continue
 
         collected.append(
             {
                 "source_id": source["id"],
-                "publisher": source["name"],
+                "publisher": publisher_name,
                 "language": "en",
                 "category": source.get("category", "news"),
                 "reliability_tier": source.get("reliability_tier", "tier_1_editorial"),
