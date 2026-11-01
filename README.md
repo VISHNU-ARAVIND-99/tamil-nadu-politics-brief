@@ -1,5 +1,5 @@
 # Tamil Nadu Politics Brief
-*"Understand Tamil Nadu Politics. One Briefing at a Time."*
+*"Tamil Nadu Politics. Zero Noise. 100% Verified."*
 
 [![GitHub Pages](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-brightgreen?style=flat-square)](https://vishnu-aravind-99.github.io/tamil-nadu-politics-brief/)
 [![Daily Editions](https://img.shields.io/badge/Schedule-Twice%20Daily%20(6%20AM%20%7C%206%20PM%20IST)-blue?style=flat-square)](https://github.com/VISHNU-ARAVIND-99/tamil-nadu-politics-brief/actions)
