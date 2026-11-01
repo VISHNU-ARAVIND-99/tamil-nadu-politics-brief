@@ -128,7 +128,13 @@ def save_edition_and_update_indexes(
 
     existing_editions = [e for e in index_data.get("editions", []) if e.get("edition_id") != edition_id]
     existing_editions.append(index_entry)
-    existing_editions.sort(key=lambda x: x["published_at_ist"], reverse=True)
+    def edition_chronological_key(e):
+        cov_end = e.get("coverage_end_ist")
+        if not cov_end:
+            cov_end = f"{e.get('date', '')}T18:00:00+05:30" if e.get("edition_type") == "evening" else f"{e.get('date', '')}T06:00:00+05:30"
+        return cov_end
+
+    existing_editions.sort(key=edition_chronological_key, reverse=True)
 
     index_data["editions"] = existing_editions
     index_data["total_editions"] = len(existing_editions)
@@ -167,10 +173,13 @@ def save_edition_and_update_indexes(
         "url": f"edition.html?id={edition_id}",
     }
 
-    latest_data[clean_edition["edition_type"]] = latest_card
-    latest_data["last_updated_ist"] = clean_edition["published_at_ist"]
-    latest_data["system_status"] = "operational"
-    latest_data["status_message"] = f"Latest {clean_edition['edition_type']} edition published at {clean_edition['published_at_ist']}."
+    slot_type = clean_edition["edition_type"]
+    current_slot = latest_data.get(slot_type)
+    if not current_slot or edition_chronological_key(latest_card) >= edition_chronological_key(current_slot):
+        latest_data[clean_edition["edition_type"]] = latest_card
+        latest_data["last_updated_ist"] = clean_edition["published_at_ist"]
+        latest_data["system_status"] = "operational"
+        latest_data["status_message"] = f"Latest {clean_edition['edition_type']} edition published at {clean_edition['published_at_ist']}."
 
     with open(latest_editions_file, "w", encoding="utf-8") as f:
         json.dump(latest_data, f, indent=2, ensure_ascii=False)

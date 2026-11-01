@@ -138,9 +138,24 @@ class TestTamilNaduPoliticsBriefPipeline(unittest.TestCase):
             ed2 = build_extractive_fallback_edition(w2, [], "test_evening")
             save_edition_and_update_indexes(ed2, arch_dir, idx_file, latest_file)
 
+            # Save an older morning edition (backfill)
+            w0 = compute_coverage_window("morning", "2026-10-31")
+            ed0 = build_extractive_fallback_edition(w0, [], "test_older_morning")
+            save_edition_and_update_indexes(ed0, arch_dir, idx_file, latest_file)
+
             with open(idx_file, "r", encoding="utf-8") as f:
                 idx_data = json.load(f)
-            self.assertEqual(idx_data["total_editions"], 2)
+            self.assertEqual(idx_data["total_editions"], 3)
+            # Verify chronological ordering: 1-Nov evening, 1-Nov morning, 31-Oct morning
+            self.assertEqual(idx_data["editions"][0]["edition_id"], "2026-11-01-evening")
+            self.assertEqual(idx_data["editions"][1]["edition_id"], "2026-11-01-morning")
+            self.assertEqual(idx_data["editions"][2]["edition_id"], "2026-10-31-morning")
+
+            with open(latest_file, "r", encoding="utf-8") as f:
+                latest_data = json.load(f)
+            # Ensure backfilled 31-Oct morning did not overwrite 1-Nov morning
+            self.assertEqual(latest_data["morning"]["edition_id"], "2026-11-01-morning")
+            self.assertEqual(latest_data["evening"]["edition_id"], "2026-11-01-evening")
 
     def test_08_no_api_key_leak_in_public_files(self):
         """Ensure no Gemini API key pattern ('AIzaSy') exists in any HTML, JS, or JSON file."""

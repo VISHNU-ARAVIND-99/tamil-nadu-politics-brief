@@ -1,28 +1,31 @@
 {
-  "last_updated_ist": "2026-11-01T18:01:15.128297+05:30",
+  "last_updated_ist": "2026-11-01T17:56:25.956182+05:30",
   "system_status": "operational",
-  "status_message": "Latest morning edition published at 2026-11-01T18:01:15.128297+05:30.",
+  "status_message": "Latest edition published at 2026-11-01T17:56:25.956182+05:30.",
   "morning": {
-    "edition_id": "2026-10-31-morning",
-    "title": "Tamil Nadu Politics – Morning Brief – 31 October 2026",
-    "date": "2026-10-31",
+    "edition_id": "2026-11-01-morning",
+    "title": "Tamil Nadu Politics – Morning Brief – 1 November 2026",
+    "date": "2026-11-01",
     "edition_type": "morning",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-10-31T06:00:00+05:30",
-    "generated_at_ist": "2026-11-01T18:01:15.123308+05:30",
-    "published_at_ist": "2026-11-01T18:01:15.128297+05:30",
-    "coverage_start_ist": "2026-10-30T18:00:00+05:30",
-    "coverage_end_ist": "2026-10-31T06:00:00+05:30",
+    "scheduled_time_ist": "2026-11-01T06:00:00+05:30",
+    "generated_at_ist": "2026-11-01T17:42:28.380050+05:30",
+    "published_at_ist": "2026-11-01T17:42:28.442510+05:30",
+    "coverage_start_ist": "2026-10-31T18:00:00+05:30",
+    "coverage_end_ist": "2026-11-01T06:00:00+05:30",
     "reading_time_minutes": 20,
-    "word_count": 3068,
-    "headline": "Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh",
-    "big_picture_excerpt": "- Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh\n- Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection\n- Cooperative supermarkets to sell packets with 10 essential commodities for ₹200\n- Madras High Court issues notice on plea to investigate CJP's Saurav Das, block his X and Instagram accounts",
+    "word_count": 4328,
+    "headline": "Take action against officials who arrested MIDS professor, Stalin urges T.N. government",
+    "big_picture_excerpt": "- Take action against officials who arrested MIDS professor, Stalin urges T.N. government\n- \"My good time joined Thalapathy\" - Minister KA Sengottaiyan\n- DMK women’s wing protests reflect public anger against TVK govt: Stalin\n- Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts",
     "parties": [
       "AIADMK",
+      "BJP",
       "DMK",
       "NTK",
-      "TVK"
+      "PMK",
+      "TVK",
+      "VCK"
     ],
     "topics": [
       "Assembly, Courts & Policy",
@@ -35,18 +38,20 @@
       "Public Protests & Labour"
     ],
     "districts": [
+      "Chengalpattu",
       "Chennai",
+      "Coimbatore",
       "Cuddalore",
-      "Nagapattinam",
+      "Erode",
+      "Madurai",
       "Ramanathapuram",
-      "Ranipet",
-      "Tiruvannamalai",
-      "Vellore",
+      "Theni",
+      "Thoothukudi",
       "Viluppuram"
     ],
-    "json_path": "archive/2026/10/2026-10-31-morning.json",
-    "md_path": "archive/2026/10/2026-10-31-morning.md",
-    "url": "edition.html?id=2026-10-31-morning"
+    "json_path": "archive/2026/11/2026-11-01-morning.json",
+    "md_path": "archive/2026/11/2026-11-01-morning.md",
+    "url": "edition.html?id=2026-11-01-morning"
   },
   "evening": {
     "edition_id": "2026-11-01-evening",

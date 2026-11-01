@@ -1,48 +1,7 @@
 {
   "total_editions": 4,
-  "last_updated_ist": "2026-11-01T18:01:15.128297+05:30",
+  "last_updated_ist": "2026-11-01T17:56:25.956182+05:30",
   "editions": [
-    {
-      "edition_id": "2026-10-31-morning",
-      "title": "Tamil Nadu Politics – Morning Brief – 31 October 2026",
-      "date": "2026-10-31",
-      "edition_type": "morning",
-      "is_test_sample": false,
-      "status": "published_delayed",
-      "published_at_ist": "2026-11-01T18:01:15.128297+05:30",
-      "coverage_window": "2026-10-30T18:00:00+05:30 to 2026-10-31T06:00:00+05:30",
-      "reading_time_minutes": 20,
-      "headline": "Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh",
-      "summary_text": "- Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh\n- Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection\n- Cooperative supermarkets to sell packets with 10 essential commodities for ₹200\n- Madras High Court issues notice on plea to investigate CJP's Saurav Das, block his X and Instagram accounts",
-      "parties": [
-        "AIADMK",
-        "DMK",
-        "NTK",
-        "TVK"
-      ],
-      "topics": [
-        "Assembly, Courts & Policy",
-        "Centre–State Relations",
-        "Education & NEET",
-        "Elections",
-        "Government & Administration",
-        "Infrastructure & Economy",
-        "Political Parties",
-        "Public Protests & Labour"
-      ],
-      "districts": [
-        "Chennai",
-        "Cuddalore",
-        "Nagapattinam",
-        "Ramanathapuram",
-        "Ranipet",
-        "Tiruvannamalai",
-        "Vellore",
-        "Viluppuram"
-      ],
-      "url": "edition.html?id=2026-10-31-morning",
-      "json_path": "archive/2026/10/2026-10-31-morning.json"
-    },
     {
       "edition_id": "2026-11-01-evening",
       "title": "Tamil Nadu Politics – Evening Brief – 1 November 2026",
@@ -83,49 +42,6 @@
       ],
       "url": "edition.html?id=2026-11-01-evening",
       "json_path": "archive/2026/11/2026-11-01-evening.json"
-    },
-    {
-      "edition_id": "2026-10-31-evening",
-      "title": "Tamil Nadu Politics – Evening Brief – 31 October 2026",
-      "date": "2026-10-31",
-      "edition_type": "evening",
-      "is_test_sample": false,
-      "status": "published_delayed",
-      "published_at_ist": "2026-11-01T17:50:29.125109+05:30",
-      "coverage_window": "2026-10-31T06:00:00+05:30 to 2026-10-31T18:00:00+05:30",
-      "reading_time_minutes": 20,
-      "headline": "DA for Tamil Nadu government employees increases from 60% to 63%",
-      "summary_text": "- DA for Tamil Nadu government employees increases from 60% to 63%\n- Chief Minister Vijay inaugurates Pudukottai new bus stand.\n- CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak\n- Condemnation of the government which is playing with the lives of poor and poor people : EPS",
-      "parties": [
-        "AIADMK",
-        "AMMK",
-        "DMK",
-        "INC",
-        "TVK",
-        "VCK"
-      ],
-      "topics": [
-        "Agriculture & Water",
-        "Assembly, Courts & Policy",
-        "Centre–State Relations",
-        "Elections",
-        "Government & Administration",
-        "Infrastructure & Economy",
-        "Political Parties",
-        "Public Protests & Labour"
-      ],
-      "districts": [
-        "Chennai",
-        "Coimbatore",
-        "Cuddalore",
-        "Dharmapuri",
-        "Kancheepuram",
-        "Thanjavur",
-        "Theni",
-        "Viluppuram"
-      ],
-      "url": "edition.html?id=2026-10-31-evening",
-      "json_path": "archive/2026/10/2026-10-31-evening.json"
     },
     {
       "edition_id": "2026-11-01-morning",
@@ -172,6 +88,90 @@
       ],
       "url": "edition.html?id=2026-11-01-morning",
       "json_path": "archive/2026/11/2026-11-01-morning.json"
+    },
+    {
+      "edition_id": "2026-10-31-evening",
+      "title": "Tamil Nadu Politics – Evening Brief – 31 October 2026",
+      "date": "2026-10-31",
+      "edition_type": "evening",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-01T17:50:29.125109+05:30",
+      "coverage_window": "2026-10-31T06:00:00+05:30 to 2026-10-31T18:00:00+05:30",
+      "reading_time_minutes": 20,
+      "headline": "DA for Tamil Nadu government employees increases from 60% to 63%",
+      "summary_text": "- DA for Tamil Nadu government employees increases from 60% to 63%\n- Chief Minister Vijay inaugurates Pudukottai new bus stand.\n- CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak\n- Condemnation of the government which is playing with the lives of poor and poor people : EPS",
+      "parties": [
+        "AIADMK",
+        "AMMK",
+        "DMK",
+        "INC",
+        "TVK",
+        "VCK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Assembly, Courts & Policy",
+        "Centre–State Relations",
+        "Elections",
+        "Government & Administration",
+        "Infrastructure & Economy",
+        "Political Parties",
+        "Public Protests & Labour"
+      ],
+      "districts": [
+        "Chennai",
+        "Coimbatore",
+        "Cuddalore",
+        "Dharmapuri",
+        "Kancheepuram",
+        "Thanjavur",
+        "Theni",
+        "Viluppuram"
+      ],
+      "url": "edition.html?id=2026-10-31-evening",
+      "json_path": "archive/2026/10/2026-10-31-evening.json"
+    },
+    {
+      "edition_id": "2026-10-31-morning",
+      "title": "Tamil Nadu Politics – Morning Brief – 31 October 2026",
+      "date": "2026-10-31",
+      "edition_type": "morning",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-01T18:01:15.128297+05:30",
+      "coverage_window": "2026-10-30T18:00:00+05:30 to 2026-10-31T06:00:00+05:30",
+      "reading_time_minutes": 20,
+      "headline": "Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh",
+      "summary_text": "- Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh\n- Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection\n- Cooperative supermarkets to sell packets with 10 essential commodities for ₹200\n- Madras High Court issues notice on plea to investigate CJP's Saurav Das, block his X and Instagram accounts",
+      "parties": [
+        "AIADMK",
+        "DMK",
+        "NTK",
+        "TVK"
+      ],
+      "topics": [
+        "Assembly, Courts & Policy",
+        "Centre–State Relations",
+        "Education & NEET",
+        "Elections",
+        "Government & Administration",
+        "Infrastructure & Economy",
+        "Political Parties",
+        "Public Protests & Labour"
+      ],
+      "districts": [
+        "Chennai",
+        "Cuddalore",
+        "Nagapattinam",
+        "Ramanathapuram",
+        "Ranipet",
+        "Tiruvannamalai",
+        "Vellore",
+        "Viluppuram"
+      ],
+      "url": "edition.html?id=2026-10-31-morning",
+      "json_path": "archive/2026/10/2026-10-31-morning.json"
     }
   ]
 }

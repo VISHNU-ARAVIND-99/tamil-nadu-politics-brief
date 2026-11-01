@@ -572,16 +572,17 @@ async function initHomePage() {
             statusEl.textContent = `Latest edition updated on ${formatReadableIST(data.last_updated_ist)}`;
         }
 
-        cardsEl.innerHTML =
-            renderEditionCard(data.morning, "Morning Brief (6:00 AM IST)") +
-            renderEditionCard(data.evening, "Evening Brief (6:00 PM IST)");
+        const morningTime = data.morning ? new Date(data.morning.coverage_end_ist || (data.morning.date + "T06:00:00+05:30")).getTime() : 0;
+        const eveningTime = data.evening ? new Date(data.evening.coverage_end_ist || (data.evening.date + "T18:00:00+05:30")).getTime() : 0;
+        const isEveningNewer = eveningTime >= morningTime;
+        const mostRecent = isEveningNewer ? (data.evening || data.morning) : (data.morning || data.evening);
 
-        let mostRecent = data.evening || data.morning;
-        if (data.morning && data.evening) {
-            mostRecent = new Date(data.evening.published_at_ist) >= new Date(data.morning.published_at_ist)
-                ? data.evening
-                : data.morning;
-        }
+        const morningCard = data.morning ? renderEditionCard(data.morning, "Morning Brief (6:00 AM IST)") : "";
+        const eveningCard = data.evening ? renderEditionCard(data.evening, "Evening Brief (6:00 PM IST)") : "";
+
+        cardsEl.innerHTML = isEveningNewer
+            ? (eveningCard + morningCard)
+            : (morningCard + eveningCard);
 
         if (mostRecent && mostRecent.json_path && inlineEditionEl) {
             const edRes = await fetch(mostRecent.json_path, { cache: "no-store" });
