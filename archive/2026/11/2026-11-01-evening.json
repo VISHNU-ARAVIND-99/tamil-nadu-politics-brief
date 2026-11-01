@@ -6,59 +6,52 @@
   "is_test_sample": false,
   "status": "published_delayed",
   "scheduled_time_ist": "2026-11-01T18:00:00+05:30",
-  "generated_at_ist": "2026-11-01T20:48:24.044209+05:30",
-  "published_at_ist": "2026-11-01T20:48:24.044420+05:30",
+  "generated_at_ist": "2026-11-01T21:57:21.151370+05:30",
+  "published_at_ist": "2026-11-01T21:57:21.151638+05:30",
   "coverage_start_ist": "2026-11-01T06:00:00+05:30",
   "coverage_end_ist": "2026-11-01T18:00:00+05:30",
   "reading_time_minutes": 2,
-  "word_count": 350,
-  "headline": "Government Announces Fast-Track Courts and Cultural Initiatives",
+  "word_count": 398,
+  "headline": "Tamil Nadu Political Developments: Tamil Nadu Day, Bribery Allegations, and Tasmac Strikes",
   "parties": [
     "AIADMK",
     "BJP",
     "DMK",
-    "TVK",
-    "VCK"
+    "NTK",
+    "PMK",
+    "TVK"
   ],
   "topics": [
     "Assembly, Courts & Policy",
     "Centre–State Relations",
     "Education & NEET",
-    "Government & Administration"
+    "Elections",
+    "Government & Administration",
+    "Public Protests & Labour"
   ],
   "districts": [
+    "Ariyalur",
     "Chennai",
-    "Erode",
     "Pudukkottai",
-    "Thoothukudi",
     "Viluppuram"
   ],
   "sections": {
     "big_picture": "",
     "top_developments": [
       {
-        "headline": "Tamil Nadu Orders 26 POCSO and Four NDPS Fast-Track Courts",
-        "verification_badge": "Verified Report",
-        "who_is_involved": "TVK",
-        "summary": "Chief Minister C. Joseph Vijay has ordered the immediate setup of 26 special courts under the POCSO Act and four courts under the NDPS Act. The new judiciary units aim to expedite long-pending trials and ensure swift justice for victims across the State. A formal government press release confirmed the decision following a high-level administrative review meeting.",
-        "why_it_matters": "Speeds up severe criminal trials involving child abuse and narcotics, addressing major case backlogs in the state judiciary.",
+        "headline": "President, Prime Minister, and CM Vijay greet people on Tamil Nadu Day",
+        "verification_badge": "Multi-Source Verified",
+        "who_is_involved": "DMK, TVK",
+        "summary": "President Droupadi Murmu, Prime Minister Narendra Modi, Governor Rajendra Vishwanath Arlekar, and Chief Minister C Joseph Vijay greeted citizens on Tamil Nadu Day, acknowledging the state's growth and cultural identity. While the ruling TVK government celebrated the occasion on November 1, the opposition DMK reiterated its stance that July 18 is the historically correct date for the observance.",
+        "why_it_matters": "",
         "sources": [
           {
-            "title": "Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts",
-            "publisher": "The Hindu",
+            "title": "President Droupadi Murmu , PM Modi, CM Vijay greet people on Tamil Nadu Day fete",
+            "publisher": "DT Next",
             "language": "en",
             "published_date": "2026-11-01",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-to-set-up-26-pocso-act-courts-and-four-ndps-courts/article71652310.ece"
-          }
-        ]
-      },
-      {
-        "headline": "Tamil Nadu Celebrates Formation Day as Leaders Trade Greetings",
-        "verification_badge": "Verified Report",
-        "who_is_involved": "DMK, TVK",
-        "summary": "The Tamil Nadu government celebrated Tamil Nadu Day on Sunday with state-wide events and cultural programs. President Droupadi Murmu, Prime Minister Narendra Modi, and Chief Minister C. Joseph Vijay extended public greetings acknowledging the State's linguistic and historical identity. Simultaneously, the opposition DMK asserted that July 18 remains the legally accurate date for the celebration, sparking a minor debate over formation history.",
-        "why_it_matters": "Highlights ongoing political disagreement regarding official state calendar milestones and historical regional identity.",
-        "sources": [
+            "url": "https://www.dtnext.in/news/tamilnadu/president-droupadi-murmu-pm-modi-governor-arlekar-and-cm-vijay-greet-people-on-tamil-nadu-day"
+          },
           {
             "title": "Tamil Nadu Day: Vijay government celebrates November 1; DMK says July 18 is the right date",
             "publisher": "The Hindu",
@@ -67,21 +60,44 @@
             "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-day-vijay-government-celebrates-november-1-dmk-says-july-18-is-the-right-date/article71653101.ece"
           }
         ]
+      },
+      {
+        "headline": "Tamil Nadu government orders setting up of 30 additional special courts",
+        "verification_badge": "Multi-Source Verified",
+        "who_is_involved": "TVK",
+        "summary": "The Tamil Nadu government has ordered the creation of 30 additional special courts to fast-track trials involving sexual offences against children and drug-related crimes. Out of the newly approved courts, 26 will exclusively handle Pocso Act cases, while four will manage cases registered under the NDPS Act. The directive was issued by Chief Minister C Joseph Vijay to reduce judicial pendency and ensure timely justice.",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "Tamil Nadu to get 26 more special courts for Pocso cases",
+            "publisher": "DT Next",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "url": "https://www.dtnext.in/news/tamilnadu/tn-to-set-up-30-special-courts-to-fast-track-pocso-ndps-cases"
+          },
+          {
+            "title": "Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts",
+            "publisher": "The Hindu",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-to-set-up-26-pocso-act-courts-and-four-ndps-courts/article71652310.ece"
+          }
+        ]
       }
     ],
-    "government_and_administration": "- **TN Announces Weekly Traditional Attire Day and Secretariat Tamil Sangam:** School Education Minister Rajmohan announced that government employees and ministers must wear traditional attire on a designated weekly day to support the handloom sector. Chief Minister C. Joseph Vijay approved the proposal, alongside plans to establish a Secretariat Tamil Sangam. ([DT Next](https://www.dtnext.in/news/tamilnadu/tn-to-introduce-weekly-traditional-attire-day-in-government-offices-cm-vijay-to-head-secretariat-tamil-sangam))",
-    "political_parties_and_opposition": "- **AIADMK Chief EPS Slams TVK Government Over Rising Prices:** AIADMK General Secretary Edappadi K. Palaniswami criticized the ruling TVK administration, alleging that the government has delivered nothing to citizens in six months except skyrocketing commodity prices and poor governance. Palaniswami likened the current state administration to a vehicle operating without brakes. ([The New Indian Express](https://news.google.com/rss/articles/CBMizgFBVV95cUxPZmlsejRzS0k4RmlaQTh0eVNRYXN6c1VpelZFaUN3eWwwYjlUZk1kU2FiQXJQZmxaeWVLWll4Zlg5T0FFZUpHSFkzR3pRQjBwal9NZS1QRV92QXhFSDJmeG1HZV84enNBWE9jRW94X2Fjd3JGdGc5cWZtbWdPenhsd0UyUFAxWlVITFFBMG5WSGd2ZWkzTkVCZjZHOGRSSVdzSzgzTEhHMV94MVh3T2pGclFfclhXYm9oRGRYYjF2RTFQOHVhRVJvVm9tTWFvUdIB2wFBVV95cUxQdlBJV0k3ai1DNmlUZ3M0RC1ET1RJMVM1dUp1d19aR05mSDNPMEZFTDVhcWZrTm1UOGh1WExBTkhLWC05bEhmU09fSWRIemRvaWppY2cyRVc0N0tDVTdLNThWRkNBQm82Q1VyLVFfeDZKNjdwNWJ0djBtZUh6WmlxcWxjWlZOeTFyamk5UnQ5aGZ1NHAwcXdoSzlFNTZfYktzaDZicWtGMzJaSXN4WHpua05tVy1paFRVNDNVd3NmVjZTaXVJbURaM3lGeHpmcUlJdUdKNnU3Qmc?oc=5))",
-    "assembly_courts_and_policy": "- **Madras HC Bars Public Meetings Targeting Sitting Judges:** The Madras High Court ruled that public meetings and protests targeting sitting judges cross legal boundaries, declaring that malicious caste-based attacks against the judiciary do not fall under the protection of free speech. ([Organiser](https://news.google.com/rss/articles/CBMi7gFBVV95cUxOWGoxcGM5T1A3TWQtUmhrcUtKcV9Ycl9hdW1NOTUwTHVZdW0tRUJrWEFFaGNaX1h3anRtUDM5bzlXRHRpTUNTbVExT0lCbzVTWC13OHJGY3NmVkd1QVVwOGlhZkxhTUVnaUFhc3oyUzJQNUhtWG9JYjNhcnFEZGpTTGF0Yk9PdHRXQ2phTktiR3BvT2ticndrUXVDQkZVdmhpY0RIWElZbFlXWjhjU1l6empYM29uRHRrN1FSOWNhUTFSNTNNVU5TLXRaYjJxeWIyRlZLVlc0em5yNHdsY2xGT19ucEI2MkxyQkVtTEVn0gHzAUFVX3lxTFBFSGpTNjZQWEZZVzRsTUtwX3lSdDRJNjVPYzVVZjFUSWdhR2FFNmZaNXdMR29sN2lGOTNTYi05OU9DRS1JbHZ3OTRsbXdPWjFpODR4cTIycEh6M1U4N2Y5MlJWdW5QbFl3LXNkUll3R2lxRFZBR1o1T2JMbzJtRlQzdjRWVWtLeEVHT1dYOXNuY2pILTdGRzVQU2JpbzlZcFlUejB5QXUxdm1Nd0NKaUtZanFHam5aRTlTYU5makk0QV9IWDVKZkNLMVpPc1A4YUROWi1QOTNOa2l1RzhtZWt1LWdsTWQ4b0RPS2VaUkxuNXJxUQ?oc=5))",
-    "district_developments": "- **Heavy Security in Pudukottai Ahead of Chief Minister Vijay's Visit:** Pudukottai district has been placed under strict security cover by multiple police divisions ahead of Chief Minister C. Joseph Vijay's official visit on Monday to inaugurate a new bus stand and an indoor stadium. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/pudukottai-brought-under-heavy-security-cover-for-cms-visit-on-monday/article71652676.ece))",
+    "government_and_administration": "- **TN to introduce weekly traditional attire day in government offices; CM Vijay to head Secretariat Tamil Sangam:** The Tamil Nadu government will introduce a weekly traditional attire day requiring officials to wear traditional clothing to promote local culture and support handloom sectors. Minister Rajmohan announced that Chief Minister C Joseph Vijay approved the initiative, which includes establishing a Secretariat Tamil Sangam. ([DT Next](https://www.dtnext.in/news/tamilnadu/tn-to-introduce-weekly-traditional-attire-day-in-government-offices-cm-vijay-to-head-secretariat-tamil-sangam))",
+    "political_parties_and_opposition": "- **Offered Rs 5 crore bribe for Manram chief post, alleges TVK Minister Rajmohan:** School Education Minister Rajmohan claimed he was offered a Rs 5 crore bribe to secure the chairmanship of the Iyal Isai Nataka Manram through a corporation chairman. The opposition DMK and BJP immediately criticized the minister for failing to report the bribery attempt directly to the Directorate of Vigilance and Anti-Corruption. ([DT Next](https://www.dtnext.in/news/tamilnadu/row-erupts-over-minister-rajmohans-rs-5-cr-bribe-claim-for-cultural-body-post))",
+    "assembly_courts_and_policy": "- **Tasmac staff go on flash strike against bottle buy-back scheme, 3 suspended:** Tasmac liquor store employees launched a flash strike across Chennai and other districts to protest the empty-bottle buy-back scheme introduced to reduce environmental littering. With unions threatening continued protests due to lack of talks, the state government took a hard stance by suspending three protesting workers. ([DT Next](https://www.dtnext.in/news/tamilnadu/tasmac-shops-shut-in-several-districts-as-workers-protest-bottle-buy-back-scheme))",
+    "district_developments": "- **Pudukottai under heavy security cover ahead of CM Vijay's visit:** Pudukottai district has been placed under tight security as Chief Minister C Joseph Vijay arrives for his maiden official visit to inaugurate a new bus stand and an indoor sports stadium. Local authorities have deployed multi-tier security schemes involving city and rural police units across the region. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/pudukottai-brought-under-heavy-security-cover-for-cms-visit-on-monday/article71652676.ece))",
     "claims_vs_facts": [],
     "what_to_watch_next": "",
     "all_sources": [
       {
-        "title": "Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts",
-        "publisher": "The Hindu",
+        "title": "President Droupadi Murmu , PM Modi, CM Vijay greet people on Tamil Nadu Day fete",
+        "publisher": "DT Next",
         "language": "en",
         "published_date": "2026-11-01",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-to-set-up-26-pocso-act-courts-and-four-ndps-courts/article71652310.ece"
+        "url": "https://www.dtnext.in/news/tamilnadu/president-droupadi-murmu-pm-modi-governor-arlekar-and-cm-vijay-greet-people-on-tamil-nadu-day"
       },
       {
         "title": "Tamil Nadu Day: Vijay government celebrates November 1; DMK says July 18 is the right date",
@@ -89,6 +105,20 @@
         "language": "en",
         "published_date": "2026-11-01",
         "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-day-vijay-government-celebrates-november-1-dmk-says-july-18-is-the-right-date/article71653101.ece"
+      },
+      {
+        "title": "Tamil Nadu to get 26 more special courts for Pocso cases",
+        "publisher": "DT Next",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://www.dtnext.in/news/tamilnadu/tn-to-set-up-30-special-courts-to-fast-track-pocso-ndps-cases"
+      },
+      {
+        "title": "Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts",
+        "publisher": "The Hindu",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-to-set-up-26-pocso-act-courts-and-four-ndps-courts/article71652310.ece"
       }
     ]
   }
