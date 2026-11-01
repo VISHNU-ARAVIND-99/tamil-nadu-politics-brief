@@ -474,7 +474,6 @@ function renderEditionCard(ed, slotLabel, isActive = false) {
         : `<span class="badge badge-verified">${escapeHtml(formatStatusLabel(ed.status))}</span>`;
 
     const partyBadges = (ed.parties || [])
-        .slice(0, 6)
         .map(p => `<span class="badge badge-tag">${escapeHtml(p)}</span>`)
         .join("");
 
@@ -889,6 +888,16 @@ async function initSearchPage() {
         }).length;
         const baseLabel = btn.textContent.trim().replace(/\s*\(\d+\)$/, "");
         btn.textContent = `${baseLabel} (${count})`;
+
+        if (count === 0) {
+            btn.classList.add("is-dimmed");
+            btn.setAttribute("aria-disabled", "true");
+            btn.setAttribute("title", "No editions currently match this keyword");
+        } else {
+            btn.classList.remove("is-dimmed");
+            btn.removeAttribute("aria-disabled");
+            btn.removeAttribute("title");
+        }
     });
 
     function renderSearchResultCard(ed) {

@@ -387,7 +387,7 @@ a:hover {
 /* Archive & Search Filter Bar */
 .filter-bar {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.85rem;
     background: var(--bg-subtle);
     padding: 1.15rem;
@@ -396,7 +396,16 @@ a:hover {
     margin-bottom: 1.5rem;
     font-family: var(--font-sans);
     width: 100%;
+    box-sizing: border-box;
     align-items: flex-end;
+}
+
+.filter-bar > div {
+    min-width: 0;
+}
+
+.archive-filter-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
 }
 
 .filter-bar label {
@@ -410,6 +419,8 @@ a:hover {
 .filter-bar input,
 .filter-bar select {
     width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
     padding: 0.5rem;
     font-size: 0.88rem;
     border: 1px solid var(--border-color);
@@ -547,6 +558,20 @@ a:hover {
     color: var(--text-primary);
     text-decoration: none;
     transition: border-color 0.2s, color 0.2s;
+}
+
+
+/* Quick Filter Chips (Keyword Search) */
+.quick-chip {
+    transition: opacity 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+.quick-chip.is-dimmed {
+    opacity: 0.35 !important;
+    pointer-events: none !important;
+    cursor: not-allowed !important;
+    border-style: dashed !important;
+    filter: grayscale(100%);
 }
 
 .pagination-link:hover {
@@ -696,9 +721,23 @@ a:hover {
     }
 
     .filter-bar {
-        grid-template-columns: 1fr;
-        gap: 0.65rem;
-        padding: 0.85rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    .filter-bar label {
+        font-size: 0.72rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .filter-bar input,
+    .filter-bar select,
+    .filter-bar button {
+        font-size: 0.78rem;
+        padding: 0.4rem 0.25rem;
     }
     .edition-header-row {
         flex-direction: column;
