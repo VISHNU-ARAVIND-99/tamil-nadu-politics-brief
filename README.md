@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/images/logo.png" alt="Tamil Nadu Politics Brief Logo" width="120" height="120" style="border-radius: 50%;">
+</p>
+
 # Tamil Nadu Politics Brief
 *"Tamil Nadu Politics. Zero Noise. 100% Verified."*
 

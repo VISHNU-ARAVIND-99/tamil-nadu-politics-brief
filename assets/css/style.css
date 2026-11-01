@@ -108,6 +108,38 @@ a:hover {
     flex: 1;
 }
 
+.masthead-brand-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.masthead-brand-link:hover {
+    color: var(--accent-red);
+}
+
+.masthead-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.masthead-brand-link:hover .masthead-logo {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(139, 30, 30, 0.25);
+}
+
+.masthead-brand-text {
+    display: inline-block;
+}
+
 .masthead-title a {
     color: var(--text-primary);
     text-decoration: none;
@@ -405,6 +437,16 @@ a:hover {
         width: 100%;
         font-size: 1.45rem;
         margin-bottom: 0.15rem;
+    }
+
+    .masthead-brand-link {
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .masthead-logo {
+        width: 48px;
+        height: 48px;
     }
 
     .date-chip {
