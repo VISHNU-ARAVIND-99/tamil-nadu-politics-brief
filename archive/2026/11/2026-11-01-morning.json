@@ -6,12 +6,12 @@
   "is_test_sample": false,
   "status": "published_delayed",
   "scheduled_time_ist": "2026-11-01T06:00:00+05:30",
-  "generated_at_ist": "2026-11-01T11:32:12.443939+05:30",
-  "published_at_ist": "2026-11-01T11:32:12.446010+05:30",
+  "generated_at_ist": "2026-11-01T11:43:12.080442+05:30",
+  "published_at_ist": "2026-11-01T11:43:12.082349+05:30",
   "coverage_start_ist": "2026-10-31T18:00:00+05:30",
   "coverage_end_ist": "2026-11-01T06:00:00+05:30",
-  "reading_time_minutes": 11,
-  "word_count": 1604,
+  "reading_time_minutes": 10,
+  "word_count": 1534,
   "headline": "‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami",
   "parties": [
     "AIADMK",
@@ -22,9 +22,7 @@
   "topics": [
     "Agriculture & Water",
     "Assembly, Courts & Policy",
-    "Centre–State Relations",
     "Education & NEET",
-    "Elections",
     "Government & Administration"
   ],
   "districts": [
@@ -174,7 +172,7 @@
       }
     ],
     "government_and_administration": "- **Tamil Nadu government withdraws cases against 1,800 anti-NEET protesters:** The Hindu also reported on the development: \"Tamil Nadu government orders withdrawal of 65 cases against NEET protesters.\" ([DT Next](https://news.google.com/rss/articles/CBMirAFBVV95cUxPNmtZdTAyUTJDWWE5ZUhjMmVWWkVnYjVwWUw5ZmJxRlEzQ0puQ1JkYTRqZU5QZGZTSlRyRlVfUl9FNlZfRHBrdUhBem1qemI2T0R3MTRlcl9sRXRJbDAzLUNKeldWQkdIM0JUbmFSNmNpRnRBZ2NyQVp3OGlFV2JVM1o5cW9qQ1VxVzYxRU5oS0t0WGZtaXhYdUR0RmtmNGFPN3NzZ1B3N0R3M3BX0gG6AUFVX3lxTE1XSnI1MS05OEFkLVB0dDFwWFo1Y0pFbjE0cWdoSXVtSTdjek94d0NZV1dmN21JNUlrc0ZtOGNJTnZoY3I0SFZYREVGYkxUcVdQSmZDSEVaRXVfdHJzd0FNV2p5Vnd3enBIZk9vVGx5UHBIWjUyV3NuaFVCUFVIZkpBbVVLUml3TmoxVFc0Z0NET1ZxM3RqMnpPQUFSNmx0UUhjYVIyVF8wMk52eTVlZDhSQ1dtRkZUd2ZmUQ?oc=5))\n- **Madras High Court Advocates Association challenges 1965 Union Cabinet decision to continue English as common language for Supreme Court and all High Courts:** Says, the 1965 decision came to its notice only in 2025 pursuant to details obtained by a lawyer under the Right to Information Act, 2005 ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/madras-high-court-advocates-association-challenges-1965-union-cabinet-decision-to-continue-english-as-common-language-for-supreme-court-and-all-high-courts/article71648537.ece))\n- **HoDs now responsible for student placements in colleges and universities, says higher education department:** Tamil Nadu higher education circular makes HoDs lead student placements, industry tie-ups, internships and skill training; teacher bodies oppose amid 7,000 vacancies. ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/hods-now-responsible-for-student-placements-in-colleges-and-universities-says-higher-education-department/articleshow/135405074.cms))\n- **Minister inaugurates modern paddy storage facilities in Cuddalore district:** The facilities, constructed with financial assistance under the National Bank for Agriculture and Rural Development (NABARD), have a combined storage capacity of 7,000 tonnes ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/minister-inaugurates-modern-paddy-storage-facilities-in-cuddalore-district/article71652117.ece))",
-    "political_parties_and_opposition": "- **Plea in Madras high court against extension of special officers tenure for rural local bodies:** Plea in Madras HC challenges Tamil Nadu’s extension of special officers for rural local bodies, seeking ward delimitation completion and elections across 37 districts. ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/plea-in-madras-high-court-against-extension-of-special-officers-tenure-for-rural-local-bodies/articleshow/135410326.cms))",
+    "political_parties_and_opposition": "",
     "assembly_courts_and_policy": "",
     "district_developments": "- **Two persons held for possession of country-made guns, explosives:** Two Vellore arrests for possession of country-made guns, explosives, and hunting gear linked to a farmer and a tribal man. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/two-persons-held-for-possession-of-country-made-guns-explosives/article71649177.ece))\n- **Man escapes from police custody before being lodged in Coimbatore Central Prison:** This is the second time Raghavan, a theft case convict, has escaped from police custody; four personnel suspended ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/convict-escapes-from-police-custody-before-being-lodged-in-coimbatore-central-prison/article71648346.ece))\n- **Tamil Nadu shuts prison enterprises outside campuses, recalls around 400 warders to plugs security gaps:** Tamil Nadu shuts prison enterprises outside campuses after Theni jailbreak, recalling 300–400 warders to boost prison security; inside-campus industries continue. ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-shuts-prison-enterprises-outside-campuses-recalls-around-400-warders-to-plugs-security-gaps/articleshow/135410725.cms))\n- **Runaway schoolgirls from Vellore rescued in Chennai:** Two 16-year-old Vellore schoolgirls who ran away from Pernampattu were found near a Kilpauk hospital in Chennai and handed over to police; parents informed. ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/runaway-schoolgirls-from-vellore-rescued-in-chennai/articleshow/135410333.cms))",
     "claims_vs_facts": [],
@@ -242,13 +240,6 @@
         "language": "en",
         "published_date": "2026-11-01",
         "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOZ29YdWoxR0dvTWN4TnRFRzM4ejVmMHBhX3FZd2JNb2xPZEdVTGlYTGF1RjlsU0JkakJqQ293dHo3Mm9FR0hYMktLWFIzTWRWRERKYkYwY2VreGdydkd2VDlhYWx3azM2MkNVUWRCTS14cWc5VUNjNnM5N0tkZW5kT3ZFV2M4SG1kSEk0VDZnaEFBWG9EY1VPVDd5OFVOLWtobFY3NDROTE5zNmNMeno4TnBWQUFSQ1pFR3ZSV1lySUg1LVdyYllfajkwY0lEMkhoSUpTUWxTRdIB3gFBVV95cUxQeHlndnBaZkUxcHptVFl6YzJMUDNzU0N1VWtybE1JdnotNklmaGxmTTN5ZGJCZGQ0cjZVelRGVnVONS1YSm5wRldYYkpDQUZIRkVWN2JGZVYxZVlWUC16T3NNcTFKV1UxVmV5cFNtQ1IzZVJPWGdVR3doTEVoQmdNdjlhMEZ1RzY0UGlFcVFOa2tvbUNOU3RCeGpNbGlQRWI5UzYtM1d0SjFWalduUjlVUW5xZ1pGandzc3lFX3pHbUp1c3lBSUZjRmk5SHloNmZ1RW0yRXladWZhRmcyaHc?oc=5"
-      },
-      {
-        "title": "Plea in Madras high court against extension of special officers tenure for rural local bodies",
-        "publisher": "The Times of India",
-        "language": "en",
-        "published_date": "2026-11-01",
-        "url": "https://timesofindia.indiatimes.com/city/chennai/plea-in-madras-high-court-against-extension-of-special-officers-tenure-for-rural-local-bodies/articleshow/135410326.cms"
       },
       {
         "title": "Madras High Court Advocates Association challenges 1965 Union Cabinet decision to continue English as common language for Supreme Court and all High Courts",
