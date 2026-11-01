@@ -157,6 +157,61 @@ function getFixedCoverageWindowText(dateStr, editionType) {
     }
 }
 
+
+const KNOWN_PARTIES = [
+    { name: "DMK", regex: /\b(?:dmk|dravida munnetra|stalin|udhayanidhi)\b/i },
+    { name: "AIADMK", regex: /\b(?:aiadmk|admk|edappadi|eps|ops)\b/i },
+    { name: "TVK", regex: /\b(?:tvk|thamizhaga vettri|vijay)\b/i },
+    { name: "BJP", regex: /\b(?:bjp|bharatiya janata|annamalai)\b/i },
+    { name: "Congress", regex: /\b(?:congress|inc)\b/i },
+    { name: "PMK", regex: /\b(?:pmk|pattali makkal|ramadoss|anbumani)\b/i },
+    { name: "VCK", regex: /\b(?:vck|viduthalai chiruthaigal|thirumavalavan)\b/i },
+    { name: "NTK", regex: /\b(?:ntk|naam tamilar|seeman)\b/i },
+    { name: "CPI(M)", regex: /\b(?:cpim|cpi-m|cpm)\b/i },
+    { name: "CPI", regex: /\b(?:cpi)\b/i }
+];
+
+function extractPartiesFromText(text) {
+    if (!text) return [];
+    const found = [];
+    for (const p of KNOWN_PARTIES) {
+        if (p.regex.test(text)) {
+            found.push(p.name);
+        }
+    }
+    return found;
+}
+
+function cleanHeadlineText(headline) {
+    let h = ensurePureEnglish(headline) || "Tamil Nadu Political Briefing";
+    h = h.replace(/^(?:Tamil\s+Nadu\s+Politic(?:s|al)\s+Brief(?:ing)?[:\-–—]\s*)/i, "").trim();
+    return h;
+}
+
+function getReadingTimeMinutes(ed, storyCount) {
+    if (ed && ed.word_count && ed.word_count > 0) {
+        return Math.max(1, Math.round(ed.word_count / 200));
+    }
+    if (ed && ed.reading_time_minutes && ed.reading_time_minutes <= 7) {
+        return ed.reading_time_minutes;
+    }
+    const count = storyCount || (ed && ed.sections ? Object.values(ed.sections).flat().length : 4);
+    return Math.max(1, Math.round((count * 75) / 200));
+}
+
+function formatEditionTimeDisplay(ed) {
+    const scheduledIST = ed.scheduled_time_ist || (ed.edition_type === "morning" ? `${ed.date}T06:00:00+05:30` : `${ed.date}T18:00:00+05:30`);
+    const publishedIST = ed.published_at_ist || scheduledIST;
+    const schedTime = new Date(scheduledIST).getTime();
+    const pubTime = new Date(publishedIST).getTime();
+    const wasUpdatedLater = Math.abs(pubTime - schedTime) > (90 * 60 * 1000);
+    let html = `<strong>Published:</strong> ${formatReadableIST(scheduledIST)}`;
+    if (wasUpdatedLater) {
+        html += ` <span class="updated-time-chip">(Updated: ${formatReadableIST(publishedIST)})</span>`;
+    }
+    return html;
+}
+
 function formatStatusLabel(status) {
     const map = {
         "published": "Verified Edition",
@@ -178,7 +233,7 @@ function formatInlineMarkdown(escapedStr) {
  * Zero artificial padding or vague commentary.
  */
 function renderStoryCardHtml(item, indexNumber, sectionLabel) {
-    const headlineClean = ensurePureEnglish(item.headline);
+    const headlineClean = cleanHeadlineText(item.headline);
     let bodyClean = ensurePureEnglish(item.summary || item.what_happened || "");
 
     // Remove trailing "(Publisher)" inside body text since Source is shown below
@@ -199,15 +254,26 @@ function renderStoryCardHtml(item, indexNumber, sectionLabel) {
         }
     }
 
-    const involved = item.who_is_involved && item.who_is_involved !== "State Administration / Public Stakeholders"
-        ? `<span class="badge badge-tag">${escapeHtml(item.who_is_involved)}</span>`
-        : "";
+    // Multi-source proof: If marked Multi-Source Verified but fewer than 2 sources exist, badge as Verified Report
+    let badgeLabel = item.verification_badge || "Verified Report";
+    if (badgeLabel.includes("Multi-Source") && shortSources.length < 2) {
+        badgeLabel = "Verified Report";
+    }
+
+    // Party tags: split multiple parties into individual badges
+    const rawInvolved = item.who_is_involved || "";
+    const partyTags = rawInvolved
+        .split(",")
+        .map(p => p.trim())
+        .filter(p => p && p !== "State Administration / Public Stakeholders")
+        .map(p => `<span class="badge badge-tag">${escapeHtml(p)}</span>`)
+        .join(" ");
 
     return `
     <article class="story-item">
       <div style="margin-bottom:0.4rem;">
-        <span class="badge badge-verified">${escapeHtml(item.verification_badge || sectionLabel || "Verified News")}</span>
-        ${involved}
+        <span class="badge badge-verified">${escapeHtml(badgeLabel)}</span>
+        ${partyTags}
       </div>
       <h3>${indexNumber}. ${escapeHtml(headlineClean)}</h3>
       ${hasDistinctBody ? `<p style="margin-bottom:0.65rem;color:var(--text-secondary);">${formatInlineMarkdown(escapeHtml(bodyClean))}</p>` : ""}
@@ -285,10 +351,11 @@ function parseSectionIntoStoryCards(sectionVal, sectionBadgeLabel, allSourcesPoo
             }
         }
 
+        const detectedParties = extractPartiesFromText(`${headline} ${summary}`);
         cards.push({
             headline,
-            verification_badge: sectionBadgeLabel,
-            who_is_involved: "",
+            verification_badge: "Verified Report",
+            who_is_involved: detectedParties.join(", "),
             summary,
             sources: pubUrl
                 ? [{ publisher: pubName || "News Report", url: pubUrl, title: headline }]
@@ -392,7 +459,7 @@ function initActiveNavAndTheme() {
     }
 }
 
-function renderEditionCard(ed, slotLabel) {
+function renderEditionCard(ed, slotLabel, isActive = false) {
     if (!ed) {
         return `
       <div class="card">
@@ -411,18 +478,21 @@ function renderEditionCard(ed, slotLabel) {
         .map(p => `<span class="badge badge-tag">${escapeHtml(p)}</span>`)
         .join("");
 
-    const cleanHeadline = ensurePureEnglish(ed.headline) || "Tamil Nadu Political Briefing";
+    const cleanHeadline = cleanHeadlineText(ed.headline);
     const fixedWindow = getFixedCoverageWindowText(ed.date, ed.edition_type);
     const otherBulletsHtml = formatEditorialText(ed.big_picture_excerpt || "", true, cleanHeadline);
+    const readMin = getReadingTimeMinutes(ed);
+    const timeDisplayHtml = formatEditionTimeDisplay(ed);
 
     return `
-    <article class="card">
+    <article class="card ${isActive ? "card-active-edition" : ""}">
+      ${isActive ? `<div class="card-active-pill">Currently Viewing Below &darr;</div>` : ""}
       <div class="card-kicker">${escapeHtml(slotLabel)} &bull; ${escapeHtml(ed.date)}</div>
       <div style="margin-bottom:0.45rem;">${badge}</div>
       <h2><a href="${escapeHtml(ed.url)}">${escapeHtml(cleanHeadline)}</a></h2>
       <p class="meta-line">
         <strong>Window:</strong> ${fixedWindow}<br>
-        <strong>Published:</strong> ${formatReadableIST(ed.published_at_ist)} &bull; ~${escapeHtml(ed.reading_time_minutes || 15)} min read
+        ${timeDisplayHtml} &bull; ~${readMin} min read
       </p>
       ${otherBulletsHtml ? `<div style="margin-bottom:0.85rem;font-size:0.93rem;">${otherBulletsHtml}</div>` : ""}
       <div style="margin-bottom:0.85rem;">${partyBadges}</div>
@@ -484,25 +554,34 @@ function renderFullEditionView(container, ed) {
     const sourcesHtml = citedSources.slice(0, 18).map(s => {
         const shortPub = cleanPublisherName(s.publisher);
         const cleanTitle = ensurePureEnglish(s.title || shortPub);
-        const shortTitle = cleanTitle.length > 78 ? cleanTitle.slice(0, 75) + "..." : cleanTitle;
-        return `<li style="margin-bottom:0.45rem;"><strong>${escapeHtml(shortPub)}:</strong> <a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(shortTitle)}</a></li>`;
+        return `<li style="margin-bottom:0.45rem;"><strong>${escapeHtml(shortPub)}:</strong> <a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(cleanTitle)}</a></li>`;
     }).join("");
 
     const fixedWindow = getFixedCoverageWindowText(ed.date, ed.edition_type);
-    const estimatedReadMin = Math.min(20, Math.max(8, Math.round(allCards.length * 1.1)));
+    const estimatedReadMin = getReadingTimeMinutes(ed, allCards.length);
+    const timeDisplayHtml = formatEditionTimeDisplay(ed);
 
     const dynamicSections = [
         {
             id: "sec-info",
-            toc: "Edition Info",
+            toc: "Overview",
             title: null,
             html: `
-        <h1 style="font-size:clamp(1.35rem, 3vw, 1.85rem);line-height:1.28;margin:0 0 0.5rem;">${escapeHtml(ed.title)}</h1>
-        <p class="meta-line" style="margin-bottom:0;">
-          <strong>Coverage Window:</strong> ${fixedWindow} &bull;
-          <strong>Published:</strong> ${formatReadableIST(ed.published_at_ist)} &bull;
-          <strong>Reading Time:</strong> ~${estimatedReadMin} min (${allCards.length} Quick-Read Stories)
-        </p>
+        <div class="edition-header-row">
+          <div class="edition-title-meta">
+            <h1 class="edition-view-title">${escapeHtml(ed.title)}</h1>
+            <p class="meta-line" style="margin-bottom:0;">
+              <strong>Coverage Window:</strong> ${fixedWindow} &bull;
+              ${timeDisplayHtml} &bull;
+              <strong>Reading Time:</strong> ~${estimatedReadMin} min (${allCards.length} Quick-Read Stories)
+            </p>
+          </div>
+          <div class="edition-toolbar">
+            <button class="share-whatsapp-btn theme-btn share-btn-whatsapp" type="button">WhatsApp</button>
+            <button class="copy-link-btn theme-btn" type="button">Copy Link</button>
+            <button onclick="window.print()" class="theme-btn" type="button">Save PDF</button>
+          </div>
+        </div>
       `,
             show: true
         },
@@ -570,11 +649,6 @@ function renderFullEditionView(container, ed) {
       <aside class="toc-sidebar">
         <h4>Edition Contents</h4>
         <ul>${tocHtml}</ul>
-        <div class="share-actions">
-          <button class="share-whatsapp-btn theme-btn" style="background:#1f8b4c;color:#fff;border:none;font-weight:600;">WhatsApp</button>
-          <button class="copy-link-btn theme-btn">Copy Link</button>
-          <button onclick="window.print()" class="theme-btn">Save PDF</button>
-        </div>
       </aside>
       <div class="reading-column">
         ${bodySectionsHtml}
@@ -616,8 +690,11 @@ async function initHomePage() {
         const isEveningNewer = eveningTime >= morningTime;
         const mostRecent = isEveningNewer ? (data.evening || data.morning) : (data.morning || data.evening);
 
-        const morningCard = data.morning ? renderEditionCard(data.morning, "Morning Brief (6:00 AM IST)") : "";
-        const eveningCard = data.evening ? renderEditionCard(data.evening, "Evening Brief (6:00 PM IST)") : "";
+        const morningIsActive = Boolean(mostRecent && data.morning && mostRecent.edition_id === data.morning.edition_id);
+        const eveningIsActive = Boolean(mostRecent && data.evening && mostRecent.edition_id === data.evening.edition_id);
+
+        const morningCard = data.morning ? renderEditionCard(data.morning, "Morning Brief (6:00 AM IST)", morningIsActive) : "";
+        const eveningCard = data.evening ? renderEditionCard(data.evening, "Evening Brief (6:00 PM IST)", eveningIsActive) : "";
 
         cardsEl.innerHTML = isEveningNewer
             ? (eveningCard + morningCard)
@@ -626,7 +703,17 @@ async function initHomePage() {
         if (mostRecent && mostRecent.json_path && inlineEditionEl) {
             const edRes = await fetch(mostRecent.json_path, { cache: "no-store" });
             const edFull = await edRes.json();
-            renderFullEditionView(inlineEditionEl, edFull);
+            const activeBannerHtml = `
+              <div class="active-edition-banner">
+                <div class="active-edition-banner-content">
+                  <span class="active-edition-indicator"></span>
+                  <span>Currently Reading Complete Briefing: <strong>${escapeHtml(mostRecent.title)}</strong></span>
+                </div>
+              </div>
+            `;
+            inlineEditionEl.innerHTML = activeBannerHtml + '<div id="lead-edition-inner"></div>';
+            const innerContainer = document.getElementById("lead-edition-inner");
+            renderFullEditionView(innerContainer, edFull);
         }
     } catch (err) {
         cardsEl.innerHTML = `<div class="card"><p>Unable to load latest editions: ${escapeHtml(err.message)}</p></div>`;

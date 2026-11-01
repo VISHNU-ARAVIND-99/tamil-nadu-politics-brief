@@ -29,6 +29,7 @@ STRICT INSHORTS STYLE RULES:
 2. ZERO VAGUE FILLER: Never write generic commentary like 'This development forms part of broader policy', 'Senior officials are closely monitoring', or 'X also reported on the development'.
 3. SIMPLE, EASY-TO-READ ENGLISH: Use short, clear sentences that anyone can understand quickly.
 4. NO DUPLICATION ACROSS SECTIONS: Stories in 'top_developments' must NOT be repeated in the lower sections.
+5. NO REDUNDANT SITE PREFIXES: The "headline" field and story headlines must NEVER start with "Tamil Nadu Politics Brief:", "Tamil Nadu Political Brief:", or similar publication prefixes. State the actual news event directly.
 
 Return ONLY valid JSON with these exact keys:
 {
@@ -52,6 +53,13 @@ Return ONLY valid JSON with these exact keys:
   "what_to_watch_next": ""
 }"""
 
+
+
+def clean_headline_prefix(h: str) -> str:
+    if not h:
+        return ""
+    clean = re.sub(r"^(?:Tamil\s+Nadu\s+Politic(?:s|al)\s+Brief(?:ing)?[:\-–—]\s*)", "", h.strip(), flags=re.IGNORECASE)
+    return clean.strip() or h.strip()
 
 def clean_json_response(raw_text: str) -> dict:
     cleaned = raw_text.strip()
@@ -262,9 +270,9 @@ def build_extractive_fallback_edition(window_meta: dict, verified_clusters: list
         "published_at_ist": now_ist,
         "coverage_start_ist": window_meta["coverage_start_ist"],
         "coverage_end_ist": window_meta["coverage_end_ist"],
-        "reading_time_minutes": min(20, max(10, round(word_count / 110))),
+        "reading_time_minutes": max(1, round(word_count / 200)),
         "word_count": word_count,
-        "headline": top_devs[0]["headline"] if top_devs else "Tamil Nadu Political Briefing",
+        "headline": clean_headline_prefix(top_devs[0]["headline"]) if top_devs else "Tamil Nadu Political Briefing",
         "parties": all_parties,
         "topics": all_topics,
         "districts": all_districts,
@@ -279,7 +287,7 @@ def validate_and_sanitize_ai_output(ai_data: dict, allowed_urls: set[str], fallb
     seen_u = set()
 
     for dev in ai_data.get("top_developments", []):
-        dev["headline"] = translate_tamil_to_english(dev.get("headline", ""))
+        dev["headline"] = clean_headline_prefix(translate_tamil_to_english(dev.get("headline", "")))
         dev["summary"] = translate_tamil_to_english(dev.get("summary", ""))
         valid_sources = []
         for s in dev.get("sources", []):
@@ -292,6 +300,11 @@ def validate_and_sanitize_ai_output(ai_data: dict, allowed_urls: set[str], fallb
         if not valid_sources and fallback_sources:
             valid_sources = [fallback_sources[0]]
         dev["sources"] = valid_sources
+        # Multi-source proof: If fewer than 2 sources, badge as Verified Report
+        badge = dev.get("verification_badge", "Verified Report")
+        if "Multi-Source" in badge and len(valid_sources) < 2:
+            badge = "Verified Report"
+        dev["verification_badge"] = badge
         cleaned_devs.append(dev)
 
     ai_data["top_developments"] = cleaned_devs
@@ -441,9 +454,9 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
                 "published_at_ist": now_ist,
                 "coverage_start_ist": window_meta["coverage_start_ist"],
                 "coverage_end_ist": window_meta["coverage_end_ist"],
-                "reading_time_minutes": min(20, max(10, round(word_count / 110))),
+                "reading_time_minutes": max(1, round(word_count / 200)),
                 "word_count": word_count,
-                "headline": validated.get("headline", top_clusters[0]["primary_title"]),
+                "headline": clean_headline_prefix(validated.get("headline", top_clusters[0]["primary_title"])),
                 "parties": all_parties,
                 "topics": all_topics,
                 "districts": all_districts,
