@@ -314,12 +314,13 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
     models_to_try = [
         GEMINI_MODEL,
         *discovered,
-        "gemini-1.5-flash",
-        "gemini-1.5-flash-latest",
-        "gemini-1.5-flash-8b",
-        "gemini-2.0-flash",
+        "gemini-3.5-flash-lite",
+        "gemini-3.8-flash",
+        "gemini-3.6-flash",
+        "gemini-3.1-flash-lite",
         "gemini-2.5-flash",
-        "gemini-1.5-pro",
+        "gemini-2.0-flash",
+        "gemini-1.5-flash",
     ]
     models_to_try = list(dict.fromkeys(m for m in models_to_try if m))
     last_err = "unknown"
