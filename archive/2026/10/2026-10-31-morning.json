@@ -6,13 +6,13 @@
   "is_test_sample": false,
   "status": "published_delayed",
   "scheduled_time_ist": "2026-10-31T06:00:00+05:30",
-  "generated_at_ist": "2026-11-01T11:37:42.073281+05:30",
-  "published_at_ist": "2026-11-01T11:37:42.075059+05:30",
+  "generated_at_ist": "2026-11-01T18:01:15.123308+05:30",
+  "published_at_ist": "2026-11-01T18:01:15.128297+05:30",
   "coverage_start_ist": "2026-10-30T18:00:00+05:30",
   "coverage_end_ist": "2026-10-31T06:00:00+05:30",
-  "reading_time_minutes": 7,
-  "word_count": 1073,
-  "headline": "Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection",
+  "reading_time_minutes": 20,
+  "word_count": 3068,
+  "headline": "Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh",
   "parties": [
     "AIADMK",
     "DMK",
@@ -25,23 +25,67 @@
     "Education & NEET",
     "Elections",
     "Government & Administration",
-    "Political Parties"
+    "Infrastructure & Economy",
+    "Political Parties",
+    "Public Protests & Labour"
   ],
   "districts": [
     "Chennai",
     "Cuddalore",
+    "Nagapattinam",
+    "Ramanathapuram",
     "Ranipet",
-    "Tirunelveli",
-    "Vellore"
+    "Tiruvannamalai",
+    "Vellore",
+    "Viluppuram"
   ],
   "sections": {
-    "big_picture": "- **AIADMK, DMK — Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection:** At an interaction with journalists at Pasumpon after paying tributes to Muthuramalinga Thevar, he wondered why he should not accept their support when he had been yearning for an election victory for long.\n- **TVK — Stalin demands apology from T.N. CM Vijay for MIDS professor’s detention; TVK denies ‘political vendetta’ claim:** The ruling TVK said the inquiry was not related to the professor’s remarks on rising rice prices.\n- **State Update — MIDS professor Kalaiyarasan’s colleagues condemn police harassment:** Colleagues and academics condemn Tamil Nadu police harassment of MIDS professor Kalaiyarasan, urging accountability and safeguarding academic freedom.\n- **State Update — Plea in Madras High Court seeks probe into nationality of Cockroach Janata Party co-convenor Saurav Das:** Chief Justice Sushrut Arvind Dharmadhikari and Justice G.\n- **Ranipet — Man held for possession of 22 country-made explosives in Ranipet:** A tribal man from Irular community in Ranipet was arrested for possessing 22 country-made explosives, later jailed in Vellore Central Prison.",
+    "big_picture": "",
     "top_developments": [
+      {
+        "headline": "Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh",
+        "verification_badge": "Multi-Source Verified",
+        "who_is_involved": "DMK, TVK",
+        "summary": "CHENNAI A special court for Prevention of Corruption Act cases on Friday (October 30, 2026) reserved orders on a petition filed by the Central Crime Branch (CCB) for five days of police custody of former School Education Minister Anbil Mahesh Poyyamozhi. The court adjourned the case to November 2. Poyyamozhi was arrested on October 26 in a case of alleged bribery in the grant of permanent recognition to private schools during the DMK government. Poyyamozhi was produced in the court when the petition came up before Judge L.S.",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh",
+            "publisher": "The Hindu",
+            "language": "en",
+            "published_date": "2026-10-30",
+            "published_at_ist": "2026-10-30T20:23:04+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.thehindu.com/news/cities/chennai/special-court-reserves-orders-on-central-crime-branchs-petition-for-custody-of-anbil-mahesh/article71645222.ece",
+            "snippet": "CHENNAI A special court for Prevention of Corruption Act cases on Friday (October 30, 2026) reserved orders on a petition filed by the Central Crime Branch (CCB) for five days of police custody of former School Education Minister Anbil Mahesh Poyyamozhi. The court adjourned the case to November 2. Poyyamozhi was arrested on October 26 in a case of alleged bribery in the grant of permanent recognition to private schools during the DMK government. Poyyamozhi was produced in the court when the petition came up before Judge L.S."
+          },
+          {
+            "title": "Stalin demands apology from T.N. CM Vijay for MIDS professor’s detention; TVK denies ‘political vendetta’ claim",
+            "publisher": "The Hindu",
+            "language": "en",
+            "published_date": "2026-10-30",
+            "published_at_ist": "2026-10-30T18:01:24+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.thehindu.com/news/national/tamil-nadu/stalin-demands-apology-from-tamil-nadu-cm-vijay-for-detention-of-mids-professor/article71639187.ece",
+            "snippet": "CHENNAI DMK president M.K. Stalin on Thursday (October 29, 2026) condemned the brief detention of Kalaiyarasan, an associateassistant professor at the Madras Institute of Development Studies (MIDS), on Wednesday (October 28). Stalin claimed the academic was detained for highlighting the unprecedented price rise, describing it as the height of the Tamilaga Vettri Kazhagam’s (TVK) “fascist attitude”."
+          },
+          {
+            "title": "Minister: Higher Education Department Irregularities During DMK Rule Under Review",
+            "publisher": "Deccan Chronicle",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T00:46:20+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQclF2WTNLRVRnbzNta1NaZk5uSVExckxEY2FPTkJESGRFZXVKYXMyazQwSWIzZzJyS05sYnI1Q1JjZnN4cW4wUUVPQTkzcl9RYnFIT2hsQmozQTA0ai1RNUZxb2R3YnBOU0dZQXM5ZWllRDVOSGMwNEhLYWJMZTV4WUw0anJoQk9hZ2QxSzY5R3dnZ2o0Q1dRWGQzbXVZVndSR3lsRFJWdE1OTHp3bS1oZUlETEZVR0diblN4RjNoTVJSWF94ekM4bnJLS0VQdEROcDFITXMtblpUREZmY0Eyd9IB5gFBVV95cUxNM0hPVXBBSXVSNW5QVjNRRFgxWG1aSUlGS3I1UHRybUpXNjgwUUh3NzgwWTlpMnk3QncyMzB5OVpkSEtmWW5WLTctT0pFa1hfY08zdWRyT3o4ZnhhbkNzUzcyS1hkU2kzUklXOE1sRTM4c2pCeXVwM2FKVFVrZGtqM190amNKdzFjY1JaaWlIeHVfWkotQi1MSTV5SG1xOXZodDI5VnB6REI3X0g0dkUydEh3ejd3bEg3eTFFOWNza3NnZzJ4QTNjUXdWVU9VLVBKMWF1dWttSS0zTHVOTWxhVEhza2k3UQ?oc=5",
+            "snippet": "Minister: Higher Education Department Irregularities During DMK Rule Under Review"
+          }
+        ]
+      },
       {
         "headline": "Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection",
         "verification_badge": "Single-Source Report",
         "who_is_involved": "AIADMK, DMK, NTK",
-        "summary": "At an interaction with journalists at Pasumpon after paying tributes to Muthuramalinga Thevar, he wondered why he should not accept their support when he had been yearning for an election victory for long",
+        "summary": "RAMANATHAPURAM Naam Tamilar Katchi (NTK) chief coordinator Seeman on Friday hinted that he was open to accepting the support of the DMK and the AIADMK, if they chose to back him in the Ambasamudram Assembly constituency as and when a byelection is held there. He had recently hinted that he would contest the byelection. At an interaction with journalists at Pasumpon after paying tributes to freedom fighter Muthuramalinga Thevar, he wondered why he should not accept their support when he had been yearning for an election victory for long.",
         "why_it_matters": "",
         "sources": [
           {
@@ -52,83 +96,104 @@
             "published_at_ist": "2026-10-30T22:11:50+05:30",
             "reliability_tier": "tier_1_editorial",
             "url": "https://www.thehindu.com/news/cities/Madurai/seeman-hints-at-accepting-the-support-of-dmk-and-aiadmk-in-ambasamudram-byelection/article71644538.ece",
-            "snippet": "At an interaction with journalists at Pasumpon after paying tributes to Muthuramalinga Thevar, he wondered why he should not accept their support when he had been yearning for an election victory for long"
+            "snippet": "RAMANATHAPURAM Naam Tamilar Katchi (NTK) chief coordinator Seeman on Friday hinted that he was open to accepting the support of the DMK and the AIADMK, if they chose to back him in the Ambasamudram Assembly constituency as and when a byelection is held there. He had recently hinted that he would contest the byelection. At an interaction with journalists at Pasumpon after paying tributes to freedom fighter Muthuramalinga Thevar, he wondered why he should not accept their support when he had been yearning for an election victory for long."
           }
         ]
       },
       {
-        "headline": "Stalin demands apology from T.N. CM Vijay for MIDS professor’s detention; TVK denies ‘political vendetta’ claim",
+        "headline": "Cooperative supermarkets to sell packets with 10 essential commodities for ₹200",
         "verification_badge": "Single-Source Report",
         "who_is_involved": "TVK",
-        "summary": "The ruling TVK said the inquiry was not related to the professor’s remarks on rising rice prices",
+        "summary": "CHENNAI Minister for Cooperation V. Gandhiraj on Friday launched the sale of packets priced ₹200, which contain 10 essential commodities, at supermarkets run by various cooperatives. Speaking at the event at a cooperative supermarket in Red Hills, he said Chief Minister C. Joseph Vijay had instructed Ministers and officials to ensure that price control measures were taken.",
         "why_it_matters": "",
         "sources": [
           {
-            "title": "Stalin demands apology from T.N. CM Vijay for MIDS professor’s detention; TVK denies ‘political vendetta’ claim",
+            "title": "Cooperative supermarkets to sell packets with 10 essential commodities for ₹200",
             "publisher": "The Hindu",
             "language": "en",
             "published_date": "2026-10-30",
-            "published_at_ist": "2026-10-30T18:01:24+05:30",
+            "published_at_ist": "2026-10-30T21:18:40+05:30",
             "reliability_tier": "tier_1_editorial",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/stalin-demands-apology-from-tamil-nadu-cm-vijay-for-detention-of-mids-professor/article71639187.ece",
-            "snippet": "The ruling TVK said the inquiry was not related to the professor’s remarks on rising rice prices"
+            "url": "https://www.thehindu.com/news/cities/chennai/cooperative-supermarkets-to-sell-packets-with-10-essential-commodities-for-200/article71645910.ece",
+            "snippet": "CHENNAI Minister for Cooperation V. Gandhiraj on Friday launched the sale of packets priced ₹200, which contain 10 essential commodities, at supermarkets run by various cooperatives. Speaking at the event at a cooperative supermarket in Red Hills, he said Chief Minister C. Joseph Vijay had instructed Ministers and officials to ensure that price control measures were taken."
           }
         ]
       },
       {
-        "headline": "MIDS professor Kalaiyarasan’s colleagues condemn police harassment",
-        "verification_badge": "Single-Source Report",
+        "headline": "Madras High Court issues notice on plea to investigate CJP's Saurav Das, block his X and Instagram accounts",
+        "verification_badge": "Confirmed by Primary Official & Independent Sources",
         "who_is_involved": "",
-        "summary": "Colleagues and academics condemn Tamil Nadu police harassment of MIDS professor Kalaiyarasan, urging accountability and safeguarding academic freedom.",
+        "summary": "Madras High Court issues notice to Saurav Das, Centre in citizenship plea. Madras High Court Issues Notice to CJP Coordinator Over Citizenship.",
         "why_it_matters": "",
         "sources": [
           {
-            "title": "MIDS professor Kalaiyarasan’s colleagues condemn police harassment",
-            "publisher": "The Hindu",
-            "language": "en",
-            "published_date": "2026-10-31",
-            "published_at_ist": "2026-10-31T00:43:20+05:30",
-            "reliability_tier": "tier_1_editorial",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/mids-professor-kalaiyarasans-colleagues-condemn-police-harassment/article71646371.ece",
-            "snippet": "Colleagues and academics condemn Tamil Nadu police harassment of MIDS professor Kalaiyarasan, urging accountability and safeguarding academic freedom."
-          }
-        ]
-      },
-      {
-        "headline": "Plea in Madras High Court seeks probe into nationality of Cockroach Janata Party co-convenor Saurav Das",
-        "verification_badge": "Single-Source Report",
-        "who_is_involved": "",
-        "summary": "Chief Justice Sushrut Arvind Dharmadhikari and Justice G. Arul Murugan order notices to the Centre as well as the CJP leader",
-        "why_it_matters": "",
-        "sources": [
-          {
-            "title": "Plea in Madras High Court seeks probe into nationality of Cockroach Janata Party co-convenor Saurav Das",
-            "publisher": "The Hindu",
+            "title": "Madras High Court issues notice to Saurav Das, Centre in citizenship plea",
+            "publisher": "The News Mill",
             "language": "en",
             "published_date": "2026-10-30",
-            "published_at_ist": "2026-10-30T18:51:17+05:30",
-            "reliability_tier": "tier_1_editorial",
-            "url": "https://www.thehindu.com/news/national/probe-into-nationality-of-cockroach-janata-party-co-convenor-saurav-das-plea-before-madras-high-court/article71643606.ece",
-            "snippet": "Chief Justice Sushrut Arvind Dharmadhikari and Justice G. Arul Murugan order notices to the Centre as well as the CJP leader"
+            "published_at_ist": "2026-10-30T23:12:08+05:30",
+            "reliability_tier": "primary_official",
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUW1XckF3aXNuU25aTGhzZXNrNXd1MmVhRXlweVl0c2FpN01ETkxhSkJ2TEt0b0Q2VFgwNUowZVpkSXVjNUc0eU9ZTUdIMkxiN3hucnpMVkpkeUlJQjV5Y0pBbWo2RGs3ems1eFlHdWIzZmpaVTU1UThMeU1BOVhuWGpxbklKVzdKbTZfaFVtbVR0OThJTzN6a3JMZVBrSFFXTDRXa284anRkNnJDbmo5Z01TbTMwWVk?oc=5",
+            "snippet": "Madras High Court issues notice to Saurav Das, Centre in citizenship plea"
+          },
+          {
+            "title": "Madras High Court issues notice on plea to investigate CJP's Saurav Das, block his X and Instagram accounts",
+            "publisher": "Livemint",
+            "language": "en",
+            "published_date": "2026-10-30",
+            "published_at_ist": "2026-10-30T18:56:54+05:30",
+            "reliability_tier": "primary_official",
+            "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNNmktTGJqVUk0SmxHTExneDJWWWphWjFSb3hJbm1LcWpwZEFVdGR0dXRJY1JJWk44M3dGWFA0N1lDT1VtMXFZTkxzdlpPRGhhSFUwR1J4c3hGanRJQ0hyOXgtM1F3eloxTk1BdGJYWlRZZF9jUm5RZkN0MUdzSVVReldJY09yb1MwS3RQMWRLYzRCRW9WbDk2NjBuNFFSSHR6Nkx4dlFLZFk3dURXaUI1MzJZUjA1bDg4VDFiR21UVDNhUkhZZXh0ckhNMHdSbW5mS0t3VFQzc2ttMzdQX2J2RzdVY1ptNnlNUk1vaHZYcEU4M3fSAfgBQVVfeXFMTllWeWZFUldHVy1KMkpKQll0WGlxR2dJZDhSQk5KN1R2Q0cycG0tTFA1dTlmUVZyaDU0aUpubmJWczc0bnpzRGxWREhQZ2w0T1RycVRUMzUxdm85ZzBoLUhWeHhleklyUnVHaWFuUjI5cEtlT2F0UzRKOGE5YjZwdTFBSl9zVXhjaHp5VmQtT2tVVG1WNkhacy1zUF8zaEdVTzBBRl9NNEhNbEM2ZlJEclRZT044dDFzdlFrSmZRTlVKS3dnVHRmVVlPTk1RUkFDc3hLZmQ1MHdaY0tjaXBYczduRTM2ZmhwcXRldThMb2I0VHZNWlBjbHI?oc=5",
+            "snippet": "Madras High Court issues notice on plea to investigate CJP's Saurav Das, block his X and Instagram accounts"
+          },
+          {
+            "title": "Madras High Court Issues Notice to CJP Coordinator Over Citizenship",
+            "publisher": "Asianet Newsable",
+            "language": "en",
+            "published_date": "2026-10-30",
+            "published_at_ist": "2026-10-30T23:10:38+05:30",
+            "reliability_tier": "primary_official",
+            "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPM25OeWlpcDItUGxkc0FCWXYtd0tZTUFuZWExeXdzZzl2djkxazkyUzlmYlV4ZzlXOGVDOTl3bkNSbGxhVWdVTVFYNW1xOWJOaE1WLWdTR3dDS2NQd0tXdlJrdXFlVlpfNk1OYW5RZk43TUZnNlFUUGZ5aEZiU091cnB2SUY5ZkVtN2VfWF8wTXJLZ3JFdm1ZQUlZWDl5UmRoZ2k3cTROWjVTZnUtcHFla19wM2NJb3lEMVFXMUxlSnNaT2VC0gHKAUFVX3lxTE1WUVlHVzBYVDhPUDZLOXNWT2FZZ0NKaVVWbUtacEhpUUwtYV9FTGZNdEFfRGxIRXdxc2tfZjVJb0ZRYm1EVjI0V2NMczlpYmFyeUJVM3UzbmpXcnhOc2ZDZjVyVUt4R2t0bE5uZjhMWlVUTHhBY1Radm16Nlh6UTR1dXZMTUxzamw5WXFiRnFLMURsVjNwMTBORXJxTHFxdzE3X0h5QVh5a2hzTEI2ZEhXT3UwTXk2X1E1SFUxOEV5S3VVSHNaOHZBNnc?oc=5",
+            "snippet": "Madras High Court Issues Notice to CJP Coordinator Over Citizenship"
           }
         ]
       },
       {
-        "headline": "Man held for possession of 22 country-made explosives in Ranipet",
-        "verification_badge": "Single-Source Report",
+        "headline": "Madras High Court bars protests targeting sitting judges with personal attacks",
+        "verification_badge": "Confirmed by Primary Official & Independent Sources",
         "who_is_involved": "",
-        "summary": "A tribal man from Irular community in Ranipet was arrested for possessing 22 country-made explosives, later jailed in Vellore Central Prison.",
+        "summary": "Madras High Court Bars Meetings Attacking Judges. Targeting Radical Protests, Madras High Court Disallows Gatherings Targeting Judges.",
         "why_it_matters": "",
         "sources": [
           {
-            "title": "Man held for possession of 22 country-made explosives in Ranipet",
-            "publisher": "The Hindu",
+            "title": "Madras High Court Bars Meetings Attacking Judges",
+            "publisher": "Urban Acres",
             "language": "en",
-            "published_date": "2026-10-31",
-            "published_at_ist": "2026-10-31T00:00:13+05:30",
-            "reliability_tier": "tier_1_editorial",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/man-held-in-ranipet-for-possession-of-22-country-made-explosives/article71645236.ece",
-            "snippet": "A tribal man from Irular community in Ranipet was arrested for possessing 22 country-made explosives, later jailed in Vellore Central Prison."
+            "published_date": "2026-10-30",
+            "published_at_ist": "2026-10-30T23:17:57+05:30",
+            "reliability_tier": "primary_official",
+            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPTUo0Q2tDRG9Pb1pxSXBjS1BNOXdxLTVPVUY1SnllM0kwNTlOc1JQS2NFTWVYdjYzNkFOb1VaWDFTTEtKalE1RWZoLTNiamFqclJLeEJLdF9MdHdiRnF2V2thUE9pT1JheU5DbjBYSHhDc3RnMDFOQjZPWnd3TDgydkVJQ3pacUVhb2NxaA?oc=5",
+            "snippet": "Madras High Court Bars Meetings Attacking Judges"
+          },
+          {
+            "title": "Madras High Court bars protests targeting sitting judges with personal attacks",
+            "publisher": "Madhyamam",
+            "language": "en",
+            "published_date": "2026-10-30",
+            "published_at_ist": "2026-10-30T21:41:47+05:30",
+            "reliability_tier": "primary_official",
+            "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNm9JUDNac240a0pfQlotNm5NaHh1cFZCTUd2TEd3a21Pb2VfSElJWURTTzFBalRzSG9KTEowcEl1ZmZ4V0kxQ1IyMmFfbWlKQnkwN09zdmc2eVJhSE50LUtpVFBqVllQaGtfNzhteXJqYVpORzNOeWFwSnB5QWJuaGxrWDdNOWNIcWZ2d1lMLVU2SnBoZHFFOGcwTFFsTnY4cndEWUZmZjNOWGRLQXJndWNiMFEyUEZuQXl5TdIBwgFBVV95cUxQd01WdVBsVm1mVFg4dnJSNHlwSVo3NlZ3cDAwOXAtT0ZRVTJJMm53Y3pobjN3cHFoWU5hdUY1YkZ6OHk4MGF4R21YUE56ZDdBT1lzM0ZRdlp4UnRNREdkNEtSY3VUQlZPM29mSDlMSVdRWUJkNlBSR3dsWmJBWTB2dkhUYTFpU084X2VmM1ZTdGhwOXBOX3BPdEROQllyQVJqaks5STVHbGVDZWJQNXdSY1k4QXJCeW9fMXpwajdDckJvdw?oc=5",
+            "snippet": "Madras High Court bars protests targeting sitting judges with personal attacks"
+          },
+          {
+            "title": "Targeting Radical Protests, Madras High Court Disallows Gatherings Targeting Judges",
+            "publisher": "Times Now",
+            "language": "en",
+            "published_date": "2026-10-30",
+            "published_at_ist": "2026-10-30T18:58:36+05:30",
+            "reliability_tier": "primary_official",
+            "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNWTlWUzduSWNjaHZWM01pTHdCTExJUC1OaGhSNDRqeDU5ODNvTFdtb0ktQmlSTkJaX2ExNXYyUG1rR3lhVncwQ0syWVJTTFh4V1YtQXlpZUJCVWZXM2VIWmY2VkxNNUVIajRBdDJUbWpTU3gtcXNxa21ieVU1QnM1OEhPS09PdmtXS1hpQ1VhWTNPTmR2SVJhZEJLZkV3STZmYXpQcmpvUC15bmRrNVNSUmxYeFQyaFVZZ3J3MHptc3cwbVRwYmh4RFVDOHhTeGxNOTVR0gHYAUFVX3lxTFBYcHdwQTZWNXdaYXVEVC0ta1Y0bmhXZnk0RDJPNE52NWdybGZDWjFpWnFkZGgtMXlxcGtONE5CTEV5WmZXd2N4ZUJJN292cldnOWRvTUNWYWs5U05kUDJUR0tVM3VhUGJ0UVZMNGZhTnpFeXluT0hONDVhWFhCUDJlVEExY3lHMjJZREk0WUlMS2lPbUJMQkxJSHFuWVY5WlRnUUFxOWlYaVZCLXFfeEJxaktyWEQxM0hIVjlRSVI4d05uVS15Wko4QlFPN0FCYXRlT3FsUU5ILQ?oc=5",
+            "snippet": "Targeting Radical Protests, Madras High Court Disallows Gatherings Targeting Judges"
           }
         ]
       },
@@ -136,7 +201,7 @@
         "headline": "Victim of crime should never become victim of process: Madras High Court Chief Justice",
         "verification_badge": "Single-Source Report",
         "who_is_involved": "",
-        "summary": "Legal and administrative procedures must never inflict fresh trauma on those who are really broken, they must offer immediate support, public care, and unconditional dignity, Justice Dharmadhikari said",
+        "summary": "Chennai There is an urgent need to speed up the processes in the criminal justice system to prevent the process from victimising the victim further, Sushrut Arvind Dharmadhikari, Chief Justice, Madras High Court, said in Chennai on Friday. “Our urgent goal now is to speed up our system. A victim of crime should never become a victim of process,” Justice Dharmadhikari said, delivering the inaugural address at a national conference on ‘Victim Justice: Issues and Challenges’ at the University of Madras.",
         "why_it_matters": "",
         "sources": [
           {
@@ -147,37 +212,70 @@
             "published_at_ist": "2026-10-30T22:19:52+05:30",
             "reliability_tier": "tier_1_editorial",
             "url": "https://www.thehindu.com/news/national/tamil-nadu/victim-of-crime-should-never-become-victim-of-process-madras-high-court-chief-justice/article71645359.ece",
-            "snippet": "Legal and administrative procedures must never inflict fresh trauma on those who are really broken, they must offer immediate support, public care, and unconditional dignity, Justice Dharmadhikari said"
+            "snippet": "Chennai There is an urgent need to speed up the processes in the criminal justice system to prevent the process from victimising the victim further, Sushrut Arvind Dharmadhikari, Chief Justice, Madras High Court, said in Chennai on Friday. “Our urgent goal now is to speed up our system. A victim of crime should never become a victim of process,” Justice Dharmadhikari said, delivering the inaugural address at a national conference on ‘Victim Justice: Issues and Challenges’ at the University of Madras."
           }
         ]
       },
       {
-        "headline": "Cuddalore Collector inspects development works in Chidambaram",
+        "headline": "MIDS professor Kalaiyarasan’s colleagues condemn police harassment",
         "verification_badge": "Single-Source Report",
         "who_is_involved": "",
-        "summary": "Cuddalore Collector audits Chidambaram development projects, from bus stand and water schemes to Miyawaki plantings and waste management initiatives.",
+        "summary": "Chennai Colleagues of MIDS professor Kalaiyarasan and members of academic community “strongly” condemned the harassment meted out to him by the Tamil Nadu police based on misinformation. In a statement, 17 academics, said “it is shocking that the police thought it fit to pick him up from his residence in the early hours of the morning without following any procedural protocol”.",
         "why_it_matters": "",
         "sources": [
           {
-            "title": "Cuddalore Collector inspects development works in Chidambaram",
+            "title": "MIDS professor Kalaiyarasan’s colleagues condemn police harassment",
+            "publisher": "The Hindu",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T00:43:20+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.thehindu.com/news/national/tamil-nadu/mids-professor-kalaiyarasans-colleagues-condemn-police-harassment/article71646371.ece",
+            "snippet": "Chennai Colleagues of MIDS professor Kalaiyarasan and members of academic community “strongly” condemned the harassment meted out to him by the Tamil Nadu police based on misinformation. In a statement, 17 academics, said “it is shocking that the police thought it fit to pick him up from his residence in the early hours of the morning without following any procedural protocol”."
+          }
+        ]
+      },
+      {
+        "headline": "Plea in Madras High Court seeks probe into nationality of Cockroach Janata Party co-convenor Saurav Das",
+        "verification_badge": "Single-Source Report",
+        "who_is_involved": "",
+        "summary": "CHENNAI The Madras High Court on Friday (October 30, 2026) ordered notice to the Centre on a public interest litigation (PIL) petition, which sought a direction to the Union Ministry of Home Affairs (MHA) to probe into the nationality of Saurav Das, co-convenor of the Cockroach Janata Party (CJP), and cancel his passport and Aadhaar card if he is not found to be an Indian.",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "Plea in Madras High Court seeks probe into nationality of Cockroach Janata Party co-convenor Saurav Das",
             "publisher": "The Hindu",
             "language": "en",
             "published_date": "2026-10-30",
-            "published_at_ist": "2026-10-30T21:15:32+05:30",
+            "published_at_ist": "2026-10-30T18:51:17+05:30",
             "reliability_tier": "tier_1_editorial",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/cuddalore-collector-inspects-development-works-in-chidambaram/article71644529.ece",
-            "snippet": "Cuddalore Collector audits Chidambaram development projects, from bus stand and water schemes to Miyawaki plantings and waste management initiatives."
+            "url": "https://www.thehindu.com/news/national/probe-into-nationality-of-cockroach-janata-party-co-convenor-saurav-das-plea-before-madras-high-court/article71643606.ece",
+            "snippet": "CHENNAI The Madras High Court on Friday (October 30, 2026) ordered notice to the Centre on a public interest litigation (PIL) petition, which sought a direction to the Union Ministry of Home Affairs (MHA) to probe into the nationality of Saurav Das, co-convenor of the Cockroach Janata Party (CJP), and cancel his passport and Aadhaar card if he is not found to be an Indian."
           }
         ]
       }
     ],
-    "government_and_administration": "- **Work on ‘Gateway of Chennai’ to begin next week as Tamil Nadu government approves 680 road projects:** Under the Chief Minister’s Integrated Urban Development Mission (CMIUDM), the stretch from Airport to Kathipara grade separator will get better greenery, lighting and artwork as part of the project ([The Hindu](https://www.thehindu.com/news/cities/chennai/work-on-gateway-of-chennai-to-begin-next-week-as-tamil-nadu-government-approves-680-road-projects/article71645529.ece))",
-    "political_parties_and_opposition": "",
+    "government_and_administration": "- **Japan’s Omron Healthcare opens first India manufacturing facility near Chennai:** CHENNAI Japan’s Omron Healthcare on Friday formally inaugurated its first India production facility in Gummidipoondi near Chennai. The new unit, spread over an area of 258,333 square feet at Origins by Mahindra industrial estate in Puduvoyal, has been built within three years of the Japanese firm signing a Memorandum of Understanding (MoU) with the Tamil Nadu government in 2023. Designed to produce about 300,000 blood pressure monitors annually, the company plans to increase its production capacity tenfold to make 30 lakh units annually in the next two years. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/japans-omron-healthcare-opens-first-india-manufacturing-facility-near-chennai/article71645749.ece))\n- **“Home Nursing Aid” course for geriatric care:** John Ambulance Association, Tamil Nadu State Centre, is conducting an 8-day “Home Nursing Aid” Course with a special emphasis on geriatric care from second week of November. The program is designed to equip caregivers with essential practical skills for home care employment and elder care. Persons who have a passed standard 10 are eligible. The total course Fee is ₹1,000 + 18% GST (Total: ₹1,280/-) and last date to register is November 1, 2026. For details and registration, contact: 044-2819 1707 / 044-2819 4630, 86088 56656. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/home-nursing-aid-course-for-geriatric-care/article71645748.ece))\n- **BIS organises MSME conclave in Ranipet:** RANIPET The Bureau of Indian Standards (BIS), in collaboration with the District Industries Centre (DIC), organised an MSME Stakeholder Conclave in Ranipet as part of World Standards Day 2026 celebrations. According to a press release, the conclave brought together representatives of Micro, Small and Medium Enterprises (MSMEs) and officials from BIS, DIC, and the National Test House (NTH) to discuss Indian Standards, BIS certification, testing facilities, and the various support measures available to MSMEs. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/bis-organises-msme-conclave-in-ranipet/article71645245.ece))\n- **Man held for possession of 22 country-made explosives in Ranipet:** RANIPET A 20-year-old tribal, who belongs to the Irula community, was arrested by the Forest Department in Ranipet on Friday for possession of 22 country-made explosives. Forest officials identified the arrested person as V. Devak Kumar, a resident of Irular colony near Arcot town. Initial inquiry revealed that a team of forest officials were on patrol in Pakkiri reserve forests near Kaveripakkam village, when they intercepted Kumar. Forest officials said that the team made an inquiry into the purpose of the visit in the forest to him. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/man-held-in-ranipet-for-possession-of-22-country-made-explosives/article71645236.ece))\n- **CMC observes World Stroke Day:** VELLORE The Christian Medical College (CMC) observed World Stroke Day 2026 at its campus in Vellore and Ranipet on Friday. with a day of public awareness, education and screening on Friday. According to a press release, the event was held under the theme ‘Each Minute Counts, Be FAST, Recognise Stroke, Save Lives’. The celebrations brought together neurology, radiology, rehabilitation, emergency medicine, and nursing teams to show the public what timely stroke care looks like, from the first symptom to recovery. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/cmc-observes-world-stroke-day/article71645253.ece))",
+    "political_parties_and_opposition": "- **Villagers protest against unregulated silt extraction from irrigation tank:** TIRUVANNAMALAI Residents, mostly farmers and traders, formed a human chain on Mangal Koot Road in Pavoor village near Cheyyar town in Tiruvannamalai town on Friday, to protest against unregulated silt extraction from an irrigation tank, by private contractors. Residents said that Pavoor village forms part of Vembakkam Panchayat Union near Cheyyar town. Along with surrounding farming villages like Elacheri, Ukkal, Vayalathur, Arasanipalai and Mathur Residents of Pavoor and those of the surrounding villages are dependent on the irrigation tank in Pavoor village for cultivation and domestic consumption. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/villagers-protest-against-unregulated-silt-extraction-from-irrigation-tank/article71645232.ece))",
     "assembly_courts_and_policy": "",
-    "district_developments": "",
+    "district_developments": "- **Should Director of Collegiate Education be an academic?:** Chennai Before January 2024, senior principals of government colleges were appointed as the Director of Collegiate Education. Things changed when the then government, citing administrative reasons, appointed an IAS officer to the post. Initially, the appointment was stated to be for one year, but the practice continued. The department now faces a crisis. The present Director has gone on leave on health grounds a few days ago, and the government has appointed the Commissioner of Technical Education to discharge duties in his stead. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/should-director-of-collegiate-education-be-an-academic/article71627862.ece))\n- **Takshashila University conducts Induction ceremony for MBBS students:** VILLUPURAM The induction of the 2026 batch of MBBS students at Takshashila University at Ongur near Tindivanam, was organised recently. Addressing the students, University Chancellor and Chairman and Managing Director of the Sri Manakula Vinayagar Educational Trust M. Dhanasekaran, urged them to set aside three to four hours daily for structured study and focus on understanding fundamental concepts rather than rote learning. The university would support research and innovation, he said. Vice-Chancellor Vivek Inder Kocchar stressed the importance of time management, continuous learning and sharpening clinical skills. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/takshashila-university-conducts-induction-ceremony-for-mbbs-students/article71644576.ece))\n- **Cuddalore Collector inspects development works in Chidambaram:** CUDDALORE Collector Sibi Adhithya Senthil Kumar inspected development works in Chidambaram and adjoining areas on Thursday and directed officials to expedite the works. At Lalpuram, he reviewed the construction of Chidambaram’s new bus stand and instructed officials to complete the work within the stipulated deadline. He also inspected a Miyawaki plantation established on about 2.5 acres at the Tamil Nadu Water Supply and Drainage (TWAD) Board’s sewage treatment complex. More than 6,000 saplings of various species, including neem and peepal, have been planted at the site. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/cuddalore-collector-inspects-development-works-in-chidambaram/article71644529.ece))\n- **Chola-era bronze alloy idols of Lord Nataraja, Goddess Sivakami unearthed in Nagapattinam:** CHENNAI In a significant finding, the Tamil Nadu State Department of Archaeology (TNSDA) has unearthed bronze alloy idols of Lord Nataraja and Goddess Sivagami, along with their respective pedestals, during the ongoing excavations at Nagapattinam. The idols belong to the Chola period and were unearthed at a depth of one metre. The idol of Lord Nataraja is depicted in the ‘Ananda Tandava’ posture with four arms and measures 110 cm in height and 100 cm in width. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/chola-era-bronze-alloy-idols-of-lord-nataraja-goddess-sivakami-unearthed-in-nagapattinam/article71646181.ece))\n- **Work on ‘Gateway of Chennai’ to begin next week as Tamil Nadu government approves 680 road projects:** CHENNAI The Tamil Nadu government has accorded administrative sanction for 680 road improvement projects and other civic infrastructure projects, including beautification of the “Gateway of Chennai” at a cost of ₹131 crore under the Chief Minister’s Integrated Urban Development Mission (CMIUDM). Greater Chennai Corporation Commissioner G.S. Sameeran on Friday (October 30, 2026) said: “A detailed survey [for the Gateway of Chennai] is going on by the contractor.” The GCC Commissioner added that he had convened an inter-departmental meeting two days ago with all stakeholders like the Highways, Airports Authority of India, Cantonment Board,... ([The Hindu](https://www.thehindu.com/news/cities/chennai/work-on-gateway-of-chennai-to-begin-next-week-as-tamil-nadu-government-approves-680-road-projects/article71645529.ece))",
     "claims_vs_facts": [],
     "what_to_watch_next": "",
     "all_sources": [
+      {
+        "title": "Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh",
+        "publisher": "The Hindu",
+        "language": "en",
+        "published_date": "2026-10-30",
+        "url": "https://www.thehindu.com/news/cities/chennai/special-court-reserves-orders-on-central-crime-branchs-petition-for-custody-of-anbil-mahesh/article71645222.ece"
+      },
+      {
+        "title": "Stalin demands apology from T.N. CM Vijay for MIDS professor’s detention; TVK denies ‘political vendetta’ claim",
+        "publisher": "The Hindu",
+        "language": "en",
+        "published_date": "2026-10-30",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/stalin-demands-apology-from-tamil-nadu-cm-vijay-for-detention-of-mids-professor/article71639187.ece"
+      },
       {
         "title": "Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection",
         "publisher": "The Hindu",
@@ -186,11 +284,46 @@
         "url": "https://www.thehindu.com/news/cities/Madurai/seeman-hints-at-accepting-the-support-of-dmk-and-aiadmk-in-ambasamudram-byelection/article71644538.ece"
       },
       {
-        "title": "Stalin demands apology from T.N. CM Vijay for MIDS professor’s detention; TVK denies ‘political vendetta’ claim",
+        "title": "Cooperative supermarkets to sell packets with 10 essential commodities for ₹200",
         "publisher": "The Hindu",
         "language": "en",
         "published_date": "2026-10-30",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/stalin-demands-apology-from-tamil-nadu-cm-vijay-for-detention-of-mids-professor/article71639187.ece"
+        "url": "https://www.thehindu.com/news/cities/chennai/cooperative-supermarkets-to-sell-packets-with-10-essential-commodities-for-200/article71645910.ece"
+      },
+      {
+        "title": "Madras High Court issues notice to Saurav Das, Centre in citizenship plea",
+        "publisher": "The News Mill",
+        "language": "en",
+        "published_date": "2026-10-30",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUW1XckF3aXNuU25aTGhzZXNrNXd1MmVhRXlweVl0c2FpN01ETkxhSkJ2TEt0b0Q2VFgwNUowZVpkSXVjNUc0eU9ZTUdIMkxiN3hucnpMVkpkeUlJQjV5Y0pBbWo2RGs3ems1eFlHdWIzZmpaVTU1UThMeU1BOVhuWGpxbklKVzdKbTZfaFVtbVR0OThJTzN6a3JMZVBrSFFXTDRXa284anRkNnJDbmo5Z01TbTMwWVk?oc=5"
+      },
+      {
+        "title": "Madras High Court issues notice on plea to investigate CJP's Saurav Das, block his X and Instagram accounts",
+        "publisher": "Livemint",
+        "language": "en",
+        "published_date": "2026-10-30",
+        "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNNmktTGJqVUk0SmxHTExneDJWWWphWjFSb3hJbm1LcWpwZEFVdGR0dXRJY1JJWk44M3dGWFA0N1lDT1VtMXFZTkxzdlpPRGhhSFUwR1J4c3hGanRJQ0hyOXgtM1F3eloxTk1BdGJYWlRZZF9jUm5RZkN0MUdzSVVReldJY09yb1MwS3RQMWRLYzRCRW9WbDk2NjBuNFFSSHR6Nkx4dlFLZFk3dURXaUI1MzJZUjA1bDg4VDFiR21UVDNhUkhZZXh0ckhNMHdSbW5mS0t3VFQzc2ttMzdQX2J2RzdVY1ptNnlNUk1vaHZYcEU4M3fSAfgBQVVfeXFMTllWeWZFUldHVy1KMkpKQll0WGlxR2dJZDhSQk5KN1R2Q0cycG0tTFA1dTlmUVZyaDU0aUpubmJWczc0bnpzRGxWREhQZ2w0T1RycVRUMzUxdm85ZzBoLUhWeHhleklyUnVHaWFuUjI5cEtlT2F0UzRKOGE5YjZwdTFBSl9zVXhjaHp5VmQtT2tVVG1WNkhacy1zUF8zaEdVTzBBRl9NNEhNbEM2ZlJEclRZT044dDFzdlFrSmZRTlVKS3dnVHRmVVlPTk1RUkFDc3hLZmQ1MHdaY0tjaXBYczduRTM2ZmhwcXRldThMb2I0VHZNWlBjbHI?oc=5"
+      },
+      {
+        "title": "Madras High Court Bars Meetings Attacking Judges",
+        "publisher": "Urban Acres",
+        "language": "en",
+        "published_date": "2026-10-30",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPTUo0Q2tDRG9Pb1pxSXBjS1BNOXdxLTVPVUY1SnllM0kwNTlOc1JQS2NFTWVYdjYzNkFOb1VaWDFTTEtKalE1RWZoLTNiamFqclJLeEJLdF9MdHdiRnF2V2thUE9pT1JheU5DbjBYSHhDc3RnMDFOQjZPWnd3TDgydkVJQ3pacUVhb2NxaA?oc=5"
+      },
+      {
+        "title": "Madras High Court bars protests targeting sitting judges with personal attacks",
+        "publisher": "Madhyamam",
+        "language": "en",
+        "published_date": "2026-10-30",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNm9JUDNac240a0pfQlotNm5NaHh1cFZCTUd2TEd3a21Pb2VfSElJWURTTzFBalRzSG9KTEowcEl1ZmZ4V0kxQ1IyMmFfbWlKQnkwN09zdmc2eVJhSE50LUtpVFBqVllQaGtfNzhteXJqYVpORzNOeWFwSnB5QWJuaGxrWDdNOWNIcWZ2d1lMLVU2SnBoZHFFOGcwTFFsTnY4cndEWUZmZjNOWGRLQXJndWNiMFEyUEZuQXl5TdIBwgFBVV95cUxQd01WdVBsVm1mVFg4dnJSNHlwSVo3NlZ3cDAwOXAtT0ZRVTJJMm53Y3pobjN3cHFoWU5hdUY1YkZ6OHk4MGF4R21YUE56ZDdBT1lzM0ZRdlp4UnRNREdkNEtSY3VUQlZPM29mSDlMSVdRWUJkNlBSR3dsWmJBWTB2dkhUYTFpU084X2VmM1ZTdGhwOXBOX3BPdEROQllyQVJqaks5STVHbGVDZWJQNXdSY1k4QXJCeW9fMXpwajdDckJvdw?oc=5"
+      },
+      {
+        "title": "Victim of crime should never become victim of process: Madras High Court Chief Justice",
+        "publisher": "The Hindu",
+        "language": "en",
+        "published_date": "2026-10-30",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/victim-of-crime-should-never-become-victim-of-process-madras-high-court-chief-justice/article71645359.ece"
       },
       {
         "title": "MIDS professor Kalaiyarasan’s colleagues condemn police harassment",
@@ -207,6 +340,27 @@
         "url": "https://www.thehindu.com/news/national/probe-into-nationality-of-cockroach-janata-party-co-convenor-saurav-das-plea-before-madras-high-court/article71643606.ece"
       },
       {
+        "title": "Japan’s Omron Healthcare opens first India manufacturing facility near Chennai",
+        "publisher": "The Hindu",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/japans-omron-healthcare-opens-first-india-manufacturing-facility-near-chennai/article71645749.ece"
+      },
+      {
+        "title": "“Home Nursing Aid” course for geriatric care",
+        "publisher": "The Hindu",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/home-nursing-aid-course-for-geriatric-care/article71645748.ece"
+      },
+      {
+        "title": "BIS organises MSME conclave in Ranipet",
+        "publisher": "The Hindu",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/bis-organises-msme-conclave-in-ranipet/article71645245.ece"
+      },
+      {
         "title": "Man held for possession of 22 country-made explosives in Ranipet",
         "publisher": "The Hindu",
         "language": "en",
@@ -214,25 +368,25 @@
         "url": "https://www.thehindu.com/news/national/tamil-nadu/man-held-in-ranipet-for-possession-of-22-country-made-explosives/article71645236.ece"
       },
       {
-        "title": "Victim of crime should never become victim of process: Madras High Court Chief Justice",
+        "title": "Villagers protest against unregulated silt extraction from irrigation tank",
         "publisher": "The Hindu",
         "language": "en",
         "published_date": "2026-10-30",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/victim-of-crime-should-never-become-victim-of-process-madras-high-court-chief-justice/article71645359.ece"
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/villagers-protest-against-unregulated-silt-extraction-from-irrigation-tank/article71645232.ece"
       },
       {
-        "title": "Cuddalore Collector inspects development works in Chidambaram",
+        "title": "CMC observes World Stroke Day",
         "publisher": "The Hindu",
         "language": "en",
         "published_date": "2026-10-30",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/cuddalore-collector-inspects-development-works-in-chidambaram/article71644529.ece"
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/cmc-observes-world-stroke-day/article71645253.ece"
       },
       {
-        "title": "Work on ‘Gateway of Chennai’ to begin next week as Tamil Nadu government approves 680 road projects",
+        "title": "Should Director of Collegiate Education be an academic?",
         "publisher": "The Hindu",
         "language": "en",
         "published_date": "2026-10-30",
-        "url": "https://www.thehindu.com/news/cities/chennai/work-on-gateway-of-chennai-to-begin-next-week-as-tamil-nadu-government-approves-680-road-projects/article71645529.ece"
+        "url": "https://www.thehindu.com/news/national/tamil-nadu/should-director-of-collegiate-education-be-an-academic/article71627862.ece"
       }
     ]
   }
