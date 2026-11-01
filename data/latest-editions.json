@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-01T20:00:12.301607+05:30",
+  "last_updated_ist": "2026-11-01T20:48:24.044420+05:30",
   "system_status": "operational",
-  "status_message": "Latest evening edition published at 2026-11-01T20:00:12.301607+05:30.",
+  "status_message": "Last published — Evening: 2026-11-01T20:48:24.044420+05:30; Morning: 2026-11-01T19:32:25.066382+05:30.",
   "morning": {
     "edition_id": "2026-11-01-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 1 November 2026",
@@ -54,36 +54,32 @@
     "is_test_sample": false,
     "status": "published_delayed",
     "scheduled_time_ist": "2026-11-01T18:00:00+05:30",
-    "generated_at_ist": "2026-11-01T20:00:12.301229+05:30",
-    "published_at_ist": "2026-11-01T20:00:12.301607+05:30",
+    "generated_at_ist": "2026-11-01T20:48:24.044209+05:30",
+    "published_at_ist": "2026-11-01T20:48:24.044420+05:30",
     "coverage_start_ist": "2026-11-01T06:00:00+05:30",
     "coverage_end_ist": "2026-11-01T18:00:00+05:30",
     "reading_time_minutes": 10,
-    "word_count": 937,
-    "headline": "Tamil Nadu Politics Brief: November 2, 2026",
-    "big_picture_excerpt": "- Tamil Nadu Celebrates Formation Day\n- TN Government Announces Traditional Attire Day and Secretariat Tamil Sangam\n- Chief Minister Vijay Orders Setup of 26 POCSO and Four NDPS Courts",
+    "word_count": 350,
+    "headline": "Tamil Nadu Political Brief: Government Announces Fast-Track Courts and Cultural Initiatives",
+    "big_picture_excerpt": "- Tamil Nadu Orders 26 POCSO and Four NDPS Fast-Track Courts\n- Tamil Nadu Celebrates Formation Day as Leaders Trade Greetings",
     "parties": [
       "AIADMK",
+      "BJP",
       "DMK",
       "TVK",
       "VCK"
     ],
     "topics": [
-      "Agriculture & Water",
       "Assembly, Courts & Policy",
       "Centre–State Relations",
       "Education & NEET",
-      "Government & Administration",
-      "Public Protests & Labour"
+      "Government & Administration"
     ],
     "districts": [
       "Chennai",
-      "Cuddalore",
+      "Erode",
       "Pudukkottai",
-      "Ramanathapuram",
-      "Ranipet",
       "Thoothukudi",
-      "Vellore",
       "Viluppuram"
     ],
     "json_path": "archive/2026/11/2026-11-01-evening.json",
