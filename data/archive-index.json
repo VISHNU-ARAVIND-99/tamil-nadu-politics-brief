@@ -1,6 +1,6 @@
 {
   "total_editions": 4,
-  "last_updated_ist": "2026-11-01T19:37:51.935616+05:30",
+  "last_updated_ist": "2026-11-01T20:00:12.301607+05:30",
   "editions": [
     {
       "edition_id": "2026-11-01-evening",
@@ -9,33 +9,34 @@
       "edition_type": "evening",
       "is_test_sample": false,
       "status": "published_delayed",
-      "published_at_ist": "2026-11-01T19:37:51.935616+05:30",
+      "published_at_ist": "2026-11-01T20:00:12.301607+05:30",
       "coverage_window": "2026-11-01T06:00:00+05:30 to 2026-11-01T18:00:00+05:30",
-      "reading_time_minutes": 20,
-      "headline": "Pudukottai brought under heavy security cover for CM’s visit on Monday",
-      "summary_text": "- Pudukottai brought under heavy security cover for CM’s visit on Monday\n- Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts\n- July 18 is only Tamil Nadu Day; Don't change history: DMK TamilNadu Day\n- President Droupadi Murmu , PM Modi, CM Vijay greet people on Tamil Nadu Day fete",
+      "reading_time_minutes": 10,
+      "headline": "Tamil Nadu Politics Brief: November 2, 2026",
+      "summary_text": "- Tamil Nadu Celebrates Formation Day\n- TN Government Announces Traditional Attire Day and Secretariat Tamil Sangam\n- Chief Minister Vijay Orders Setup of 26 POCSO and Four NDPS Courts",
       "parties": [
+        "AIADMK",
         "DMK",
         "TVK",
         "VCK"
       ],
       "topics": [
+        "Agriculture & Water",
         "Assembly, Courts & Policy",
+        "Centre–State Relations",
         "Education & NEET",
         "Government & Administration",
-        "Infrastructure & Economy",
-        "Political Parties",
         "Public Protests & Labour"
       ],
       "districts": [
-        "Chengalpattu",
         "Chennai",
         "Cuddalore",
-        "Erode",
-        "Madurai",
+        "Pudukkottai",
         "Ramanathapuram",
+        "Ranipet",
         "Thoothukudi",
-        "Tirupathur"
+        "Vellore",
+        "Viluppuram"
       ],
       "url": "edition.html?id=2026-11-01-evening",
       "json_path": "archive/2026/11/2026-11-01-evening.json"
