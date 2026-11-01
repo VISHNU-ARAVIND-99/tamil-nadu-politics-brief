@@ -1,6 +1,6 @@
 {
   "total_editions": 4,
-  "last_updated_ist": "2026-11-01T19:27:44.790157+05:30",
+  "last_updated_ist": "2026-11-01T19:37:51.935616+05:30",
   "editions": [
     {
       "edition_id": "2026-11-01-evening",
@@ -9,22 +9,22 @@
       "edition_type": "evening",
       "is_test_sample": false,
       "status": "published_delayed",
-      "published_at_ist": "2026-11-01T19:27:44.790157+05:30",
+      "published_at_ist": "2026-11-01T19:37:51.935616+05:30",
       "coverage_window": "2026-11-01T06:00:00+05:30 to 2026-11-01T18:00:00+05:30",
-      "reading_time_minutes": 10,
-      "headline": "Tamil Nadu Politics Brief: Tamil Nadu Day Celebrated, Pudukottai Exam Postponement Sparks Row, and VCK Functionary Hacked to Death",
-      "summary_text": "- Tamil Nadu Day Celebrated Amid Political Row Over Date\n- Postponement of College Exams for Chief Minister's Visit Triggers Controversy\n- VCK Functionary Hacked to Death in Thoothukudi, Causing Local Tension",
+      "reading_time_minutes": 20,
+      "headline": "Pudukottai brought under heavy security cover for CM’s visit on Monday",
+      "summary_text": "- Pudukottai brought under heavy security cover for CM’s visit on Monday\n- Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts\n- July 18 is only Tamil Nadu Day; Don't change history: DMK TamilNadu Day\n- President Droupadi Murmu , PM Modi, CM Vijay greet people on Tamil Nadu Day fete",
       "parties": [
         "DMK",
         "TVK",
         "VCK"
       ],
       "topics": [
-        "Agriculture & Water",
         "Assembly, Courts & Policy",
-        "Centre–State Relations",
         "Education & NEET",
         "Government & Administration",
+        "Infrastructure & Economy",
+        "Political Parties",
         "Public Protests & Labour"
       ],
       "districts": [
@@ -32,16 +32,10 @@
         "Chennai",
         "Cuddalore",
         "Erode",
-        "Kanniyakumari",
-        "Karur",
-        "Krishnagiri",
         "Madurai",
-        "Pudukkottai",
         "Ramanathapuram",
         "Thoothukudi",
-        "Tiruvallur",
-        "Vellore",
-        "Viluppuram"
+        "Tirupathur"
       ],
       "url": "edition.html?id=2026-11-01-evening",
       "json_path": "archive/2026/11/2026-11-01-evening.json"
@@ -53,40 +47,33 @@
       "edition_type": "morning",
       "is_test_sample": false,
       "status": "published_delayed",
-      "published_at_ist": "2026-11-01T17:42:28.442510+05:30",
+      "published_at_ist": "2026-11-01T19:32:25.066382+05:30",
       "coverage_window": "2026-10-31T18:00:00+05:30 to 2026-11-01T06:00:00+05:30",
       "reading_time_minutes": 20,
-      "headline": "Take action against officials who arrested MIDS professor, Stalin urges T.N. government",
-      "summary_text": "- Take action against officials who arrested MIDS professor, Stalin urges T.N. government\n- \"My good time joined Thalapathy\" - Minister KA Sengottaiyan\n- DMK women’s wing protests reflect public anger against TVK govt: Stalin\n- Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts",
+      "headline": "Opposition slams TVK govt for repeated prison escapes across Tamil Nadu",
+      "summary_text": "- Opposition slams TVK govt for repeated prison escapes across Tamil Nadu\n- Sollathigaram \"What is the purpose of going only to specific 3 blocks?\"\n- DMK women’s wing protests reflect public anger against TVK govt: Stalin\n- T.N. govt. raises DA for its employees from 60% to 63%",
       "parties": [
         "AIADMK",
+        "AMMK",
         "BJP",
         "DMK",
         "NTK",
         "PMK",
-        "TVK",
-        "VCK"
+        "TVK"
       ],
       "topics": [
         "Assembly, Courts & Policy",
         "Centre–State Relations",
         "Education & NEET",
         "Elections",
-        "Government & Administration",
-        "Infrastructure & Economy",
-        "Political Parties",
-        "Public Protests & Labour"
+        "Government & Administration"
       ],
       "districts": [
         "Chengalpattu",
         "Chennai",
         "Coimbatore",
         "Cuddalore",
-        "Erode",
-        "Madurai",
-        "Ramanathapuram",
         "Theni",
-        "Thoothukudi",
         "Viluppuram"
       ],
       "url": "edition.html?id=2026-11-01-morning",
@@ -99,11 +86,11 @@
       "edition_type": "evening",
       "is_test_sample": false,
       "status": "published_delayed",
-      "published_at_ist": "2026-11-01T17:50:29.125109+05:30",
+      "published_at_ist": "2026-11-01T19:30:21.037029+05:30",
       "coverage_window": "2026-10-31T06:00:00+05:30 to 2026-10-31T18:00:00+05:30",
       "reading_time_minutes": 20,
-      "headline": "DA for Tamil Nadu government employees increases from 60% to 63%",
-      "summary_text": "- DA for Tamil Nadu government employees increases from 60% to 63%\n- Chief Minister Vijay inaugurates Pudukottai new bus stand.\n- CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak\n- Condemnation of the government which is playing with the lives of poor and poor people : EPS",
+      "headline": "Chief Minister Vijay inaugurates Pudukottai new bus stand.",
+      "summary_text": "- Chief Minister Vijay inaugurates Pudukottai new bus stand.\n- DA for Tamil Nadu government employees increases from 60% to 63%\n- CM Vijay orders suspension of top official, transfer of prison staff after Tamil Nadu jailbreak\n- Condemnation of the government which is playing with the lives of poor and poor people : EPS",
       "parties": [
         "AIADMK",
         "AMMK",
@@ -142,11 +129,11 @@
       "edition_type": "morning",
       "is_test_sample": false,
       "status": "published_delayed",
-      "published_at_ist": "2026-11-01T18:01:15.128297+05:30",
+      "published_at_ist": "2026-11-01T19:28:11.586413+05:30",
       "coverage_window": "2026-10-30T18:00:00+05:30 to 2026-10-31T06:00:00+05:30",
       "reading_time_minutes": 20,
-      "headline": "Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh",
-      "summary_text": "- Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh\n- Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection\n- Cooperative supermarkets to sell packets with 10 essential commodities for ₹200\n- Madras High Court issues notice on plea to investigate CJP's Saurav Das, block his X and Instagram accounts",
+      "headline": "Increase in age limit for direct appointment to government jobs - Chief Minister Vijay",
+      "summary_text": "- Increase in age limit for direct appointment to government jobs - Chief Minister Vijay\n- Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh\n- Seeman hints at accepting the support of DMK and AIADMK in Ambasamudram byelection\n- Cooperative supermarkets to sell packets with 10 essential commodities for ₹200",
       "parties": [
         "AIADMK",
         "DMK",

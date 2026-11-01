@@ -6,13 +6,13 @@
   "is_test_sample": false,
   "status": "published_delayed",
   "scheduled_time_ist": "2026-10-31T06:00:00+05:30",
-  "generated_at_ist": "2026-11-01T18:01:15.123308+05:30",
-  "published_at_ist": "2026-11-01T18:01:15.128297+05:30",
+  "generated_at_ist": "2026-11-01T19:28:11.577967+05:30",
+  "published_at_ist": "2026-11-01T19:28:11.586413+05:30",
   "coverage_start_ist": "2026-10-30T18:00:00+05:30",
   "coverage_end_ist": "2026-10-31T06:00:00+05:30",
   "reading_time_minutes": 20,
-  "word_count": 3068,
-  "headline": "Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh",
+  "word_count": 3248,
+  "headline": "Increase in age limit for direct appointment to government jobs - Chief Minister Vijay",
   "parties": [
     "AIADMK",
     "DMK",
@@ -42,6 +42,45 @@
   "sections": {
     "big_picture": "",
     "top_developments": [
+      {
+        "headline": "Increase in age limit for direct appointment to government jobs - Chief Minister Vijay",
+        "verification_badge": "Confirmed by Primary Official & Independent Sources",
+        "who_is_involved": "TVK",
+        "summary": "The upper age limit for direct appointment to government jobs through TNPSC is raised by 5 years. Chief Minister Vijay orders to accept the request of competitive candidates. The age limit for general category candidates appearing for Group 1 examination is raised from 32 to 37. Age limit for reservation increased from 37 to 42. There is no upper age limit for higher educational qualification category candidates appearing for Group 4 examination. 5 years promotion for general category and reservation category without higher educational qualification.",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "Increase in age limit for direct appointment to government jobs - Chief Minister Vijay",
+            "publisher": "Polimer News",
+            "language": "en",
+            "published_date": "2026-10-30",
+            "published_at_ist": "2026-10-30T18:13:41+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://www.polimernews.com/tamilnadunews/cm-vijay-raises-upper-age-limit-for-direct-government-recruitment-12768896",
+            "snippet": "The upper age limit for direct appointment to government jobs through TNPSC is raised by 5 years. Chief Minister Vijay orders to accept the request of competitive candidates. The age limit for general category candidates appearing for Group 1 examination is raised from 32 to 37. Age limit for reservation increased from 37 to 42. There is no upper age limit for higher educational qualification category candidates appearing for Group 4 examination. 5 years promotion for general category and reservation category without higher educational qualification."
+          },
+          {
+            "title": "Increase in Government Recruitment Age Limit by 5 Years:\nChief Minister Vijay's announcement",
+            "publisher": "DinaMani",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T01:56:00+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdldKWkctc0RsSVM2bTFPRHpDQ0FjVElLdWlDQ0pXLUxxOFotcWdLcU1wNjNXYVduYUd5NEZ1ZkNrRWNVTTh0TmlBYWhOa0tGTzY1Qk5JN2YwbTVhMXU2Uk9nTmhtUVVtbnRWTDRQdy1BNFdFdXNTNlFGYlh4OUMtVWVZbEQyVnNmR1ViZkowaTVfUjBVamxkeGVVTl9mZ2dYNlRWQlN6WklWSWhFMjlWUGEwNFp1Mi15STVHNDdHb3LSAc4BQVVfeXFMT1hnTkdWYzlKVWRQSnk3d05CdEozZ1lhMlp2bGR6OF9EQUtMMWhBaDVIck1MQ3FvWkkyNk5YeWtBS3Z4SHNUbTN2aUxmblRESllPZ0dfNGdaSFA2WGF5MlZrU3JGYXB6UGRnQ3hTak5GSzFONkN2ZmhpUWNhOVREVWpuYnd5SVhFZ3MtbU5DclVQb3VYWkJWb0NJRDdqc25XZlpvSGoyRElRWDkwRG9yZEtkcERvY25lYUlQQ280c0kzXzFYaGFMT2UtdzhOTWc?oc=5",
+            "snippet": "Increase in Government Recruitment Age Limit by 5 Years:\nChief Minister Vijay's announcement"
+          },
+          {
+            "title": "Chief Minister Vijay respects Pasumbon Devar",
+            "publisher": "DinaMani",
+            "language": "en",
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T02:00:00+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNWk9Za2lXVGRja0xnZHhWazBFMTJvcjhZYUVCUWJZTmNQX2doNm1jYjhKa0YxS3J2bkl0RXAzYzdJSW53cjJmdWl2alN4dHF3dURRQUx5akVEVHV1UjlvYTd2aGo3NXZLMEt0YVZjNzJScEZzeUNNLVVub0Q2NUJmMXNPd3VDdnpYd2pYa3RUaXpFMXJDOUhoeENNRFJRVmo1QWRzbWdFNVNOaG5EQTFNdFBmcE1NVGZOalF0NTRfMjlnRWEtRmhOQ1JB0gHXAUFVX3lxTE4zQjNwa2pBSGd4amFuZGM1dkxYY05Mb0JSYU51WGRGZFFHNjJxbDVwcFNraUtvX1hNNGswaE1NdXJMQWRHOEpoRHhJQ0d5MEdiMk9NeDlaUWs2bUlQOUdyd2NsVnV1TWN4bjIxWjVGRzdlYTVXQ2JMREdOTFNTZWxFUmhLMTFQSV96anBwMFN4REJzRjktS3hJSnZ6ZW9lcFBDd3BfSldDN3VOckJVT0RpSkNzVnpPX2dpblNDM2VXTVpycXhvemhyQ3VnQVN5cWhKUi1GSWQ4?oc=5",
+            "snippet": "Chief Minister Vijay respects Pasumbon Devar"
+          }
+        ]
+      },
       {
         "headline": "Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh",
         "verification_badge": "Multi-Source Verified",
@@ -120,80 +159,41 @@
         ]
       },
       {
-        "headline": "Madras High Court issues notice on plea to investigate CJP's Saurav Das, block his X and Instagram accounts",
+        "headline": "Supreme Court directs Chidambaram Nataraja temple management committee to ensure that all devotees have darshan by standing on Kanakasabha",
         "verification_badge": "Confirmed by Primary Official & Independent Sources",
         "who_is_involved": "",
-        "summary": "Madras High Court issues notice to Saurav Das, Centre in citizenship plea. Madras High Court Issues Notice to CJP Coordinator Over Citizenship.",
+        "summary": "Podhu dikshitars have converted Chidambaram temple premises into a food court: Madras high court. Madras High Court appoints Board of Management to run Sabanayagar Temple in Chidambaram.",
         "why_it_matters": "",
         "sources": [
           {
-            "title": "Madras High Court issues notice to Saurav Das, Centre in citizenship plea",
-            "publisher": "The News Mill",
+            "title": "Supreme Court directs Chidambaram Nataraja temple management committee to ensure that all devotees have darshan by standing on Kanakasabha",
+            "publisher": "DinaMani",
             "language": "en",
-            "published_date": "2026-10-30",
-            "published_at_ist": "2026-10-30T23:12:08+05:30",
-            "reliability_tier": "primary_official",
-            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUW1XckF3aXNuU25aTGhzZXNrNXd1MmVhRXlweVl0c2FpN01ETkxhSkJ2TEt0b0Q2VFgwNUowZVpkSXVjNUc0eU9ZTUdIMkxiN3hucnpMVkpkeUlJQjV5Y0pBbWo2RGs3ems1eFlHdWIzZmpaVTU1UThMeU1BOVhuWGpxbklKVzdKbTZfaFVtbVR0OThJTzN6a3JMZVBrSFFXTDRXa284anRkNnJDbmo5Z01TbTMwWVk?oc=5",
-            "snippet": "Madras High Court issues notice to Saurav Das, Centre in citizenship plea"
+            "published_date": "2026-10-31",
+            "published_at_ist": "2026-10-31T01:01:00+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxPR0NjbGxIQnFLMXhJNHU3dEg3d3Vhd3g4NE5zaTk0Q0Z5U0toSHdRaHBCUnB6dVR1TUh5RE1MNHhlQkN5TkJ5ZXEydENyRmxPUWdsenpEZVdKZGF4Sm5pN1RoY0M2NnA0MVRXS2hwZmVxMGh1WC1qVldfU2ZxZWlYWGttLTFqQmR2Y2VyZExHdVNybGlJTzlCYmNtd2Z0TWhWYXVMLUF5X29id2czTUhDakFKcWRwRjNJdFJFa0YxaG4zX0E1bUxwZmI5dFlKZEp4WlliOGNUN1lBRzduVU1ZZ1U1QVF2ZC16dmJDamRPM2gwWWdpLU52NXVkLVY4WFNhbTRvUGN0UGYtNHA0V2pGVEdlbWxiZk1pU0pQUmMzNnl6aUpaQ1NFSFZiRHhmWl9FczZwWHBxN3Z4WG1rTkHSAcsCQVVfeXFMUEdkM2VxeGVpY2hHWHJJZk9COTI1ZDNjS2xwLUotMGVkNUZWdU5RNGZsdXo1U0tUSDlRcjFpcThKcU1NVHpxaGkyMkhhQ3MyQ0djdUQ5MkluZE9vcjR1SDVNcFdfX3FmVGx6Y1NFWGl4RmR0bE5PUXF4R0tzUDBPZWREaF9JR1B6YUJ5a0FPRmhDd0VsNTZIajZaZnRyLW1lRWtjZlZtcFB0ZENYV2V5QWxJMTVlTk0tRHRPZy1lYkJCb1I5TFZiZDl1NTNlYVlsOEJ1V3FhZzYwMWFlQTBlY25VRnEzS3pfVTlsRUc3ZWFwRVFLV2Q2UVBqaTZwRDlSYW5XUld5U1pLOUVPRmw5QmREVmFzdkQzODh2RkNuRndRa0RtREJJOGg4SHZfOU1QQV8zYk1XdHlGdGRsMnhpRXp3bmVWWFp2VWVITQ?oc=5",
+            "snippet": "Supreme Court directs Chidambaram Nataraja temple management committee to ensure that all devotees have darshan by standing on Kanakasabha"
           },
           {
-            "title": "Madras High Court issues notice on plea to investigate CJP's Saurav Das, block his X and Instagram accounts",
-            "publisher": "Livemint",
+            "title": "Podhu dikshitars have converted Chidambaram temple premises into a food court: Madras high court",
+            "publisher": "The Times of India",
             "language": "en",
             "published_date": "2026-10-30",
-            "published_at_ist": "2026-10-30T18:56:54+05:30",
+            "published_at_ist": "2026-10-30T19:52:00+05:30",
             "reliability_tier": "primary_official",
-            "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNNmktTGJqVUk0SmxHTExneDJWWWphWjFSb3hJbm1LcWpwZEFVdGR0dXRJY1JJWk44M3dGWFA0N1lDT1VtMXFZTkxzdlpPRGhhSFUwR1J4c3hGanRJQ0hyOXgtM1F3eloxTk1BdGJYWlRZZF9jUm5RZkN0MUdzSVVReldJY09yb1MwS3RQMWRLYzRCRW9WbDk2NjBuNFFSSHR6Nkx4dlFLZFk3dURXaUI1MzJZUjA1bDg4VDFiR21UVDNhUkhZZXh0ckhNMHdSbW5mS0t3VFQzc2ttMzdQX2J2RzdVY1ptNnlNUk1vaHZYcEU4M3fSAfgBQVVfeXFMTllWeWZFUldHVy1KMkpKQll0WGlxR2dJZDhSQk5KN1R2Q0cycG0tTFA1dTlmUVZyaDU0aUpubmJWczc0bnpzRGxWREhQZ2w0T1RycVRUMzUxdm85ZzBoLUhWeHhleklyUnVHaWFuUjI5cEtlT2F0UzRKOGE5YjZwdTFBSl9zVXhjaHp5VmQtT2tVVG1WNkhacy1zUF8zaEdVTzBBRl9NNEhNbEM2ZlJEclRZT044dDFzdlFrSmZRTlVKS3dnVHRmVVlPTk1RUkFDc3hLZmQ1MHdaY0tjaXBYczduRTM2ZmhwcXRldThMb2I0VHZNWlBjbHI?oc=5",
-            "snippet": "Madras High Court issues notice on plea to investigate CJP's Saurav Das, block his X and Instagram accounts"
+            "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNaU5LWG9hQjZGbkhmRUY3Q3RVSTV4YmJ3WWJxV2FSTGtLcTZOSzZHMERVLWlGTnFkOW5rQTR2RmY5U2NZTElxZnJGYTZxNzJMYzZMd2NxTjdOMlhyeGc2RFhfRUZ0MHltb3YyNG9CX1YwOGtzaVFNYXJsQTc4MmRmZlpnbGJCYzZJWFRIX05ibFhQN3U2Z1ZtZzJRd01wVURKVkZpdU9lNjZBMUFVVlF2VWlIanQxbU91UGRtd2wxWWJxME1NZkpqQnV4RzdEdWROdDEwN3VYSVBwbFF5VTFXS09GbnkyZ0FadFRmd2FDWnI0YnhVVUpUaEYzVEhkak3SAYQCQVVfeXFMTnpMTlpwTHJoRzhrdXp0cUIyMW1PTk9UVmZBdDJKNGFhT1BUMHlNRmdEUXdQRll2NmhzQXRjYTVmZk9ON1pCczd5OE1pQ1pVbXBWYzNjX0lWanU4MURKM29QQko4ajNVZmRYVGlrb2thQ3VBX1ZZd3NyS00zVHM1dE4tOFQyeHc3MS14R0JrQncydWNXYmtNOEFMRlN0akd2ZzBDbUpFSmI5dkRWbWhpUXZCSmZSS1FIanVTTFVObmRNdGJIYi1mS2piSW9scGwyNlpIZGFCWU9uR2dUVmZfQW1LMTVLMEk2LVRaRlBWTnltWkEzSDZ0ZU0wcXEtTk4tME51eUU?oc=5",
+            "snippet": "Podhu dikshitars have converted Chidambaram temple premises into a food court: Madras high court"
           },
           {
-            "title": "Madras High Court Issues Notice to CJP Coordinator Over Citizenship",
-            "publisher": "Asianet Newsable",
+            "title": "Madras High Court appoints Board of Management to run Sabanayagar Temple in Chidambaram",
+            "publisher": "Deccan Herald",
             "language": "en",
             "published_date": "2026-10-30",
-            "published_at_ist": "2026-10-30T23:10:38+05:30",
+            "published_at_ist": "2026-10-30T20:37:03+05:30",
             "reliability_tier": "primary_official",
-            "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPM25OeWlpcDItUGxkc0FCWXYtd0tZTUFuZWExeXdzZzl2djkxazkyUzlmYlV4ZzlXOGVDOTl3bkNSbGxhVWdVTVFYNW1xOWJOaE1WLWdTR3dDS2NQd0tXdlJrdXFlVlpfNk1OYW5RZk43TUZnNlFUUGZ5aEZiU091cnB2SUY5ZkVtN2VfWF8wTXJLZ3JFdm1ZQUlZWDl5UmRoZ2k3cTROWjVTZnUtcHFla19wM2NJb3lEMVFXMUxlSnNaT2VC0gHKAUFVX3lxTE1WUVlHVzBYVDhPUDZLOXNWT2FZZ0NKaVVWbUtacEhpUUwtYV9FTGZNdEFfRGxIRXdxc2tfZjVJb0ZRYm1EVjI0V2NMczlpYmFyeUJVM3UzbmpXcnhOc2ZDZjVyVUt4R2t0bE5uZjhMWlVUTHhBY1Radm16Nlh6UTR1dXZMTUxzamw5WXFiRnFLMURsVjNwMTBORXJxTHFxdzE3X0h5QVh5a2hzTEI2ZEhXT3UwTXk2X1E1SFUxOEV5S3VVSHNaOHZBNnc?oc=5",
-            "snippet": "Madras High Court Issues Notice to CJP Coordinator Over Citizenship"
-          }
-        ]
-      },
-      {
-        "headline": "Madras High Court bars protests targeting sitting judges with personal attacks",
-        "verification_badge": "Confirmed by Primary Official & Independent Sources",
-        "who_is_involved": "",
-        "summary": "Madras High Court Bars Meetings Attacking Judges. Targeting Radical Protests, Madras High Court Disallows Gatherings Targeting Judges.",
-        "why_it_matters": "",
-        "sources": [
-          {
-            "title": "Madras High Court Bars Meetings Attacking Judges",
-            "publisher": "Urban Acres",
-            "language": "en",
-            "published_date": "2026-10-30",
-            "published_at_ist": "2026-10-30T23:17:57+05:30",
-            "reliability_tier": "primary_official",
-            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPTUo0Q2tDRG9Pb1pxSXBjS1BNOXdxLTVPVUY1SnllM0kwNTlOc1JQS2NFTWVYdjYzNkFOb1VaWDFTTEtKalE1RWZoLTNiamFqclJLeEJLdF9MdHdiRnF2V2thUE9pT1JheU5DbjBYSHhDc3RnMDFOQjZPWnd3TDgydkVJQ3pacUVhb2NxaA?oc=5",
-            "snippet": "Madras High Court Bars Meetings Attacking Judges"
-          },
-          {
-            "title": "Madras High Court bars protests targeting sitting judges with personal attacks",
-            "publisher": "Madhyamam",
-            "language": "en",
-            "published_date": "2026-10-30",
-            "published_at_ist": "2026-10-30T21:41:47+05:30",
-            "reliability_tier": "primary_official",
-            "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNm9JUDNac240a0pfQlotNm5NaHh1cFZCTUd2TEd3a21Pb2VfSElJWURTTzFBalRzSG9KTEowcEl1ZmZ4V0kxQ1IyMmFfbWlKQnkwN09zdmc2eVJhSE50LUtpVFBqVllQaGtfNzhteXJqYVpORzNOeWFwSnB5QWJuaGxrWDdNOWNIcWZ2d1lMLVU2SnBoZHFFOGcwTFFsTnY4cndEWUZmZjNOWGRLQXJndWNiMFEyUEZuQXl5TdIBwgFBVV95cUxQd01WdVBsVm1mVFg4dnJSNHlwSVo3NlZ3cDAwOXAtT0ZRVTJJMm53Y3pobjN3cHFoWU5hdUY1YkZ6OHk4MGF4R21YUE56ZDdBT1lzM0ZRdlp4UnRNREdkNEtSY3VUQlZPM29mSDlMSVdRWUJkNlBSR3dsWmJBWTB2dkhUYTFpU084X2VmM1ZTdGhwOXBOX3BPdEROQllyQVJqaks5STVHbGVDZWJQNXdSY1k4QXJCeW9fMXpwajdDckJvdw?oc=5",
-            "snippet": "Madras High Court bars protests targeting sitting judges with personal attacks"
-          },
-          {
-            "title": "Targeting Radical Protests, Madras High Court Disallows Gatherings Targeting Judges",
-            "publisher": "Times Now",
-            "language": "en",
-            "published_date": "2026-10-30",
-            "published_at_ist": "2026-10-30T18:58:36+05:30",
-            "reliability_tier": "primary_official",
-            "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNWTlWUzduSWNjaHZWM01pTHdCTExJUC1OaGhSNDRqeDU5ODNvTFdtb0ktQmlSTkJaX2ExNXYyUG1rR3lhVncwQ0syWVJTTFh4V1YtQXlpZUJCVWZXM2VIWmY2VkxNNUVIajRBdDJUbWpTU3gtcXNxa21ieVU1QnM1OEhPS09PdmtXS1hpQ1VhWTNPTmR2SVJhZEJLZkV3STZmYXpQcmpvUC15bmRrNVNSUmxYeFQyaFVZZ3J3MHptc3cwbVRwYmh4RFVDOHhTeGxNOTVR0gHYAUFVX3lxTFBYcHdwQTZWNXdaYXVEVC0ta1Y0bmhXZnk0RDJPNE52NWdybGZDWjFpWnFkZGgtMXlxcGtONE5CTEV5WmZXd2N4ZUJJN292cldnOWRvTUNWYWs5U05kUDJUR0tVM3VhUGJ0UVZMNGZhTnpFeXluT0hONDVhWFhCUDJlVEExY3lHMjJZREk0WUlMS2lPbUJMQkxJSHFuWVY5WlRnUUFxOWlYaVZCLXFfeEJxaktyWEQxM0hIVjlRSVI4d05uVS15Wko4QlFPN0FCYXRlT3FsUU5ILQ?oc=5",
-            "snippet": "Targeting Radical Protests, Madras High Court Disallows Gatherings Targeting Judges"
+            "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOemxUTlB2SlhXczVZcDFHTGlVNmgtWFdORXJQMWtlV0lZREQ4b0F3U2pPR3BVdnFlSmgzeVNXWHVSN3NZLUw1dlU2cGpXNmtuZ0JOT05jY1g1YUlFb1Zsd0NGZi1WSzg1dXRKWUhxaVVxUm50WmZmZnpOSnRJZkpUckVKclBpZHVqb2FOX29HSFNnbkF1QjFEbG0xdm1HR2FqNUFmR0VwOFJMSC03Y280b2x1QVVDMlp4ZWxjNGNpUnZ6RmJ0?oc=5",
+            "snippet": "Madras High Court appoints Board of Management to run Sabanayagar Temple in Chidambaram"
           }
         ]
       },
@@ -263,6 +263,20 @@
     "what_to_watch_next": "",
     "all_sources": [
       {
+        "title": "Increase in age limit for direct appointment to government jobs - Chief Minister Vijay",
+        "publisher": "Polimer News",
+        "language": "en",
+        "published_date": "2026-10-30",
+        "url": "https://www.polimernews.com/tamilnadunews/cm-vijay-raises-upper-age-limit-for-direct-government-recruitment-12768896"
+      },
+      {
+        "title": "Increase in Government Recruitment Age Limit by 5 Years:\nChief Minister Vijay's announcement",
+        "publisher": "DinaMani",
+        "language": "en",
+        "published_date": "2026-10-31",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdldKWkctc0RsSVM2bTFPRHpDQ0FjVElLdWlDQ0pXLUxxOFotcWdLcU1wNjNXYVduYUd5NEZ1ZkNrRWNVTTh0TmlBYWhOa0tGTzY1Qk5JN2YwbTVhMXU2Uk9nTmhtUVVtbnRWTDRQdy1BNFdFdXNTNlFGYlh4OUMtVWVZbEQyVnNmR1ViZkowaTVfUjBVamxkeGVVTl9mZ2dYNlRWQlN6WklWSWhFMjlWUGEwNFp1Mi15STVHNDdHb3LSAc4BQVVfeXFMT1hnTkdWYzlKVWRQSnk3d05CdEozZ1lhMlp2bGR6OF9EQUtMMWhBaDVIck1MQ3FvWkkyNk5YeWtBS3Z4SHNUbTN2aUxmblRESllPZ0dfNGdaSFA2WGF5MlZrU3JGYXB6UGRnQ3hTak5GSzFONkN2ZmhpUWNhOVREVWpuYnd5SVhFZ3MtbU5DclVQb3VYWkJWb0NJRDdqc25XZlpvSGoyRElRWDkwRG9yZEtkcERvY25lYUlQQ280c0kzXzFYaGFMT2UtdzhOTWc?oc=5"
+      },
+      {
         "title": "Special court reserves orders on Central Crime Branch’s petition for custody of Anbil Mahesh",
         "publisher": "The Hindu",
         "language": "en",
@@ -291,32 +305,18 @@
         "url": "https://www.thehindu.com/news/cities/chennai/cooperative-supermarkets-to-sell-packets-with-10-essential-commodities-for-200/article71645910.ece"
       },
       {
-        "title": "Madras High Court issues notice to Saurav Das, Centre in citizenship plea",
-        "publisher": "The News Mill",
+        "title": "Supreme Court directs Chidambaram Nataraja temple management committee to ensure that all devotees have darshan by standing on Kanakasabha",
+        "publisher": "DinaMani",
         "language": "en",
-        "published_date": "2026-10-30",
-        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUW1XckF3aXNuU25aTGhzZXNrNXd1MmVhRXlweVl0c2FpN01ETkxhSkJ2TEt0b0Q2VFgwNUowZVpkSXVjNUc0eU9ZTUdIMkxiN3hucnpMVkpkeUlJQjV5Y0pBbWo2RGs3ems1eFlHdWIzZmpaVTU1UThMeU1BOVhuWGpxbklKVzdKbTZfaFVtbVR0OThJTzN6a3JMZVBrSFFXTDRXa284anRkNnJDbmo5Z01TbTMwWVk?oc=5"
+        "published_date": "2026-10-31",
+        "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxPR0NjbGxIQnFLMXhJNHU3dEg3d3Vhd3g4NE5zaTk0Q0Z5U0toSHdRaHBCUnB6dVR1TUh5RE1MNHhlQkN5TkJ5ZXEydENyRmxPUWdsenpEZVdKZGF4Sm5pN1RoY0M2NnA0MVRXS2hwZmVxMGh1WC1qVldfU2ZxZWlYWGttLTFqQmR2Y2VyZExHdVNybGlJTzlCYmNtd2Z0TWhWYXVMLUF5X29id2czTUhDakFKcWRwRjNJdFJFa0YxaG4zX0E1bUxwZmI5dFlKZEp4WlliOGNUN1lBRzduVU1ZZ1U1QVF2ZC16dmJDamRPM2gwWWdpLU52NXVkLVY4WFNhbTRvUGN0UGYtNHA0V2pGVEdlbWxiZk1pU0pQUmMzNnl6aUpaQ1NFSFZiRHhmWl9FczZwWHBxN3Z4WG1rTkHSAcsCQVVfeXFMUEdkM2VxeGVpY2hHWHJJZk9COTI1ZDNjS2xwLUotMGVkNUZWdU5RNGZsdXo1U0tUSDlRcjFpcThKcU1NVHpxaGkyMkhhQ3MyQ0djdUQ5MkluZE9vcjR1SDVNcFdfX3FmVGx6Y1NFWGl4RmR0bE5PUXF4R0tzUDBPZWREaF9JR1B6YUJ5a0FPRmhDd0VsNTZIajZaZnRyLW1lRWtjZlZtcFB0ZENYV2V5QWxJMTVlTk0tRHRPZy1lYkJCb1I5TFZiZDl1NTNlYVlsOEJ1V3FhZzYwMWFlQTBlY25VRnEzS3pfVTlsRUc3ZWFwRVFLV2Q2UVBqaTZwRDlSYW5XUld5U1pLOUVPRmw5QmREVmFzdkQzODh2RkNuRndRa0RtREJJOGg4SHZfOU1QQV8zYk1XdHlGdGRsMnhpRXp3bmVWWFp2VWVITQ?oc=5"
       },
       {
-        "title": "Madras High Court issues notice on plea to investigate CJP's Saurav Das, block his X and Instagram accounts",
-        "publisher": "Livemint",
+        "title": "Podhu dikshitars have converted Chidambaram temple premises into a food court: Madras high court",
+        "publisher": "The Times of India",
         "language": "en",
         "published_date": "2026-10-30",
-        "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNNmktTGJqVUk0SmxHTExneDJWWWphWjFSb3hJbm1LcWpwZEFVdGR0dXRJY1JJWk44M3dGWFA0N1lDT1VtMXFZTkxzdlpPRGhhSFUwR1J4c3hGanRJQ0hyOXgtM1F3eloxTk1BdGJYWlRZZF9jUm5RZkN0MUdzSVVReldJY09yb1MwS3RQMWRLYzRCRW9WbDk2NjBuNFFSSHR6Nkx4dlFLZFk3dURXaUI1MzJZUjA1bDg4VDFiR21UVDNhUkhZZXh0ckhNMHdSbW5mS0t3VFQzc2ttMzdQX2J2RzdVY1ptNnlNUk1vaHZYcEU4M3fSAfgBQVVfeXFMTllWeWZFUldHVy1KMkpKQll0WGlxR2dJZDhSQk5KN1R2Q0cycG0tTFA1dTlmUVZyaDU0aUpubmJWczc0bnpzRGxWREhQZ2w0T1RycVRUMzUxdm85ZzBoLUhWeHhleklyUnVHaWFuUjI5cEtlT2F0UzRKOGE5YjZwdTFBSl9zVXhjaHp5VmQtT2tVVG1WNkhacy1zUF8zaEdVTzBBRl9NNEhNbEM2ZlJEclRZT044dDFzdlFrSmZRTlVKS3dnVHRmVVlPTk1RUkFDc3hLZmQ1MHdaY0tjaXBYczduRTM2ZmhwcXRldThMb2I0VHZNWlBjbHI?oc=5"
-      },
-      {
-        "title": "Madras High Court Bars Meetings Attacking Judges",
-        "publisher": "Urban Acres",
-        "language": "en",
-        "published_date": "2026-10-30",
-        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPTUo0Q2tDRG9Pb1pxSXBjS1BNOXdxLTVPVUY1SnllM0kwNTlOc1JQS2NFTWVYdjYzNkFOb1VaWDFTTEtKalE1RWZoLTNiamFqclJLeEJLdF9MdHdiRnF2V2thUE9pT1JheU5DbjBYSHhDc3RnMDFOQjZPWnd3TDgydkVJQ3pacUVhb2NxaA?oc=5"
-      },
-      {
-        "title": "Madras High Court bars protests targeting sitting judges with personal attacks",
-        "publisher": "Madhyamam",
-        "language": "en",
-        "published_date": "2026-10-30",
-        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNm9JUDNac240a0pfQlotNm5NaHh1cFZCTUd2TEd3a21Pb2VfSElJWURTTzFBalRzSG9KTEowcEl1ZmZ4V0kxQ1IyMmFfbWlKQnkwN09zdmc2eVJhSE50LUtpVFBqVllQaGtfNzhteXJqYVpORzNOeWFwSnB5QWJuaGxrWDdNOWNIcWZ2d1lMLVU2SnBoZHFFOGcwTFFsTnY4cndEWUZmZjNOWGRLQXJndWNiMFEyUEZuQXl5TdIBwgFBVV95cUxQd01WdVBsVm1mVFg4dnJSNHlwSVo3NlZ3cDAwOXAtT0ZRVTJJMm53Y3pobjN3cHFoWU5hdUY1YkZ6OHk4MGF4R21YUE56ZDdBT1lzM0ZRdlp4UnRNREdkNEtSY3VUQlZPM29mSDlMSVdRWUJkNlBSR3dsWmJBWTB2dkhUYTFpU084X2VmM1ZTdGhwOXBOX3BPdEROQllyQVJqaks5STVHbGVDZWJQNXdSY1k4QXJCeW9fMXpwajdDckJvdw?oc=5"
+        "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNaU5LWG9hQjZGbkhmRUY3Q3RVSTV4YmJ3WWJxV2FSTGtLcTZOSzZHMERVLWlGTnFkOW5rQTR2RmY5U2NZTElxZnJGYTZxNzJMYzZMd2NxTjdOMlhyeGc2RFhfRUZ0MHltb3YyNG9CX1YwOGtzaVFNYXJsQTc4MmRmZlpnbGJCYzZJWFRIX05ibFhQN3U2Z1ZtZzJRd01wVURKVkZpdU9lNjZBMUFVVlF2VWlIanQxbU91UGRtd2wxWWJxME1NZkpqQnV4RzdEdWROdDEwN3VYSVBwbFF5VTFXS09GbnkyZ0FadFRmd2FDWnI0YnhVVUpUaEYzVEhkak3SAYQCQVVfeXFMTnpMTlpwTHJoRzhrdXp0cUIyMW1PTk9UVmZBdDJKNGFhT1BUMHlNRmdEUXdQRll2NmhzQXRjYTVmZk9ON1pCczd5OE1pQ1pVbXBWYzNjX0lWanU4MURKM29QQko4ajNVZmRYVGlrb2thQ3VBX1ZZd3NyS00zVHM1dE4tOFQyeHc3MS14R0JrQncydWNXYmtNOEFMRlN0akd2ZzBDbUpFSmI5dkRWbWhpUXZCSmZSS1FIanVTTFVObmRNdGJIYi1mS2piSW9scGwyNlpIZGFCWU9uR2dUVmZfQW1LMTVLMEk2LVRaRlBWTnltWkEzSDZ0ZU0wcXEtTk4tME51eUU?oc=5"
       },
       {
         "title": "Victim of crime should never become victim of process: Madras High Court Chief Justice",
