@@ -1,7 +1,38 @@
 {
-  "total_editions": 3,
-  "last_updated_ist": "2026-11-01T16:41:58.420900+05:30",
+  "total_editions": 4,
+  "last_updated_ist": "2026-11-01T17:03:57.213171+05:30",
   "editions": [
+    {
+      "edition_id": "2026-11-01-evening",
+      "title": "Tamil Nadu Politics – Evening Brief – 1 November 2026",
+      "date": "2026-11-01",
+      "edition_type": "evening",
+      "is_test_sample": false,
+      "status": "published",
+      "published_at_ist": "2026-11-01T17:03:57.213171+05:30",
+      "coverage_window": "2026-11-01T06:00:00+05:30 to 2026-11-01T18:00:00+05:30",
+      "reading_time_minutes": 17,
+      "headline": "Postponement of college exam for CM’s visit in Pudukottai triggers row",
+      "summary_text": "- Postponement of college exam for CM’s visit in Pudukottai triggers row\n- Tamil Nadu to set up 26 POCSO Act courts and four NDPS courts\n- How significant is the TVK-led regime’s move to hold Social Justice Survey? Explained\n- 1,172 candidates receive offer letters at job fair held in Villupuram",
+      "parties": [
+        "TVK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Centre–State Relations",
+        "Education & NEET",
+        "Government & Administration",
+        "Public Protests & Labour"
+      ],
+      "districts": [
+        "Chennai",
+        "Cuddalore",
+        "Ramanathapuram",
+        "Viluppuram"
+      ],
+      "url": "edition.html?id=2026-11-01-evening",
+      "json_path": "archive/2026/11/2026-11-01-evening.json"
+    },
     {
       "edition_id": "2026-11-01-morning",
       "title": "Tamil Nadu Politics – Morning Brief – 1 November 2026",
