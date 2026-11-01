@@ -6,39 +6,80 @@
   "is_test_sample": false,
   "status": "published_delayed",
   "scheduled_time_ist": "2026-11-01T06:00:00+05:30",
-  "generated_at_ist": "2026-11-01T11:57:51.144938+05:30",
-  "published_at_ist": "2026-11-01T11:57:51.147091+05:30",
+  "generated_at_ist": "2026-11-01T16:41:58.417825+05:30",
+  "published_at_ist": "2026-11-01T16:41:58.420900+05:30",
   "coverage_start_ist": "2026-10-31T18:00:00+05:30",
   "coverage_end_ist": "2026-11-01T06:00:00+05:30",
-  "reading_time_minutes": 12,
-  "word_count": 1746,
-  "headline": "‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami",
+  "reading_time_minutes": 13,
+  "word_count": 1977,
+  "headline": "CM Vijay urges protection of Tamil language, heritage in Tamil Nadu Day message",
   "parties": [
     "AIADMK",
     "AMMK",
+    "BJP",
     "DMK",
-    "TVK"
+    "TVK",
+    "VCK"
   ],
   "topics": [
     "Agriculture & Water",
     "Assembly, Courts & Policy",
     "Centre–State Relations",
-    "Education & NEET",
     "Elections",
-    "Government & Administration"
+    "Government & Administration",
+    "Public Protests & Labour"
   ],
   "districts": [
     "Chengalpattu",
-    "Chennai",
     "Coimbatore",
     "Cuddalore",
     "Salem",
     "Theni",
+    "Thoothukudi",
     "Vellore"
   ],
   "sections": {
-    "big_picture": "- **AIADMK, TVK — ‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami:** Addressing a meeting in Maraimalai Nagar amid the 55th formation day celebrations of the AIADMK, the leader says even schemes launched by it, such as the marriage assistance scheme for women, were originally implemented during his party’s regime CHENGALPET: AIADMK general secretary and former chief minister Edappadi K Palaniswami (EPS) on Saturday launched a blistering attack on the TVK govt,.\n- **AIADMK, TVK — Palaniswami slams TVK-led government over convict’s escape in Coimbatore:** Palaniswami blasts TVK-led government over Coimbatore convict escape; criticizes law-and-order and power issues in Tamil Nadu.\n- **DMK, TVK — Opposition slams TVK govt for repeated prison escapes across Tamil Nadu:** Prisoners are deciding whether to escape from Palayamkottai or Salem by playing ‘inky pinky ponky’: Udhayanidhi.\n- **DMK, TVK — DMK women’s wing protests reflect public anger against TVK govt: Stalin:** ‘Statewide protests drew large numbers of women, including those not affiliated to any political party’.\n- **TVK — How significant is the TVK-led regime’s move to hold Social Justice Survey? Explained:** The feature of an ‘open column’, where respondents can state their caste during the second phase of the Census, to be carried out in most parts of the country during February next year, has forced many parties and other stakeholders to express concerns over the utility of the whole exercise.",
+    "big_picture": "- **TVK — CM Vijay urges protection of Tamil language, heritage in Tamil Nadu Day message:** Dailyhunt also reported on the development: \"LIVE: Tamil Nadu Day Celebration.\n- **AIADMK, TVK — ‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami:** Addressing a meeting in Maraimalai Nagar amid the 55th formation day celebrations of the AIADMK, the leader says even schemes launched by it, such as the marriage assistance scheme for women, were originally implemented during his party’s regime CHENGALPET: AIADMK general secretary and former chief minister Edappadi K Palaniswami (EPS) on Saturday launched a blistering attack on the TVK govt,.\n- **VCK — VCK functionary hacked to death in TN's Tuticorin:** The New Indian Express also reported on the development: \"VCK functionary hacked to death over flex banner issue in TN's Thoothukudi district.\".\n- **AIADMK — Standing together... Greetings Edappadi Palaniswami on Tamil Nadu Day!:** Hindu Tamil Thisai also reported on the development: \"Edappadi Palaniswami insists on fully reopening Amma Dispensaries.\" Hindu Tamil Thisai also reported on the development: \"'Tamil Nadu government is like a vehicle without brakes' - Palaniswami alleges.\".\n- **TVK — Nov. in Perundurai. 3-in Chief Minister Vijay road crossing?:** DinaMani also reported on the development: \"Chief Minister Vijay's plan to crawl the road in Pudukottai?.\" Hindu Tamil Thisai also reported on the development: \"Tamil Nadu Day - Leaders including Chief Minister Vijay congratulated.\".",
     "top_developments": [
+      {
+        "headline": "CM Vijay urges protection of Tamil language, heritage in Tamil Nadu Day message",
+        "verification_badge": "Multi-Source Verified",
+        "who_is_involved": "TVK",
+        "summary": "Dailyhunt also reported on the development: \"LIVE: Tamil Nadu Day Celebration.. Ministers Attend — CM Vijay.\" DinaMani also reported on the development: \"Let's pledge to uphold the state's pride: Chief Minister Vijay wishes on Tamil Nadu Day!.\"",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "CM Vijay urges protection of Tamil language, heritage in Tamil Nadu Day message",
+            "publisher": "DT Next",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T12:13:18+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOR1g2OTlRa3VJUnBwQ0s5aU5SNFFiSFFmWWwxRVVta0tBWWNsckt4S1JrZUM2V0stdUp3cGZ3RXZqNDZHVklhSzU3dVdfNHhkZWNocGlKNGU2TnFQeWJBOURlQ2I1b2JzdDkxMmVqZWNLb0pkMVRrb0pfamt6dHk0ZzlQcS1kWi1fSmNLOG5EcE5Pd2xCWFFJbHoxcVplb0N1bEs4UFhBYlMzYkR1RDlUclFFb9IBwAFBVV95cUxQcDBRWVdwQWhBdTI0aTRtcU8zSmVKSVZPa0EwdHFiRmVzNzB5LTFxUkR2X29lQmhBaHpSRWRJLVRFR04tSFAtWWFsLWJqQUIyUzF0VWlHVXRlWDluREw3dG5VM0ltN0h0ajNVbHBUd0dJYTQycVNuU1N6RlFIZC1sWDI3LXhrVDRiTmJjb2pjcW5jN3k4b0dSbDZDX05ZNlRUZmtQOEoyTTRCZTNUT1Zzd3ctXzZjUTRlc1p0eFFjR08?oc=5",
+            "snippet": ""
+          },
+          {
+            "title": "LIVE: Tamil Nadu Day Celebration.. Ministers Attend — CM Vijay",
+            "publisher": "Dailyhunt",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T14:10:43+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSDUyWUp5akxTb09rbXItR3gzcGhyYlIyT19NcFFOR3dGdmdsX3F2ci1uME9LSEVmS045YU9IbnptamFkRTBIU2JfTWtDLUUya2VjeUtCUFRyV3N0cXJ0bFJ2UFlmYV95LV85ZU4wTUZ2UDRZLWxBaHJXOWUyS2w3RzRVak12WWN1U1pN?oc=5",
+            "snippet": ""
+          },
+          {
+            "title": "Let's pledge to uphold the state's pride: Chief Minister Vijay wishes on Tamil Nadu Day!",
+            "publisher": "DinaMani",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T09:09:32+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPcC1JNmR0eUJoN1pMN185Y1h5YWpBdkZBRExaZGZJWGtObVprWnhGam13Wk91MkJ5SmZkOWdkZmJDYW85NGFkZjljVHNHeFhDbHIwSUt0X2tPRTRhT2dEVEhnekxNbDBLU01Mal96U2ItOW9xTzdHdFNKRXU0T0VOaHdDOWZ0eEtMTTUyY1FUREtXMXNoalBfcG5VcktBUDJMenEyVC1OdjhKZU9zb1RoVTJTZm1NY1BiSzFMTzd4VGIxeUh2MmtPNmxaeXNYTnVId0lYaTN4WXdVdw?oc=5",
+            "snippet": ""
+          }
+        ]
+      },
       {
         "headline": "‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami",
         "verification_badge": "Multi-Source Verified",
@@ -65,6 +106,113 @@
             "reliability_tier": "tier_1_editorial",
             "url": "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-cm-vijay-is-completely-out-of-touch-lacks-independent-decision-making-eps/articleshow/135408614.cms",
             "snippet": "CHENGALPET: AIADMK general secretary and former chief minister Edappadi K Palaniswami (EPS) on Saturday launched a blistering attack on the TVK govt,"
+          }
+        ]
+      },
+      {
+        "headline": "VCK functionary hacked to death in TN's Tuticorin",
+        "verification_badge": "Multi-Source Verified",
+        "who_is_involved": "VCK",
+        "summary": "The New Indian Express also reported on the development: \"VCK functionary hacked to death over flex banner issue in TN's Thoothukudi district.\"",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "VCK functionary hacked to death in TN's Tuticorin",
+            "publisher": "DT Next",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T15:47:52+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPamNVX2lUcGNXM3hDbG8zZkMtS2lmZS1NcGp4OFJ2ZkNaaldZcVhnZzh2ZXo2TmxVdVBpYU9ZekIxaUpGUEtqUjd2b1FNcEV4UU8tMDE5QnNXRTV6SGUteEZYdUZQR1dhMzl6cWVUSGlYZVpCTzRsQlJTZzROVThGdHV6NWpWaVA0YURVY2NB0gGbAUFVX3lxTFBBQm9HdzN2VENJZ29VdHNCU3NGc2JfWl9iZ3RMWW9VZnRPR3BJbGJfSm82NUVfekYwdkZnbzVEZmVuY2FXZkl5Uzl6TjJ0aTVidUxqcV94cEFaRTJhNXBrYnNQU09tRmFHcVJxSGNBRHRQWE1wVHpQUS02WDY4LU8yNG1vb3RyYS1uUzFhQmpPQ09DTVVRYm8xRnBZ?oc=5",
+            "snippet": ""
+          },
+          {
+            "title": "VCK functionary hacked to death over flex banner issue in TN's Thoothukudi district",
+            "publisher": "The New Indian Express",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T13:06:00+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOX21LLTV5MHFmcWJydWQ3WlM4RVVpeXM3U0VwaG5pYnpzY1FMdjM0UzlLRzdiVVBHUDFoZnd0bHV0bE1mVU5qdklFaWVYSk5uZG01MEJUdGgxbThxbHpVY1dBam5OaXNCOFdCSFQ5R015N1JXek94Z19zOFR2UDVPcF93ZTJLOGtxVmJLam16Q3FiaDNieFozR2luLWpfNlVTM3JSN09KWlhKTi1BNkp0cVlfSzRVZXBXZUtNeE5FQTFTNDlBZVhVTHR5MnNlV2xJakVNMy1ELXBkSExXc3Y1SWdvLXNhODJTZV9r0gHrAUFVX3lxTE5fbUstNXkwcWZxYnJ1ZDdaUzhFVWl5czdTRXBobmlienNjUUx2MzRTOUtHN2JVUEdQMWhmd3RsdXRsTWZVTmp2SUVpZVhKTm5kbTUwQlR0aDFtOHFselVjV0Fqbk5pc0I4V0JIVDlHTXk3Uld6T3hnX3M4VHZQNU9wX3dlMks4a3FWYktqbXpDcWJoM2J4WjNHaW4tal82VVMzclI3T0paWEpOLUE2SnRxWV9LNFVlcFdlS014TkVBMVM0OUFlWFVMdHkyc2VXbElqRU0zLUQtcGRITFdzdjVJZ28tc2E4MlNlX2s?oc=5",
+            "snippet": ""
+          }
+        ]
+      },
+      {
+        "headline": "Standing together... Greetings Edappadi Palaniswami on Tamil Nadu Day!",
+        "verification_badge": "Multi-Source Verified",
+        "who_is_involved": "AIADMK",
+        "summary": "Hindu Tamil Thisai also reported on the development: \"Edappadi Palaniswami insists on fully reopening Amma Dispensaries.\" Hindu Tamil Thisai also reported on the development: \"'Tamil Nadu government is like a vehicle without brakes' - Palaniswami alleges.\"",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "Standing together... Greetings Edappadi Palaniswami on Tamil Nadu Day!",
+            "publisher": "DinaMani",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T12:00:33+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSDB4Q1hTYUVuLUF5OGtCTTREVndMYVBUWGJRcDBaQk5LSUtxMzlsTW5SNDN6d2gtR0l5el8xM2ZwZTdxZURQeV9SbXFYdlFKSEZ6UkFrNldaM1dhZGg5X3VCWjR3Sk8wSG03WTM4RnVVa2tZaGxwU0dFcHkwWXFrMmdac1ZSQXREYUNhNnRSMnN2V1VOclBtT1ZpUm0tYUo5TDZPbE5RVmtEcmVSWjZXWFdNMk1icUXSAcQBQVVfeXFMT1BFTTZGWDhsX0UyLVpiQXd4VkVMcXRaTFFoeGxNRFdxTUZQTTd4UzktYlcyZGxaUHNMSExkYUQtVWJhbjNLcXZOU0lhdnh5TFF2R2FtenJoYWQ5YWtjaXlLU05EaHJSYlRneFhWa3UyQk9EbzdCUGR6YTBoUkJHWTFDdjJIM2pISUgzb0ZlNDNiNTF4ZzJhMTJqZ2ROZ21hOEI3NVVFYVhmUTJmYXByN3RNVUtXOHo5Q243eG9VaVB0b3JiRg?oc=5",
+            "snippet": ""
+          },
+          {
+            "title": "Edappadi Palaniswami insists on fully reopening Amma Dispensaries",
+            "publisher": "Hindu Tamil Thisai",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T14:09:16+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOc1RqeGxhRWNCVVM5UkY2YzAxRWJDcVY0NEpFU1pIaFp4S1UzaDFGZG5rQjMxRmZ6TWJQSktTR3RCZDN6bHkwLS1GM1lSb2lOMG95LUd4MUd0d2kyRU8tNmppUFh4STVjRW1mNlA0NmM1clpVRWtERVc4Y2VoNWVhT1ZDc1hXYXRLWFRWSGdGRjVjeUJWam9yUzBjRDlRSHNKVVlFdFBPeF9SYXpSWkZJUdIBvgFBVV95cUxNN3lJTS1LS1VqR2hhOUlZWU1XNzRmblMzb0RHNkNlb3VRRy05MkVUaHZzRWhIeHVmUjlTNGZUUlRmcUh1TFhPVXExUW9acHk5TGtrekp5UmtxSTJpZHJHWnBOMFRXY1F1NW02M19EZjZaTHQ4YmVydl9wUGJSX0FRU0NsZjZEaFEzeXRaUnhtMW1JMHdfNlFiajVxSzNGRE9laFg3bG00eTc2bUxUNVZKeGlDeU1WQk0ybVpKQVNB?oc=5",
+            "snippet": ""
+          },
+          {
+            "title": "'Tamil Nadu government is like a vehicle without brakes' - Palaniswami alleges",
+            "publisher": "Hindu Tamil Thisai",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T08:07:00+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTW44MWZQRXJIUHB0X2phb0dYSVRwc0t6MnlnYzFTbVFtc1AyUUtsT0JvaENkTnV3VTJnbXMxV1pFQUlYS2I0NUk2d0gxckpWU2tqWWdlVER2WGZWRWJQNXRzaGJTM0RYeVQ1QUZuUmZjWHBidnBsLXhKWGZSYTFQd2ZJNWNXM1dQZlpV0gGYAUFVX3lxTE5zQVlkYzJMWmpZZ3ppMHV2U0lxN1ZuMXFLbF9scGtFVkJ3VTJRZHZIVE1DRUtiNlFyQWJobGlUVWxlWUlGSkMtdThZdnd3Q3JKTnNWc2cxU2h6NGZ0QkkzNU8xUzhDLUdqaFZTY2d2M0hxWkF2cjMzbk54alQ5Ry0xTGE4Q1g0VnRIMHZDUHM2dl9aUWZOSGVk?oc=5",
+            "snippet": ""
+          }
+        ]
+      },
+      {
+        "headline": "Nov. in Perundurai. 3-in Chief Minister Vijay road crossing?",
+        "verification_badge": "Multi-Source Verified",
+        "who_is_involved": "TVK",
+        "summary": "DinaMani also reported on the development: \"Chief Minister Vijay's plan to crawl the road in Pudukottai?.\" Hindu Tamil Thisai also reported on the development: \"Tamil Nadu Day - Leaders including Chief Minister Vijay congratulated.\"",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "Nov. in Perundurai. 3-in Chief Minister Vijay road crossing?",
+            "publisher": "DinaMani",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T16:11:15+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdDllZzVJOWdKM2hDNWRXNk9Dd2hWM3VhUXExMUtOdHVIcGxlNVJzbGVjTkRmckxHOEc1OTdlR3FMeURYQTFVVDBVdG1NYmxNaVpwaGJ0QzdpN1pxMTc5cmgxZnFpcjF1NWYtQWpySF9XMXlFNFZnZUJOTV9PdE4weEN5SEltbUJsQ1h6SnRQT0U3djlMelJMRGhB0gGnAUFVX3lxTE5SeElGc1l0V3Q2Y1gwT0ZSRjBETlFQSm9fNmZ5MzdMQTFZSmRvM0FJbEdFeE5aQXoyVnpZc0dYQmVnUV94V3VKM010Z1RtaXNXYU9Ed3hyQzd1a3FWN1huVW9udkpfUHdfWFZ1OWl3eFQ3a0ZjMlhuSU8zX1ZVMDJ2bDk2SUNkaDItbGtDSGEzOTJSSWhwc1pFd3FsNklJWXZVVC1DVy1r?oc=5",
+            "snippet": ""
+          },
+          {
+            "title": "Chief Minister Vijay's plan to crawl the road in Pudukottai?",
+            "publisher": "DinaMani",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T12:09:53+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxORnptUUduVC1mazg4NDRjYW5FVWVyU3ZBUHVxR2VQNkF4blpWLXUzR2R4Tno0bi1jcXNtdlJmT2NrNGY1cWtWeHpRLVVmN1hzU0dwYndzLW5NcEs0bTgyazlaUFlfSmVMcDJBMXgtdUttX2t0eEY4WEs1SC0tXzlxT0pyOHkxTlJKd0ZDbzJZWEVaT2F4NHhFdjN30gGnAUFVX3lxTFBaVVRqNkwxRmVHbm5SQWhaaWFMUC1jR2RxdmxBaHFOeUVBeVVoeWxZQVg1WlN6NXVBbHhLamFya3pOR0dmU0VRTTZQRVJNZ3gtRmo5TXZzTU1nS0tIXzF6TTdPV1RQb1ZNV0w5VXRBWkVPV1J5THN6RkZnNGEtSHdxUnhGU3E2eEgtVjAtTkRES3J1eGhfdTlLM2p2R1hqQXMzaGV4d2tR?oc=5",
+            "snippet": ""
+          },
+          {
+            "title": "Tamil Nadu Day - Leaders including Chief Minister Vijay congratulated",
+            "publisher": "Hindu Tamil Thisai",
+            "language": "en",
+            "published_date": "2026-11-01",
+            "published_at_ist": "2026-11-01T11:42:50+05:30",
+            "reliability_tier": "tier_1_editorial",
+            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNek1qcFZoLUxyRXdrTUljV011Vkw2SFVjZzdzQkk4VXQ1ZjNDcm5LOXc1VG5aUzd0U2RqRWh6UnRWMmpLc1RKLVlYT0xoOTFybms5anYwcnk3TTd2SmFTbGJfYzVqTDkxMDFuUmlSbFl0YlBOR3djNElsVkdUSi1udXpWb0UzMFZzb20tUTc3aEJiVUprVGxoV05zU0hKU0xZMGxGOUJNZFRaRzdn0gG6AUFVX3lxTE5WNi1oSVlMRkZFZEctWDJmMGIzR3RnNFBLT2Z6OVlBSzY1RVMwLXB4NzJVNjlqUzZ3Q3BVVmk0MTUta0M2RHgwM0Vnamh4VHpwNmtWZFI5V3dyOXhyWHU2a243Mm1JWTAzV185ZWJuOFRJeWlTb2Z4dWh0TmZxUE1RejJhanZvd2lNYmxILTg2aGt5UzRRRVRuc1MwY2gzVG16UExYVW9fZ2NZNkRGd0xQTTVjR0JYU3c4Zw?oc=5",
+            "snippet": ""
           }
         ]
       },
@@ -105,101 +253,29 @@
             "snippet": "Prisoners are deciding whether to escape from Palayamkottai or Salem by playing ‘inky pinky ponky’: Udhayanidhi"
           }
         ]
-      },
-      {
-        "headline": "DMK women’s wing protests reflect public anger against TVK govt: Stalin",
-        "verification_badge": "Single-Source Report",
-        "who_is_involved": "DMK, TVK",
-        "summary": "‘Statewide protests drew large numbers of women, including those not affiliated to any political party’",
-        "why_it_matters": "",
-        "sources": [
-          {
-            "title": "DMK women’s wing protests reflect public anger against TVK govt: Stalin",
-            "publisher": "The Times of India",
-            "language": "en",
-            "published_date": "2026-11-01",
-            "published_at_ist": "2026-11-01T00:37:56+05:30",
-            "reliability_tier": "tier_1_editorial",
-            "url": "https://timesofindia.indiatimes.com/city/chennai/dmk-womens-wing-protests-reflect-public-anger-against-tvk-govt-stalin/articleshow/135410646.cms",
-            "snippet": "‘Statewide protests drew large numbers of women, including those not affiliated to any political party’"
-          }
-        ]
-      },
-      {
-        "headline": "How significant is the TVK-led regime’s move to hold Social Justice Survey? Explained",
-        "verification_badge": "Single-Source Report",
-        "who_is_involved": "TVK",
-        "summary": "The feature of an ‘open column’, where respondents can state their caste during the second phase of the Census, to be carried out in most parts of the country during February next year, has forced many parties and other stakeholders to express concerns over the utility of the whole exercise",
-        "why_it_matters": "",
-        "sources": [
-          {
-            "title": "How significant is the TVK-led regime’s move to hold Social Justice Survey? Explained",
-            "publisher": "The Hindu",
-            "language": "en",
-            "published_date": "2026-11-01",
-            "published_at_ist": "2026-11-01T11:29:16+05:30",
-            "reliability_tier": "tier_1_editorial",
-            "url": "https://www.thehindu.com/news/national/tamil-nadu/how-significant-is-the-tvk-led-regimes-move-to-hold-social-justice-survey-explained/article71649252.ece",
-            "snippet": "The feature of an ‘open column’, where respondents can state their caste during the second phase of the Census, to be carried out in most parts of the country during February next year, has forced many parties and other stakeholders to express concerns over the utility of the whole exercise"
-          }
-        ]
-      },
-      {
-        "headline": "AMMK leader targets Tamil Nadu govt over power cuts, questions energy minister’s continuance",
-        "verification_badge": "Single-Source Report",
-        "who_is_involved": "AMMK",
-        "summary": "TTV: TNPDCL, despite protests over unscheduled power cuts, refused to acknowledge the complaints",
-        "why_it_matters": "",
-        "sources": [
-          {
-            "title": "AMMK leader targets Tamil Nadu govt over power cuts, questions energy minister’s continuance",
-            "publisher": "The Times of India",
-            "language": "en",
-            "published_date": "2026-11-01",
-            "published_at_ist": "2026-11-01T00:36:33+05:30",
-            "reliability_tier": "tier_1_editorial",
-            "url": "https://timesofindia.indiatimes.com/city/chennai/ammk-leader-targets-tamil-nadu-govt-over-power-cuts-questions-energy-ministers-continuance/articleshow/135410626.cms",
-            "snippet": "TTV: TNPDCL, despite protests over unscheduled power cuts, refused to acknowledge the complaints"
-          }
-        ]
-      },
-      {
-        "headline": "Tamil Nadu government withdraws cases against 1,800 anti-NEET protesters",
-        "verification_badge": "Confirmed by Primary Official & Independent Sources",
-        "who_is_involved": "",
-        "summary": "The Hindu also reported on the development: \"Tamil Nadu government orders withdrawal of 65 cases against NEET protesters.\"",
-        "why_it_matters": "",
-        "sources": [
-          {
-            "title": "Tamil Nadu government withdraws cases against 1,800 anti-NEET protesters",
-            "publisher": "DT Next",
-            "language": "en",
-            "published_date": "2026-11-01",
-            "published_at_ist": "2026-11-01T07:30:52+05:30",
-            "reliability_tier": "tier_1_editorial",
-            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNmtZdTAyUTJDWWE5ZUhjMmVWWkVnYjVwWUw5ZmJxRlEzQ0puQ1JkYTRqZU5QZGZTSlRyRlVfUl9FNlZfRHBrdUhBem1qemI2T0R3MTRlcl9sRXRJbDAzLUNKeldWQkdIM0JUbmFSNmNpRnRBZ2NyQVp3OGlFV2JVM1o5cW9qQ1VxVzYxRU5oS0t0WGZtaXhYdUR0RmtmNGFPN3NzZ1B3N0R3M3BX0gG6AUFVX3lxTE1XSnI1MS05OEFkLVB0dDFwWFo1Y0pFbjE0cWdoSXVtSTdjek94d0NZV1dmN21JNUlrc0ZtOGNJTnZoY3I0SFZYREVGYkxUcVdQSmZDSEVaRXVfdHJzd0FNV2p5Vnd3enBIZk9vVGx5UHBIWjUyV3NuaFVCUFVIZkpBbVVLUml3TmoxVFc0Z0NET1ZxM3RqMnpPQUFSNmx0UUhjYVIyVF8wMk52eTVlZDhSQ1dtRkZUd2ZmUQ?oc=5",
-            "snippet": ""
-          },
-          {
-            "title": "Tamil Nadu government orders withdrawal of 65 cases against NEET protesters",
-            "publisher": "The Hindu",
-            "language": "en",
-            "published_date": "2026-11-01",
-            "published_at_ist": "2026-11-01T00:50:43+05:30",
-            "reliability_tier": "primary_official",
-            "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOZ29YdWoxR0dvTWN4TnRFRzM4ejVmMHBhX3FZd2JNb2xPZEdVTGlYTGF1RjlsU0JkakJqQ293dHo3Mm9FR0hYMktLWFIzTWRWRERKYkYwY2VreGdydkd2VDlhYWx3azM2MkNVUWRCTS14cWc5VUNjNnM5N0tkZW5kT3ZFV2M4SG1kSEk0VDZnaEFBWG9EY1VPVDd5OFVOLWtobFY3NDROTE5zNmNMeno4TnBWQUFSQ1pFR3ZSV1lySUg1LVdyYllfajkwY0lEMkhoSUpTUWxTRdIB3gFBVV95cUxQeHlndnBaZkUxcHptVFl6YzJMUDNzU0N1VWtybE1JdnotNklmaGxmTTN5ZGJCZGQ0cjZVelRGVnVONS1YSm5wRldYYkpDQUZIRkVWN2JGZVYxZVlWUC16T3NNcTFKV1UxVmV5cFNtQ1IzZVJPWGdVR3doTEVoQmdNdjlhMEZ1RzY0UGlFcVFOa2tvbUNOU3RCeGpNbGlQRWI5UzYtM1d0SjFWalduUjlVUW5xZ1pGandzc3lFX3pHbUp1c3lBSUZjRmk5SHloNmZ1RW0yRXladWZhRmcyaHc?oc=5",
-            "snippet": ""
-          }
-        ]
       }
     ],
-    "government_and_administration": "- **Madras High Court Advocates Association challenges 1965 Union Cabinet decision to continue English as common language for Supreme Court and all High Courts:** Says, the 1965 decision came to its notice only in 2025 pursuant to details obtained by a lawyer under the Right to Information Act, 2005 ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/madras-high-court-advocates-association-challenges-1965-union-cabinet-decision-to-continue-english-as-common-language-for-supreme-court-and-all-high-courts/article71648537.ece))\n- **HoDs now responsible for student placements in colleges and universities, says higher education department:** Tamil Nadu higher education circular makes HoDs lead student placements, industry tie-ups, internships and skill training; teacher bodies oppose amid 7,000 vacancies. ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/hods-now-responsible-for-student-placements-in-colleges-and-universities-says-higher-education-department/articleshow/135405074.cms))\n- **Minister inaugurates modern paddy storage facilities in Cuddalore district:** The facilities, constructed with financial assistance under the National Bank for Agriculture and Rural Development (NABARD), have a combined storage capacity of 7,000 tonnes ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/minister-inaugurates-modern-paddy-storage-facilities-in-cuddalore-district/article71652117.ece))\n- **Two persons held for possession of country-made guns, explosives:** Two Vellore arrests for possession of country-made guns, explosives, and hunting gear linked to a farmer and a tribal man. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/two-persons-held-for-possession-of-country-made-guns-explosives/article71649177.ece))",
-    "political_parties_and_opposition": "- **Plea in Madras high court against extension of special officers tenure for rural local bodies:** Plea in Madras HC challenges Tamil Nadu’s extension of special officers for rural local bodies, seeking ward delimitation completion and elections across 37 districts. ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/plea-in-madras-high-court-against-extension-of-special-officers-tenure-for-rural-local-bodies/articleshow/135410326.cms))",
-    "assembly_courts_and_policy": "",
-    "district_developments": "- **Man escapes from police custody before being lodged in Coimbatore Central Prison:** This is the second time Raghavan, a theft case convict, has escaped from police custody; four personnel suspended ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/convict-escapes-from-police-custody-before-being-lodged-in-coimbatore-central-prison/article71648346.ece))\n- **Tamil Nadu shuts prison enterprises outside campuses, recalls around 400 warders to plugs security gaps:** Tamil Nadu shuts prison enterprises outside campuses after Theni jailbreak, recalling 300–400 warders to boost prison security; inside-campus industries continue. ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-shuts-prison-enterprises-outside-campuses-recalls-around-400-warders-to-plugs-security-gaps/articleshow/135410725.cms))\n- **Runaway schoolgirls from Vellore rescued in Chennai:** Two 16-year-old Vellore schoolgirls who ran away from Pernampattu were found near a Kilpauk hospital in Chennai and handed over to police; parents informed. ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/runaway-schoolgirls-from-vellore-rescued-in-chennai/articleshow/135410333.cms))\n- **Student wearing headphones killed while crossing railway tracks:** year-old engineering student M Gayathri died after being hit by Jaipur Express while crossing tracks near Pattaravakkam, Chennai; police investigating. ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/student-wearing-headphones-killed-while-crossing-railway-tracks/articleshow/135409435.cms))",
+    "government_and_administration": "- **DMK women’s wing protests reflect public anger against TVK govt: Stalin:** ‘Statewide protests drew large numbers of women, including those not affiliated to any political party’ ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/dmk-womens-wing-protests-reflect-public-anger-against-tvk-govt-stalin/articleshow/135410646.cms))\n- **How significant is the TVK-led regime’s move to hold Social Justice Survey? Explained:** The feature of an ‘open column’, where respondents can state their caste during the second phase of the Census, to be carried out in most parts of the country during February next year, has forced many parties and other stakeholders to express concerns over the utility of the whole exercise ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/how-significant-is-the-tvk-led-regimes-move-to-hold-social-justice-survey-explained/article71649252.ece))\n- **AMMK leader targets Tamil Nadu govt over power cuts, questions energy minister’s continuance:** TTV: TNPDCL, despite protests over unscheduled power cuts, refused to acknowledge the complaints ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/ammk-leader-targets-tamil-nadu-govt-over-power-cuts-questions-energy-ministers-continuance/articleshow/135410626.cms))\n- **BJP March: Fadnavis Accuses Congress of Samvidhan Chori During Emergency:** Deccan Chronicle also reported on the development: \"BJP Rally: Nitin Nabin Leads Loktantra Bachao March in Rohtak.\" ([Deccan Chronicle](https://news.google.com/rss/articles/CBMiugFBVV95cUxQcmZDSjhNZ2p0YWlpeWZCN3AtN3Q1UmsxYnpvZDBJR0tpY0hfQUhvZS0yZmZuMndNSEpEY1lZNXZhOXJJTzVoVmZOWWJRV3VzTDg2ZjZMUXRIQ0VHbzhpazN6bmprd0lXMGdMSGdFM0x2MUNOcnJUS2c1bDJGZjlJa1pXS3dWSVNsQXk1bnB4TFVTNE5hbXQ2WUFSMFRGOW4xclpNanJXR1BrU1NZYWMwWUJGNWNLY085SVHSAb8BQVVfeXFMTWJWT2lTcEFvbUFCcVZFRTV5VnVEMFpjYlYwTjJ3amw2ckM1bU9KSzVYenNyZTZMR3JsSkNWaUFXZXpXSTJvWk1uRXFfRXV5R1BRZUxuSEZCdGVWX0IwNUR5VGNQR3VuVjllMnlYRU9IQmk3dWQyQnRNc1BaRVpDZTVmemI2ME5vYmpWd1pvUTRNY2JwSVN0ZGRKRk1rbmFPVUROM3B5QVpWSVE5RDhtS2F1Z0w3VmFMUFNXMGo5dWc?oc=5))",
+    "political_parties_and_opposition": "- **Plea in Madras high court against extension of special officers tenure for rural local bodies:** Plea in Madras HC challenges Tamil Nadu’s extension of special officers for rural local bodies, seeking ward delimitation completion and elections across 37 districts. ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/plea-in-madras-high-court-against-extension-of-special-officers-tenure-for-rural-local-bodies/articleshow/135410326.cms))\n- **Bay of Bengal deep depression moves closer to Tamil Nadu; IMD warns of strong winds up to 75kmph, rain likely over next two days:** Squally winds are predicted along the Tamil Nadu coast, with moderate rainfall expected from Monday onward. A deep depression in the Bay of Bengal will affect weather conditions beginning Sunday afternoon. Wind speeds might reach up to 75 kilometers per hour, especially overnight. The India Meteorological Department has issued warnings to fishermen to avoid certain areas. Rainfall is anticipated to increase, particularly on Monday and Tuesday. ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/bay-of-bengal-deep-depression-moves-closer-to-tamil-nadu-imd-warns-of-strong-winds-up-to-75kmph-rain-likely-over-next-two-days/articleshow/135420570.cms))",
+    "assembly_courts_and_policy": "- **Plea in Madras HC seeks deadline for local body elections:** Urban Acres also reported on the development: \"Tamil Nadu Local Body Elections Face Madras HC Plea.\" ([DT Next](https://news.google.com/rss/articles/CBMimgFBVV95cUxOVVp6LTVlUDEzNTZwdFV1VERBVFBiTlRBc09sakdsTy03UzljUDAxc3A1NmliUVhheHdQZXRDWmZOQ1VwU0ZOTnU2NG8tbTVzeUNsX0tVdGZRc0xlM2JuUzZGZlppVU9xOHFYYmNzaWRVWnhkT1lra1lxQnp2Wi0tTGNQRzJsWDRnQXZvcmNuYUpkMEZPMVNhY3Nn0gGnAUFVX3lxTE0wbUtwYndUSGxzS3NmdXd3dHRwbWl0UEVyZW9EcmlwZGwyX01lQ0xhMGZ2ZDlaUC1oT2Y0Z0tlamd3Z21QQjNoSF9TQWVlbVhRU3NkdlN0b0JKdWpOdWc1SE5Vc2hYN0x3V0tZTktsQjdIMXFBQmU5UVNMUWdTU3ZzOGtIWVJxOEx0V3BlcTVRbmRST1d3OV94djJFendwSXBkQV92U0ZF?oc=5))\n- **Madras High Court Advocates Association challenges 1965 Union Cabinet decision to continue English as common language for Supreme Court and all High Courts:** Says, the 1965 decision came to its notice only in 2025 pursuant to details obtained by a lawyer under the Right to Information Act, 2005 ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/madras-high-court-advocates-association-challenges-1965-union-cabinet-decision-to-continue-english-as-common-language-for-supreme-court-and-all-high-courts/article71648537.ece))",
+    "district_developments": "- **Minister inaugurates modern paddy storage facilities in Cuddalore district:** The facilities, constructed with financial assistance under the National Bank for Agriculture and Rural Development (NABARD), have a combined storage capacity of 7,000 tonnes ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/minister-inaugurates-modern-paddy-storage-facilities-in-cuddalore-district/article71652117.ece))\n- **Two persons held for possession of country-made guns, explosives:** Two Vellore arrests for possession of country-made guns, explosives, and hunting gear linked to a farmer and a tribal man. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/two-persons-held-for-possession-of-country-made-guns-explosives/article71649177.ece))\n- **Man escapes from police custody before being lodged in Coimbatore Central Prison:** This is the second time Raghavan, a theft case convict, has escaped from police custody; four personnel suspended ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/convict-escapes-from-police-custody-before-being-lodged-in-coimbatore-central-prison/article71648346.ece))\n- **Tamil Nadu shuts prison enterprises outside campuses, recalls around 400 warders to plugs security gaps:** Tamil Nadu shuts prison enterprises outside campuses after Theni jailbreak, recalling 300–400 warders to boost prison security; inside-campus industries continue. ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-shuts-prison-enterprises-outside-campuses-recalls-around-400-warders-to-plugs-security-gaps/articleshow/135410725.cms))",
     "claims_vs_facts": [],
     "what_to_watch_next": "",
     "all_sources": [
+      {
+        "title": "CM Vijay urges protection of Tamil language, heritage in Tamil Nadu Day message",
+        "publisher": "DT Next",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOR1g2OTlRa3VJUnBwQ0s5aU5SNFFiSFFmWWwxRVVta0tBWWNsckt4S1JrZUM2V0stdUp3cGZ3RXZqNDZHVklhSzU3dVdfNHhkZWNocGlKNGU2TnFQeWJBOURlQ2I1b2JzdDkxMmVqZWNLb0pkMVRrb0pfamt6dHk0ZzlQcS1kWi1fSmNLOG5EcE5Pd2xCWFFJbHoxcVplb0N1bEs4UFhBYlMzYkR1RDlUclFFb9IBwAFBVV95cUxQcDBRWVdwQWhBdTI0aTRtcU8zSmVKSVZPa0EwdHFiRmVzNzB5LTFxUkR2X29lQmhBaHpSRWRJLVRFR04tSFAtWWFsLWJqQUIyUzF0VWlHVXRlWDluREw3dG5VM0ltN0h0ajNVbHBUd0dJYTQycVNuU1N6RlFIZC1sWDI3LXhrVDRiTmJjb2pjcW5jN3k4b0dSbDZDX05ZNlRUZmtQOEoyTTRCZTNUT1Zzd3ctXzZjUTRlc1p0eFFjR08?oc=5"
+      },
+      {
+        "title": "LIVE: Tamil Nadu Day Celebration.. Ministers Attend — CM Vijay",
+        "publisher": "Dailyhunt",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSDUyWUp5akxTb09rbXItR3gzcGhyYlIyT19NcFFOR3dGdmdsX3F2ci1uME9LSEVmS045YU9IbnptamFkRTBIU2JfTWtDLUUya2VjeUtCUFRyV3N0cXJ0bFJ2UFlmYV95LV85ZU4wTUZ2UDRZLWxBaHJXOWUyS2w3RzRVak12WWN1U1pN?oc=5"
+      },
       {
         "title": "‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami",
         "publisher": "The Hindu",
@@ -213,6 +289,48 @@
         "language": "en",
         "published_date": "2026-10-31",
         "url": "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-cm-vijay-is-completely-out-of-touch-lacks-independent-decision-making-eps/articleshow/135408614.cms"
+      },
+      {
+        "title": "VCK functionary hacked to death in TN's Tuticorin",
+        "publisher": "DT Next",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPamNVX2lUcGNXM3hDbG8zZkMtS2lmZS1NcGp4OFJ2ZkNaaldZcVhnZzh2ZXo2TmxVdVBpYU9ZekIxaUpGUEtqUjd2b1FNcEV4UU8tMDE5QnNXRTV6SGUteEZYdUZQR1dhMzl6cWVUSGlYZVpCTzRsQlJTZzROVThGdHV6NWpWaVA0YURVY2NB0gGbAUFVX3lxTFBBQm9HdzN2VENJZ29VdHNCU3NGc2JfWl9iZ3RMWW9VZnRPR3BJbGJfSm82NUVfekYwdkZnbzVEZmVuY2FXZkl5Uzl6TjJ0aTVidUxqcV94cEFaRTJhNXBrYnNQU09tRmFHcVJxSGNBRHRQWE1wVHpQUS02WDY4LU8yNG1vb3RyYS1uUzFhQmpPQ09DTVVRYm8xRnBZ?oc=5"
+      },
+      {
+        "title": "VCK functionary hacked to death over flex banner issue in TN's Thoothukudi district",
+        "publisher": "The New Indian Express",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOX21LLTV5MHFmcWJydWQ3WlM4RVVpeXM3U0VwaG5pYnpzY1FMdjM0UzlLRzdiVVBHUDFoZnd0bHV0bE1mVU5qdklFaWVYSk5uZG01MEJUdGgxbThxbHpVY1dBam5OaXNCOFdCSFQ5R015N1JXek94Z19zOFR2UDVPcF93ZTJLOGtxVmJLam16Q3FiaDNieFozR2luLWpfNlVTM3JSN09KWlhKTi1BNkp0cVlfSzRVZXBXZUtNeE5FQTFTNDlBZVhVTHR5MnNlV2xJakVNMy1ELXBkSExXc3Y1SWdvLXNhODJTZV9r0gHrAUFVX3lxTE5fbUstNXkwcWZxYnJ1ZDdaUzhFVWl5czdTRXBobmlienNjUUx2MzRTOUtHN2JVUEdQMWhmd3RsdXRsTWZVTmp2SUVpZVhKTm5kbTUwQlR0aDFtOHFselVjV0Fqbk5pc0I4V0JIVDlHTXk3Uld6T3hnX3M4VHZQNU9wX3dlMks4a3FWYktqbXpDcWJoM2J4WjNHaW4tal82VVMzclI3T0paWEpOLUE2SnRxWV9LNFVlcFdlS014TkVBMVM0OUFlWFVMdHkyc2VXbElqRU0zLUQtcGRITFdzdjVJZ28tc2E4MlNlX2s?oc=5"
+      },
+      {
+        "title": "Standing together... Greetings Edappadi Palaniswami on Tamil Nadu Day!",
+        "publisher": "DinaMani",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSDB4Q1hTYUVuLUF5OGtCTTREVndMYVBUWGJRcDBaQk5LSUtxMzlsTW5SNDN6d2gtR0l5el8xM2ZwZTdxZURQeV9SbXFYdlFKSEZ6UkFrNldaM1dhZGg5X3VCWjR3Sk8wSG03WTM4RnVVa2tZaGxwU0dFcHkwWXFrMmdac1ZSQXREYUNhNnRSMnN2V1VOclBtT1ZpUm0tYUo5TDZPbE5RVmtEcmVSWjZXWFdNMk1icUXSAcQBQVVfeXFMT1BFTTZGWDhsX0UyLVpiQXd4VkVMcXRaTFFoeGxNRFdxTUZQTTd4UzktYlcyZGxaUHNMSExkYUQtVWJhbjNLcXZOU0lhdnh5TFF2R2FtenJoYWQ5YWtjaXlLU05EaHJSYlRneFhWa3UyQk9EbzdCUGR6YTBoUkJHWTFDdjJIM2pISUgzb0ZlNDNiNTF4ZzJhMTJqZ2ROZ21hOEI3NVVFYVhmUTJmYXByN3RNVUtXOHo5Q243eG9VaVB0b3JiRg?oc=5"
+      },
+      {
+        "title": "Edappadi Palaniswami insists on fully reopening Amma Dispensaries",
+        "publisher": "Hindu Tamil Thisai",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOc1RqeGxhRWNCVVM5UkY2YzAxRWJDcVY0NEpFU1pIaFp4S1UzaDFGZG5rQjMxRmZ6TWJQSktTR3RCZDN6bHkwLS1GM1lSb2lOMG95LUd4MUd0d2kyRU8tNmppUFh4STVjRW1mNlA0NmM1clpVRWtERVc4Y2VoNWVhT1ZDc1hXYXRLWFRWSGdGRjVjeUJWam9yUzBjRDlRSHNKVVlFdFBPeF9SYXpSWkZJUdIBvgFBVV95cUxNN3lJTS1LS1VqR2hhOUlZWU1XNzRmblMzb0RHNkNlb3VRRy05MkVUaHZzRWhIeHVmUjlTNGZUUlRmcUh1TFhPVXExUW9acHk5TGtrekp5UmtxSTJpZHJHWnBOMFRXY1F1NW02M19EZjZaTHQ4YmVydl9wUGJSX0FRU0NsZjZEaFEzeXRaUnhtMW1JMHdfNlFiajVxSzNGRE9laFg3bG00eTc2bUxUNVZKeGlDeU1WQk0ybVpKQVNB?oc=5"
+      },
+      {
+        "title": "Nov. in Perundurai. 3-in Chief Minister Vijay road crossing?",
+        "publisher": "DinaMani",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdDllZzVJOWdKM2hDNWRXNk9Dd2hWM3VhUXExMUtOdHVIcGxlNVJzbGVjTkRmckxHOEc1OTdlR3FMeURYQTFVVDBVdG1NYmxNaVpwaGJ0QzdpN1pxMTc5cmgxZnFpcjF1NWYtQWpySF9XMXlFNFZnZUJOTV9PdE4weEN5SEltbUJsQ1h6SnRQT0U3djlMelJMRGhB0gGnAUFVX3lxTE5SeElGc1l0V3Q2Y1gwT0ZSRjBETlFQSm9fNmZ5MzdMQTFZSmRvM0FJbEdFeE5aQXoyVnpZc0dYQmVnUV94V3VKM010Z1RtaXNXYU9Ed3hyQzd1a3FWN1huVW9udkpfUHdfWFZ1OWl3eFQ3a0ZjMlhuSU8zX1ZVMDJ2bDk2SUNkaDItbGtDSGEzOTJSSWhwc1pFd3FsNklJWXZVVC1DVy1r?oc=5"
+      },
+      {
+        "title": "Chief Minister Vijay's plan to crawl the road in Pudukottai?",
+        "publisher": "DinaMani",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxORnptUUduVC1mazg4NDRjYW5FVWVyU3ZBUHVxR2VQNkF4blpWLXUzR2R4Tno0bi1jcXNtdlJmT2NrNGY1cWtWeHpRLVVmN1hzU0dwYndzLW5NcEs0bTgyazlaUFlfSmVMcDJBMXgtdUttX2t0eEY4WEs1SC0tXzlxT0pyOHkxTlJKd0ZDbzJZWEVaT2F4NHhFdjN30gGnAUFVX3lxTFBaVVRqNkwxRmVHbm5SQWhaaWFMUC1jR2RxdmxBaHFOeUVBeVVoeWxZQVg1WlN6NXVBbHhLamFya3pOR0dmU0VRTTZQRVJNZ3gtRmo5TXZzTU1nS0tIXzF6TTdPV1RQb1ZNV0w5VXRBWkVPV1J5THN6RkZnNGEtSHdxUnhGU3E2eEgtVjAtTkRES3J1eGhfdTlLM2p2R1hqQXMzaGV4d2tR?oc=5"
       },
       {
         "title": "Palaniswami slams TVK-led government over convict’s escape in Coimbatore",
@@ -250,81 +368,25 @@
         "url": "https://timesofindia.indiatimes.com/city/chennai/ammk-leader-targets-tamil-nadu-govt-over-power-cuts-questions-energy-ministers-continuance/articleshow/135410626.cms"
       },
       {
-        "title": "Tamil Nadu government withdraws cases against 1,800 anti-NEET protesters",
+        "title": "BJP March: Fadnavis Accuses Congress of Samvidhan Chori During Emergency",
+        "publisher": "Deccan Chronicle",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQcmZDSjhNZ2p0YWlpeWZCN3AtN3Q1UmsxYnpvZDBJR0tpY0hfQUhvZS0yZmZuMndNSEpEY1lZNXZhOXJJTzVoVmZOWWJRV3VzTDg2ZjZMUXRIQ0VHbzhpazN6bmprd0lXMGdMSGdFM0x2MUNOcnJUS2c1bDJGZjlJa1pXS3dWSVNsQXk1bnB4TFVTNE5hbXQ2WUFSMFRGOW4xclpNanJXR1BrU1NZYWMwWUJGNWNLY085SVHSAb8BQVVfeXFMTWJWT2lTcEFvbUFCcVZFRTV5VnVEMFpjYlYwTjJ3amw2ckM1bU9KSzVYenNyZTZMR3JsSkNWaUFXZXpXSTJvWk1uRXFfRXV5R1BRZUxuSEZCdGVWX0IwNUR5VGNQR3VuVjllMnlYRU9IQmk3dWQyQnRNc1BaRVpDZTVmemI2ME5vYmpWd1pvUTRNY2JwSVN0ZGRKRk1rbmFPVUROM3B5QVpWSVE5RDhtS2F1Z0w3VmFMUFNXMGo5dWc?oc=5"
+      },
+      {
+        "title": "BJP Rally: Nitin Nabin Leads Loktantra Bachao March in Rohtak",
+        "publisher": "Deccan Chronicle",
+        "language": "en",
+        "published_date": "2026-11-01",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQTkxjWUFXNXFfRmdqM0dWeGhiOVYzc01EWm01X1ZBV25lLVhwMnU0TXBkSEtzenJBaUY0MmpSVTcwNFhCWXU5YkR6T2J0elFoc0N3U2lvY2IzT0d0YmlGaVZNRzRuREcwYUJQQWFkNVdNWGxvQVQ0cmRGWXdVWkR5V1Q0a3JSZjNsMFZfU3lDa2J3RDJoMDh5UUd6U0F5QTNRNERHVDJQLXNFNWvSAbABQVVfeXFMUHdKY05iRTZ0ajA0UERJbHVrems4d1lGRk1qd25pSGM1b01MM3F5LVdZX0c1MDFxelEyR1ZaV0Yzc2tiLWZyeE9lb2kwSDRDaFo2YzBPUEtHb2VNSnowc1JWQjVQSkUyYWlKYWlUOGM1eVVZbElNeDJzQlE5bm9LaWRxX2pFYWlYcU1kQnk0cVphRHQzSG11WVRNYy1OX1BRUEJ4dTBLdndOWnRjMk1uT28?oc=5"
+      },
+      {
+        "title": "Plea in Madras HC seeks deadline for local body elections",
         "publisher": "DT Next",
         "language": "en",
         "published_date": "2026-11-01",
-        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNmtZdTAyUTJDWWE5ZUhjMmVWWkVnYjVwWUw5ZmJxRlEzQ0puQ1JkYTRqZU5QZGZTSlRyRlVfUl9FNlZfRHBrdUhBem1qemI2T0R3MTRlcl9sRXRJbDAzLUNKeldWQkdIM0JUbmFSNmNpRnRBZ2NyQVp3OGlFV2JVM1o5cW9qQ1VxVzYxRU5oS0t0WGZtaXhYdUR0RmtmNGFPN3NzZ1B3N0R3M3BX0gG6AUFVX3lxTE1XSnI1MS05OEFkLVB0dDFwWFo1Y0pFbjE0cWdoSXVtSTdjek94d0NZV1dmN21JNUlrc0ZtOGNJTnZoY3I0SFZYREVGYkxUcVdQSmZDSEVaRXVfdHJzd0FNV2p5Vnd3enBIZk9vVGx5UHBIWjUyV3NuaFVCUFVIZkpBbVVLUml3TmoxVFc0Z0NET1ZxM3RqMnpPQUFSNmx0UUhjYVIyVF8wMk52eTVlZDhSQ1dtRkZUd2ZmUQ?oc=5"
-      },
-      {
-        "title": "Tamil Nadu government orders withdrawal of 65 cases against NEET protesters",
-        "publisher": "The Hindu",
-        "language": "en",
-        "published_date": "2026-11-01",
-        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOZ29YdWoxR0dvTWN4TnRFRzM4ejVmMHBhX3FZd2JNb2xPZEdVTGlYTGF1RjlsU0JkakJqQ293dHo3Mm9FR0hYMktLWFIzTWRWRERKYkYwY2VreGdydkd2VDlhYWx3azM2MkNVUWRCTS14cWc5VUNjNnM5N0tkZW5kT3ZFV2M4SG1kSEk0VDZnaEFBWG9EY1VPVDd5OFVOLWtobFY3NDROTE5zNmNMeno4TnBWQUFSQ1pFR3ZSV1lySUg1LVdyYllfajkwY0lEMkhoSUpTUWxTRdIB3gFBVV95cUxQeHlndnBaZkUxcHptVFl6YzJMUDNzU0N1VWtybE1JdnotNklmaGxmTTN5ZGJCZGQ0cjZVelRGVnVONS1YSm5wRldYYkpDQUZIRkVWN2JGZVYxZVlWUC16T3NNcTFKV1UxVmV5cFNtQ1IzZVJPWGdVR3doTEVoQmdNdjlhMEZ1RzY0UGlFcVFOa2tvbUNOU3RCeGpNbGlQRWI5UzYtM1d0SjFWalduUjlVUW5xZ1pGandzc3lFX3pHbUp1c3lBSUZjRmk5SHloNmZ1RW0yRXladWZhRmcyaHc?oc=5"
-      },
-      {
-        "title": "Plea in Madras high court against extension of special officers tenure for rural local bodies",
-        "publisher": "The Times of India",
-        "language": "en",
-        "published_date": "2026-11-01",
-        "url": "https://timesofindia.indiatimes.com/city/chennai/plea-in-madras-high-court-against-extension-of-special-officers-tenure-for-rural-local-bodies/articleshow/135410326.cms"
-      },
-      {
-        "title": "Madras High Court Advocates Association challenges 1965 Union Cabinet decision to continue English as common language for Supreme Court and all High Courts",
-        "publisher": "The Hindu",
-        "language": "en",
-        "published_date": "2026-11-01",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/madras-high-court-advocates-association-challenges-1965-union-cabinet-decision-to-continue-english-as-common-language-for-supreme-court-and-all-high-courts/article71648537.ece"
-      },
-      {
-        "title": "HoDs now responsible for student placements in colleges and universities, says higher education department",
-        "publisher": "The Times of India",
-        "language": "en",
-        "published_date": "2026-10-31",
-        "url": "https://timesofindia.indiatimes.com/city/chennai/hods-now-responsible-for-student-placements-in-colleges-and-universities-says-higher-education-department/articleshow/135405074.cms"
-      },
-      {
-        "title": "Minister inaugurates modern paddy storage facilities in Cuddalore district",
-        "publisher": "The Hindu",
-        "language": "en",
-        "published_date": "2026-11-01",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/minister-inaugurates-modern-paddy-storage-facilities-in-cuddalore-district/article71652117.ece"
-      },
-      {
-        "title": "Two persons held for possession of country-made guns, explosives",
-        "publisher": "The Hindu",
-        "language": "en",
-        "published_date": "2026-11-01",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/two-persons-held-for-possession-of-country-made-guns-explosives/article71649177.ece"
-      },
-      {
-        "title": "Man escapes from police custody before being lodged in Coimbatore Central Prison",
-        "publisher": "The Hindu",
-        "language": "en",
-        "published_date": "2026-10-31",
-        "url": "https://www.thehindu.com/news/national/tamil-nadu/convict-escapes-from-police-custody-before-being-lodged-in-coimbatore-central-prison/article71648346.ece"
-      },
-      {
-        "title": "Tamil Nadu shuts prison enterprises outside campuses, recalls around 400 warders to plugs security gaps",
-        "publisher": "The Times of India",
-        "language": "en",
-        "published_date": "2026-11-01",
-        "url": "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-shuts-prison-enterprises-outside-campuses-recalls-around-400-warders-to-plugs-security-gaps/articleshow/135410725.cms"
-      },
-      {
-        "title": "Runaway schoolgirls from Vellore rescued in Chennai",
-        "publisher": "The Times of India",
-        "language": "en",
-        "published_date": "2026-11-01",
-        "url": "https://timesofindia.indiatimes.com/city/chennai/runaway-schoolgirls-from-vellore-rescued-in-chennai/articleshow/135410333.cms"
-      },
-      {
-        "title": "Student wearing headphones killed while crossing railway tracks",
-        "publisher": "The Times of India",
-        "language": "en",
-        "published_date": "2026-10-31",
-        "url": "https://timesofindia.indiatimes.com/city/chennai/student-wearing-headphones-killed-while-crossing-railway-tracks/articleshow/135409435.cms"
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOVVp6LTVlUDEzNTZwdFV1VERBVFBiTlRBc09sakdsTy03UzljUDAxc3A1NmliUVhheHdQZXRDWmZOQ1VwU0ZOTnU2NG8tbTVzeUNsX0tVdGZRc0xlM2JuUzZGZlppVU9xOHFYYmNzaWRVWnhkT1lra1lxQnp2Wi0tTGNQRzJsWDRnQXZvcmNuYUpkMEZPMVNhY3Nn0gGnAUFVX3lxTE0wbUtwYndUSGxzS3NmdXd3dHRwbWl0UEVyZW9EcmlwZGwyX01lQ0xhMGZ2ZDlaUC1oT2Y0Z0tlamd3Z21QQjNoSF9TQWVlbVhRU3NkdlN0b0JKdWpOdWc1SE5Vc2hYN0x3V0tZTktsQjdIMXFBQmU5UVNMUWdTU3ZzOGtIWVJxOEx0V3BlcTVRbmRST1d3OV94djJFendwSXBkQV92U0ZF?oc=5"
       }
     ]
   }
