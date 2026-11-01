@@ -74,7 +74,7 @@ def is_clean_factual_sentence(sentence: str, headline: str) -> bool:
         return False
     if re.sub(r"\W+", "", s.lower()) == re.sub(r"\W+", "", headline.lower()):
         return False
-    if re.search(r"(closure of liquor|in 2\.|heating up|what is the purpose)", s, re.IGNORECASE):
+    if re.search(r"(?:\bclosure of liquor\b|\bin 2\.|\bheating up\b|\bwhat is the purpose\b)", s, re.IGNORECASE):
         return False
     return True
 
@@ -240,7 +240,16 @@ def build_extractive_fallback_edition(window_meta: dict, verified_clusters: list
         "all_sources": cited_sources[:18],
     }
 
-    word_count = max(350, len(json.dumps(sections, ensure_ascii=False).split()))
+    # Count actual prose words, not JSON structural tokens
+    prose_parts = []
+    for dev in top_devs:
+        prose_parts.append(dev.get("headline", ""))
+        prose_parts.append(dev.get("summary", ""))
+    for key in ["government_and_administration", "political_parties_and_opposition",
+                 "assembly_courts_and_policy", "district_developments"]:
+        if isinstance(sections.get(key), str):
+            prose_parts.append(sections[key])
+    word_count = max(350, len(" ".join(prose_parts).split()))
     return {
         "edition_id": window_meta["edition_id"],
         "title": window_meta["title"],
@@ -292,9 +301,9 @@ def validate_and_sanitize_ai_output(ai_data: dict, allowed_urls: set[str], fallb
 
 def discover_gemini_flash_models(api_key: str) -> list[str]:
     """Queries Google Generative Language API to dynamically list all models supporting generateContent."""
-    url = f"https://generativelanguage.googleapis.com/v1beta/models?key={api_key}"
+    url = "https://generativelanguage.googleapis.com/v1beta/models"
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "x-goog-api-key": api_key})
         with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT_SECONDS) as resp:
             data = json.loads(resp.read().decode("utf-8"))
         models = []
@@ -368,10 +377,7 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
     last_err = "unknown"
 
     for model_name in models_to_try:
-        endpoint = (
-            f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent"
-            f"?key={GEMINI_API_KEY}"
-        )
+        endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent"
         request_body = {
             "contents": [
                 {
@@ -395,7 +401,7 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
         req = urllib.request.Request(
             endpoint,
             data=json.dumps(request_body).encode("utf-8"),
-            headers={"Content-Type": "application/json"},
+            headers={"Content-Type": "application/json", "x-goog-api-key": GEMINI_API_KEY},
             method="POST",
         )
 
@@ -411,7 +417,17 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
             all_parties = sorted({p for c in top_clusters for p in c.get("parties", [])})
             all_topics = sorted({t for c in top_clusters for t in c.get("topics", [])})
             all_districts = sorted({d for c in top_clusters for d in c.get("districts", [])})
-            word_count = len(json.dumps(validated, ensure_ascii=False).split())
+            # Count actual prose words, not JSON structural tokens
+            prose_parts = []
+            for dev in validated.get("top_developments", []):
+                prose_parts.append(dev.get("headline", ""))
+                prose_parts.append(dev.get("summary", ""))
+            for key in ["government_and_administration", "political_parties_and_opposition",
+                         "assembly_courts_and_policy", "district_developments"]:
+                val = validated.get(key, "")
+                if isinstance(val, str):
+                    prose_parts.append(val)
+            word_count = max(350, len(" ".join(prose_parts).split()))
 
             return {
                 "edition_id": window_meta["edition_id"],

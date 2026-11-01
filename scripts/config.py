@@ -4,10 +4,12 @@ Central configuration, fixed 12-hour IST coverage window math,
 and HTML/Google-News bundle sanitizer.
 """
 
+import functools
 import html
 import json
 import os
 import re
+import time
 import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
@@ -205,7 +207,7 @@ def compute_coverage_window(edition_type: str, target_date_str: str | None = Non
     fetch_end_dt = max(end_dt, now_ist) if target_date_str is None else end_dt
 
     date_str = scheduled_dt.strftime("%Y-%m-%d")
-    human_date = scheduled_dt.strftime("%-d %B %Y") if os.name != "nt" else scheduled_dt.strftime("%d %B %Y").lstrip("0")
+    human_date = scheduled_dt.strftime("%-d %B %Y") if os.name != "nt" else f"{scheduled_dt.day} {scheduled_dt.strftime('%B %Y')}"
     edition_id = f"{date_str}-{edition_type}"
 
     return {
@@ -276,21 +278,28 @@ def has_tamil_script(text: str) -> bool:
     return bool(text and TAMIL_UNICODE_RE.search(text))
 
 
+@functools.lru_cache(maxsize=256)
 def translate_tamil_to_english(text: str) -> str:
     if not text:
         return ""
     if not has_tamil_script(text):
         return sanitize_untrusted_text(text)
 
-    try:
-        q = urllib.parse.quote(text[:900])
-        url = f"https://translate.googleapis.com/translate_a/single?client=gtx&sl=ta&tl=en&dt=t&q={q}"
-        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-        with urllib.request.urlopen(req, timeout=8) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-        translated_parts = [seg[0] for seg in data[0] if seg and seg[0]]
-        result = "".join(translated_parts).strip()
-        return sanitize_untrusted_text(result, max_length=650)
-    except Exception:
-        ascii_only = TAMIL_UNICODE_RE.sub(" ", text)
-        return sanitize_untrusted_text(ascii_only, max_length=650)
+    last_exc = None
+    for attempt in range(3):
+        try:
+            q = urllib.parse.quote(text[:900])
+            url = f"https://translate.googleapis.com/translate_a/single?client=gtx&sl=ta&tl=en&dt=t&q={q}"
+            req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(req, timeout=8) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            translated_parts = [seg[0] for seg in data[0] if seg and seg[0]]
+            result = "".join(translated_parts).strip()
+            return sanitize_untrusted_text(result, max_length=650)
+        except Exception as exc:
+            last_exc = exc
+            if attempt < 2:
+                time.sleep(0.5 * (attempt + 1))
+    print(f"[WARN] Tamil translation failed after 3 attempts: {last_exc}")
+    ascii_only = TAMIL_UNICODE_RE.sub(" ", text)
+    return sanitize_untrusted_text(ascii_only, max_length=650)

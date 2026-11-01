@@ -89,6 +89,13 @@ def run_pipeline(edition_type: str = "auto", target_date: str | None = None, for
         edition_type = auto_detect_edition_type()
         print(f"[INFO] Auto-detected edition type based on current IST time: {edition_type}")
 
+    if target_date:
+        try:
+            datetime.strptime(target_date, "%Y-%m-%d")
+        except ValueError:
+            print(f"[ERROR] Invalid --date '{target_date}'. Expected YYYY-MM-DD format (e.g. 2026-11-01).", file=sys.stderr)
+            return 1
+
     window_meta = compute_coverage_window(edition_type, target_date)
     edition_id = window_meta["edition_id"]
 

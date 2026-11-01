@@ -6,10 +6,12 @@ Step 2 & Step 3 of Pipeline:
 - Fixes Tamil political terminology ('ரோடு ஷோ' -> 'roadshow') before translation.
 """
 
+import concurrent.futures
 import email.utils
 import html
 import json
 import re
+import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -174,10 +176,12 @@ def fetch_real_article_summary(url: str) -> str:
             try:
                 ld_obj = json.loads(ld_raw.strip())
                 candidates = ld_obj if isinstance(ld_obj, list) else [ld_obj]
+                # Safely expand @graph entries without mutating during iteration (cap at 50 to prevent abuse)
+                expanded = list(candidates)
                 for item in candidates:
                     if isinstance(item, dict) and "@graph" in item and isinstance(item["@graph"], list):
-                        candidates.extend(item["@graph"])
-                for item in candidates:
+                        expanded.extend(item["@graph"][:50])
+                for item in expanded:
                     if isinstance(item, dict) and item.get("articleBody"):
                         body_candidate = html.unescape(str(item["articleBody"]))
                         if len(body_candidate.split()) >= 35:
@@ -239,11 +243,23 @@ def fetch_feed_items(source: dict, window_start: datetime, window_end: datetime)
         },
     )
 
-    try:
-        with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT_SECONDS) as response:
-            raw_bytes = response.read()
-    except Exception as exc:
-        print(f"[WARN] Failed to fetch {source['name']}: {exc}")
+    raw_bytes = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT_SECONDS) as response:
+                content_type = response.headers.get("Content-Type", "")
+                if not any(ct in content_type.lower() for ct in ["xml", "rss", "atom", "text/"]):
+                    print(f"[WARN] Unexpected content-type '{content_type}' from {source['name']}, skipping.")
+                    return []
+                raw_bytes = response.read()
+                break
+        except Exception as exc:
+            if attempt < 2:
+                time.sleep(1.0 * (attempt + 1))
+            else:
+                print(f"[WARN] Failed to fetch {source['name']} after 3 attempts: {exc}")
+                return []
+    if raw_bytes is None:
         return []
 
     raw_entries = []
@@ -344,19 +360,24 @@ def collect_all_sources(window_start: datetime, window_end: datetime, sources_pa
     with open(sources_path, "r", encoding="utf-8") as f:
         registry = json.load(f)
 
-    sources = registry.get("sources", [])
+    enabled_sources = [src for src in registry.get("sources", []) if src.get("enabled", True)]
     all_items = []
-    sources_checked = 0
 
-    for src in sources:
-        if not src.get("enabled", True):
-            continue
-        sources_checked += 1
-        items = fetch_feed_items(src, window_start, window_end)
-        all_items.extend(items)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+        future_to_src = {
+            executor.submit(fetch_feed_items, src, window_start, window_end): src
+            for src in enabled_sources
+        }
+        for future in concurrent.futures.as_completed(future_to_src):
+            try:
+                items = future.result()
+                all_items.extend(items)
+            except Exception as exc:
+                src = future_to_src[future]
+                print(f"[WARN] Unexpected error fetching {src['name']}: {exc}")
 
     return {
-        "sources_checked": sources_checked,
+        "sources_checked": len(enabled_sources),
         "raw_count": len(all_items),
         "items": all_items,
     }

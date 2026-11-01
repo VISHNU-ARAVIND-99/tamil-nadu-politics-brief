@@ -101,10 +101,11 @@ def save_edition_and_update_indexes(
     else:
         index_data = {"total_editions": 0, "last_updated_ist": "", "editions": []}
 
+    main_headline = clean_edition.get("headline", "")
     bullet_headlines = "\n".join(
         f"- {d.get('headline', '')}"
-        for d in clean_edition["sections"].get("top_developments", [])[:4]
-        if d.get("headline")
+        for d in clean_edition["sections"].get("top_developments", [])[:5]
+        if d.get("headline") and d.get("headline") != main_headline
     )
 
     index_entry = {
@@ -115,6 +116,8 @@ def save_edition_and_update_indexes(
         "is_test_sample": clean_edition.get("is_test_sample", False),
         "status": clean_edition["status"],
         "published_at_ist": clean_edition["published_at_ist"],
+        "coverage_start_ist": clean_edition["coverage_start_ist"],
+        "coverage_end_ist": clean_edition["coverage_end_ist"],
         "coverage_window": f"{clean_edition['coverage_start_ist']} to {clean_edition['coverage_end_ist']}",
         "reading_time_minutes": clean_edition["reading_time_minutes"],
         "headline": clean_edition["headline"],
@@ -179,7 +182,15 @@ def save_edition_and_update_indexes(
         latest_data[clean_edition["edition_type"]] = latest_card
         latest_data["last_updated_ist"] = clean_edition["published_at_ist"]
         latest_data["system_status"] = "operational"
-        latest_data["status_message"] = f"Latest {clean_edition['edition_type']} edition published at {clean_edition['published_at_ist']}."
+        slot_times = {}
+        for slot in ["morning", "evening"]:
+            slot_data = latest_data.get(slot)
+            if slot == slot_type:
+                slot_times[slot] = clean_edition["published_at_ist"]
+            elif isinstance(slot_data, dict) and slot_data.get("published_at_ist"):
+                slot_times[slot] = slot_data["published_at_ist"]
+        status_parts = [f"{s.capitalize()}: {t}" for s, t in sorted(slot_times.items())]
+        latest_data["status_message"] = f"Last published — {'; '.join(status_parts)}."
 
     with open(latest_editions_file, "w", encoding="utf-8") as f:
         json.dump(latest_data, f, indent=2, ensure_ascii=False)
@@ -188,18 +199,40 @@ def save_edition_and_update_indexes(
 
 
 def record_pipeline_log(log_entry: dict, logs_file: Path = PIPELINE_LOGS_FILE) -> None:
-    if logs_file.exists():
-        try:
-            with open(logs_file, "r", encoding="utf-8") as f:
-                data = json.load(f)
-        except Exception:
+    lock_file = logs_file.with_suffix(".lock")
+    lock_fd = None
+    try:
+        import time
+        # Simple file-based lock to prevent concurrent write corruption
+        for _ in range(10):
+            try:
+                lock_fd = open(lock_file, "x")
+                break
+            except FileExistsError:
+                time.sleep(0.5)
+        else:
+            print("[WARN] Could not acquire pipeline log lock, writing anyway.")
+            lock_fd = None
+
+        if logs_file.exists():
+            try:
+                with open(logs_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+            except Exception:
+                data = {"runs": []}
+        else:
             data = {"runs": []}
-    else:
-        data = {"runs": []}
 
-    runs = data.get("runs", [])
-    runs.insert(0, log_entry)
-    data["runs"] = runs[:100]
+        runs = data.get("runs", [])
+        runs.insert(0, log_entry)
+        data["runs"] = runs[:100]
 
-    with open(logs_file, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+        with open(logs_file, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+    finally:
+        if lock_fd:
+            lock_fd.close()
+        try:
+            lock_file.unlink(missing_ok=True)
+        except OSError:
+            pass

@@ -21,6 +21,11 @@ STOPWORDS = {
     "tamil", "nadu", "chennai", "news", "report", "state", "government", "today", "latest"
 }
 
+# Jaccard + entity similarity threshold for clustering related stories.
+# Tuned empirically: 0.36 balances dedup (removing near-duplicates) vs keeping
+# distinct stories with shared entities (e.g. two different DMK stories in Chennai).
+CLUSTER_SIMILARITY_THRESHOLD = 0.36
+
 # Parties that exist ONLY in Tamil Nadu (used as a strict Tamil Nadu geographic anchor)
 TN_REGIONAL_PARTIES = {"DMK", "AIADMK", "TVK", "PMK", "NTK", "VCK", "MDMK", "DMDK", "AMMK"}
 
@@ -199,7 +204,7 @@ def deduplicate_and_filter(raw_items: list[dict]) -> list[dict]:
         best_sim = 0.0
         for cluster in clusters:
             sim = compute_cluster_similarity(item, cluster["representative"])
-            if sim >= 0.36 and sim > best_sim:
+            if sim >= CLUSTER_SIMILARITY_THRESHOLD and sim > best_sim:
                 best_sim = sim
                 matched_cluster = cluster
 

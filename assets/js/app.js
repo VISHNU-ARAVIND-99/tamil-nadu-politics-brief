@@ -52,7 +52,8 @@ function escapeHtml(str) {
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;");
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
 }
 
 function cleanPublisherName(name) {
@@ -75,21 +76,28 @@ function ensurePureEnglish(str) {
         .map(line => {
             let l = line
                 .replace(/&nbsp;.*$/gi, "")
-                .replace(/&#x[0-9a-f]+;?/gi, "")
-                .replace(/[A-Za-z0-9\s]+also reported on the development:\s*"[^"]*"\.?/gi, "")
-                .replace(/This development (?:involving|across) [^.]+\./gi, "")
-                .replace(/Senior party functionaries and district administrative officials [^.]+\./gi, "")
-                .replace(/District-level demonstrations and party mobilisation drives [^.]+\./gi, "")
-                .replace(/Party spokespersons emphasized that household commodity prices [^.]+\./gi, "")
-                .replace(/The incident has intensified scrutiny on prison administration [^.]+\./gi, "")
-                .replace(/Opposition leaders from the DMK, AIADMK, and allied parties have cited [^.]+\./gi, "")
-                .replace(/The legal and constitutional questions raised before the judiciary [^.]+\./gi, "")
-                .replace(/Legal counsel and state departmental representatives are expected [^.]+\./gi, "")
-                .replace(/The policy measure directly impacts public-sector expenditure [^.]+\./gi, "")
-                .replace(/State departments have been instructed to coordinate disbursement [^.]+\./gi, "")
-                .replace(/The development directly involves [^.]+\./gi, "")
-                .replace(/The matter is being addressed by state administrative authorities [^.]+\./gi, "")
-                .replace(/Reporting from [^.]+\./gi, "")
+                .replace(/&#x[0-9a-f]+;?/gi, "");
+            // Remove AI-generated boilerplate sentences (data-driven for maintainability)
+            const BOILERPLATE_PATTERNS = [
+                /[A-Za-z0-9\s]+also reported on the development:\s*"[^"]*"\.?/gi,
+                /This development (?:involving|across) [^.]+\./gi,
+                /Senior party functionaries and district administrative officials [^.]+\./gi,
+                /District-level demonstrations and party mobilisation drives [^.]+\./gi,
+                /Party spokespersons emphasized that household commodity prices [^.]+\./gi,
+                /The incident has intensified scrutiny on prison administration [^.]+\./gi,
+                /Opposition leaders from the DMK, AIADMK, and allied parties have cited [^.]+\./gi,
+                /The legal and constitutional questions raised before the judiciary [^.]+\./gi,
+                /Legal counsel and state departmental representatives are expected [^.]+\./gi,
+                /The policy measure directly impacts public-sector expenditure [^.]+\./gi,
+                /State departments have been instructed to coordinate disbursement [^.]+\./gi,
+                /The development directly involves [^.]+\./gi,
+                /The matter is being addressed by state administrative authorities [^.]+\./gi,
+                /Reporting from [^.]+\./gi,
+            ];
+            for (const pat of BOILERPLATE_PATTERNS) {
+                l = l.replace(pat, "");
+            }
+            l = l
                 .replace(/^[A-Z][A-Z\s/.-]{2,20}:\s*/g, "")
                 .replace(/\s+[A-Z]{4,20}:\s+/g, " ")
                 .replace(/^(?:JUST\s+NOW|BREAKING\s+NEWS|\d+\s*-\s*)/i, "")
@@ -102,7 +110,9 @@ function ensurePureEnglish(str) {
             for (const s of l.split(/(?<=[.!?])\s+/)) {
                 const tr = s.trim();
                 if (!tr) continue;
-                if (tr.includes("?") || tr.includes("!")) continue;
+                // Only skip actual questions (ending with ?) and pure clickbait exclamations;
+                // keep factual sentences that contain quoted questions or emphasis
+                if (tr.endsWith("?") || /^[^.]*!\s*$/.test(tr)) continue;
                 if (/\b(?:closure of liquor|heating up|in 2\.|what is the purpose)\b/i.test(tr)) continue;
                 cleanSentences.push(tr);
             }
@@ -127,6 +137,11 @@ function formatReadableIST(isoStr) {
     }) + " IST";
 }
 
+/**
+ * Converts edition date + type to a human-readable IST coverage window.
+ * Uses UTC offsets that encode IST (+05:30): e.g. 00:30 UTC = 06:00 IST, 12:30 UTC = 18:00 IST.
+ * If coverage window boundaries change, update the UTC hour constants accordingly.
+ */
 function getFixedCoverageWindowText(dateStr, editionType) {
     if (!dateStr) return "";
     const [y, m, d] = dateStr.split("-").map(Number);
@@ -556,8 +571,8 @@ function renderFullEditionView(container, ed) {
         <h4>Edition Contents</h4>
         <ul>${tocHtml}</ul>
         <div class="share-actions">
-          <button onclick="shareOnWhatsApp('${escapeHtml(ed.edition_id)}', '${escapeHtml(ensurePureEnglish(ed.headline).replace(/'/g, "\\'"))}')" class="theme-btn" style="background:#1f8b4c;color:#fff;border:none;font-weight:600;">WhatsApp</button>
-          <button onclick="copyEditionLink('${escapeHtml(ed.edition_id)}')" class="theme-btn">Copy Link</button>
+          <button class="share-whatsapp-btn theme-btn" style="background:#1f8b4c;color:#fff;border:none;font-weight:600;">WhatsApp</button>
+          <button class="copy-link-btn theme-btn">Copy Link</button>
           <button onclick="window.print()" class="theme-btn">Save PDF</button>
         </div>
       </aside>
@@ -566,6 +581,20 @@ function renderFullEditionView(container, ed) {
       </div>
     </div>
   `;
+
+    const waBtn = container.querySelector(".share-whatsapp-btn");
+    if (waBtn) {
+        waBtn.addEventListener("click", () => {
+            shareOnWhatsApp(ed.edition_id, ed.headline);
+        });
+    }
+
+    const copyBtn = container.querySelector(".copy-link-btn");
+    if (copyBtn) {
+        copyBtn.addEventListener("click", () => {
+            copyEditionLink(ed.edition_id);
+        });
+    }
 }
 
 async function initHomePage() {
@@ -653,9 +682,15 @@ async function initArchivePage() {
     populateSelect(topicSelect, TN_TOPICS, "All Topics");
     populateSelect(districtSelect, TN_DISTRICTS, "All 38 Districts");
 
-    const res = await fetch("data/archive-index.json", { cache: "no-store" });
-    const data = await res.json();
-    const allEditions = data.editions || [];
+    let allEditions = [];
+    try {
+        const res = await fetch("data/archive-index.json", { cache: "no-store" });
+        const data = await res.json();
+        allEditions = data.editions || [];
+    } catch (err) {
+        listEl.innerHTML = `<div class="card"><p>Unable to load archive: ${escapeHtml(err.message)}</p></div>`;
+        return;
+    }
 
     function applyFilters() {
         const fDate = dateInput ? dateInput.value : "";
@@ -705,9 +740,15 @@ async function initSearchPage() {
     const resultsEl = document.getElementById("search-results-list");
     if (!inputEl || !resultsEl) return;
 
-    const res = await fetch("data/archive-index.json", { cache: "no-store" });
-    const data = await res.json();
-    const editions = data.editions || [];
+    let editions = [];
+    try {
+        const res = await fetch("data/archive-index.json", { cache: "no-store" });
+        const data = await res.json();
+        editions = data.editions || [];
+    } catch (err) {
+        resultsEl.innerHTML = `<div class="card"><p>Unable to load search index: ${escapeHtml(err.message)}</p></div>`;
+        return;
+    }
 
     function runSearch() {
         const q = inputEl.value.trim().toLowerCase();
