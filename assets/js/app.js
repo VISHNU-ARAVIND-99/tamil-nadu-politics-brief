@@ -1,9 +1,8 @@
 /**
- * Tamil Nadu Politics Brief - Pure-English Newspaper UI Engine
- * - Auto-highlights the correct navigation tab on every page
- * - Removes duplicate edition title header
- * - Renders ALL sections (Top Developments, Government, Parties, Courts, Districts) in unified numbered Story Cards
- * - Expands 1-line story stubs into multi-paragraph political analysis (~18-20 min read)
+ * Tamil Nadu Politics Brief - Inshorts-Style Factual News Reader
+ * - ZERO generic or artificial filler sentences: displays ONLY 100% real news facts
+ * - Crisp, easy-to-read cards across all sections
+ * - Responsive on Desktop and 360px Android screens
  */
 
 const TN_PARTIES = [
@@ -45,7 +44,7 @@ const PLACEHOLDER_PHRASES = [
     "regional reporting in this window covered:"
 ];
 
-const NON_POLITICAL_NOISE_RE = /runaway schoolgirls|wearing headphones killed|country-made guns|vijaya\s+deepika|vijayawada|uddhav\s+thackeray|kishan\s+reddy/i;
+const NON_POLITICAL_NOISE_RE = /runaway schoolgirls|wearing headphones killed|country-made guns|vijaya\s+deepika|vijayawada|uddhav\s+thackeray|kishan\s+reddy|fadnavis|rohtak|deep\s+depression|imd\s+warns|road\s+crossing|crawl\s+the\s+road|standing\s+together\.\.\./i;
 
 function escapeHtml(str) {
     if (!str) return "";
@@ -64,6 +63,10 @@ function cleanPublisherName(name) {
         .trim() || "News Report";
 }
 
+/**
+ * Strips any legacy boilerplate/vague sentences or 'also reported on the development'
+ * so ONLY 100% real news sentences are shown.
+ */
 function ensurePureEnglish(str) {
     if (!str) return "";
     return String(str)
@@ -73,9 +76,22 @@ function ensurePureEnglish(str) {
             return line
                 .replace(/&nbsp;.*$/gi, "")
                 .replace(/&#x[0-9a-f]+;?/gi, "")
+                .replace(/[A-Za-z0-9\s]+also reported on the development:\s*"[^"]*"\.?/gi, "")
+                .replace(/This development (?:involving|across) [^.]+\./gi, "")
+                .replace(/Senior party functionaries and district administrative officials [^.]+\./gi, "")
+                .replace(/District-level demonstrations and party mobilisation drives [^.]+\./gi, "")
+                .replace(/Party spokespersons emphasized that household commodity prices [^.]+\./gi, "")
+                .replace(/The incident has intensified scrutiny on prison administration [^.]+\./gi, "")
+                .replace(/Opposition leaders from the DMK, AIADMK, and allied parties have cited [^.]+\./gi, "")
+                .replace(/The legal and constitutional questions raised before the judiciary [^.]+\./gi, "")
+                .replace(/Legal counsel and state departmental representatives are expected [^.]+\./gi, "")
+                .replace(/The policy measure directly impacts public-sector expenditure [^.]+\./gi, "")
+                .replace(/State departments have been instructed to coordinate disbursement [^.]+\./gi, "")
                 .replace(/The development directly involves [^.]+\./gi, "")
                 .replace(/The matter is being addressed by state administrative authorities [^.]+\./gi, "")
                 .replace(/Reporting from [^.]+\./gi, "")
+                .replace(/^[A-Z][A-Z\s/.-]{2,20}:\s*/g, "")
+                .replace(/\s+[A-Z]{4,20}:\s+/g, " ")
                 .replace(/^(?:JUST\s+NOW|BREAKING\s+NEWS|\d+\s*-\s*)/i, "")
                 .replace(/[\u0B80-\u0BFF]+/g, " ")
                 .replace(/\s*\|\s*/g, " ")
@@ -84,15 +100,6 @@ function ensurePureEnglish(str) {
         })
         .filter(line => line && !NON_POLITICAL_NOISE_RE.test(line))
         .join("\n");
-}
-
-function isMeaningfulContent(val) {
-    if (!val) return false;
-    if (Array.isArray(val)) return val.length > 0;
-    const text = ensurePureEnglish(val);
-    if (!text || text.length < 20) return false;
-    const lower = text.toLowerCase();
-    return !PLACEHOLDER_PHRASES.some(p => lower.includes(p));
 }
 
 function formatReadableIST(isoStr) {
@@ -142,101 +149,20 @@ function formatInlineMarkdown(escapedStr) {
 }
 
 /**
- * Expands short 1-sentence story summaries into a thorough 2-paragraph political briefing
- * so every card provides substantial reading depth (~18-20 min total edition reading time).
+ * Renders a crisp Inshorts-style news card with ONLY real news sentences.
+ * Zero artificial padding or vague commentary.
  */
-function enrichStoryParagraphs(headline, rawBody, involved, sectionLabel, sources) {
-    const h = ensurePureEnglish(headline).replace(/\.$/, "");
-    let body = ensurePureEnglish(rawBody);
-
-    // Clean up duplicate "The Hindu also reported on the development: ..." stub
-    body = body.replace(/^([A-Za-z\s]+)\salso reported on the development:\s*"([^"]+)"\.?$/i, "$2 ($1).");
-
-    const wordCount = body.split(/\s+/).filter(Boolean).length;
-    const paragraphs = body.split(/\n{2,}/).map(p => p.trim()).filter(Boolean);
-
-    if (wordCount >= 65 && paragraphs.length >= 2) {
-        return paragraphs;
-    }
-
-    const firstPara = (body && body.toLowerCase() !== h.toLowerCase())
-        ? (body.endsWith(".") || body.endsWith("'") || body.endsWith('"') ? body : body + ".")
-        : `${h}.`;
-
-    // Infer political & policy context from headline and tags
-    const combined = `${h} ${firstPara} ${involved || ""}`.toLowerCase();
-    const contextSentences = [];
-
-    if (/prison|jailbreak|escape|convict|warder|custody/.test(combined)) {
-        contextSentences.push(
-            "The incident has intensified scrutiny on prison administration and police custody protocols across Tamil Nadu, prompting senior home department and prison officials to review security deployments, surveillance measures, and disciplinary accountability at district and central facilities."
-        );
-        contextSentences.push(
-            "Opposition leaders from the DMK, AIADMK, and allied parties have cited the security breach to question state law-and-order management, while the administration has ordered departmental transfers and recalled personnel to plug operational gaps."
-        );
-    } else if (/price rise|women|protest|demonstration|cadre|law and order|safety/.test(combined)) {
-        contextSentences.push(
-            "District-level demonstrations and party mobilisation drives across major urban and rural centres reflect intensifying political competition between the ruling dispensation and opposition fronts ahead of upcoming civic and legislative schedules."
-        );
-        contextSentences.push(
-            "Party spokespersons emphasized that household commodity prices, public safety, and welfare delivery remain central themes in their constituency outreach campaigns across Tamil Nadu."
-        );
-    } else if (/high court|madras hc|supreme court|plea|cabinet|delimitation|local body|election/.test(combined)) {
-        contextSentences.push(
-            "The legal and constitutional questions raised before the judiciary carry direct implications for state administrative timelines, statutory notifications, and governance frameworks across Tamil Nadu's districts."
-        );
-        contextSentences.push(
-            "Legal counsel and state departmental representatives are expected to place detailed counter-affidavits and policy compliance records on file as the proceedings advance."
-        );
-    } else if (/power cut|electricity|tangedco|tnpdcl|energy|coal|solar/.test(combined)) {
-        contextSentences.push(
-            "Unscheduled power disruptions, feeder maintenance, and billing operations remain high-priority public grievances across both industrial corridors and residential municipalities in Tamil Nadu."
-        );
-        contextSentences.push(
-            "Opposition parties have demanded transparent feeder-level audits and faster grievance redressal from the electricity utility, particularly during peak seasonal demand."
-        );
-    } else if (/neet|education|hod|college|university|professor|mids|student/.test(combined)) {
-        contextSentences.push(
-            "Higher education governance, campus academic freedom, and examination policies continue to generate active debate among faculty associations, student organisations, and political parties in Tamil Nadu."
-        );
-        contextSentences.push(
-            "State education authorities and political leadership are facing calls to balance administrative directives with institutional autonomy and student welfare."
-        );
-    } else if (/da hike|dearness allowance|paddy|storage|nabard|farmer|welfare|scheme/.test(combined)) {
-        contextSentences.push(
-            "The policy measure directly impacts public-sector expenditure, rural agricultural logistics, and household income support across Tamil Nadu's districts."
-        );
-        contextSentences.push(
-            "State departments have been instructed to coordinate disbursement and field-level implementation schedules with district collectors and nodal officers."
-        );
-    } else {
-        const actorText = involved && involved !== "State Administration / Public Stakeholders"
-            ? `involving ${involved}`
-            : "across Tamil Nadu's political and administrative landscape";
-        contextSentences.push(
-            `This development ${actorText} forms part of broader policy and organisational positioning under ${sectionLabel || "state governance"}.`
-        );
-        contextSentences.push(
-            "Senior party functionaries and district administrative officials are closely monitoring ground-level implementation and public feedback as follow-up actions unfold."
-        );
-    }
-
-    return [firstPara, contextSentences.join(" ")];
-}
-
 function renderStoryCardHtml(item, indexNumber, sectionLabel) {
     const headlineClean = ensurePureEnglish(item.headline);
-    const paragraphs = enrichStoryParagraphs(
-        headlineClean,
-        item.summary || item.what_happened || "",
-        item.who_is_involved || "",
-        sectionLabel,
-        item.sources || []
-    );
+    let bodyClean = ensurePureEnglish(item.summary || item.what_happened || "");
 
-    const bodyHtml = paragraphs
-        .map(p => `<p style="margin-bottom:0.75rem;">${formatInlineMarkdown(escapeHtml(p))}</p>`)
-        .join("");
+    // Remove trailing "(Publisher)" inside body text since Source is shown below
+    bodyClean = bodyClean.replace(/\s*\([A-Za-z\s.&'-]{3,35}\)\.?\s*$/, "").trim();
+    if (bodyClean && !/[.!?'"”]$/.test(bodyClean)) {
+        bodyClean += ".";
+    }
+
+    const hasDistinctBody = bodyClean && bodyClean.toLowerCase() !== headlineClean.toLowerCase();
 
     const seenPubs = new Set();
     const shortSources = [];
@@ -254,23 +180,19 @@ function renderStoryCardHtml(item, indexNumber, sectionLabel) {
 
     return `
     <article class="story-item">
-      <div style="margin-bottom:0.45rem;">
-        <span class="badge badge-verified">${escapeHtml(item.verification_badge || sectionLabel || "Verified Report")}</span>
+      <div style="margin-bottom:0.4rem;">
+        <span class="badge badge-verified">${escapeHtml(item.verification_badge || sectionLabel || "Verified News")}</span>
         ${involved}
       </div>
       <h3>${indexNumber}. ${escapeHtml(headlineClean)}</h3>
-      <div style="margin-bottom:0.65rem;">${bodyHtml}</div>
+      ${hasDistinctBody ? `<p style="margin-bottom:0.65rem;color:var(--text-secondary);">${formatInlineMarkdown(escapeHtml(bodyClean))}</p>` : ""}
       <div class="meta-line" style="margin-bottom:0;padding-top:0.45rem;border-top:1px solid var(--border-color);">
-        <strong>Source:</strong> ${shortSources.join(" &bull; ") || "Official Release"}
+        <strong>Read more at:</strong> ${shortSources.join(" &bull; ") || "Official Release"}
       </div>
     </article>
   `;
 }
 
-/**
- * Converts Markdown bullet strings in lower sections (Government, Parties, Courts, Districts)
- * into structured Story Objects so they render in the exact same Card format as Top Political Developments!
- */
 function parseSectionIntoStoryCards(sectionVal, sectionBadgeLabel, allSourcesPool) {
     if (!sectionVal) return [];
     if (Array.isArray(sectionVal)) return sectionVal;
@@ -287,7 +209,6 @@ function parseSectionIntoStoryCards(sectionVal, sectionBadgeLabel, allSourcesPoo
         if (PLACEHOLDER_PHRASES.some(p => rawLine.toLowerCase().includes(p))) continue;
         let line = rawLine.replace(/^[-*•]\s+/, "").trim();
 
-        // Extract trailing ([Publisher](url)) or (Publisher)
         let pubName = "";
         let pubUrl = "";
 
@@ -304,7 +225,6 @@ function parseSectionIntoStoryCards(sectionVal, sectionBadgeLabel, allSourcesPoo
             }
         }
 
-        // Split "**Headline:** Body" or "Headline: Body"
         let headline = "";
         let summary = "";
         const boldMatch = line.match(/^\*\*([^*]+)\*\*:?\s*(.*)$/);
@@ -322,9 +242,12 @@ function parseSectionIntoStoryCards(sectionVal, sectionBadgeLabel, allSourcesPoo
             }
         }
 
-        if (!headline || headline.length < 12 || NON_POLITICAL_NOISE_RE.test(headline)) continue;
+        headline = ensurePureEnglish(headline);
+        summary = ensurePureEnglish(summary);
 
-        // Match URL from allSourcesPool if not inline
+        if (!headline || headline.length < 15 || NON_POLITICAL_NOISE_RE.test(headline)) continue;
+        if (NON_POLITICAL_NOISE_RE.test(summary)) continue;
+
         if (!pubUrl && allSourcesPool && allSourcesPool.length) {
             const hWords = headline.toLowerCase().split(/\W+/).filter(w => w.length > 4);
             const matchedSrc = allSourcesPool.find(s => {
@@ -380,10 +303,10 @@ function formatEditorialText(str, forceBullets = false, excludeHeadline = "") {
         const items = lines
             .map(l => {
                 const stripped = l.replace(/^[-*•]\s+/, "").trim();
-                return `<li style="margin-bottom:0.65rem;line-height:1.6;">${formatInlineMarkdown(escapeHtml(stripped))}</li>`;
+                return `<li style="margin-bottom:0.6rem;line-height:1.55;">${formatInlineMarkdown(escapeHtml(stripped))}</li>`;
             })
             .join("");
-        return `<ul style="padding-left:1.3rem;margin-bottom:0.75rem;">${items}</ul>`;
+        return `<ul style="padding-left:1.25rem;margin-bottom:0.75rem;">${items}</ul>`;
     }
 
     return lines
@@ -408,7 +331,6 @@ function copyEditionLink(editionId) {
 }
 
 function initActiveNavAndTheme() {
-    // Automatically highlight the correct active navigation tab based on current page URL
     const path = window.location.pathname.split("/").pop() || "index.html";
     document.querySelectorAll(".nav-bar a").forEach(link => {
         const href = (link.getAttribute("href") || "").split("?")[0];
@@ -475,7 +397,7 @@ function renderEditionCard(ed, slotLabel) {
       <h2><a href="${escapeHtml(ed.url)}">${escapeHtml(cleanHeadline)}</a></h2>
       <p class="meta-line">
         <strong>Window:</strong> ${fixedWindow}<br>
-        <strong>Published:</strong> ${formatReadableIST(ed.published_at_ist)} &bull; ~18 min read
+        <strong>Published:</strong> ${formatReadableIST(ed.published_at_ist)} &bull; ~${escapeHtml(ed.reading_time_minutes || 15)} min read
       </p>
       ${otherBulletsHtml ? `<div style="margin-bottom:0.85rem;font-size:0.93rem;">${otherBulletsHtml}</div>` : ""}
       <div style="margin-bottom:0.85rem;">${partyBadges}</div>
@@ -490,29 +412,38 @@ function renderFullEditionView(container, ed) {
     const sec = ed.sections || {};
     const allSourcesPool = sec.all_sources || [];
 
+    // Keep only stories that have real, non-empty factual news text (skip broken clickbait or 0-body items)
     const validDevs = (sec.top_developments || []).filter(d => {
         const h = ensurePureEnglish(d.headline);
-        return h && h.length >= 12 && !NON_POLITICAL_NOISE_RE.test(h);
+        const b = ensurePureEnglish(d.summary || d.what_happened || "");
+        return h && h.length >= 15 && b && b.length >= 25 && !NON_POLITICAL_NOISE_RE.test(h) && !NON_POLITICAL_NOISE_RE.test(b);
     });
 
     const devsHtml = validDevs
-        .map((d, i) => renderStoryCardHtml(d, i + 1, "Verified Report"))
+        .map((d, i) => renderStoryCardHtml(d, i + 1, "Top Story"))
         .join("");
 
-    // Convert Government, Political Parties, Assembly/Courts, and District sections into the exact same Card format!
-    const govCards = parseSectionIntoStoryCards(sec.government_and_administration, "Government & Administration", allSourcesPool);
-    const govHtml = govCards.map((c, i) => renderStoryCardHtml(c, i + 1, "Government & Administration")).join("");
+    const govCards = parseSectionIntoStoryCards(sec.government_and_administration, "Government & Admin", allSourcesPool);
+    const rawPartyCards = parseSectionIntoStoryCards(sec.political_parties_and_opposition, "Political Parties", allSourcesPool);
+    const courtCards = parseSectionIntoStoryCards(sec.assembly_courts_and_policy, "Assembly & Courts", allSourcesPool);
+    const distCards = parseSectionIntoStoryCards(sec.district_developments, "District News", allSourcesPool);
 
-    const partyCards = parseSectionIntoStoryCards(sec.political_parties_and_opposition, "Political Parties", allSourcesPool);
+    // Move any High Court / Plea cards accidentally placed in Political Parties into Assembly & Courts
+    const partyCards = [];
+    for (const c of rawPartyCards) {
+        if (/high court|madras hc|supreme court|plea\b/i.test(c.headline)) {
+            c.verification_badge = "Assembly & Courts";
+            courtCards.push(c);
+        } else {
+            partyCards.push(c);
+        }
+    }
+
+    const govHtml = govCards.map((c, i) => renderStoryCardHtml(c, i + 1, "Government & Admin")).join("");
     const partiesHtml = partyCards.map((c, i) => renderStoryCardHtml(c, i + 1, "Political Parties")).join("");
-
-    const courtCards = parseSectionIntoStoryCards(sec.assembly_courts_and_policy, "Assembly, Courts & Policy", allSourcesPool);
     const courtsHtml = courtCards.map((c, i) => renderStoryCardHtml(c, i + 1, "Assembly & Courts")).join("");
+    const districtsHtml = distCards.map((c, i) => renderStoryCardHtml(c, i + 1, "District News")).join("");
 
-    const distCards = parseSectionIntoStoryCards(sec.district_developments, "District Update", allSourcesPool);
-    const districtsHtml = distCards.map((c, i) => renderStoryCardHtml(c, i + 1, "District Update")).join("");
-
-    // Collect all cited sources across all active cards
     const citedSources = [];
     const seenSourceUrls = new Set();
     const allCards = [...validDevs, ...govCards, ...partyCards, ...courtCards, ...distCards];
@@ -533,9 +464,8 @@ function renderFullEditionView(container, ed) {
     }).join("");
 
     const fixedWindow = getFixedCoverageWindowText(ed.date, ed.edition_type);
-    const estimatedReadMin = Math.max(15, Math.min(20, allCards.length * 2));
+    const estimatedReadMin = Math.min(20, Math.max(8, Math.round(allCards.length * 1.1)));
 
-    // Single clean title in Edition Info (Removed redundant kicker line above title!)
     const dynamicSections = [
         {
             id: "sec-info",
@@ -546,7 +476,7 @@ function renderFullEditionView(container, ed) {
         <p class="meta-line" style="margin-bottom:0;">
           <strong>Coverage Window:</strong> ${fixedWindow} &bull;
           <strong>Published:</strong> ${formatReadableIST(ed.published_at_ist)} &bull;
-          <strong>Reading Time:</strong> ~${estimatedReadMin} min
+          <strong>Reading Time:</strong> ~${estimatedReadMin} min (${allCards.length} Quick-Read Stories)
         </p>
       `,
             show: true
@@ -743,7 +673,7 @@ async function initArchivePage() {
         <h3><a href="${escapeHtml(ed.url)}">${escapeHtml(ensurePureEnglish(ed.headline))}</a></h3>
         <p class="meta-line">
           <strong>Coverage Window:</strong> ${getFixedCoverageWindowText(ed.date, ed.edition_type)}<br>
-          <strong>Published:</strong> ${formatReadableIST(ed.published_at_ist)} &bull; ~18 min read
+          <strong>Published:</strong> ${formatReadableIST(ed.published_at_ist)} &bull; ~${escapeHtml(ed.reading_time_minutes || 15)} min read
         </p>
         <div>
           ${(ed.parties || []).map(p => `<span class="badge badge-tag">${escapeHtml(p)}</span>`).join("")}

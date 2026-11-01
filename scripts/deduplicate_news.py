@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
 Step 4 & Step 5 of Pipeline:
-- Uses strict whole-word boundary matching so 'Vijay' never matches 'Vijayawada' or 'Vijaya Deepika'
-- Blocks out-of-state, international, sports, entertainment, road-accident, and adult/spam stories
-- Requires explicit Tamil Nadu relevance (TN district, TN party, or 'Tamil Nadu')
+- Requires an explicit Tamil Nadu anchor (TN regional party, TN district, or 'Tamil Nadu')
+  so national BJP/Congress stories from Maharashtra/Haryana (e.g., Fadnavis, Rohtak) are rejected.
+- Blocks pure IMD weather/rain/depression forecasts.
+- Routes High Court / Assembly stories accurately to 'Assembly, Courts & Policy'.
 """
 
 import re
@@ -20,9 +21,19 @@ STOPWORDS = {
     "tamil", "nadu", "chennai", "news", "report", "state", "government", "today", "latest"
 }
 
-# Strict blocklist for non-TN states, international news, sports, cinema, accidents, and spam
+# Parties that exist ONLY in Tamil Nadu (used as a strict Tamil Nadu geographic anchor)
+TN_REGIONAL_PARTIES = {"DMK", "AIADMK", "TVK", "PMK", "NTK", "VCK", "MDMK", "DMDK", "AMMK"}
+
+# TN-specific leaders of national parties
+TN_NATIONAL_PARTY_LEADERS = [
+    "annamalai", "nainar nagendran", "l. murugan", "tamilisai",
+    "selvaperunthagai", "p. chidambaram", "karti chidambaram", "tncc",
+    "k. balakrishnan", "mutharasan", "shanmugam"
+]
+
 OUT_OF_SCOPE_PATTERNS = [
-    # Other states / cities that caused false positives in PDFs
+    # Other states & non-TN politicians
+    r"\bfadnavis\b", r"\brohtak\b", r"\bnitin\s+nabin\b", r"\bsamvidhan\s+chori\b",
     r"\bvijayawada\b", r"\bvijaya\s+deepika\b", r"\bnellore\b", r"\btirupati\b",
     r"\bandhra\s+pradesh\b", r"\bchandrababu\s+naidu\b", r"\bysrc\b", r"\btelangana\b",
     r"\bhyderabad\b", r"\bcyberabad\b", r"\bkhammam\b", r"\bnagarkurnool\b", r"\bmeerpet\b",
@@ -37,16 +48,19 @@ OUT_OF_SCOPE_PATTERNS = [
     r"\bmohan\s+yadav\b", r"\bsuvendu\s+adhikari\b", r"\bmamata\b", r"\btrinamool\b",
     r"\bkarnataka\s+high\s+court\b", r"\bmandya\b", r"\bd\.?k\.?\s+shivakumar\b",
     r"\bkumaraswamy\b", r"\bsiddaramaiah\b",
-    # International / Foreign
+    # Weather forecasts (IMD / cyclones / depressions without political action)
+    r"\bdeep\s+depression\b", r"\bimd\s+warns\b", r"\bsqually\s+winds\b",
+    r"\bcyclone\s+murasu\b", r"\bweather\s+update\b", r"\bheavy\s+rain\s+alert\b",
+    # International / Sports / Cinema / Routine Crime & Accidents
     r"\btrump\b", r"\bepstein\b", r"\bwall\s+street\s+journal\b", r"\boregon\s+governor\b",
     r"\bfrankfurt\b", r"\bgermany\s+gen-z\b", r"\bfrance\s+heads\b", r"\bfrance\s+braces\b",
     r"\belon\s+musk\b", r"\bnetanyahu\b",
-    # Sports, Cinema, Routine Crime/Accidents & Spam
     r"\bchennai\s+open\b", r"\bwta\s+250\b", r"\bchennaiyin\s+fc\b", r"\bkbfc\b",
     r"\bsuper\s+sport\s+race\b", r"\bsai\s+pallavi\b", r"\bdrishyam\b", r"\bajay\s+devgn\b",
     r"\btiger\s+shroff\b", r"\bphilately\s+passport\b", r"\bdiwali\s+shopping\b",
     r"\bfridge\s+blast\b", r"\bstray\s+dogs\s+bite\b", r"\bhydroponic\s+ganja\b",
     r"\bamerican\s+tourist\s+among\s+three\b", r"\bjourney\s+to\s+the\s+centre\s+of\s+space\b",
+    r"\bruna?way\s+schoolgirls\b", r"\bwearing\s+headphones\s+killed\b", r"\bcountry-made\s+guns\b",
     r"\bxxx\b", r"\bpornx\b", r"\btvk:ca\b", r"\bequity\s+trading\b",
 ]
 
@@ -54,7 +68,6 @@ COMPILED_EXCLUSIONS = [re.compile(p, re.IGNORECASE) for p in OUT_OF_SCOPE_PATTER
 
 
 def keyword_in_text(keyword: str, lowered_text: str) -> bool:
-    """Match ASCII keywords on strict word boundaries so 'vijay' never matches 'vijayawada'."""
     kw = keyword.lower().strip()
     if not kw:
         return False
@@ -78,30 +91,27 @@ def extract_tags(text: str) -> dict:
 
 
 def is_politically_relevant(item: dict, tags: dict) -> bool:
-    """
-    Strictly require:
-    1. Zero matches against OUT_OF_SCOPE_PATTERNS (other states, sports, cinema, spam)
-    2. Explicit connection to Tamil Nadu (mentions a TN party, TN district, or 'Tamil Nadu')
-    3. At least one political party or political/governance topic
-    """
     combined = f"{item.get('title', '')} {item.get('snippet', '')}"
     lowered = combined.lower()
 
     if any(pat.search(lowered) for pat in COMPILED_EXCLUSIONS):
         return False
 
-    has_tn_anchor = (
+    # National parties (BJP, INC, Left) alone do NOT prove a story is in Tamil Nadu!
+    has_regional_party = bool(set(tags["parties"]) & TN_REGIONAL_PARTIES)
+    has_tn_national_leader = any(keyword_in_text(ldr, lowered) for ldr in TN_NATIONAL_PARTY_LEADERS)
+    has_tn_keyword = any(keyword_in_text(kw, lowered) for kw in TN_RELEVANCE_KEYWORDS)
+
+    has_strict_tn_anchor = (
         bool(tags["districts"])
-        or bool(tags["parties"])
-        or any(keyword_in_text(kw, lowered) for kw in TN_RELEVANCE_KEYWORDS)
+        or has_regional_party
+        or has_tn_national_leader
+        or has_tn_keyword
     )
-    if not has_tn_anchor:
+    if not has_strict_tn_anchor:
         return False
 
-    if tags["parties"] or tags["topics"]:
-        return True
-
-    return False
+    return bool(tags["parties"] or tags["topics"])
 
 
 def tokenize_for_similarity(text: str) -> set[str]:
@@ -124,15 +134,12 @@ def compute_cluster_similarity(item_a: dict, item_b: dict) -> float:
 
     shared_parties = set(item_a["parties"]) & set(item_b["parties"])
     shared_districts = set(item_a["districts"]) & set(item_b["districts"])
-    shared_topics = set(item_a["topics"]) & set(item_b["topics"])
 
     bonus = 0.0
-    if shared_parties and shared_districts:
-        bonus += 0.30
-    elif shared_parties and shared_topics:
-        bonus += 0.20
-    elif shared_districts and shared_topics:
-        bonus += 0.15
+    if jaccard >= 0.18 and shared_parties and shared_districts:
+        bonus = 0.25
+    elif jaccard >= 0.22 and shared_parties:
+        bonus = 0.15
 
     return min(1.0, jaccard + bonus)
 
@@ -159,14 +166,7 @@ def deduplicate_and_filter(raw_items: list[dict]) -> list[dict]:
         enriched["parties"] = tags["parties"]
         enriched["topics"] = tags["topics"] or ["Government & Administration"]
         enriched["districts"] = tags["districts"]
-        tokens = tokenize_for_similarity(combined_text)
-        for p in tags["parties"]:
-            tokens.add(f"entity_party_{p.lower()}")
-        for d in tags["districts"]:
-            tokens.add(f"entity_district_{d.lower()}")
-        for t in tags["topics"]:
-            tokens.add(f"entity_topic_{t.lower()}")
-        enriched["_tokens"] = tokens
+        enriched["_tokens"] = tokenize_for_similarity(combined_text)
         relevant_items.append(enriched)
 
     clusters: list[dict] = []
@@ -221,7 +221,6 @@ def deduplicate_and_filter(raw_items: list[dict]) -> list[dict]:
                     }
                 )
 
-        # Pick the item with the longest clean snippet as primary representative
         best_rep = max(cluster["items"], key=lambda x: len(x.get("snippet") or ""))
 
         finalized.append(

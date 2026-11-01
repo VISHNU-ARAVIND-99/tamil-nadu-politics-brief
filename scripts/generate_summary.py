@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 Step 7, Step 8 & Step 9 of Pipeline:
-- Zero story duplication across sections (stories in Top Political Developments are never repeated below)
-- Zero robotic filler sentences ('The development directly involves... Reporting from...')
-- Section J (Sources and Further Reading) lists ONLY the sources actually cited in the edition
+- Produces crisp Inshorts-style news summaries (60-85 words per story, 100% factual news only).
+- NEVER generates vague filler ('This development forms part of...', 'X also reported on the development').
+- Routes Court/Assembly stories strictly to Assembly, Courts & Policy first.
 """
 
 import json
@@ -20,33 +20,33 @@ from scripts.config import (
     translate_tamil_to_english,
 )
 
-PROMPT_INSTRUCTIONS = """You are the Editor-in-Chief of 'Tamil Nadu Politics Brief', a pure-English digital newspaper.
-Write today's edition strictly from the verified Tamil Nadu political news clusters provided below.
+PROMPT_INSTRUCTIONS = """You are the Editor of 'Tamil Nadu Politics Brief', writing in the crisp, factual style of the Inshorts news app.
+Summarize each verified Tamil Nadu political news story in 60 to 80 words of simple, direct English.
 
-STRICT EDITORIAL RULES:
-1. 100% PURE ENGLISH ONLY: Every headline, bullet point, and story paragraph must be in natural English.
-2. THE BIG PICTURE (BULLET LIST): Format 'big_picture' as 4 to 5 concise Markdown bullet points (`- **Topic Lead:** 1 to 2 crisp sentences summarizing the key takeaway.`). Do not copy-paste the full story text into The Big Picture.
-3. TOP POLITICAL DEVELOPMENTS (NO DUPLICATION): Select the top 6 to 8 stories. For each story, write a natural 2-paragraph 'summary' (4-5 sentences total) explaining what happened, who is involved, and the political reactions, plus 1 specific sentence for 'why_it_matters'.
-4. LOWER SECTIONS (UNIQUE STORIES ONLY): In 'government_and_administration', 'political_parties_and_opposition', 'assembly_courts_and_policy', and 'district_developments', summarize ONLY the remaining clusters that were NOT already featured in 'top_developments', formatted as Markdown bullet points (`- **Headline:** 2-3 clear sentences.`). If no remaining stories exist for a section, set it to `""`.
+STRICT INSHORTS STYLE RULES:
+1. EVERY WORD MUST BE REAL NEWS: State only the concrete facts—who said or did what, where, why, and the direct response.
+2. ZERO VAGUE FILLER: Never write generic commentary like 'This development forms part of broader policy', 'Senior officials are closely monitoring', or 'X also reported on the development'.
+3. SIMPLE, EASY-TO-READ ENGLISH: Use short, clear sentences that anyone can understand quickly.
+4. NO DUPLICATION ACROSS SECTIONS: Stories in 'top_developments' must NOT be repeated in the lower sections.
 
 Return ONLY valid JSON with these exact keys:
 {
-  "headline": "Main English newspaper headline",
-  "big_picture": "- **Lead 1:** ...\n- **Lead 2:** ...",
+  "headline": "Main English headline",
+  "big_picture": "",
   "top_developments": [
     {
-      "headline": "Clear English headline",
-      "verification_badge": "Multi-Source Verified | Official Release | Single-Source Report",
-      "who_is_involved": "Parties or leaders involved",
-      "summary": "Natural newspaper paragraphs explaining the event.",
-      "why_it_matters": "One specific sentence explaining why this matters.",
+      "headline": "Clear factual headline",
+      "verification_badge": "Multi-Source Verified | Single-Source Report",
+      "who_is_involved": "DMK, AIADMK, TVK, etc.",
+      "summary": "60 to 80 words of crisp, factual news in simple English (3 to 4 sentences).",
+      "why_it_matters": "",
       "sources": [{"title": "Article title", "publisher": "Publisher Name", "language": "en", "published_date": "YYYY-MM-DD", "url": "..."}]
     }
   ],
-  "government_and_administration": "- **Headline:** ...\n- **Headline:** ... (or empty string)",
-  "political_parties_and_opposition": "- **Headline:** ... (or empty string)",
-  "assembly_courts_and_policy": "- **Headline:** ... (or empty string)",
-  "district_developments": "- **Headline:** ... (or empty string)",
+  "government_and_administration": "- **Headline:** 60-80 word factual summary. ([Publisher](url))",
+  "political_parties_and_opposition": "- **Headline:** 60-80 word factual summary. ([Publisher](url))",
+  "assembly_courts_and_policy": "- **Headline:** 60-80 word factual summary. ([Publisher](url))",
+  "district_developments": "- **Headline:** 60-80 word factual summary. ([Publisher](url))",
   "claims_vs_facts": [],
   "what_to_watch_next": ""
 }"""
@@ -63,50 +63,60 @@ def clean_json_response(raw_text: str) -> dict:
     return json.loads(cleaned)
 
 
-def build_clean_story_text(cluster: dict) -> str:
+def build_inshorts_factual_text(cluster: dict) -> str:
     """
-    Combine unique snippets and related source titles from a cluster into clean English sentences
-    WITHOUT appending any robotic template filler sentences.
+    Combines ONLY the real, distinct factual sentences from the cluster's article snippets
+    into a clean 60-85 word Inshorts-style paragraph.
+    NEVER appends 'X also reported on the development' or any generic filler!
     """
     headline = translate_tamil_to_english(cluster["primary_title"]).strip()
-    pieces = []
+    seen_sentences = set()
+    factual_sentences = []
+    word_count = 0
 
     for s in cluster.get("sources", []):
         snip = translate_tamil_to_english(s.get("snippet") or "").strip()
-        if snip and snip.lower() != headline.lower() and snip not in pieces:
-            pieces.append(snip)
+        if not snip or snip.lower() == headline.lower():
+            continue
+        for sent in re.split(r"(?<=[.!?])\s+", snip):
+            clean_s = sent.strip()
+            norm_s = re.sub(r"\W+", "", clean_s.lower())
+            if len(clean_s) < 22 or norm_s in seen_sentences:
+                continue
+            if norm_s == re.sub(r"\W+", "", headline.lower()):
+                continue
+            seen_sentences.add(norm_s)
+            if not clean_s.endswith((".", "!", "?", '"', "'")):
+                clean_s += "."
+            factual_sentences.append(clean_s)
+            word_count += len(clean_s.split())
+            if word_count >= 85:
+                break
+        if word_count >= 85:
+            break
 
-    # If multiple sources covered the event, include additional distinct headlines as context
-    if len(pieces) < 2 and len(cluster.get("sources", [])) > 1:
-        for s in cluster["sources"][1:4]:
-            sec_title = translate_tamil_to_english(s.get("title") or "").strip().rstrip(".")
-            if sec_title and sec_title.lower() != headline.lower():
-                pieces.append(f"{s['publisher']} also reported on the development: \"{sec_title}.\"")
-
-    return " ".join(pieces[:3]).strip()
+    return " ".join(factual_sentences).strip()
 
 
 def build_extractive_fallback_edition(window_meta: dict, verified_clusters: list[dict], reason: str) -> dict:
     now_ist = get_ist_now().isoformat()
 
-    # Keep only clusters that have substantive content or multi-source backing
+    # Keep only clusters that have real factual body sentences (skip empty 1-line stubs!)
     usable_clusters = [
         c for c in verified_clusters
-        if len(build_clean_story_text(c)) >= 45 or len(c.get("sources", [])) >= 2
+        if len(build_inshorts_factual_text(c).split()) >= 14
     ]
     if not usable_clusters:
-        usable_clusters = verified_clusters[:8]
+        usable_clusters = verified_clusters[:10]
 
-    top_slice = usable_clusters[:7]
-    remaining_clusters = usable_clusters[7:22]
-
-    # Track used cluster IDs so NO story is ever repeated across sections!
+    top_slice = usable_clusters[:8]
+    remaining_clusters = usable_clusters[8:26]
     used_ids = {c["cluster_id"] for c in top_slice}
 
     top_devs = []
     for cluster in top_slice:
         headline = translate_tamil_to_english(cluster["primary_title"]).strip()
-        body = build_clean_story_text(cluster)
+        body = build_inshorts_factual_text(cluster)
         top_devs.append(
             {
                 "headline": headline,
@@ -114,52 +124,46 @@ def build_extractive_fallback_edition(window_meta: dict, verified_clusters: list
                 "who_is_involved": ", ".join(cluster["parties"]) if cluster["parties"] else "",
                 "summary": body,
                 "why_it_matters": "",
-                "sources": cluster["sources"][:4],
+                "sources": cluster["sources"][:3],
             }
         )
 
-    # Concise executive summary bullets for The Big Picture (distinct from full story cards)
-    big_picture_bullets = []
-    for c in top_slice[:5]:
-        title = translate_tamil_to_english(c["primary_title"]).strip().rstrip(".")
-        lead_tag = ", ".join(c["parties"][:2]) or ", ".join(c["districts"][:1]) or "State Update"
-        first_snip = build_clean_story_text(c).split(". ")[0].strip().rstrip(".")
-        if first_snip and first_snip.lower() != title.lower():
-            big_picture_bullets.append(f"- **{lead_tag} — {title}:** {first_snip}.")
-        else:
-            big_picture_bullets.append(f"- **{lead_tag}:** {title}.")
-
-    def allocate_unique_section(topic_matches: list[str], require_district: bool = False) -> str:
+    def allocate_unique_section(topic_matches: list[str], require_district: bool = False, must_match_keywords: list[str] | None = None) -> str:
         lines = []
         for c in remaining_clusters:
             if c["cluster_id"] in used_ids:
                 continue
-            is_match = (
-                bool(c.get("districts"))
-                if require_district
-                else any(t in c.get("topics", []) for t in topic_matches)
-            )
+            title_lower = c["primary_title"].lower()
+            if must_match_keywords:
+                is_match = any(k in title_lower for k in must_match_keywords) or any(t in c.get("topics", []) for t in topic_matches)
+            elif require_district:
+                is_match = bool(c.get("districts"))
+            else:
+                is_match = any(t in c.get("topics", []) for t in topic_matches)
+
             if is_match:
-                used_ids.add(c["cluster_id"])
                 t = translate_tamil_to_english(c["primary_title"]).strip().rstrip(".")
-                b = build_clean_story_text(c)
+                b = build_inshorts_factual_text(c)
+                if not b or b.lower() == t.lower():
+                    continue
+                used_ids.add(c["cluster_id"])
                 pub = c["sources"][0]["publisher"] if c.get("sources") else "Report"
                 url = c["sources"][0]["url"] if c.get("sources") else ""
                 src_note = f" ([{pub}]({url}))" if url else ""
-                if b and b.lower() != t.lower():
-                    lines.append(f"- **{t}:** {b}{src_note}")
-                else:
-                    lines.append(f"- **{t}**{src_note}")
-                if len(lines) >= 4:
+                lines.append(f"- **{t}:** {b}{src_note}")
+                if len(lines) >= 5:
                     break
         return "\n".join(lines)
 
-    gov_section = allocate_unique_section(["Government & Administration", "Infrastructure & Economy", "Education & NEET", "Agriculture & Water"])
+    # Route Court/Assembly stories FIRST so High Court pleas never end up under Political Parties!
+    courts_section = allocate_unique_section(
+        ["Assembly, Courts & Policy"],
+        must_match_keywords=["high court", "madras hc", "supreme court", "plea", "bench", "assembly", "speaker", "bill"]
+    )
     parties_section = allocate_unique_section(["Political Parties", "Elections", "Public Protests & Labour"])
-    courts_section = allocate_unique_section(["Assembly, Courts & Policy", "Centre–State Relations"])
+    gov_section = allocate_unique_section(["Government & Administration", "Infrastructure & Economy", "Education & NEET", "Agriculture & Water", "Centre–State Relations"])
     district_section = allocate_unique_section([], require_district=True)
 
-    # Collect ONLY sources from clusters that were actually used in this edition (max ~15 links)
     cited_sources = []
     seen_urls = set()
     for c in usable_clusters:
@@ -182,7 +186,7 @@ def build_extractive_fallback_edition(window_meta: dict, verified_clusters: list
     all_districts = sorted({d for c in usable_clusters if c["cluster_id"] in used_ids for d in c.get("districts", [])})
 
     sections = {
-        "big_picture": "\n".join(big_picture_bullets),
+        "big_picture": "",
         "top_developments": top_devs,
         "government_and_administration": gov_section,
         "political_parties_and_opposition": parties_section,
@@ -193,7 +197,7 @@ def build_extractive_fallback_edition(window_meta: dict, verified_clusters: list
         "all_sources": cited_sources[:18],
     }
 
-    word_count = max(300, len(json.dumps(sections, ensure_ascii=False).split()))
+    word_count = max(350, len(json.dumps(sections, ensure_ascii=False).split()))
     return {
         "edition_id": window_meta["edition_id"],
         "title": window_meta["title"],
@@ -206,14 +210,14 @@ def build_extractive_fallback_edition(window_meta: dict, verified_clusters: list
         "published_at_ist": now_ist,
         "coverage_start_ist": window_meta["coverage_start_ist"],
         "coverage_end_ist": window_meta["coverage_end_ist"],
-        "reading_time_minutes": max(4, round(word_count / 150)),
+        "reading_time_minutes": min(20, max(10, round(word_count / 110))),
         "word_count": word_count,
         "headline": top_devs[0]["headline"] if top_devs else "Tamil Nadu Political Briefing",
         "parties": all_parties,
         "topics": all_topics,
         "districts": all_districts,
         "sections": sections,
-        "_telemetry": {"ai_provider": f"fallback:{reason}", "tokens_used": 0},
+        "_telemetry": {"ai_provider": f"inshorts_extractive:{reason}", "tokens_used": 0},
     }
 
 
@@ -250,7 +254,10 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
     if AI_PROVIDER != "gemini" or not GEMINI_API_KEY:
         return build_extractive_fallback_edition(window_meta, verified_clusters, "missing_key")
 
-    top_clusters = verified_clusters[:16]
+    top_clusters = [c for c in verified_clusters if len(build_inshorts_factual_text(c).split()) >= 12][:18]
+    if not top_clusters:
+        top_clusters = verified_clusters[:12]
+
     allowed_urls = {s["url"] for c in top_clusters for s in c.get("sources", [])}
     all_sources = []
     seen_urls = set()
@@ -276,31 +283,20 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
             "parties": c["parties"],
             "topics": c["topics"],
             "districts": c["districts"],
-            "sources": c["sources"][:2],
+            "factual_text": build_inshorts_factual_text(c),
+            "sources": [{"title": s["title"], "publisher": s["publisher"], "published_date": s["published_date"], "url": s["url"]} for s in c["sources"][:2]],
         }
         for c in top_clusters
     ]
 
-    models_to_try = ["gemini-2.5-flash", GEMINI_MODEL]
-    seen_models = []
-    for m in models_to_try:
-        if m and m not in seen_models:
-            seen_models.append(m)
-
+    models_to_try = ["gemini-2.5-flash", "gemini-2.0-flash"]
     last_err = "unknown"
-    for model_name in seen_models:
+
+    for model_name in models_to_try:
         endpoint = (
             f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent"
             f"?key={GEMINI_API_KEY}"
         )
-        gen_config = {
-            "temperature": 0.2,
-            "responseMimeType": "application/json",
-            "maxOutputTokens": 8192,
-        }
-        if "2.5" in model_name:
-            gen_config["thinkingConfig"] = {"thinkingBudget": 0}
-
         request_body = {
             "contents": [
                 {
@@ -314,7 +310,11 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
                     ],
                 }
             ],
-            "generationConfig": gen_config,
+            "generationConfig": {
+                "temperature": 0.15,
+                "responseMimeType": "application/json",
+                "maxOutputTokens": 8192,
+            },
         }
 
         req = urllib.request.Request(
@@ -350,21 +350,21 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
                 "published_at_ist": now_ist,
                 "coverage_start_ist": window_meta["coverage_start_ist"],
                 "coverage_end_ist": window_meta["coverage_end_ist"],
-                "reading_time_minutes": max(4, round(word_count / 150)),
+                "reading_time_minutes": min(20, max(10, round(word_count / 110))),
                 "word_count": word_count,
                 "headline": validated.get("headline", top_clusters[0]["primary_title"]),
                 "parties": all_parties,
                 "topics": all_topics,
                 "districts": all_districts,
                 "sections": {
-                    "big_picture": validated.get("big_picture", ""),
+                    "big_picture": "",
                     "top_developments": validated.get("top_developments", []),
                     "government_and_administration": validated.get("government_and_administration", ""),
                     "political_parties_and_opposition": validated.get("political_parties_and_opposition", ""),
                     "assembly_courts_and_policy": validated.get("assembly_courts_and_policy", ""),
                     "district_developments": validated.get("district_developments", ""),
-                    "claims_vs_facts": validated.get("claims_vs_facts", []),
-                    "what_to_watch_next": validated.get("what_to_watch_next", ""),
+                    "claims_vs_facts": [],
+                    "what_to_watch_next": "",
                     "all_sources": validated.get("all_sources", []),
                 },
                 "_telemetry": {"ai_provider": f"gemini:{model_name}", "tokens_used": total_tokens},
