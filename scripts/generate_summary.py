@@ -64,37 +64,79 @@ def clean_json_response(raw_text: str) -> dict:
     return json.loads(cleaned)
 
 
+def is_clean_factual_sentence(sentence: str, headline: str) -> bool:
+    s = sentence.strip()
+    if s.endswith("?") or "?" in s:
+        return False
+    if "!" in s:
+        return False
+    if len(s) < 30 or len(s.split()) < 6:
+        return False
+    if re.sub(r"\W+", "", s.lower()) == re.sub(r"\W+", "", headline.lower()):
+        return False
+    if re.search(r"(closure of liquor|in 2\.|heating up|what is the purpose)", s, re.IGNORECASE):
+        return False
+    return True
+
+
 def build_inshorts_factual_text(cluster: dict) -> str:
     """
-    Combines ONLY the real, distinct factual sentences from the cluster's article snippets
-    into a clean 60-85 word Inshorts-style paragraph.
-    NEVER appends 'X also reported on the development' or any generic filler!
+    Combines ONLY real, cohesive factual sentences into an Inshorts-style paragraph.
+    Prioritizes the primary editorial report and rejects clickbait questions, exclamation marks,
+    and truncated title fragments.
     """
     headline = translate_tamil_to_english(cluster["primary_title"]).strip()
     seen_sentences = set()
     factual_sentences = []
     word_count = 0
 
-    for s in cluster.get("sources", []):
-        snip = translate_tamil_to_english(s.get("snippet") or "").strip()
-        if not snip or snip.lower() == headline.lower():
-            continue
-        for sent in re.split(r"(?<=[.!?])\s+", snip):
+    primary_source = cluster["sources"][0] if cluster.get("sources") else None
+    primary_snippet = translate_tamil_to_english(primary_source.get("snippet") or "") if primary_source else ""
+
+    if primary_snippet:
+        for sent in re.split(r"(?<=[.!?])\s+", primary_snippet):
             clean_s = sent.strip()
-            norm_s = re.sub(r"\W+", "", clean_s.lower())
-            if len(clean_s) < 22 or norm_s in seen_sentences:
+            if is_clean_factual_sentence(clean_s, headline):
+                norm_s = re.sub(r"\W+", "", clean_s.lower())
+                if norm_s not in seen_sentences:
+                    seen_sentences.add(norm_s)
+                    if not clean_s.endswith((".", '"', "'")):
+                        clean_s += "."
+                    factual_sentences.append(clean_s)
+                    word_count += len(clean_s.split())
+                    if word_count >= 80:
+                        break
+
+    if word_count < 35:
+        headline_words = {w for w in re.findall(r"\w{4,}", headline.lower())}
+        for s in cluster.get("sources", [])[1:]:
+            snip = translate_tamil_to_english(s.get("snippet") or "").strip()
+            if not snip or snip.lower() == s.get("title", "").strip().lower():
                 continue
-            if norm_s == re.sub(r"\W+", "", headline.lower()):
-                continue
-            seen_sentences.add(norm_s)
-            if not clean_s.endswith((".", "!", "?", '"', "'")):
-                clean_s += "."
-            factual_sentences.append(clean_s)
-            word_count += len(clean_s.split())
-            if word_count >= 85:
+            for sent in re.split(r"(?<=[.!?])\s+", snip):
+                clean_s = sent.strip()
+                if is_clean_factual_sentence(clean_s, headline):
+                    sent_words = {w for w in re.findall(r"\w{4,}", clean_s.lower())}
+                    if len(headline_words & sent_words) >= 2:
+                        norm_s = re.sub(r"\W+", "", clean_s.lower())
+                        if norm_s not in seen_sentences:
+                            seen_sentences.add(norm_s)
+                            if not clean_s.endswith((".", '"', "'")):
+                                clean_s += "."
+                            factual_sentences.append(clean_s)
+                            word_count += len(clean_s.split())
+                            if word_count >= 65:
+                                break
+            if word_count >= 65:
                 break
-        if word_count >= 85:
-            break
+
+    if not factual_sentences:
+        if primary_snippet and len(primary_snippet) >= 30:
+            clean_fallback = re.sub(r"[?!].*$", ".", primary_snippet).strip()
+            if len(clean_fallback) >= 25:
+                factual_sentences.append(clean_fallback)
+        else:
+            factual_sentences.append(headline + ".")
 
     return " ".join(factual_sentences).strip()
 

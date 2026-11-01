@@ -73,7 +73,7 @@ function ensurePureEnglish(str) {
         .replace(/\r\n/g, "\n")
         .split("\n")
         .map(line => {
-            return line
+            let l = line
                 .replace(/&nbsp;.*$/gi, "")
                 .replace(/&#x[0-9a-f]+;?/gi, "")
                 .replace(/[A-Za-z0-9\s]+also reported on the development:\s*"[^"]*"\.?/gi, "")
@@ -97,6 +97,16 @@ function ensurePureEnglish(str) {
                 .replace(/\s*\|\s*/g, " ")
                 .replace(/[ \t]{2,}/g, " ")
                 .trim();
+
+            const cleanSentences = [];
+            for (const s of l.split(/(?<=[.!?])\s+/)) {
+                const tr = s.trim();
+                if (!tr) continue;
+                if (tr.includes("?") || tr.includes("!")) continue;
+                if (/\b(?:closure of liquor|heating up|in 2\.|what is the purpose)\b/i.test(tr)) continue;
+                cleanSentences.push(tr);
+            }
+            return cleanSentences.join(" ");
         })
         .filter(line => line && !NON_POLITICAL_NOISE_RE.test(line))
         .join("\n");

@@ -132,17 +132,31 @@ def compute_cluster_similarity(item_a: dict, item_b: dict) -> float:
     if intersection < 2:
         return 0.0
 
+    text_tokens_a = {t for t in tokens_a if not t.startswith("entity_")}
+    text_tokens_b = {t for t in tokens_b if not t.startswith("entity_")}
+    text_intersection = len(text_tokens_a & text_tokens_b)
+
+    is_cross_lingual = item_a.get("language") != item_b.get("language")
+    if not is_cross_lingual and text_intersection < 2:
+        return 0.0
+
     shared_parties = set(item_a["parties"]) & set(item_b["parties"])
     shared_districts = set(item_a["districts"]) & set(item_b["districts"])
     shared_topics = set(item_a["topics"]) & set(item_b["topics"])
 
     entity_score = 0.0
-    if shared_parties and shared_districts:
-        entity_score += 0.35
-    elif shared_parties and shared_topics:
-        entity_score += 0.25
-    elif shared_districts and shared_topics:
-        entity_score += 0.20
+    if is_cross_lingual:
+        if shared_parties and shared_districts:
+            entity_score += 0.30
+        elif shared_parties and shared_topics:
+            entity_score += 0.22
+        elif shared_districts and shared_topics:
+            entity_score += 0.18
+    else:
+        if shared_parties and shared_districts:
+            entity_score += 0.15
+        elif shared_parties and shared_topics:
+            entity_score += 0.10
 
     return min(1.0, jaccard + entity_score)
 
