@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-01T11:52:52.882056+05:30",
+  "last_updated_ist": "2026-11-01T11:57:51.147091+05:30",
   "system_status": "operational",
-  "status_message": "Latest evening edition published at 2026-11-01T11:52:52.882056+05:30.",
+  "status_message": "Latest morning edition published at 2026-11-01T11:57:51.147091+05:30.",
   "morning": {
     "edition_id": "2026-11-01-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 1 November 2026",
@@ -10,12 +10,12 @@
     "is_test_sample": false,
     "status": "published_delayed",
     "scheduled_time_ist": "2026-11-01T06:00:00+05:30",
-    "generated_at_ist": "2026-11-01T11:43:12.080442+05:30",
-    "published_at_ist": "2026-11-01T11:43:12.082349+05:30",
+    "generated_at_ist": "2026-11-01T11:57:51.144938+05:30",
+    "published_at_ist": "2026-11-01T11:57:51.147091+05:30",
     "coverage_start_ist": "2026-10-31T18:00:00+05:30",
     "coverage_end_ist": "2026-11-01T06:00:00+05:30",
-    "reading_time_minutes": 10,
-    "word_count": 1534,
+    "reading_time_minutes": 12,
+    "word_count": 1746,
     "headline": "‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami",
     "big_picture_excerpt": "- ‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami\n- Palaniswami slams TVK-led government over convict’s escape in Coimbatore\n- Opposition slams TVK govt for repeated prison escapes across Tamil Nadu\n- DMK women’s wing protests reflect public anger against TVK govt: Stalin",
     "parties": [
@@ -27,7 +27,9 @@
     "topics": [
       "Agriculture & Water",
       "Assembly, Courts & Policy",
+      "Centre–State Relations",
       "Education & NEET",
+      "Elections",
       "Government & Administration"
     ],
     "districts": [

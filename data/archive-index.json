@@ -1,7 +1,45 @@
 {
   "total_editions": 3,
-  "last_updated_ist": "2026-11-01T11:52:52.882056+05:30",
+  "last_updated_ist": "2026-11-01T11:57:51.147091+05:30",
   "editions": [
+    {
+      "edition_id": "2026-11-01-morning",
+      "title": "Tamil Nadu Politics – Morning Brief – 1 November 2026",
+      "date": "2026-11-01",
+      "edition_type": "morning",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-01T11:57:51.147091+05:30",
+      "coverage_window": "2026-10-31T18:00:00+05:30 to 2026-11-01T06:00:00+05:30",
+      "reading_time_minutes": 12,
+      "headline": "‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami",
+      "summary_text": "- ‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami\n- Palaniswami slams TVK-led government over convict’s escape in Coimbatore\n- Opposition slams TVK govt for repeated prison escapes across Tamil Nadu\n- DMK women’s wing protests reflect public anger against TVK govt: Stalin",
+      "parties": [
+        "AIADMK",
+        "AMMK",
+        "DMK",
+        "TVK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Assembly, Courts & Policy",
+        "Centre–State Relations",
+        "Education & NEET",
+        "Elections",
+        "Government & Administration"
+      ],
+      "districts": [
+        "Chengalpattu",
+        "Chennai",
+        "Coimbatore",
+        "Cuddalore",
+        "Salem",
+        "Theni",
+        "Vellore"
+      ],
+      "url": "edition.html?id=2026-11-01-morning",
+      "json_path": "archive/2026/11/2026-11-01-morning.json"
+    },
     {
       "edition_id": "2026-10-31-evening",
       "title": "Tamil Nadu Politics – Evening Brief – 31 October 2026",
@@ -38,42 +76,6 @@
       ],
       "url": "edition.html?id=2026-10-31-evening",
       "json_path": "archive/2026/10/2026-10-31-evening.json"
-    },
-    {
-      "edition_id": "2026-11-01-morning",
-      "title": "Tamil Nadu Politics – Morning Brief – 1 November 2026",
-      "date": "2026-11-01",
-      "edition_type": "morning",
-      "is_test_sample": false,
-      "status": "published_delayed",
-      "published_at_ist": "2026-11-01T11:43:12.082349+05:30",
-      "coverage_window": "2026-10-31T18:00:00+05:30 to 2026-11-01T06:00:00+05:30",
-      "reading_time_minutes": 10,
-      "headline": "‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami",
-      "summary_text": "- ‘Administrative incompetence’ characterises TVK’s reign in the State, says Palaniswami\n- Palaniswami slams TVK-led government over convict’s escape in Coimbatore\n- Opposition slams TVK govt for repeated prison escapes across Tamil Nadu\n- DMK women’s wing protests reflect public anger against TVK govt: Stalin",
-      "parties": [
-        "AIADMK",
-        "AMMK",
-        "DMK",
-        "TVK"
-      ],
-      "topics": [
-        "Agriculture & Water",
-        "Assembly, Courts & Policy",
-        "Education & NEET",
-        "Government & Administration"
-      ],
-      "districts": [
-        "Chengalpattu",
-        "Chennai",
-        "Coimbatore",
-        "Cuddalore",
-        "Salem",
-        "Theni",
-        "Vellore"
-      ],
-      "url": "edition.html?id=2026-11-01-morning",
-      "json_path": "archive/2026/11/2026-11-01-morning.json"
     },
     {
       "edition_id": "2026-10-31-morning",
