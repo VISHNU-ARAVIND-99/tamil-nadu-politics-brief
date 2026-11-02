@@ -1,30 +1,27 @@
 {
-  "last_updated_ist": "2026-11-01T21:57:21.151638+05:30",
+  "last_updated_ist": "2026-11-02T08:50:49.077227+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-01T21:57:21.151638+05:30; Morning: 2026-11-01T19:32:25.066382+05:30.",
+  "status_message": "Last published — Evening: 2026-11-01T21:57:21.151638+05:30; Morning: 2026-11-02T08:50:49.077227+05:30.",
   "morning": {
-    "edition_id": "2026-11-01-morning",
-    "title": "Tamil Nadu Politics – Morning Brief – 1 November 2026",
-    "date": "2026-11-01",
+    "edition_id": "2026-11-02-morning",
+    "title": "Tamil Nadu Politics – Morning Brief – 2 November 2026",
+    "date": "2026-11-02",
     "edition_type": "morning",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-01T06:00:00+05:30",
-    "generated_at_ist": "2026-11-01T19:32:25.053737+05:30",
-    "published_at_ist": "2026-11-01T19:32:25.066382+05:30",
-    "coverage_start_ist": "2026-10-31T18:00:00+05:30",
-    "coverage_end_ist": "2026-11-01T06:00:00+05:30",
+    "scheduled_time_ist": "2026-11-02T06:00:00+05:30",
+    "generated_at_ist": "2026-11-02T08:50:49.077028+05:30",
+    "published_at_ist": "2026-11-02T08:50:49.077227+05:30",
+    "coverage_start_ist": "2026-11-01T18:00:00+05:30",
+    "coverage_end_ist": "2026-11-02T06:00:00+05:30",
     "reading_time_minutes": 2,
-    "word_count": 400,
-    "headline": "Opposition slams TVK govt for repeated prison escapes across Tamil Nadu",
-    "big_picture_excerpt": "- Opposition slams TVK govt for repeated prison escapes across Tamil Nadu\n- Sollathigaram \"What is the purpose of going only to specific 3 blocks?\"\n- DMK women’s wing protests reflect public anger against TVK govt: Stalin\n- T.N. govt. raises DA for its employees from 60% to 63%",
+    "word_count": 350,
+    "headline": "Prison Transfers, Bypoll Preparations, and Policy Debates",
+    "big_picture_excerpt": "- Tamil Nadu Transfers Prison Officials After Jailbreaks\n- AIADMK Chief Palaniswami Holds Huddle Over Upcoming Bypolls",
     "parties": [
       "AIADMK",
-      "AMMK",
-      "BJP",
       "DMK",
       "NTK",
-      "PMK",
       "TVK"
     ],
     "topics": [
@@ -32,19 +29,25 @@
       "Centre–State Relations",
       "Education & NEET",
       "Elections",
-      "Government & Administration"
+      "Government & Administration",
+      "Infrastructure & Economy",
+      "Political Parties"
     ],
     "districts": [
       "Chengalpattu",
       "Chennai",
       "Coimbatore",
       "Cuddalore",
+      "Dindigul",
+      "Erode",
+      "Madurai",
+      "Salem",
       "Theni",
       "Viluppuram"
     ],
-    "json_path": "archive/2026/11/2026-11-01-morning.json",
-    "md_path": "archive/2026/11/2026-11-01-morning.md",
-    "url": "edition.html?id=2026-11-01-morning"
+    "json_path": "archive/2026/11/2026-11-02-morning.json",
+    "md_path": "archive/2026/11/2026-11-02-morning.md",
+    "url": "edition.html?id=2026-11-02-morning"
   },
   "evening": {
     "edition_id": "2026-11-01-evening",

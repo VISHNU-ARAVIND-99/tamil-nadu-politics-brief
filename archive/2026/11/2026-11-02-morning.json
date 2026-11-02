@@ -1,0 +1,95 @@
+{
+  "edition_id": "2026-11-02-morning",
+  "title": "Tamil Nadu Politics – Morning Brief – 2 November 2026",
+  "date": "2026-11-02",
+  "edition_type": "morning",
+  "is_test_sample": false,
+  "status": "published_delayed",
+  "scheduled_time_ist": "2026-11-02T06:00:00+05:30",
+  "generated_at_ist": "2026-11-02T08:50:49.077028+05:30",
+  "published_at_ist": "2026-11-02T08:50:49.077227+05:30",
+  "coverage_start_ist": "2026-11-01T18:00:00+05:30",
+  "coverage_end_ist": "2026-11-02T06:00:00+05:30",
+  "reading_time_minutes": 2,
+  "word_count": 350,
+  "headline": "Prison Transfers, Bypoll Preparations, and Policy Debates",
+  "parties": [
+    "AIADMK",
+    "DMK",
+    "NTK",
+    "TVK"
+  ],
+  "topics": [
+    "Assembly, Courts & Policy",
+    "Centre–State Relations",
+    "Education & NEET",
+    "Elections",
+    "Government & Administration",
+    "Infrastructure & Economy",
+    "Political Parties"
+  ],
+  "districts": [
+    "Chengalpattu",
+    "Chennai",
+    "Coimbatore",
+    "Cuddalore",
+    "Dindigul",
+    "Erode",
+    "Madurai",
+    "Salem",
+    "Theni",
+    "Viluppuram"
+  ],
+  "sections": {
+    "big_picture": "",
+    "top_developments": [
+      {
+        "headline": "Tamil Nadu Transfers Prison Officials After Jailbreaks",
+        "verification_badge": "Single-Source Report",
+        "who_is_involved": "State Prisons Department",
+        "summary": "The Tamil Nadu government has transferred three senior prison officials, including two superintendents, following recent prison breaks in Theni and Puzhal. The prisons department also ordered the temporary closure of inmate-run petrol stations and shops across the state for safety reasons. Authorities have launched security audits and strengthened surveillance statewide to prevent further security lapses.",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "Tamil Nadu transfers 3 prison officials after Theni jailbreak",
+            "publisher": "DT Next",
+            "language": "en",
+            "published_date": "2026-11-02",
+            "url": "https://www.dtnext.in/news/tamilnadu/tamil-nadu-transfers-3-prison-officials-after-theni-jailbreak"
+          }
+        ]
+      },
+      {
+        "headline": "AIADMK Chief Palaniswami Holds Huddle Over Upcoming Bypolls",
+        "verification_badge": "Single-Source Report",
+        "who_is_involved": "AIADMK",
+        "summary": "AIADMK General Secretary Edappadi K. Palaniswami chaired a closed-door meeting with district secretaries at the party headquarters in Chennai to strategize for upcoming assembly bypolls. Rebel leaders skipped the meeting, which focused on the party's performance in recent by-elections and preparations for the general council. Palaniswami instructed functionaries to work closely with the Election Commission during voter roll revisions.",
+        "why_it_matters": "",
+        "sources": [
+          {
+            "title": "NTK cadre want Seeman to seek AIADMK, DMK support for Ambasamudram byelection",
+            "publisher": "The Hindu",
+            "language": "en",
+            "published_date": "2026-11-02",
+            "url": "https://www.thehindu.com/news/national/tamil-nadu/ntk-cadre-want-seeman-to-seek-aiadmk-dmk-support-for-ambasamudram-byelection/article71653213.ece"
+          }
+        ]
+      }
+    ],
+    "government_and_administration": "- **Tamil Nadu Plans Weekly Ethnic Wear Day:** The state government plans to introduce a weekly ethnic wear day for government employees to support local weavers and promote traditional attire. Additionally, authorities announced plans to form a Tamil Sangam at the Secretariat to champion Tamil art and literature initiatives. ([The Times of India](https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-plans-weekly-ethnic-wear-day-for-govt-employees/articleshow/135442410.cms))",
+    "political_parties_and_opposition": "- **NTK Cadre Debate Seeking Support for Seeman:** NTK chief coordinator Seeman's prospective candidacy in the Ambasamudram Assembly bypoll has sparked internal discussions over whether the party should approach the DMK and AIADMK for backing. Senior party office-bearers confirmed that pressure is mounting internally to reach out to the major Dravidian parties for a consensus candidature. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/ntk-cadre-want-seeman-to-seek-aiadmk-dmk-support-for-ambasamudram-byelection/article71653213.ece))",
+    "assembly_courts_and_policy": "- **Aadhav Arjuna Calls for Separate Tamil Nadu Flag:** Public Works Minister Aadhav Arjuna stated that Tamil Nadu should adopt a distinct state flag emphasizing the Tamil language. Speaking at a Tamil Nadu Day event, he urged that a law be enacted to hoist the flag at every household on November 1 and July 18. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/aadhav-arjuna-calls-for-a-separate-flag-for-tamil-nadu/article71654104.ece))",
+    "district_developments": "- **Villupuram Job Fair Distributes 1,172 Offer Letters:** Minister for Social Justice Vanni Arasu distributed appointment orders to 1,172 job seekers at a private sector job fair held in Tindivanam. The event, organized by district authorities and local employment cells, featured interviews of over 4,200 candidates by more than 160 companies. ([The Hindu](https://www.thehindu.com/news/national/tamil-nadu/1172-candidates-receive-offer-letters-at-job-fair-held-in-villupuram/article71652132.ece))",
+    "claims_vs_facts": [],
+    "what_to_watch_next": "",
+    "all_sources": [
+      {
+        "title": "Tamil Nadu transfers 3 prison officials after Theni jailbreak",
+        "publisher": "DT Next",
+        "language": "en",
+        "published_date": "2026-11-02",
+        "url": "https://www.dtnext.in/news/tamilnadu/tamil-nadu-transfers-3-prison-officials-after-theni-jailbreak"
+      }
+    ]
+  }
+}
