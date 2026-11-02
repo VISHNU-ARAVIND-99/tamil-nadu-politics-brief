@@ -2,7 +2,7 @@ name: Publish Evening Edition (6:00 PM IST)
 
 on:
   schedule:
-    # Staggered cron schedule across evening IST to guarantee execution during GitHub runner congestion.
+    # Staggered cron schedule across evening IST to guarantee execution even during GitHub peak runner queue congestion.
     # 12:18 UTC = 05:48 PM IST (Early evening release)
     - cron: "18 12 * * *"
     # 12:48 UTC = 06:18 PM IST (Post-6:00 PM primary run)
@@ -15,6 +15,8 @@ on:
     - cron: "18 14 * * *"
     # 14:48 UTC = 08:18 PM IST (4th backup retry)
     - cron: "48 14 * * *"
+    # 15:18 UTC = 08:48 PM IST (5th backup retry)
+    - cron: "18 15 * * *"
   workflow_dispatch:
     inputs:
       target_date:
@@ -29,6 +31,7 @@ on:
   push:
     branches: [ main ]
     paths:
+      - ".github/workflows/evening-edition.yml"
       - "scripts/**"
       - "data/sources.json"
 
@@ -65,11 +68,15 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.5-flash-lite' }}
         run: |
-          ARGS="--edition evening"
           if [ "${{ github.event_name }}" = "push" ]; then
-            # Pushes to main script changes only run if today's evening brief is not already published
-            ARGS="$ARGS --auto"
+            HOUR_IST=$(python3 -c "import datetime; print(datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5, minutes=30))).hour)")
+            if [ "$HOUR_IST" -lt 17 ]; then
+              echo "Push occurred before evening window (current IST hour: $HOUR_IST). Skipping evening edition."
+              exit 0
+            fi
           fi
+
+          ARGS="--edition evening"
           if [ -n "${{ github.event.inputs.target_date }}" ]; then
             ARGS="$ARGS --date ${{ github.event.inputs.target_date }}"
           fi
