@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-02T08:50:49.077227+05:30",
+  "last_updated_ist": "2026-11-03T03:16:52.802701+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-01T21:57:21.151638+05:30; Morning: 2026-11-02T08:50:49.077227+05:30.",
+  "status_message": "Last published — Evening: 2026-11-03T03:16:52.802701+05:30; Morning: 2026-11-02T08:50:49.077227+05:30.",
   "morning": {
     "edition_id": "2026-11-02-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 2 November 2026",
@@ -50,42 +50,26 @@
     "url": "edition.html?id=2026-11-02-morning"
   },
   "evening": {
-    "edition_id": "2026-11-01-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 1 November 2026",
-    "date": "2026-11-01",
+    "edition_id": "2026-11-03-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 3 November 2026",
+    "date": "2026-11-03",
     "edition_type": "evening",
     "is_test_sample": false,
-    "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-01T18:00:00+05:30",
-    "generated_at_ist": "2026-11-01T21:57:21.151370+05:30",
-    "published_at_ist": "2026-11-01T21:57:21.151638+05:30",
-    "coverage_start_ist": "2026-11-01T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-01T18:00:00+05:30",
+    "status": "published",
+    "scheduled_time_ist": "2026-11-03T18:00:00+05:30",
+    "generated_at_ist": "2026-11-03T03:16:52.802568+05:30",
+    "published_at_ist": "2026-11-03T03:16:52.802701+05:30",
+    "coverage_start_ist": "2026-11-03T06:00:00+05:30",
+    "coverage_end_ist": "2026-11-03T18:00:00+05:30",
     "reading_time_minutes": 2,
-    "word_count": 398,
-    "headline": "Tamil Nadu Day, Bribery Allegations, and Tasmac Strikes",
-    "big_picture_excerpt": "- President, Prime Minister, and CM Vijay greet people on Tamil Nadu Day\n- Tamil Nadu government orders setting up of 30 additional special courts",
-    "parties": [
-      "BJP",
-      "DMK",
-      "TVK"
-    ],
-    "topics": [
-      "Assembly, Courts & Policy",
-      "Centre–State Relations",
-      "Education & NEET",
-      "Elections",
-      "Government & Administration",
-      "Public Protests & Labour"
-    ],
-    "districts": [
-      "Ariyalur",
-      "Chennai",
-      "Pudukkottai",
-      "Viluppuram"
-    ],
-    "json_path": "archive/2026/11/2026-11-01-evening.json",
-    "md_path": "archive/2026/11/2026-11-01-evening.md",
-    "url": "edition.html?id=2026-11-01-evening"
+    "word_count": 350,
+    "headline": "Tamil Nadu Political Briefing",
+    "big_picture_excerpt": "",
+    "parties": [],
+    "topics": [],
+    "districts": [],
+    "json_path": "archive/2026/11/2026-11-03-evening.json",
+    "md_path": "archive/2026/11/2026-11-03-evening.md",
+    "url": "edition.html?id=2026-11-03-evening"
   }
 }
