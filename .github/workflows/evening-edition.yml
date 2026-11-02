@@ -2,12 +2,19 @@ name: Publish Evening Edition (6:00 PM IST)
 
 on:
   schedule:
-    # 12:22 UTC = 05:52 PM IST (Primary evening release)
-    - cron: "22 12 * * *"
-    # 12:52 UTC = 06:22 PM IST (1st backup retry if GitHub dropped 12:22)
-    - cron: "52 12 * * *"
-    # 13:22 UTC = 06:52 PM IST (2nd backup retry)
-    - cron: "22 13 * * *"
+    # Staggered cron schedule across evening IST to guarantee execution during GitHub runner congestion.
+    # 12:18 UTC = 05:48 PM IST (Early evening release)
+    - cron: "18 12 * * *"
+    # 12:48 UTC = 06:18 PM IST (Post-6:00 PM primary run)
+    - cron: "48 12 * * *"
+    # 13:18 UTC = 06:48 PM IST (1st backup retry)
+    - cron: "18 13 * * *"
+    # 13:48 UTC = 07:18 PM IST (2nd backup retry)
+    - cron: "48 13 * * *"
+    # 14:18 UTC = 07:48 PM IST (3rd backup retry)
+    - cron: "18 14 * * *"
+    # 14:48 UTC = 08:18 PM IST (4th backup retry)
+    - cron: "48 14 * * *"
   workflow_dispatch:
     inputs:
       target_date:
@@ -60,11 +67,13 @@ jobs:
         run: |
           ARGS="--edition evening"
           if [ "${{ github.event_name }}" = "push" ]; then
-            ARGS="--edition auto --force"
-          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            if [ -n "${{ github.event.inputs.target_date }}" ]; then
-              ARGS="$ARGS --date ${{ github.event.inputs.target_date }}"
-            fi
+            # Pushes to main script changes only run if today's evening brief is not already published
+            ARGS="$ARGS --auto"
+          fi
+          if [ -n "${{ github.event.inputs.target_date }}" ]; then
+            ARGS="$ARGS --date ${{ github.event.inputs.target_date }}"
+          fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             if [ "${{ github.event.inputs.force_regenerate }}" != "false" ]; then
               ARGS="$ARGS --force"
             fi
