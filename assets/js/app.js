@@ -189,14 +189,13 @@ function cleanHeadlineText(headline) {
 }
 
 function getReadingTimeMinutes(ed, storyCount) {
-    if (ed && ed.word_count && ed.word_count > 0) {
-        return Math.max(1, Math.round(ed.word_count / 200));
-    }
-    if (ed && ed.reading_time_minutes && ed.reading_time_minutes <= 7) {
+    if (ed && ed.reading_time_minutes && ed.reading_time_minutes >= 5) {
         return ed.reading_time_minutes;
     }
-    const count = storyCount || (ed && ed.sections ? Object.values(ed.sections).flat().length : 4);
-    return Math.max(1, Math.round((count * 75) / 200));
+    if (ed && ed.word_count && ed.word_count > 0) {
+        return Math.max(5, Math.round(ed.word_count / 160));
+    }
+    return 5;
 }
 
 function formatEditionTimeDisplay(ed) {

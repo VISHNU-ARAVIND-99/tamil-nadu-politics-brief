@@ -68,7 +68,7 @@ jobs:
           PYTHONIOENCODING: "utf-8"
           AI_PROVIDER: ${{ vars.AI_PROVIDER || 'gemini' }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.0-flash' }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.5-flash-lite' }}
         run: |
           if [ "${{ github.event_name }}" = "push" ]; then
             HOUR_IST=$(python3 -c "import datetime; print(datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5, minutes=30))).hour)")

@@ -21,34 +21,35 @@ from scripts.config import (
     translate_tamil_to_english,
 )
 
-PROMPT_INSTRUCTIONS = """You are the Editor of 'Tamil Nadu Politics Brief', writing in the crisp, factual style of the Inshorts news app.
-Summarize each verified Tamil Nadu political news story in 60 to 80 words of simple, direct English.
+PROMPT_INSTRUCTIONS = """You are the Senior Editor of 'Tamil Nadu Politics Brief'.
+Provide a comprehensive, authoritative 5-minute political briefing for state citizens, professionals, and policymakers.
+Summarize each verified Tamil Nadu political news story in 90 to 130 words of clear, informative, factual English (4 to 6 detailed sentences covering background, key quotes, government and opposition positions, and public impact).
 
-STRICT INSHORTS STYLE RULES:
-1. EVERY WORD MUST BE REAL NEWS: State only the concrete facts—who said or did what, where, why, and the direct response.
-2. ZERO VAGUE FILLER: Never write generic commentary like 'This development forms part of broader policy', 'Senior officials are closely monitoring', or 'X also reported on the development'.
-3. SIMPLE, EASY-TO-READ ENGLISH: Use short, clear sentences that anyone can understand quickly.
+STRICT EDITORIAL RULES:
+1. EVERY WORD MUST BE REAL NEWS: State concrete facts—who said or did what, dates, financial allocations, legal sections, statements, and policy impact.
+2. ZERO VAGUE FILLER: Never write generic commentary like 'This development forms part of broader policy' or 'Senior officials are closely monitoring'.
+3. COMPLETE & INFORMATIVE: Each story must be a substantive, standalone paragraph giving the reader full context.
 4. NO DUPLICATION ACROSS SECTIONS: Stories in 'top_developments' must NOT be repeated in the lower sections.
-5. NO REDUNDANT SITE PREFIXES: The "headline" field and story headlines must NEVER start with "Tamil Nadu Politics Brief:", "Tamil Nadu Political Brief:", or similar publication prefixes. State the actual news event directly.
+5. NO REDUNDANT SITE PREFIXES: Headlines must NEVER start with "Tamil Nadu Politics Brief:" or similar publication prefixes. State the actual news event directly.
 
 Return ONLY valid JSON with these exact keys:
 {
-  "headline": "Main English headline",
+  "headline": "Main English headline capturing the lead development",
   "big_picture": "",
   "top_developments": [
     {
-      "headline": "Clear factual headline",
+      "headline": "Clear, factual, descriptive headline",
       "verification_badge": "Multi-Source Verified | Single-Source Report",
-      "who_is_involved": "DMK, AIADMK, TVK, etc.",
-      "summary": "60 to 80 words of crisp, factual news in simple English (3 to 4 sentences).",
+      "who_is_involved": "DMK, AIADMK, TVK, BJP, etc.",
+      "summary": "90 to 130 words of detailed, informative, factual news in simple English (4 to 6 sentences with full context and statements).",
       "why_it_matters": "",
       "sources": [{"title": "Article title", "publisher": "Publisher Name", "language": "en", "published_date": "YYYY-MM-DD", "url": "..."}]
     }
   ],
-  "government_and_administration": "- **Headline:** 60-80 word factual summary. ([Publisher](url))",
-  "political_parties_and_opposition": "- **Headline:** 60-80 word factual summary. ([Publisher](url))",
-  "assembly_courts_and_policy": "- **Headline:** 60-80 word factual summary. ([Publisher](url))",
-  "district_developments": "- **Headline:** 60-80 word factual summary. ([Publisher](url))",
+  "government_and_administration": "- **Headline:** 90-120 word detailed factual summary with context. ([Publisher](url))",
+  "political_parties_and_opposition": "- **Headline:** 90-120 word detailed factual summary with context. ([Publisher](url))",
+  "assembly_courts_and_policy": "- **Headline:** 90-120 word detailed factual summary with context. ([Publisher](url))",
+  "district_developments": "- **Headline:** 90-120 word detailed factual summary with context. ([Publisher](url))",
   "claims_vs_facts": [],
   "what_to_watch_next": ""
 }"""
@@ -270,7 +271,7 @@ def build_extractive_fallback_edition(window_meta: dict, verified_clusters: list
         "published_at_ist": now_ist,
         "coverage_start_ist": window_meta["coverage_start_ist"],
         "coverage_end_ist": window_meta["coverage_end_ist"],
-        "reading_time_minutes": max(1, round(word_count / 200)),
+        "reading_time_minutes": max(5, round(word_count / 160)),
         "word_count": word_count,
         "headline": clean_headline_prefix(top_devs[0]["headline"]) if top_devs else "Tamil Nadu Political Briefing",
         "parties": all_parties,
@@ -376,11 +377,16 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
 
     discovered = discover_gemini_flash_models(GEMINI_API_KEY)
     models_to_try = [
+        *discovered,
         GEMINI_MODEL,
+        "gemini-3.5-flash-lite",
+        "gemini-3.8-flash",
+        "gemini-3.6-flash",
+        "gemini-3.1-flash-lite",
+        "gemini-2.5-flash",
+        "gemini-flash-latest",
         "gemini-2.0-flash",
         "gemini-1.5-flash",
-        "gemini-1.5-flash-8b",
-        *discovered,
     ]
     models_to_try = list(dict.fromkeys(m for m in models_to_try if m))
     last_err = "unknown"
@@ -450,7 +456,7 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
                 "published_at_ist": now_ist,
                 "coverage_start_ist": window_meta["coverage_start_ist"],
                 "coverage_end_ist": window_meta["coverage_end_ist"],
-                "reading_time_minutes": max(1, round(word_count / 200)),
+                "reading_time_minutes": max(5, round(word_count / 160)),
                 "word_count": word_count,
                 "headline": clean_headline_prefix(validated.get("headline", top_clusters[0]["primary_title"])),
                 "parties": all_parties,
