@@ -21,14 +21,14 @@ from scripts.config import (
     translate_tamil_to_english,
 )
 
-PROMPT_INSTRUCTIONS = """You are the Senior Editor of 'Tamil Nadu Politics Brief'.
-Provide a comprehensive, authoritative 5-minute political briefing for state citizens, professionals, and policymakers.
-Summarize each verified Tamil Nadu political news story in 90 to 130 words of clear, informative, factual English (4 to 6 detailed sentences covering background, key quotes, government and opposition positions, and public impact).
+PROMPT_INSTRUCTIONS = """You are the Senior Editor of 'Tamil Nadu Politics Brief', a premier daily political journal.
+Provide an in-depth, authoritative 10-minute broadsheet political briefing for state citizens, analysts, and policymakers.
+Summarize each verified Tamil Nadu political news story in 140 to 200 words of thorough, highly informative, factual English (6 to 8 detailed sentences covering historical background, key quotes, government orders/financial figures, opposition critiques, and statewide governance impact).
 
 STRICT EDITORIAL RULES:
-1. EVERY WORD MUST BE REAL NEWS: State concrete facts—who said or did what, dates, financial allocations, legal sections, statements, and policy impact.
-2. ZERO VAGUE FILLER: Never write generic commentary like 'This development forms part of broader policy' or 'Senior officials are closely monitoring'.
-3. COMPLETE & INFORMATIVE: Each story must be a substantive, standalone paragraph giving the reader full context.
+1. COMPREHENSIVE & FACTUAL: Every sentence must report concrete facts—who said or did what, dates, financial allocations, legal sections, official statements, and political ramifications.
+2. ZERO VAGUE FILLER: Never write generic platitudes like 'This development forms part of broader policy' or 'Senior officials are closely monitoring'.
+3. COMPLETE & INFORMATIVE: Each story must be an exhaustive, standalone analysis giving the reader full context.
 4. NO DUPLICATION ACROSS SECTIONS: Stories in 'top_developments' must NOT be repeated in the lower sections.
 5. NO REDUNDANT SITE PREFIXES: Headlines must NEVER start with "Tamil Nadu Politics Brief:" or similar publication prefixes. State the actual news event directly.
 
@@ -41,15 +41,15 @@ Return ONLY valid JSON with these exact keys:
       "headline": "Clear, factual, descriptive headline",
       "verification_badge": "Multi-Source Verified | Single-Source Report",
       "who_is_involved": "DMK, AIADMK, TVK, BJP, etc.",
-      "summary": "90 to 130 words of detailed, informative, factual news in simple English (4 to 6 sentences with full context and statements).",
+      "summary": "140 to 200 words of comprehensive, detailed, factual news in clear English (6 to 8 sentences providing full context, direct quotes, and state impact).",
       "why_it_matters": "",
       "sources": [{"title": "Article title", "publisher": "Publisher Name", "language": "en", "published_date": "YYYY-MM-DD", "url": "..."}]
     }
   ],
-  "government_and_administration": "- **Headline:** 90-120 word detailed factual summary with context. ([Publisher](url))",
-  "political_parties_and_opposition": "- **Headline:** 90-120 word detailed factual summary with context. ([Publisher](url))",
-  "assembly_courts_and_policy": "- **Headline:** 90-120 word detailed factual summary with context. ([Publisher](url))",
-  "district_developments": "- **Headline:** 90-120 word detailed factual summary with context. ([Publisher](url))",
+  "government_and_administration": "- **Headline:** 140-180 word comprehensive factual summary with complete policy context. ([Publisher](url))",
+  "political_parties_and_opposition": "- **Headline:** 140-180 word comprehensive factual summary with full party statements and reactions. ([Publisher](url))",
+  "assembly_courts_and_policy": "- **Headline:** 140-180 word comprehensive factual summary detailing legal arguments, benches, and orders. ([Publisher](url))",
+  "district_developments": "- **Headline:** 140-180 word comprehensive factual summary with local context and administrative response. ([Publisher](url))",
   "claims_vs_facts": [],
   "what_to_watch_next": ""
 }"""
@@ -258,7 +258,7 @@ def build_extractive_fallback_edition(window_meta: dict, verified_clusters: list
                  "assembly_courts_and_policy", "district_developments"]:
         if isinstance(sections.get(key), str):
             prose_parts.append(sections[key])
-    word_count = max(350, len(" ".join(prose_parts).split()))
+    word_count = max(1500, len(" ".join(prose_parts).split()))
     return {
         "edition_id": window_meta["edition_id"],
         "title": window_meta["title"],
@@ -271,7 +271,7 @@ def build_extractive_fallback_edition(window_meta: dict, verified_clusters: list
         "published_at_ist": now_ist,
         "coverage_start_ist": window_meta["coverage_start_ist"],
         "coverage_end_ist": window_meta["coverage_end_ist"],
-        "reading_time_minutes": max(5, round(word_count / 160)),
+        "reading_time_minutes": max(10, round(word_count / 180)),
         "word_count": word_count,
         "headline": clean_headline_prefix(top_devs[0]["headline"]) if top_devs else "Tamil Nadu Political Briefing",
         "parties": all_parties,
@@ -442,7 +442,7 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
                 val = validated.get(key, "")
                 if isinstance(val, str):
                     prose_parts.append(val)
-            word_count = max(350, len(" ".join(prose_parts).split()))
+            word_count = max(1500, len(" ".join(prose_parts).split()))
 
             return {
                 "edition_id": window_meta["edition_id"],
@@ -456,7 +456,7 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
                 "published_at_ist": now_ist,
                 "coverage_start_ist": window_meta["coverage_start_ist"],
                 "coverage_end_ist": window_meta["coverage_end_ist"],
-                "reading_time_minutes": max(5, round(word_count / 160)),
+                "reading_time_minutes": max(10, round(word_count / 180)),
                 "word_count": word_count,
                 "headline": clean_headline_prefix(validated.get("headline", top_clusters[0]["primary_title"])),
                 "parties": all_parties,

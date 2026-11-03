@@ -189,13 +189,13 @@ function cleanHeadlineText(headline) {
 }
 
 function getReadingTimeMinutes(ed, storyCount) {
-    if (ed && ed.reading_time_minutes && ed.reading_time_minutes >= 5) {
+    if (ed && ed.reading_time_minutes && ed.reading_time_minutes >= 10) {
         return ed.reading_time_minutes;
     }
     if (ed && ed.word_count && ed.word_count > 0) {
-        return Math.max(5, Math.round(ed.word_count / 160));
+        return Math.max(10, Math.round(ed.word_count / 180));
     }
-    return 5;
+    return 10;
 }
 
 function formatEditionTimeDisplay(ed) {
