@@ -186,7 +186,13 @@ def compute_coverage_window(edition_type: str, target_date_str: str | None = Non
     if target_date_str:
         year, month, day = map(int, target_date_str.split("-"))
     else:
-        year, month, day = now_ist.year, now_ist.month, now_ist.day
+        # If an evening edition is running in the early morning (before 12:00 PM IST),
+        # it was delayed from yesterday evening!
+        if edition_type.strip().lower() == "evening" and now_ist.hour < 12:
+            delayed_date = now_ist - timedelta(days=1)
+            year, month, day = delayed_date.year, delayed_date.month, delayed_date.day
+        else:
+            year, month, day = now_ist.year, now_ist.month, now_ist.day
 
     edition_type = edition_type.strip().lower()
     if edition_type == "morning":

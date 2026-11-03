@@ -60,6 +60,12 @@ def edition_already_exists(edition_id: str, date_str: str) -> bool:
         big_pic = existing.get("sections", {}).get("big_picture", "")
         if "distinct political and policy developments were tracked" in big_pic:
             return False
+        # Overwrite empty stubs (0 top developments or default empty headline)
+        top_devs = existing.get("sections", {}).get("top_developments", [])
+        if not top_devs:
+            return False
+        if existing.get("headline") == "Tamil Nadu Political Briefing" and not existing.get("parties"):
+            return False
         return True
     except Exception:
         return False
