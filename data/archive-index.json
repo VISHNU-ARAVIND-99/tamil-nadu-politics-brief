@@ -1,6 +1,6 @@
 {
-  "total_editions": 6,
-  "last_updated_ist": "2026-11-03T03:16:52.802701+05:30",
+  "total_editions": 7,
+  "last_updated_ist": "2026-11-03T12:31:42.759133+05:30",
   "editions": [
     {
       "edition_id": "2026-11-03-evening",
@@ -21,6 +21,49 @@
       "districts": [],
       "url": "edition.html?id=2026-11-03-evening",
       "json_path": "archive/2026/11/2026-11-03-evening.json"
+    },
+    {
+      "edition_id": "2026-11-03-morning",
+      "title": "Tamil Nadu Politics – Morning Brief – 3 November 2026",
+      "date": "2026-11-03",
+      "edition_type": "morning",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-03T12:31:42.759133+05:30",
+      "coverage_start_ist": "2026-11-02T18:00:00+05:30",
+      "coverage_end_ist": "2026-11-03T06:00:00+05:30",
+      "coverage_window": "2026-11-02T18:00:00+05:30 to 2026-11-03T06:00:00+05:30",
+      "reading_time_minutes": 2,
+      "headline": "Madras HC Grants Bail to DMK Leader, Citing Free Speech",
+      "summary_text": "- Madras HC grants bail to DMK councillor in CM abuse case\n- Stalin and opposition lambast TVK regime over sluggish GST growth\n- TNHB moves to raze Pattinapakkam flats amid Secretariat project buzz",
+      "parties": [
+        "AIADMK",
+        "BJP",
+        "DMK",
+        "Left Parties",
+        "PMK",
+        "TVK",
+        "VCK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Assembly, Courts & Policy",
+        "Centre–State Relations",
+        "Elections",
+        "Government & Administration",
+        "Infrastructure & Economy",
+        "Political Parties",
+        "Public Protests & Labour"
+      ],
+      "districts": [
+        "Ariyalur",
+        "Chennai",
+        "Karur",
+        "Pudukkottai",
+        "Thanjavur"
+      ],
+      "url": "edition.html?id=2026-11-03-morning",
+      "json_path": "archive/2026/11/2026-11-03-morning.json"
     },
     {
       "edition_id": "2026-11-02-morning",
