@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-03T12:31:42.759133+05:30",
+  "last_updated_ist": "2026-11-03T18:14:56.202535+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Morning: 2026-11-03T12:31:42.759133+05:30; Evening: 2026-11-01T21:57:21.151638+05:30.",
+  "status_message": "Last published — Evening: 2026-11-03T18:14:56.202535+05:30; Morning: 2026-11-03T12:31:42.759133+05:30.",
   "morning": {
     "edition_id": "2026-11-03-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 3 November 2026",
@@ -49,24 +49,30 @@
     "url": "edition.html?id=2026-11-03-morning"
   },
   "evening": {
-    "edition_id": "2026-11-01-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 1 November 2026",
-    "date": "2026-11-01",
+    "edition_id": "2026-11-03-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 3 November 2026",
+    "date": "2026-11-03",
     "edition_type": "evening",
     "is_test_sample": false,
-    "status": "published_ai",
-    "scheduled_time_ist": "2026-11-01T18:00:00+05:30",
-    "published_at_ist": "2026-11-01T21:57:21.151638+05:30",
-    "coverage_start_ist": "2026-11-01T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-01T18:00:00+05:30",
+    "status": "published",
+    "scheduled_time_ist": "2026-11-03T18:00:00+05:30",
+    "generated_at_ist": "2026-11-03T18:14:56.202308+05:30",
+    "published_at_ist": "2026-11-03T18:14:56.202535+05:30",
+    "coverage_start_ist": "2026-11-03T06:00:00+05:30",
+    "coverage_end_ist": "2026-11-03T18:00:00+05:30",
     "reading_time_minutes": 2,
-    "word_count": 398,
-    "headline": "Tamil Nadu Day, Bribery Allegations, and Tasmac Strikes",
-    "big_picture_excerpt": "- President, Prime Minister, and CM Vijay greet people on Tamil Nadu Day\n- Tamil Nadu government orders setting up of 30 additional special courts",
+    "word_count": 432,
+    "headline": "Madras HC Grants Relief to DMK Leader, CM Vijay Distributes Rs 3,000 Crore to Self-Help Groups",
+    "big_picture_excerpt": "- Madras High Court Grants Bail to DMK Leader in CM Abuse Case\n- CM Vijay Distributes Rs 3,000 Crore to Women Self-Help Groups in Erode",
     "parties": [
+      "AIADMK",
       "BJP",
+      "DMDK",
       "DMK",
-      "TVK"
+      "INC",
+      "NTK",
+      "TVK",
+      "VCK"
     ],
     "topics": [
       "Assembly, Courts & Policy",
@@ -74,16 +80,18 @@
       "Education & NEET",
       "Elections",
       "Government & Administration",
+      "Infrastructure & Economy",
       "Public Protests & Labour"
     ],
     "districts": [
-      "Ariyalur",
       "Chennai",
-      "Pudukkottai",
-      "Viluppuram"
+      "Coimbatore",
+      "Erode",
+      "Thoothukudi",
+      "Virudhunagar"
     ],
-    "json_path": "archive/2026/11/2026-11-01-evening.json",
-    "md_path": "archive/2026/11/2026-11-01-evening.md",
-    "url": "edition.html?id=2026-11-01-evening"
+    "json_path": "archive/2026/11/2026-11-03-evening.json",
+    "md_path": "archive/2026/11/2026-11-03-evening.md",
+    "url": "edition.html?id=2026-11-03-evening"
   }
 }
