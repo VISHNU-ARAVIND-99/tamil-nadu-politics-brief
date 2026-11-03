@@ -363,7 +363,7 @@ def collect_all_sources(window_start: datetime, window_end: datetime, sources_pa
     enabled_sources = [src for src in registry.get("sources", []) if src.get("enabled", True)]
     all_items = []
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
         future_to_src = {
             executor.submit(fetch_feed_items, src, window_start, window_end): src
             for src in enabled_sources

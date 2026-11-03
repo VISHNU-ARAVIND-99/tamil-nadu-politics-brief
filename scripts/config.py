@@ -27,9 +27,9 @@ IST = timezone(timedelta(hours=5, minutes=30))
 
 AI_PROVIDER = os.getenv("AI_PROVIDER", "gemini").strip().lower()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite").strip()
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash").strip()
 MAX_API_CALLS_PER_RUN = int(os.getenv("MAX_API_CALLS_PER_RUN", "2"))
-HTTP_TIMEOUT_SECONDS = int(os.getenv("HTTP_TIMEOUT_SECONDS", "15"))
+HTTP_TIMEOUT_SECONDS = int(os.getenv("HTTP_TIMEOUT_SECONDS", "8"))
 USER_AGENT = os.getenv(
     "USER_AGENT",
     "Mozilla/5.0 (compatible; TamilNaduPoliticsBrief/3.0; +https://github.com/tn-politics-brief)",
@@ -278,7 +278,7 @@ def has_tamil_script(text: str) -> bool:
     return bool(text and TAMIL_UNICODE_RE.search(text))
 
 
-@functools.lru_cache(maxsize=256)
+@functools.lru_cache(maxsize=1024)
 def translate_tamil_to_english(text: str) -> str:
     if not text:
         return ""
@@ -286,20 +286,20 @@ def translate_tamil_to_english(text: str) -> str:
         return sanitize_untrusted_text(text)
 
     last_exc = None
-    for attempt in range(3):
+    for attempt in range(2):
         try:
             q = urllib.parse.quote(text[:900])
             url = f"https://translate.googleapis.com/translate_a/single?client=gtx&sl=ta&tl=en&dt=t&q={q}"
             req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-            with urllib.request.urlopen(req, timeout=8) as resp:
+            with urllib.request.urlopen(req, timeout=4) as resp:
                 data = json.loads(resp.read().decode("utf-8"))
             translated_parts = [seg[0] for seg in data[0] if seg and seg[0]]
             result = "".join(translated_parts).strip()
             return sanitize_untrusted_text(result, max_length=650)
         except Exception as exc:
             last_exc = exc
-            if attempt < 2:
-                time.sleep(0.5 * (attempt + 1))
-    print(f"[WARN] Tamil translation failed after 3 attempts: {last_exc}")
+            if attempt < 1:
+                time.sleep(0.2)
+    print(f"[WARN] Tamil translation failed after 2 attempts: {last_exc}")
     ascii_only = TAMIL_UNICODE_RE.sub(" ", text)
     return sanitize_untrusted_text(ascii_only, max_length=650)

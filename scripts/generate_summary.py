@@ -377,14 +377,10 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
     discovered = discover_gemini_flash_models(GEMINI_API_KEY)
     models_to_try = [
         GEMINI_MODEL,
-        *discovered,
-        "gemini-3.5-flash-lite",
-        "gemini-3.8-flash",
-        "gemini-3.6-flash",
-        "gemini-3.1-flash-lite",
-        "gemini-2.5-flash",
         "gemini-2.0-flash",
         "gemini-1.5-flash",
+        "gemini-1.5-flash-8b",
+        *discovered,
     ]
     models_to_try = list(dict.fromkeys(m for m in models_to_try if m))
     last_err = "unknown"
@@ -419,7 +415,7 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
         )
 
         try:
-            with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT_SECONDS * 4) as resp:
+            with urllib.request.urlopen(req, timeout=30) as resp:
                 resp_json = json.loads(resp.read().decode("utf-8"))
             raw_text = resp_json["candidates"][0]["content"]["parts"][0]["text"]
             ai_sections = clean_json_response(raw_text)
