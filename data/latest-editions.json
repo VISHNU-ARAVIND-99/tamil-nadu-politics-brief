@@ -15,9 +15,9 @@
     "coverage_start_ist": "2026-11-02T18:00:00+05:30",
     "coverage_end_ist": "2026-11-03T06:00:00+05:30",
     "reading_time_minutes": 10,
-    "word_count": 459,
-    "headline": "Madras HC Grants Bail to DMK Leader, Citing Free Speech",
-    "big_picture_excerpt": "- Madras HC grants bail to DMK councillor in CM abuse case\n- Stalin and opposition lambast TVK regime over sluggish GST growth\n- TNHB moves to raze Pattinapakkam flats amid Secretariat project buzz",
+    "word_count": 1586,
+    "headline": "Madras HC Defends Political Dissent in Councillor Case, TVK Faces Fiscal Heat Over 3% GST Growth",
+    "big_picture_excerpt": "- Madras High Court Protects Political Speech in Relief to GCC Councillor\n- Unified Opposition Attacks TVK Regime Over Sluggish 3% October GST Growth\n- TNHB Moves to Demolish Pattinapakkam Rental Flats Amid New Secretariat Speculation",
     "parties": [
       "AIADMK",
       "BJP",
@@ -60,10 +60,10 @@
     "published_at_ist": "2026-11-03T18:14:56.202535+05:30",
     "coverage_start_ist": "2026-11-03T06:00:00+05:30",
     "coverage_end_ist": "2026-11-03T18:00:00+05:30",
-    "reading_time_minutes": 10,
-    "word_count": 432,
-    "headline": "Madras HC Grants Relief to DMK Leader, CM Vijay Distributes Rs 3,000 Crore to Self-Help Groups",
-    "big_picture_excerpt": "- Madras High Court Grants Bail to DMK Leader in CM Abuse Case\n- CM Vijay Distributes Rs 3,000 Crore to Women Self-Help Groups in Erode",
+    "reading_time_minutes": 12,
+    "word_count": 2178,
+    "headline": "Madras HC Censures Police Over Political Arrests, CM Vijay Rolls Out ₹3,000 Cr SHG Package in Erode",
+    "big_picture_excerpt": "- Madras High Court Grants Bail to DMK Councillor, Rebuking Police Over Political Interference\n- CM Vijay Distributes ₹3,000 Crore to 26,000 Women Self-Help Groups in Erode\n- Thoothukudi Court Acquits DMK MLA Anitha Radhakrishnan in 20-Year-Old Assets Case",
     "parties": [
       "AIADMK",
       "BJP",
@@ -75,18 +75,21 @@
       "VCK"
     ],
     "topics": [
+      "Agriculture & Water",
       "Assembly, Courts & Policy",
       "Centre–State Relations",
       "Education & NEET",
       "Elections",
       "Government & Administration",
       "Infrastructure & Economy",
+      "Political Parties",
       "Public Protests & Labour"
     ],
     "districts": [
       "Chennai",
       "Coimbatore",
       "Erode",
+      "Thanjavur",
       "Thoothukudi",
       "Virudhunagar"
     ],

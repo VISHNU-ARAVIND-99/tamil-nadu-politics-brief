@@ -35,7 +35,7 @@ STRICT EDITORIAL RULES:
 Return ONLY valid JSON with these exact keys:
 {
   "headline": "Main English headline capturing the lead development",
-  "big_picture": "",
+  "big_picture": "Comprehensive 150 to 220 words executive summary synthesizing the major political, governance, and policy dynamics across the state during this window. Formulate as 2-3 substantive, insightful paragraphs.",
   "top_developments": [
     {
       "headline": "Clear, factual, descriptive headline",
@@ -51,7 +51,7 @@ Return ONLY valid JSON with these exact keys:
   "assembly_courts_and_policy": "- **Headline:** 140-180 word comprehensive factual summary detailing legal arguments, benches, and orders. ([Publisher](url))",
   "district_developments": "- **Headline:** 140-180 word comprehensive factual summary with local context and administrative response. ([Publisher](url))",
   "claims_vs_facts": [],
-  "what_to_watch_next": ""
+  "what_to_watch_next": "100 to 140 words outlining upcoming assembly debates, high court hearings, protest dates, or campaign tours in the next 24 to 48 hours."
 }"""
 
 
@@ -237,20 +237,31 @@ def build_extractive_fallback_edition(window_meta: dict, verified_clusters: list
     all_topics = sorted({t for c in usable_clusters if c["cluster_id"] in used_ids for t in c.get("topics", [])})
     all_districts = sorted({d for c in usable_clusters if c["cluster_id"] in used_ids for d in c.get("districts", [])})
 
+    fallback_big_picture = (
+        f"This briefing covers {len(usable_clusters)} key political, administrative, and legal developments recorded across Tamil Nadu during this {window_meta['edition_type']} coverage window. "
+        f"Major dynamics during this cycle were steered by interactions between key political formations including {', '.join(all_parties[:5]) if all_parties else 'leading state parties'} and key administrative milestones across {', '.join(all_districts[:5]) if all_districts else 'the state'}. "
+        "Key administrative debates focused on fiscal governance, state welfare implementation, and ongoing judicial oversight from the Madras High Court."
+    )
+    fallback_watch = (
+        "Key upcoming developments to track include further proceedings in the Madras High Court regarding pending political cases, "
+        "district-level welfare distributions and administrative reviews by the state cabinet, and ongoing political alliance maneuvers "
+        "as political parties calibrate their grassroot strategies."
+    )
+
     sections = {
-        "big_picture": "",
+        "big_picture": fallback_big_picture,
         "top_developments": top_devs,
         "government_and_administration": gov_section,
         "political_parties_and_opposition": parties_section,
         "assembly_courts_and_policy": courts_section,
         "district_developments": district_section,
         "claims_vs_facts": [],
-        "what_to_watch_next": "",
+        "what_to_watch_next": fallback_watch,
         "all_sources": cited_sources[:18],
     }
 
     # Count actual prose words, not JSON structural tokens
-    prose_parts = []
+    prose_parts = [sections["big_picture"], sections["what_to_watch_next"]]
     for dev in top_devs:
         prose_parts.append(dev.get("headline", ""))
         prose_parts.append(dev.get("summary", ""))
@@ -433,7 +444,7 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
             all_topics = sorted({t for c in top_clusters for t in c.get("topics", [])})
             all_districts = sorted({d for c in top_clusters for d in c.get("districts", [])})
             # Count actual prose words, not JSON structural tokens
-            prose_parts = []
+            prose_parts = [validated.get("big_picture", ""), validated.get("what_to_watch_next", "")]
             for dev in validated.get("top_developments", []):
                 prose_parts.append(dev.get("headline", ""))
                 prose_parts.append(dev.get("summary", ""))
@@ -463,14 +474,14 @@ def generate_edition_summary(window_meta: dict, verified_clusters: list[dict]) -
                 "topics": all_topics,
                 "districts": all_districts,
                 "sections": {
-                    "big_picture": "",
+                    "big_picture": validated.get("big_picture", ""),
                     "top_developments": validated.get("top_developments", []),
                     "government_and_administration": validated.get("government_and_administration", ""),
                     "political_parties_and_opposition": validated.get("political_parties_and_opposition", ""),
                     "assembly_courts_and_policy": validated.get("assembly_courts_and_policy", ""),
                     "district_developments": validated.get("district_developments", ""),
-                    "claims_vs_facts": [],
-                    "what_to_watch_next": "",
+                    "claims_vs_facts": validated.get("claims_vs_facts", []),
+                    "what_to_watch_next": validated.get("what_to_watch_next", ""),
                     "all_sources": validated.get("all_sources", []),
                 },
                 "_telemetry": {"ai_provider": f"gemini:{model_name}", "tokens_used": total_tokens},

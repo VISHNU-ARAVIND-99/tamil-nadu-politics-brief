@@ -368,6 +368,29 @@ a:hover {
     margin-bottom: 1rem;
 }
 
+.executive-summary-callout {
+    background: var(--bg-card);
+    border-left: 4px solid var(--accent);
+    padding: 1.25rem 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent);
+}
+
+.what-to-watch-callout {
+    background: var(--bg-card);
+    padding: 1.25rem 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 1.25rem;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid #10b981;
+}
+
 .story-item {
     background: var(--bg-card);
     border: 1px solid var(--border-color);

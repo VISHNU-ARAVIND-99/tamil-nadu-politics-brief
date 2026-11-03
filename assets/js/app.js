@@ -375,7 +375,7 @@ function formatEditorialText(str, forceBullets = false, excludeHeadline = "") {
 
     const normExclude = excludeHeadline.toLowerCase().replace(/\W+/g, "");
 
-    const lines = cleaned
+    const rawLines = cleaned
         .split("\n")
         .map(l => l.trim())
         .filter(l => {
@@ -387,11 +387,10 @@ function formatEditorialText(str, forceBullets = false, excludeHeadline = "") {
             return true;
         });
 
-    if (!lines.length) return "";
+    if (!rawLines.length) return "";
 
-    const isBulletList = forceBullets || lines.some(l => /^[-*•]\s+/.test(l));
-    if (isBulletList) {
-        const items = lines
+    if (forceBullets) {
+        const items = rawLines
             .map(l => {
                 const stripped = l.replace(/^[-*•]\s+/, "").trim();
                 return `<li style="margin-bottom:0.6rem;line-height:1.55;">${formatInlineMarkdown(escapeHtml(stripped))}</li>`;
@@ -400,9 +399,30 @@ function formatEditorialText(str, forceBullets = false, excludeHeadline = "") {
         return `<ul style="padding-left:1.25rem;margin-bottom:0.75rem;">${items}</ul>`;
     }
 
-    return lines
-        .map(l => `<p style="margin-bottom:0.75rem;">${formatInlineMarkdown(escapeHtml(l))}</p>`)
-        .join("");
+    let html = "";
+    let inList = false;
+    let listItems = [];
+
+    function flushList() {
+        if (inList && listItems.length) {
+            html += `<ul style="padding-left:1.25rem;margin-bottom:0.85rem;line-height:1.6;">${listItems.join("")}</ul>`;
+            listItems = [];
+            inList = false;
+        }
+    }
+
+    for (const line of rawLines) {
+        if (/^[-*•]\s+/.test(line)) {
+            inList = true;
+            const stripped = line.replace(/^[-*•]\s+/, "").trim();
+            listItems.push(`<li style="margin-bottom:0.5rem;">${formatInlineMarkdown(escapeHtml(stripped))}</li>`);
+        } else {
+            flushList();
+            html += `<p style="margin-bottom:0.85rem;line-height:1.65;font-size:1rem;">${formatInlineMarkdown(escapeHtml(line))}</p>`;
+        }
+    }
+    flushList();
+    return html;
 }
 
 function shareOnWhatsApp(editionId, headline) {
@@ -572,7 +592,7 @@ function renderFullEditionView(container, ed, pagination = null) {
             <p class="meta-line" style="margin-bottom:0;">
               <strong>Coverage Window:</strong> ${fixedWindow} &bull;
               ${timeDisplayHtml} &bull;
-              <strong>Reading Time:</strong> ~${estimatedReadMin} min (${allCards.length} Quick-Read Stories)
+              <strong>Reading Time:</strong> ~${estimatedReadMin} min (${allCards.length} In-Depth Stories)
             </p>
           </div>
           <div class="edition-toolbar">
@@ -583,6 +603,13 @@ function renderFullEditionView(container, ed, pagination = null) {
         </div>
       `,
             show: true
+        },
+        {
+            id: "sec-big-picture",
+            toc: "Executive Summary",
+            title: "Executive Summary & Strategic Analysis",
+            html: `<div class="executive-summary-callout">${formatEditorialText(sec.big_picture || "", false)}</div>`,
+            show: Boolean(sec.big_picture && sec.big_picture.trim())
         },
         {
             id: "sec-top-devs",
@@ -618,6 +645,13 @@ function renderFullEditionView(container, ed, pagination = null) {
             title: "District-Level Developments",
             html: districtsHtml,
             show: Boolean(districtsHtml)
+        },
+        {
+            id: "sec-watch",
+            toc: "What to Watch Next",
+            title: "What to Watch Next & Upcoming Developments",
+            html: `<div class="what-to-watch-callout">${formatEditorialText(sec.what_to_watch_next || "", false)}</div>`,
+            show: Boolean(sec.what_to_watch_next && sec.what_to_watch_next.trim())
         },
         {
             id: "sec-sources",
