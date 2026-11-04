@@ -1,7 +1,50 @@
 {
-  "total_editions": 7,
-  "last_updated_ist": "2026-11-03T18:14:56.202535+05:30",
+  "total_editions": 8,
+  "last_updated_ist": "2026-11-04T12:09:03.499047+05:30",
   "editions": [
+    {
+      "edition_id": "2026-11-04-morning",
+      "title": "Tamil Nadu Politics – Morning Brief – 4 November 2026",
+      "date": "2026-11-04",
+      "edition_type": "morning",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-04T12:09:03.499047+05:30",
+      "coverage_start_ist": "2026-11-03T18:00:00+05:30",
+      "coverage_end_ist": "2026-11-04T06:00:00+05:30",
+      "coverage_window": "2026-11-03T18:00:00+05:30 to 2026-11-04T06:00:00+05:30",
+      "reading_time_minutes": 10,
+      "headline": "Chief Minister Joseph Vijay Rolls Out Rs 3,000 Crore Credit Scheme for Self-Help Groups in Erode as Opposition Slams Governance and Rising Agrarian Crisis",
+      "summary_text": "- CM Vijay Launches Rs 3,000 Crore Bank Credit for SHGs in Erode\n- Edappadi K Palaniswami Exposes TVK Regime Over 250 Tonnes of Rotting Onions in Chennai\n- Former DMK Minister Anitha Radhakrishnan and Six Family Members Acquitted in 20-Year-Old Assets Case",
+      "parties": [
+        "AIADMK",
+        "AMMK",
+        "BJP",
+        "DMK",
+        "TVK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Assembly, Courts & Policy",
+        "Centre–State Relations",
+        "Education & NEET",
+        "Elections",
+        "Government & Administration",
+        "Political Parties"
+      ],
+      "districts": [
+        "Ariyalur",
+        "Chennai",
+        "Cuddalore",
+        "Erode",
+        "Kallakurichi",
+        "Karur",
+        "Thoothukudi",
+        "Tiruvannamalai"
+      ],
+      "url": "edition.html?id=2026-11-04-morning",
+      "json_path": "archive/2026/11/2026-11-04-morning.json"
+    },
     {
       "edition_id": "2026-11-03-evening",
       "title": "Tamil Nadu Politics – Evening Brief – 3 November 2026",

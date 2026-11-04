@@ -1,52 +1,52 @@
 {
-  "last_updated_ist": "2026-11-03T18:14:56.202535+05:30",
+  "last_updated_ist": "2026-11-04T12:09:03.499047+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-03T18:14:56.202535+05:30; Morning: 2026-11-03T12:31:42.759133+05:30.",
+  "status_message": "Last published — Evening: 2026-11-03T18:14:56.202535+05:30; Morning: 2026-11-04T12:09:03.499047+05:30.",
   "morning": {
-    "edition_id": "2026-11-03-morning",
-    "title": "Tamil Nadu Politics – Morning Brief – 3 November 2026",
-    "date": "2026-11-03",
+    "edition_id": "2026-11-04-morning",
+    "title": "Tamil Nadu Politics – Morning Brief – 4 November 2026",
+    "date": "2026-11-04",
     "edition_type": "morning",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-03T06:00:00+05:30",
-    "generated_at_ist": "2026-11-03T12:31:42.758909+05:30",
-    "published_at_ist": "2026-11-03T12:31:42.759133+05:30",
-    "coverage_start_ist": "2026-11-02T18:00:00+05:30",
-    "coverage_end_ist": "2026-11-03T06:00:00+05:30",
+    "scheduled_time_ist": "2026-11-04T06:00:00+05:30",
+    "generated_at_ist": "2026-11-04T12:09:03.498749+05:30",
+    "published_at_ist": "2026-11-04T12:09:03.499047+05:30",
+    "coverage_start_ist": "2026-11-03T18:00:00+05:30",
+    "coverage_end_ist": "2026-11-04T06:00:00+05:30",
     "reading_time_minutes": 10,
-    "word_count": 1586,
-    "headline": "Madras HC Defends Political Dissent in Councillor Case, TVK Faces Fiscal Heat Over 3% GST Growth",
-    "big_picture_excerpt": "- Madras High Court Protects Political Speech in Relief to GCC Councillor\n- Unified Opposition Attacks TVK Regime Over Sluggish 3% October GST Growth\n- TNHB Moves to Demolish Pattinapakkam Rental Flats Amid New Secretariat Speculation",
+    "word_count": 1500,
+    "headline": "Chief Minister Joseph Vijay Rolls Out Rs 3,000 Crore Credit Scheme for Self-Help Groups in Erode as Opposition Slams Governance and Rising Agrarian Crisis",
+    "big_picture_excerpt": "- CM Vijay Launches Rs 3,000 Crore Bank Credit for SHGs in Erode\n- Edappadi K Palaniswami Exposes TVK Regime Over 250 Tonnes of Rotting Onions in Chennai\n- Former DMK Minister Anitha Radhakrishnan and Six Family Members Acquitted in 20-Year-Old Assets Case",
     "parties": [
       "AIADMK",
+      "AMMK",
       "BJP",
       "DMK",
-      "Left Parties",
-      "PMK",
-      "TVK",
-      "VCK"
+      "TVK"
     ],
     "topics": [
       "Agriculture & Water",
       "Assembly, Courts & Policy",
       "Centre–State Relations",
+      "Education & NEET",
       "Elections",
       "Government & Administration",
-      "Infrastructure & Economy",
-      "Political Parties",
-      "Public Protests & Labour"
+      "Political Parties"
     ],
     "districts": [
       "Ariyalur",
       "Chennai",
+      "Cuddalore",
+      "Erode",
+      "Kallakurichi",
       "Karur",
-      "Pudukkottai",
-      "Thanjavur"
+      "Thoothukudi",
+      "Tiruvannamalai"
     ],
-    "json_path": "archive/2026/11/2026-11-03-morning.json",
-    "md_path": "archive/2026/11/2026-11-03-morning.md",
-    "url": "edition.html?id=2026-11-03-morning"
+    "json_path": "archive/2026/11/2026-11-04-morning.json",
+    "md_path": "archive/2026/11/2026-11-04-morning.md",
+    "url": "edition.html?id=2026-11-04-morning"
   },
   "evening": {
     "edition_id": "2026-11-03-evening",
