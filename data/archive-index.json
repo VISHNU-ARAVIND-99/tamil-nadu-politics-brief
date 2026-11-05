@@ -1,7 +1,48 @@
 {
-  "total_editions": 9,
-  "last_updated_ist": "2026-11-05T01:25:47.478207+05:30",
+  "total_editions": 10,
+  "last_updated_ist": "2026-11-05T12:28:31.415224+05:30",
   "editions": [
+    {
+      "edition_id": "2026-11-05-morning",
+      "title": "Tamil Nadu Politics – Morning Brief – 5 November 2026",
+      "date": "2026-11-05",
+      "edition_type": "morning",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-05T12:28:31.415224+05:30",
+      "coverage_start_ist": "2026-11-04T18:00:00+05:30",
+      "coverage_end_ist": "2026-11-05T06:00:00+05:30",
+      "coverage_window": "2026-11-04T18:00:00+05:30 to 2026-11-05T06:00:00+05:30",
+      "reading_time_minutes": 10,
+      "headline": "CM Vijay Consolidates Welfare Agenda Amid Poaching Allegations and Opposition Attacks",
+      "summary_text": "- TVK Legislators Allege Multi-Crore Poaching Attempts by DMK and AIADMK\n- Chief Minister Vijay Launches Rs 1,003 Crore Housing Project and 400 MLD Desalination Plant\n- MK Stalin Attacks TVK Governance, Citing Power Cuts and 'Corporate' Influence",
+      "parties": [
+        "AIADMK",
+        "AMMK",
+        "BJP",
+        "DMK",
+        "PMK",
+        "TVK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Assembly, Courts & Policy",
+        "Centre–State Relations",
+        "Education & NEET",
+        "Government & Administration",
+        "Infrastructure & Economy",
+        "Political Parties"
+      ],
+      "districts": [
+        "Chennai",
+        "Coimbatore",
+        "Cuddalore",
+        "Karur",
+        "Madurai"
+      ],
+      "url": "edition.html?id=2026-11-05-morning",
+      "json_path": "archive/2026/11/2026-11-05-morning.json"
+    },
     {
       "edition_id": "2026-11-04-evening",
       "title": "Tamil Nadu Politics – Evening Brief – 4 November 2026",

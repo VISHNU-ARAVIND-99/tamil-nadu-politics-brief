@@ -1,28 +1,29 @@
 {
-  "last_updated_ist": "2026-11-05T01:25:47.478207+05:30",
+  "last_updated_ist": "2026-11-05T12:28:31.415224+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-05T01:25:47.478207+05:30; Morning: 2026-11-04T12:09:03.499047+05:30.",
+  "status_message": "Last published — Evening: 2026-11-05T01:25:47.478207+05:30; Morning: 2026-11-05T12:28:31.415224+05:30.",
   "morning": {
-    "edition_id": "2026-11-04-morning",
-    "title": "Tamil Nadu Politics – Morning Brief – 4 November 2026",
-    "date": "2026-11-04",
+    "edition_id": "2026-11-05-morning",
+    "title": "Tamil Nadu Politics – Morning Brief – 5 November 2026",
+    "date": "2026-11-05",
     "edition_type": "morning",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-04T06:00:00+05:30",
-    "generated_at_ist": "2026-11-04T12:09:03.498749+05:30",
-    "published_at_ist": "2026-11-04T12:09:03.499047+05:30",
-    "coverage_start_ist": "2026-11-03T18:00:00+05:30",
-    "coverage_end_ist": "2026-11-04T06:00:00+05:30",
+    "scheduled_time_ist": "2026-11-05T06:00:00+05:30",
+    "generated_at_ist": "2026-11-05T12:28:31.414878+05:30",
+    "published_at_ist": "2026-11-05T12:28:31.415224+05:30",
+    "coverage_start_ist": "2026-11-04T18:00:00+05:30",
+    "coverage_end_ist": "2026-11-05T06:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "Chief Minister Joseph Vijay Rolls Out Rs 3,000 Crore Credit Scheme for Self-Help Groups in Erode as Opposition Slams Governance and Rising Agrarian Crisis",
-    "big_picture_excerpt": "- CM Vijay Launches Rs 3,000 Crore Bank Credit for SHGs in Erode\n- Edappadi K Palaniswami Exposes TVK Regime Over 250 Tonnes of Rotting Onions in Chennai\n- Former DMK Minister Anitha Radhakrishnan and Six Family Members Acquitted in 20-Year-Old Assets Case",
+    "headline": "CM Vijay Consolidates Welfare Agenda Amid Poaching Allegations and Opposition Attacks",
+    "big_picture_excerpt": "- TVK Legislators Allege Multi-Crore Poaching Attempts by DMK and AIADMK\n- Chief Minister Vijay Launches Rs 1,003 Crore Housing Project and 400 MLD Desalination Plant\n- MK Stalin Attacks TVK Governance, Citing Power Cuts and 'Corporate' Influence",
     "parties": [
       "AIADMK",
       "AMMK",
       "BJP",
       "DMK",
+      "PMK",
       "TVK"
     ],
     "topics": [
@@ -30,23 +31,20 @@
       "Assembly, Courts & Policy",
       "Centre–State Relations",
       "Education & NEET",
-      "Elections",
       "Government & Administration",
+      "Infrastructure & Economy",
       "Political Parties"
     ],
     "districts": [
-      "Ariyalur",
       "Chennai",
+      "Coimbatore",
       "Cuddalore",
-      "Erode",
-      "Kallakurichi",
       "Karur",
-      "Thoothukudi",
-      "Tiruvannamalai"
+      "Madurai"
     ],
-    "json_path": "archive/2026/11/2026-11-04-morning.json",
-    "md_path": "archive/2026/11/2026-11-04-morning.md",
-    "url": "edition.html?id=2026-11-04-morning"
+    "json_path": "archive/2026/11/2026-11-05-morning.json",
+    "md_path": "archive/2026/11/2026-11-05-morning.md",
+    "url": "edition.html?id=2026-11-05-morning"
   },
   "evening": {
     "edition_id": "2026-11-04-evening",
