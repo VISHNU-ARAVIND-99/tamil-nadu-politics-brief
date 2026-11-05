@@ -301,6 +301,11 @@ def validate_and_sanitize_ai_output(ai_data: dict, allowed_urls: set[str], fallb
     for dev in ai_data.get("top_developments", []):
         dev["headline"] = clean_headline_prefix(translate_tamil_to_english(dev.get("headline", "")))
         dev["summary"] = translate_tamil_to_english(dev.get("summary", ""))
+        raw_inv = dev.get("who_is_involved", "")
+        if isinstance(raw_inv, list):
+            dev["who_is_involved"] = ", ".join(str(x) for x in raw_inv if x)
+        elif not isinstance(raw_inv, str):
+            dev["who_is_involved"] = ""
         valid_sources = []
         for s in dev.get("sources", []):
             u = s.get("url") if isinstance(s, dict) else None

@@ -259,11 +259,17 @@ function renderStoryCardHtml(item, indexNumber, sectionLabel) {
         badgeLabel = "Verified Report";
     }
 
-    // Party tags: split multiple parties into individual badges
-    const rawInvolved = item.who_is_involved || "";
-    const partyTags = rawInvolved
-        .split(",")
-        .map(p => p.trim())
+    // Party tags: split multiple parties into individual badges safely
+    const rawInvolved = item.who_is_involved;
+    let rawInvolvedList = [];
+    if (Array.isArray(rawInvolved)) {
+        rawInvolvedList = rawInvolved;
+    } else if (typeof rawInvolved === "string") {
+        rawInvolvedList = rawInvolved.split(",");
+    }
+
+    const partyTags = rawInvolvedList
+        .map(p => String(p).trim())
         .filter(p => p && p !== "State Administration / Public Stakeholders")
         .map(p => `<span class="badge badge-tag">${escapeHtml(p)}</span>`)
         .join(" ");
