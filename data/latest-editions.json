@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-05T12:28:31.415224+05:30",
+  "last_updated_ist": "2026-11-06T01:37:28.017930+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-05T01:25:47.478207+05:30; Morning: 2026-11-05T12:28:31.415224+05:30.",
+  "status_message": "Last published — Evening: 2026-11-06T01:37:28.017930+05:30; Morning: 2026-11-05T12:28:31.415224+05:30.",
   "morning": {
     "edition_id": "2026-11-05-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 5 November 2026",
@@ -47,33 +47,32 @@
     "url": "edition.html?id=2026-11-05-morning"
   },
   "evening": {
-    "edition_id": "2026-11-04-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 4 November 2026",
-    "date": "2026-11-04",
+    "edition_id": "2026-11-05-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 5 November 2026",
+    "date": "2026-11-05",
     "edition_type": "evening",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-04T18:00:00+05:30",
-    "generated_at_ist": "2026-11-05T01:25:47.477880+05:30",
-    "published_at_ist": "2026-11-05T01:25:47.478207+05:30",
-    "coverage_start_ist": "2026-11-04T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-04T18:00:00+05:30",
+    "scheduled_time_ist": "2026-11-05T18:00:00+05:30",
+    "generated_at_ist": "2026-11-06T01:37:28.017645+05:30",
+    "published_at_ist": "2026-11-06T01:37:28.017930+05:30",
+    "coverage_start_ist": "2026-11-05T06:00:00+05:30",
+    "coverage_end_ist": "2026-11-05T18:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "Chief Minister Vijay Unveils Rs 1,003-Crore Housing Projects as DMK Leader M.K. Stalin Alleges Power Purchase Scandals and Corporate Control",
-    "big_picture_excerpt": "- CM Vijay Rolls Out Rs 1,003-Crore Urban Housing Projects Across Chennai\n- M.K. Stalin Accuses TVK Government of Power Purchase Scam and Corporate Control\n- Supreme Court Stays Madras High Court Order on Chidambaram Natarajar Temple Administration",
+    "headline": "Political Tensions Escalate as TVK Government Faces Allegations of Instability and External Influence",
+    "big_picture_excerpt": "- Allegations of Poaching and Destabilization Rock TVK Government",
     "parties": [
       "AIADMK",
-      "AMMK",
       "BJP",
       "DMK",
+      "INC",
       "PMK",
       "TVK"
     ],
     "topics": [
       "Agriculture & Water",
       "Assembly, Courts & Policy",
-      "Centre–State Relations",
       "Education & NEET",
       "Elections",
       "Government & Administration",
@@ -83,11 +82,11 @@
     "districts": [
       "Chennai",
       "Coimbatore",
-      "Cuddalore",
-      "Karur"
+      "Theni",
+      "Vellore"
     ],
-    "json_path": "archive/2026/11/2026-11-04-evening.json",
-    "md_path": "archive/2026/11/2026-11-04-evening.md",
-    "url": "edition.html?id=2026-11-04-evening"
+    "json_path": "archive/2026/11/2026-11-05-evening.json",
+    "md_path": "archive/2026/11/2026-11-05-evening.md",
+    "url": "edition.html?id=2026-11-05-evening"
   }
 }
