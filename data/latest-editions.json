@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-06T12:29:16.351984+05:30",
+  "last_updated_ist": "2026-11-07T01:03:24.990911+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-06T01:37:28.017930+05:30; Morning: 2026-11-06T12:29:16.351984+05:30.",
+  "status_message": "Last published — Evening: 2026-11-07T01:03:24.990911+05:30; Morning: 2026-11-06T12:29:16.351984+05:30.",
   "morning": {
     "edition_id": "2026-11-06-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 6 November 2026",
@@ -47,21 +47,21 @@
     "url": "edition.html?id=2026-11-06-morning"
   },
   "evening": {
-    "edition_id": "2026-11-05-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 5 November 2026",
-    "date": "2026-11-05",
+    "edition_id": "2026-11-06-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 6 November 2026",
+    "date": "2026-11-06",
     "edition_type": "evening",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-05T18:00:00+05:30",
-    "generated_at_ist": "2026-11-06T01:37:28.017645+05:30",
-    "published_at_ist": "2026-11-06T01:37:28.017930+05:30",
-    "coverage_start_ist": "2026-11-05T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-05T18:00:00+05:30",
+    "scheduled_time_ist": "2026-11-06T18:00:00+05:30",
+    "generated_at_ist": "2026-11-07T01:03:24.990611+05:30",
+    "published_at_ist": "2026-11-07T01:03:24.990911+05:30",
+    "coverage_start_ist": "2026-11-06T06:00:00+05:30",
+    "coverage_end_ist": "2026-11-06T18:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "Political Tensions Escalate as TVK Government Faces Allegations of Instability and External Influence",
-    "big_picture_excerpt": "- Allegations of Poaching and Destabilization Rock TVK Government",
+    "headline": "Political Turmoil Escalates in Tamil Nadu: Corruption Charges, High-Profile Arrests, and Legislative Realignments Rock State Politics",
+    "big_picture_excerpt": "- Supreme Court Agrees to Hear DMK Leader's Plea Challenging Madras High Court Dismissal of Election Petition\n- DVAC Books DMK General Secretary Durai Murugan and 26 Others in Rs 1,427 Crore Illegal Sand Mining Scam",
     "parties": [
       "AIADMK",
       "BJP",
@@ -73,20 +73,20 @@
     "topics": [
       "Agriculture & Water",
       "Assembly, Courts & Policy",
+      "Centre–State Relations",
       "Education & NEET",
       "Elections",
       "Government & Administration",
-      "Infrastructure & Economy",
-      "Political Parties"
+      "Infrastructure & Economy"
     ],
     "districts": [
       "Chennai",
       "Coimbatore",
-      "Theni",
-      "Vellore"
+      "Madurai",
+      "Virudhunagar"
     ],
-    "json_path": "archive/2026/11/2026-11-05-evening.json",
-    "md_path": "archive/2026/11/2026-11-05-evening.md",
-    "url": "edition.html?id=2026-11-05-evening"
+    "json_path": "archive/2026/11/2026-11-06-evening.json",
+    "md_path": "archive/2026/11/2026-11-06-evening.md",
+    "url": "edition.html?id=2026-11-06-evening"
   }
 }
