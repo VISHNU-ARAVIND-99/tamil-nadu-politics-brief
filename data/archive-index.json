@@ -1,7 +1,41 @@
 {
-  "total_editions": 14,
-  "last_updated_ist": "2026-11-07T11:40:03.064588+05:30",
+  "total_editions": 15,
+  "last_updated_ist": "2026-11-07T23:18:50.316304+05:30",
   "editions": [
+    {
+      "edition_id": "2026-11-07-evening",
+      "title": "Tamil Nadu Politics – Evening Brief – 7 November 2026",
+      "date": "2026-11-07",
+      "edition_type": "evening",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-07T23:18:50.316304+05:30",
+      "coverage_start_ist": "2026-11-07T06:00:00+05:30",
+      "coverage_end_ist": "2026-11-07T18:00:00+05:30",
+      "coverage_window": "2026-11-07T06:00:00+05:30 to 2026-11-07T18:00:00+05:30",
+      "reading_time_minutes": 10,
+      "headline": "Tamil Nadu Political Landscape Shaken as TVK Government Allocates ₹2,000 Crore for Student Laptops, Scraps Kurian Panel, and Confronts Opposition Over Controversial 'AI Book Scandal'",
+      "summary_text": "- Chief Minister Vijay Sanctions ₹2,000 Crore for Vetri Laptop Scheme to Empower College Students\n- Tamil Nadu Government Probes Alleged 'AI Book Scam' Under Previous DMK Regime as Opposition Demands Anti-Corruption Inquiry\n- Chief Minister Vijay Writes to Prime Minister Modi Opposing Karnataka's Mekedatu Dam Project and Central Site Inspections",
+      "parties": [
+        "AIADMK",
+        "DMK",
+        "TVK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Assembly, Courts & Policy",
+        "Centre–State Relations",
+        "Education & NEET",
+        "Elections",
+        "Government & Administration"
+      ],
+      "districts": [
+        "Chennai",
+        "Coimbatore"
+      ],
+      "url": "edition.html?id=2026-11-07-evening",
+      "json_path": "archive/2026/11/2026-11-07-evening.json"
+    },
     {
       "edition_id": "2026-11-07-morning",
       "title": "Tamil Nadu Politics – Morning Brief – 7 November 2026",
