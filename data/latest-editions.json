@@ -1,50 +1,48 @@
 {
-  "last_updated_ist": "2026-11-07T01:03:24.990911+05:30",
+  "last_updated_ist": "2026-11-07T11:40:03.064588+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-07T01:03:24.990911+05:30; Morning: 2026-11-06T12:29:16.351984+05:30.",
+  "status_message": "Last published — Evening: 2026-11-07T01:03:24.990911+05:30; Morning: 2026-11-07T11:40:03.064588+05:30.",
   "morning": {
-    "edition_id": "2026-11-06-morning",
-    "title": "Tamil Nadu Politics – Morning Brief – 6 November 2026",
-    "date": "2026-11-06",
+    "edition_id": "2026-11-07-morning",
+    "title": "Tamil Nadu Politics – Morning Brief – 7 November 2026",
+    "date": "2026-11-07",
     "edition_type": "morning",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-06T06:00:00+05:30",
-    "generated_at_ist": "2026-11-06T12:29:16.351661+05:30",
-    "published_at_ist": "2026-11-06T12:29:16.351984+05:30",
-    "coverage_start_ist": "2026-11-05T18:00:00+05:30",
-    "coverage_end_ist": "2026-11-06T06:00:00+05:30",
+    "scheduled_time_ist": "2026-11-07T06:00:00+05:30",
+    "generated_at_ist": "2026-11-07T11:40:03.063876+05:30",
+    "published_at_ist": "2026-11-07T11:40:03.064588+05:30",
+    "coverage_start_ist": "2026-11-06T18:00:00+05:30",
+    "coverage_end_ist": "2026-11-07T06:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "Political Turbulence Intensifies Across Tamil Nadu as Allegations of Horse-Trading, High-Level Anti-Corruption Raids, and Wetland Conservation Disputes Grip the State",
-    "big_picture_excerpt": "- Madurai Police Interrogate AIADMK Functionary Over Alleged ₹15-Crore Horse-Trading Scheme Targeting TVK MLAs\n- DVAC Launches Statewide Raids at 30 Locations Following Enforcement Directorate's Multi-Crore Sand Mining Scam Probe",
+    "headline": "Corruption Scrutiny Intensifies in Tamil Nadu as DVAC Books Duraimurugan Over Rs 1,427-Crore Sand Mining Scam",
+    "big_picture_excerpt": "- DVAC Books DMK General Secretary Duraimurugan and 26 Others in Rs 1,427-Crore River Sand Mining Scam\n- Periyar Arivulagam Book Procurement Controversy Triggers Statewide Political Outcry and Government Inquiries",
     "parties": [
       "AIADMK",
       "BJP",
       "DMK",
-      "INC",
+      "Left Parties",
       "PMK",
       "TVK"
     ],
     "topics": [
+      "Agriculture & Water",
       "Assembly, Courts & Policy",
       "Centre–State Relations",
       "Education & NEET",
       "Elections",
       "Government & Administration",
-      "Infrastructure & Economy",
-      "Political Parties",
-      "Public Protests & Labour"
+      "Infrastructure & Economy"
     ],
     "districts": [
       "Chennai",
       "Coimbatore",
-      "Madurai",
-      "Vellore"
+      "Madurai"
     ],
-    "json_path": "archive/2026/11/2026-11-06-morning.json",
-    "md_path": "archive/2026/11/2026-11-06-morning.md",
-    "url": "edition.html?id=2026-11-06-morning"
+    "json_path": "archive/2026/11/2026-11-07-morning.json",
+    "md_path": "archive/2026/11/2026-11-07-morning.md",
+    "url": "edition.html?id=2026-11-07-morning"
   },
   "evening": {
     "edition_id": "2026-11-06-evening",
