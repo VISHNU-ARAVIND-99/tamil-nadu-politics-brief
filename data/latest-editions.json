@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-08T11:45:10.051685+05:30",
+  "last_updated_ist": "2026-11-08T23:29:47.838541+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-07T23:18:50.316304+05:30; Morning: 2026-11-08T11:45:10.051685+05:30.",
+  "status_message": "Last published — Evening: 2026-11-08T23:29:47.838541+05:30; Morning: 2026-11-08T11:45:10.051685+05:30.",
   "morning": {
     "edition_id": "2026-11-08-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 8 November 2026",
@@ -46,40 +46,59 @@
     "url": "edition.html?id=2026-11-08-morning"
   },
   "evening": {
-    "edition_id": "2026-11-07-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 7 November 2026",
-    "date": "2026-11-07",
+    "edition_id": "2026-11-08-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 8 November 2026",
+    "date": "2026-11-08",
     "edition_type": "evening",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-07T18:00:00+05:30",
-    "generated_at_ist": "2026-11-07T23:18:50.316022+05:30",
-    "published_at_ist": "2026-11-07T23:18:50.316304+05:30",
-    "coverage_start_ist": "2026-11-07T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-07T18:00:00+05:30",
+    "scheduled_time_ist": "2026-11-08T18:00:00+05:30",
+    "generated_at_ist": "2026-11-08T23:29:47.838289+05:30",
+    "published_at_ist": "2026-11-08T23:29:47.838541+05:30",
+    "coverage_start_ist": "2026-11-08T06:00:00+05:30",
+    "coverage_end_ist": "2026-11-08T18:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "Tamil Nadu Political Landscape Shaken as TVK Government Allocates ₹2,000 Crore for Student Laptops, Scraps Kurian Panel, and Confronts Opposition Over Controversial 'AI Book Scandal'",
-    "big_picture_excerpt": "- Chief Minister Vijay Sanctions ₹2,000 Crore for Vetri Laptop Scheme to Empower College Students\n- Tamil Nadu Government Probes Alleged 'AI Book Scam' Under Previous DMK Regime as Opposition Demands Anti-Corruption Inquiry\n- Chief Minister Vijay Writes to Prime Minister Modi Opposing Karnataka's Mekedatu Dam Project and Central Site Inspections",
+    "headline": "Karnataka Pushes Mekedatu Project as Tamil Nadu Opposes, Sparking Inter-State Tensions",
+    "big_picture_excerpt": "- Karnataka Seeks Tamil Nadu's Cooperation for Mekedatu Balancing Reservoir Project",
     "parties": [
       "AIADMK",
+      "BJP",
       "DMK",
+      "MDMK",
       "TVK"
     ],
     "topics": [
-      "Agriculture & Water",
       "Assembly, Courts & Policy",
-      "Centre–State Relations",
-      "Education & NEET",
       "Elections",
       "Government & Administration"
     ],
     "districts": [
+      "Ariyalur",
+      "Chengalpattu",
       "Chennai",
-      "Coimbatore"
+      "Coimbatore",
+      "Cuddalore",
+      "Dindigul",
+      "Erode",
+      "Kallakurichi",
+      "Kancheepuram",
+      "Madurai",
+      "Mayiladuthurai",
+      "Nagapattinam",
+      "Perambalur",
+      "Ramanathapuram",
+      "Sivaganga",
+      "Thanjavur",
+      "Thoothukudi",
+      "Tiruchirappalli",
+      "Tirunelveli",
+      "Tiruvallur",
+      "Tiruvarur",
+      "Viluppuram"
     ],
-    "json_path": "archive/2026/11/2026-11-07-evening.json",
-    "md_path": "archive/2026/11/2026-11-07-evening.md",
-    "url": "edition.html?id=2026-11-07-evening"
+    "json_path": "archive/2026/11/2026-11-08-evening.json",
+    "md_path": "archive/2026/11/2026-11-08-evening.md",
+    "url": "edition.html?id=2026-11-08-evening"
   }
 }

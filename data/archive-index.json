@@ -1,7 +1,60 @@
 {
-  "total_editions": 16,
-  "last_updated_ist": "2026-11-08T11:45:10.051685+05:30",
+  "total_editions": 17,
+  "last_updated_ist": "2026-11-08T23:29:47.838541+05:30",
   "editions": [
+    {
+      "edition_id": "2026-11-08-evening",
+      "title": "Tamil Nadu Politics – Evening Brief – 8 November 2026",
+      "date": "2026-11-08",
+      "edition_type": "evening",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-08T23:29:47.838541+05:30",
+      "coverage_start_ist": "2026-11-08T06:00:00+05:30",
+      "coverage_end_ist": "2026-11-08T18:00:00+05:30",
+      "coverage_window": "2026-11-08T06:00:00+05:30 to 2026-11-08T18:00:00+05:30",
+      "reading_time_minutes": 10,
+      "headline": "Karnataka Pushes Mekedatu Project as Tamil Nadu Opposes, Sparking Inter-State Tensions",
+      "summary_text": "- Karnataka Seeks Tamil Nadu's Cooperation for Mekedatu Balancing Reservoir Project",
+      "parties": [
+        "AIADMK",
+        "BJP",
+        "DMK",
+        "MDMK",
+        "TVK"
+      ],
+      "topics": [
+        "Assembly, Courts & Policy",
+        "Elections",
+        "Government & Administration"
+      ],
+      "districts": [
+        "Ariyalur",
+        "Chengalpattu",
+        "Chennai",
+        "Coimbatore",
+        "Cuddalore",
+        "Dindigul",
+        "Erode",
+        "Kallakurichi",
+        "Kancheepuram",
+        "Madurai",
+        "Mayiladuthurai",
+        "Nagapattinam",
+        "Perambalur",
+        "Ramanathapuram",
+        "Sivaganga",
+        "Thanjavur",
+        "Thoothukudi",
+        "Tiruchirappalli",
+        "Tirunelveli",
+        "Tiruvallur",
+        "Tiruvarur",
+        "Viluppuram"
+      ],
+      "url": "edition.html?id=2026-11-08-evening",
+      "json_path": "archive/2026/11/2026-11-08-evening.json"
+    },
     {
       "edition_id": "2026-11-08-morning",
       "title": "Tamil Nadu Politics – Morning Brief – 8 November 2026",
