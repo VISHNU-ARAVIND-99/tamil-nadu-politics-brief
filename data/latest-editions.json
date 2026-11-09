@@ -1,49 +1,37 @@
 {
-  "last_updated_ist": "2026-11-08T23:29:47.838541+05:30",
+  "last_updated_ist": "2026-11-09T12:18:19.956543+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-08T23:29:47.838541+05:30; Morning: 2026-11-08T11:45:10.051685+05:30.",
+  "status_message": "Last published — Evening: 2026-11-08T23:29:47.838541+05:30; Morning: 2026-11-09T12:18:19.956543+05:30.",
   "morning": {
-    "edition_id": "2026-11-08-morning",
-    "title": "Tamil Nadu Politics – Morning Brief – 8 November 2026",
-    "date": "2026-11-08",
+    "edition_id": "2026-11-09-morning",
+    "title": "Tamil Nadu Politics – Morning Brief – 9 November 2026",
+    "date": "2026-11-09",
     "edition_type": "morning",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-08T06:00:00+05:30",
-    "generated_at_ist": "2026-11-08T11:45:10.051385+05:30",
-    "published_at_ist": "2026-11-08T11:45:10.051685+05:30",
-    "coverage_start_ist": "2026-11-07T18:00:00+05:30",
-    "coverage_end_ist": "2026-11-08T06:00:00+05:30",
+    "scheduled_time_ist": "2026-11-09T06:00:00+05:30",
+    "generated_at_ist": "2026-11-09T12:18:19.956277+05:30",
+    "published_at_ist": "2026-11-09T12:18:19.956543+05:30",
+    "coverage_start_ist": "2026-11-08T18:00:00+05:30",
+    "coverage_end_ist": "2026-11-09T06:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "Tamil Nadu Political Upheaval: DMK and TVK Clash Over Periyar Library Book Scandal and Centre-State Panel Dissolution",
-    "big_picture_excerpt": "- DMK and TVK Exchange Blows Over Alleged AI-Generated Book Procurement Scam at Periyar Arivulagam\n- Dissolution of Panel on Union-State Relations Triggers Fierce Political Row Across Tamil Nadu",
+    "headline": "DMK Leadership Departs for Overseas Engagement Amid Major High Court Rulings and Environmental Interventions",
+    "big_picture_excerpt": "- MK Stalin and Udhayanidhi Stalin Depart Chennai for Greece via Dubai\n- Armed Gang Waylays Courier and Loots 55 Kilograms of Silver Bars at Perungalathur Bus Stop",
     "parties": [
-      "BJP",
-      "DMK",
-      "Left Parties",
-      "PMK",
-      "TVK"
+      "DMK"
     ],
     "topics": [
-      "Agriculture & Water",
       "Assembly, Courts & Policy",
-      "Centre–State Relations",
-      "Education & NEET",
-      "Elections",
-      "Government & Administration",
-      "Public Protests & Labour"
+      "Government & Administration"
     ],
     "districts": [
       "Chennai",
-      "Coimbatore",
-      "Cuddalore",
-      "Madurai",
       "Tirunelveli"
     ],
-    "json_path": "archive/2026/11/2026-11-08-morning.json",
-    "md_path": "archive/2026/11/2026-11-08-morning.md",
-    "url": "edition.html?id=2026-11-08-morning"
+    "json_path": "archive/2026/11/2026-11-09-morning.json",
+    "md_path": "archive/2026/11/2026-11-09-morning.md",
+    "url": "edition.html?id=2026-11-09-morning"
   },
   "evening": {
     "edition_id": "2026-11-08-evening",
