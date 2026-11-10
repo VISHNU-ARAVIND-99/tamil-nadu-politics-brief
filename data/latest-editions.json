@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-10T12:58:27.933914+05:30",
+  "last_updated_ist": "2026-11-11T01:23:23.682266+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-10T04:01:43.765794+05:30; Morning: 2026-11-10T12:58:27.933914+05:30.",
+  "status_message": "Last published — Evening: 2026-11-11T01:23:23.682266+05:30; Morning: 2026-11-10T12:58:27.933914+05:30.",
   "morning": {
     "edition_id": "2026-11-10-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 10 November 2026",
@@ -47,41 +47,48 @@
     "url": "edition.html?id=2026-11-10-morning"
   },
   "evening": {
-    "edition_id": "2026-11-09-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 9 November 2026",
-    "date": "2026-11-09",
+    "edition_id": "2026-11-10-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 10 November 2026",
+    "date": "2026-11-10",
     "edition_type": "evening",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-09T18:00:00+05:30",
-    "generated_at_ist": "2026-11-10T04:01:43.765504+05:30",
-    "published_at_ist": "2026-11-10T04:01:43.765794+05:30",
-    "coverage_start_ist": "2026-11-09T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-09T18:00:00+05:30",
+    "scheduled_time_ist": "2026-11-10T18:00:00+05:30",
+    "generated_at_ist": "2026-11-11T01:23:23.681986+05:30",
+    "published_at_ist": "2026-11-11T01:23:23.682266+05:30",
+    "coverage_start_ist": "2026-11-10T06:00:00+05:30",
+    "coverage_end_ist": "2026-11-10T18:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "TVK Government Marks Six Months in Office Amid Law and Order Challenges, High Court Legal Victories, and Major Policy Rollouts",
-    "big_picture_excerpt": "- AIADMK and DMK Slam TVK Government Over Deepavali Day Murders and Theni SSI Senthilkumar's Death\n- Madras High Court Dismisses ₹35 Crore Land Claim Against Actor-Politician C. Joseph Vijay",
+    "headline": "CM Vijay Faces Multi-Front Opposition Over Law and Order Crisis and Inter-State Water Disputes",
+    "big_picture_excerpt": "- Kallakurichi MLA Arul Vignesh Accused of Harassing District Collector; Opposition Demands Immediate Arrest\n- DMK President MK Stalin Slams TVK Government, Claims Law and Order is in 'Intensive Care Unit'",
     "parties": [
       "AIADMK",
       "AMMK",
+      "BJP",
       "DMK",
-      "TVK"
+      "Left Parties",
+      "MDMK",
+      "TVK",
+      "VCK"
     ],
     "topics": [
       "Agriculture & Water",
       "Assembly, Courts & Policy",
+      "Centre–State Relations",
+      "Education & NEET",
       "Elections",
-      "Government & Administration"
+      "Government & Administration",
+      "Political Parties"
     ],
     "districts": [
       "Chennai",
       "Coimbatore",
       "Kallakurichi",
-      "Theni"
+      "Tiruchirappalli"
     ],
-    "json_path": "archive/2026/11/2026-11-09-evening.json",
-    "md_path": "archive/2026/11/2026-11-09-evening.md",
-    "url": "edition.html?id=2026-11-09-evening"
+    "json_path": "archive/2026/11/2026-11-10-evening.json",
+    "md_path": "archive/2026/11/2026-11-10-evening.md",
+    "url": "edition.html?id=2026-11-10-evening"
   }
 }
