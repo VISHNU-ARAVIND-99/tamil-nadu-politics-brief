@@ -1,7 +1,48 @@
 {
-  "total_editions": 23,
-  "last_updated_ist": "2026-11-12T01:15:40.249089+05:30",
+  "total_editions": 24,
+  "last_updated_ist": "2026-11-12T12:52:46.179704+05:30",
   "editions": [
+    {
+      "edition_id": "2026-11-12-morning",
+      "title": "Tamil Nadu Politics – Morning Brief – 12 November 2026",
+      "date": "2026-11-12",
+      "edition_type": "morning",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-12T12:52:46.179704+05:30",
+      "coverage_start_ist": "2026-11-11T18:00:00+05:30",
+      "coverage_end_ist": "2026-11-12T06:00:00+05:30",
+      "coverage_window": "2026-11-11T18:00:00+05:30 to 2026-11-12T06:00:00+05:30",
+      "reading_time_minutes": 10,
+      "headline": "Chief Minister Vijay Consolidates Governance Amidst Legislative Scrutiny and Economic Expansion",
+      "summary_text": "- CM Vijay orders ₹5.25 crore additional relief for 2018 anti-Sterlite protest victims",
+      "parties": [
+        "AMMK",
+        "BJP",
+        "DMK",
+        "NTK",
+        "TVK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Assembly, Courts & Policy",
+        "Education & NEET",
+        "Government & Administration",
+        "Infrastructure & Economy",
+        "Political Parties",
+        "Public Protests & Labour"
+      ],
+      "districts": [
+        "Chengalpattu",
+        "Chennai",
+        "Coimbatore",
+        "Thoothukudi",
+        "Tiruvallur",
+        "Viluppuram"
+      ],
+      "url": "edition.html?id=2026-11-12-morning",
+      "json_path": "archive/2026/11/2026-11-12-morning.json"
+    },
     {
       "edition_id": "2026-11-11-evening",
       "title": "Tamil Nadu Politics – Evening Brief – 11 November 2026",
