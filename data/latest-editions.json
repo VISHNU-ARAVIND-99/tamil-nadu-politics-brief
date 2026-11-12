@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-12T12:52:46.179704+05:30",
+  "last_updated_ist": "2026-11-13T01:39:07.043574+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-12T01:15:40.249089+05:30; Morning: 2026-11-12T12:52:46.179704+05:30.",
+  "status_message": "Last published — Evening: 2026-11-13T01:39:07.043574+05:30; Morning: 2026-11-12T12:52:46.179704+05:30.",
   "morning": {
     "edition_id": "2026-11-12-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 12 November 2026",
@@ -47,32 +47,32 @@
     "url": "edition.html?id=2026-11-12-morning"
   },
   "evening": {
-    "edition_id": "2026-11-11-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 11 November 2026",
-    "date": "2026-11-11",
+    "edition_id": "2026-11-12-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 12 November 2026",
+    "date": "2026-11-12",
     "edition_type": "evening",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-11T18:00:00+05:30",
-    "generated_at_ist": "2026-11-12T01:15:40.248765+05:30",
-    "published_at_ist": "2026-11-12T01:15:40.249089+05:30",
-    "coverage_start_ist": "2026-11-11T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-11T18:00:00+05:30",
+    "scheduled_time_ist": "2026-11-12T18:00:00+05:30",
+    "generated_at_ist": "2026-11-13T01:39:07.043268+05:30",
+    "published_at_ist": "2026-11-13T01:39:07.043574+05:30",
+    "coverage_start_ist": "2026-11-12T06:00:00+05:30",
+    "coverage_end_ist": "2026-11-12T18:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "CM Vijay Issues Stern Warning to TVK Legislators Amid Misconduct Allegations; Madras HC Orders FIR in AI-Generated Book Scam",
-    "big_picture_excerpt": "- Chief Minister Vijay Convenes Emergency Meeting to Discipline TVK MLAs Over Misconduct Allegations\n- Government Sanctions ₹5.25 Crore Additional Relief for Sterlite Victims and Launches EV Infrastructure",
+    "headline": "TVK Government Faces Mounting Pressure Over Law and Order and MLA Conduct",
+    "big_picture_excerpt": "- CM Vijay Holds Third Law and Order Review Amid Rising Opposition Criticism",
     "parties": [
       "AIADMK",
+      "AMMK",
+      "BJP",
       "DMK",
-      "INC",
-      "NTK",
       "TVK"
     ],
     "topics": [
-      "Agriculture & Water",
       "Assembly, Courts & Policy",
       "Centre–State Relations",
+      "Education & NEET",
       "Elections",
       "Government & Administration",
       "Infrastructure & Economy",
@@ -81,13 +81,14 @@
     ],
     "districts": [
       "Chennai",
-      "Coimbatore",
+      "Erode",
       "Kallakurichi",
-      "Salem",
-      "Thoothukudi"
+      "Tenkasi",
+      "Thoothukudi",
+      "Viluppuram"
     ],
-    "json_path": "archive/2026/11/2026-11-11-evening.json",
-    "md_path": "archive/2026/11/2026-11-11-evening.md",
-    "url": "edition.html?id=2026-11-11-evening"
+    "json_path": "archive/2026/11/2026-11-12-evening.json",
+    "md_path": "archive/2026/11/2026-11-12-evening.md",
+    "url": "edition.html?id=2026-11-12-evening"
   }
 }
