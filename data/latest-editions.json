@@ -1,50 +1,47 @@
 {
-  "last_updated_ist": "2026-11-13T01:39:07.043574+05:30",
+  "last_updated_ist": "2026-11-13T12:25:55.565226+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-13T01:39:07.043574+05:30; Morning: 2026-11-12T12:52:46.179704+05:30.",
+  "status_message": "Last published — Evening: 2026-11-13T01:39:07.043574+05:30; Morning: 2026-11-13T12:25:55.565226+05:30.",
   "morning": {
-    "edition_id": "2026-11-12-morning",
-    "title": "Tamil Nadu Politics – Morning Brief – 12 November 2026",
-    "date": "2026-11-12",
+    "edition_id": "2026-11-13-morning",
+    "title": "Tamil Nadu Politics – Morning Brief – 13 November 2026",
+    "date": "2026-11-13",
     "edition_type": "morning",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-12T06:00:00+05:30",
-    "generated_at_ist": "2026-11-12T12:52:46.179417+05:30",
-    "published_at_ist": "2026-11-12T12:52:46.179704+05:30",
-    "coverage_start_ist": "2026-11-11T18:00:00+05:30",
-    "coverage_end_ist": "2026-11-12T06:00:00+05:30",
+    "scheduled_time_ist": "2026-11-13T06:00:00+05:30",
+    "generated_at_ist": "2026-11-13T12:25:55.564884+05:30",
+    "published_at_ist": "2026-11-13T12:25:55.565226+05:30",
+    "coverage_start_ist": "2026-11-12T18:00:00+05:30",
+    "coverage_end_ist": "2026-11-13T06:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "Chief Minister Vijay Consolidates Governance Amidst Legislative Scrutiny and Economic Expansion",
-    "big_picture_excerpt": "- CM Vijay orders ₹5.25 crore additional relief for 2018 anti-Sterlite protest victims",
+    "headline": "Madras High Court Denies Dismissal of Election Petition Against Udhayanidhi Stalin",
+    "big_picture_excerpt": "- Madras High Court Dismisses Udhayanidhi Stalin's Plea To Reject Election Petition",
     "parties": [
+      "AIADMK",
       "AMMK",
       "BJP",
       "DMK",
-      "NTK",
       "TVK"
     ],
     "topics": [
-      "Agriculture & Water",
       "Assembly, Courts & Policy",
+      "Centre–State Relations",
       "Education & NEET",
+      "Elections",
       "Government & Administration",
       "Infrastructure & Economy",
-      "Political Parties",
-      "Public Protests & Labour"
+      "Political Parties"
     ],
     "districts": [
-      "Chengalpattu",
       "Chennai",
-      "Coimbatore",
-      "Thoothukudi",
-      "Tiruvallur",
-      "Viluppuram"
+      "Erode",
+      "Kallakurichi"
     ],
-    "json_path": "archive/2026/11/2026-11-12-morning.json",
-    "md_path": "archive/2026/11/2026-11-12-morning.md",
-    "url": "edition.html?id=2026-11-12-morning"
+    "json_path": "archive/2026/11/2026-11-13-morning.json",
+    "md_path": "archive/2026/11/2026-11-13-morning.md",
+    "url": "edition.html?id=2026-11-13-morning"
   },
   "evening": {
     "edition_id": "2026-11-12-evening",
