@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-14T12:09:20.155350+05:30",
+  "last_updated_ist": "2026-11-14T23:48:11.931188+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-14T01:23:23.087814+05:30; Morning: 2026-11-14T12:09:20.155350+05:30.",
+  "status_message": "Last published — Evening: 2026-11-14T23:48:11.931188+05:30; Morning: 2026-11-14T12:09:20.155350+05:30.",
   "morning": {
     "edition_id": "2026-11-14-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 14 November 2026",
@@ -48,25 +48,27 @@
     "url": "edition.html?id=2026-11-14-morning"
   },
   "evening": {
-    "edition_id": "2026-11-13-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 13 November 2026",
-    "date": "2026-11-13",
+    "edition_id": "2026-11-14-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 14 November 2026",
+    "date": "2026-11-14",
     "edition_type": "evening",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-13T18:00:00+05:30",
-    "generated_at_ist": "2026-11-14T01:23:23.087551+05:30",
-    "published_at_ist": "2026-11-14T01:23:23.087814+05:30",
-    "coverage_start_ist": "2026-11-13T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-13T18:00:00+05:30",
+    "scheduled_time_ist": "2026-11-14T18:00:00+05:30",
+    "generated_at_ist": "2026-11-14T23:48:11.930875+05:30",
+    "published_at_ist": "2026-11-14T23:48:11.931188+05:30",
+    "coverage_start_ist": "2026-11-14T06:00:00+05:30",
+    "coverage_end_ist": "2026-11-14T18:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "Madras High Court Refuses to Dismiss Election Plea Against Udhayanidhi Stalin as Political Flashpoints Intensify Across Tamil Nadu",
-    "big_picture_excerpt": "- Madras High Court Dismisses Udhayanidhi Stalin's Plea to Void Election Petition\n- AIADMK Announces Statewide Protests Over Kallakurichi MLA Controversy",
+    "headline": "DMK Urges All-Party Meet Over Mekedatu As Former Civil Servants Demand Restoration of Federal Relations Panel",
+    "big_picture_excerpt": "- DMK President Stalin Demands All-Party Summit to Oppose Karnataka's Mekedatu Dam Bid\n- Constitutional Conduct Group Urges Chief Minister Vijay to Reinstate High-Level Committee on Federal Rights",
     "parties": [
-      "AIADMK",
-      "BJP",
       "DMK",
+      "INC",
+      "Left Parties",
+      "MDMK",
+      "NTK",
       "PMK",
       "TVK",
       "VCK"
@@ -74,22 +76,22 @@
     "topics": [
       "Agriculture & Water",
       "Assembly, Courts & Policy",
+      "Centre–State Relations",
       "Education & NEET",
-      "Elections",
       "Government & Administration",
-      "Infrastructure & Economy",
-      "Political Parties",
-      "Public Protests & Labour"
+      "Political Parties"
     ],
     "districts": [
       "Chennai",
-      "Coimbatore",
-      "Erode",
       "Kallakurichi",
-      "Thanjavur"
+      "Madurai",
+      "Sivaganga",
+      "Tirupathur",
+      "Tiruvannamalai",
+      "Viluppuram"
     ],
-    "json_path": "archive/2026/11/2026-11-13-evening.json",
-    "md_path": "archive/2026/11/2026-11-13-evening.md",
-    "url": "edition.html?id=2026-11-13-evening"
+    "json_path": "archive/2026/11/2026-11-14-evening.json",
+    "md_path": "archive/2026/11/2026-11-14-evening.md",
+    "url": "edition.html?id=2026-11-14-evening"
   }
 }
