@@ -1,7 +1,49 @@
 {
-  "total_editions": 27,
-  "last_updated_ist": "2026-11-14T01:23:23.087814+05:30",
+  "total_editions": 28,
+  "last_updated_ist": "2026-11-14T12:09:20.155350+05:30",
   "editions": [
+    {
+      "edition_id": "2026-11-14-morning",
+      "title": "Tamil Nadu Politics – Morning Brief – 14 November 2026",
+      "date": "2026-11-14",
+      "edition_type": "morning",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-14T12:09:20.155350+05:30",
+      "coverage_start_ist": "2026-11-13T18:00:00+05:30",
+      "coverage_end_ist": "2026-11-14T06:00:00+05:30",
+      "coverage_window": "2026-11-13T18:00:00+05:30 to 2026-11-14T06:00:00+05:30",
+      "reading_time_minutes": 10,
+      "headline": "Tamil Nadu Imposes Strict Stock Limits on Essential Food Commodities to Curb Inflation Spike",
+      "summary_text": "- Tamil Nadu Government Imposes Stock Limits on Paddy, Rice, and Pulses to Counter Surging Inflation\n- Madras High Court Transfers High-Profile Isha Yoga Centre Missing Person Case to CB-CID\n- AIADMK General Secretary Edappadi K. Palaniswami Slams TVK Regime Over Law and Order and Project Clearances",
+      "parties": [
+        "AIADMK",
+        "BJP",
+        "DMK",
+        "PMK",
+        "TVK",
+        "VCK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Assembly, Courts & Policy",
+        "Centre–State Relations",
+        "Education & NEET",
+        "Elections",
+        "Government & Administration",
+        "Infrastructure & Economy",
+        "Political Parties",
+        "Public Protests & Labour"
+      ],
+      "districts": [
+        "Chennai",
+        "Coimbatore",
+        "Kallakurichi",
+        "Theni"
+      ],
+      "url": "edition.html?id=2026-11-14-morning",
+      "json_path": "archive/2026/11/2026-11-14-morning.json"
+    },
     {
       "edition_id": "2026-11-13-evening",
       "title": "Tamil Nadu Politics – Evening Brief – 13 November 2026",
