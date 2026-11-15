@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-15T12:15:53.543870+05:30",
+  "last_updated_ist": "2026-11-16T00:29:28.915299+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-14T23:48:11.931188+05:30; Morning: 2026-11-15T12:15:53.543870+05:30.",
+  "status_message": "Last published — Evening: 2026-11-16T00:29:28.915299+05:30; Morning: 2026-11-15T12:15:53.543870+05:30.",
   "morning": {
     "edition_id": "2026-11-15-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 15 November 2026",
@@ -47,50 +47,46 @@
     "url": "edition.html?id=2026-11-15-morning"
   },
   "evening": {
-    "edition_id": "2026-11-14-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 14 November 2026",
-    "date": "2026-11-14",
+    "edition_id": "2026-11-15-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 15 November 2026",
+    "date": "2026-11-15",
     "edition_type": "evening",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-14T18:00:00+05:30",
-    "generated_at_ist": "2026-11-14T23:48:11.930875+05:30",
-    "published_at_ist": "2026-11-14T23:48:11.931188+05:30",
-    "coverage_start_ist": "2026-11-14T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-14T18:00:00+05:30",
+    "scheduled_time_ist": "2026-11-15T18:00:00+05:30",
+    "generated_at_ist": "2026-11-16T00:29:28.915052+05:30",
+    "published_at_ist": "2026-11-16T00:29:28.915299+05:30",
+    "coverage_start_ist": "2026-11-15T06:00:00+05:30",
+    "coverage_end_ist": "2026-11-15T18:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "DMK Urges All-Party Meet Over Mekedatu As Former Civil Servants Demand Restoration of Federal Relations Panel",
-    "big_picture_excerpt": "- DMK President Stalin Demands All-Party Summit to Oppose Karnataka's Mekedatu Dam Bid\n- Constitutional Conduct Group Urges Chief Minister Vijay to Reinstate High-Level Committee on Federal Rights",
+    "headline": "Political Tensions Mount in Tamil Nadu Over Alliance Rifts, Mekedhatu Dispute, and High-Profile Legal Battles",
+    "big_picture_excerpt": "- AIADMK and AMMK Press CM Vijay to Confront Congress High Command on Mekedhatu Dam Issue During Delhi Visit\n- ED Re-Summons Former Minister C. Vijayabaskar and Wife in Rs 35.79 Crore Disproportionate Assets Case",
     "parties": [
+      "AIADMK",
+      "AMMK",
       "DMK",
       "INC",
-      "Left Parties",
-      "MDMK",
       "NTK",
-      "PMK",
-      "TVK",
-      "VCK"
+      "TVK"
     ],
     "topics": [
       "Agriculture & Water",
       "Assembly, Courts & Policy",
-      "Centre–State Relations",
       "Education & NEET",
+      "Elections",
       "Government & Administration",
       "Political Parties"
     ],
     "districts": [
+      "Chengalpattu",
       "Chennai",
       "Kallakurichi",
       "Madurai",
-      "Sivaganga",
-      "Tirupathur",
-      "Tiruvannamalai",
-      "Viluppuram"
+      "Theni"
     ],
-    "json_path": "archive/2026/11/2026-11-14-evening.json",
-    "md_path": "archive/2026/11/2026-11-14-evening.md",
-    "url": "edition.html?id=2026-11-14-evening"
+    "json_path": "archive/2026/11/2026-11-15-evening.json",
+    "md_path": "archive/2026/11/2026-11-15-evening.md",
+    "url": "edition.html?id=2026-11-15-evening"
   }
 }
