@@ -1,47 +1,47 @@
 {
-  "last_updated_ist": "2026-11-17T03:50:53.089847+05:30",
+  "last_updated_ist": "2026-11-17T13:37:10.048210+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-17T03:50:53.089847+05:30; Morning: 2026-11-16T12:15:04.314486+05:30.",
+  "status_message": "Last published — Evening: 2026-11-17T03:50:53.089847+05:30; Morning: 2026-11-17T13:37:10.048210+05:30.",
   "morning": {
-    "edition_id": "2026-11-16-morning",
-    "title": "Tamil Nadu Politics – Morning Brief – 16 November 2026",
-    "date": "2026-11-16",
+    "edition_id": "2026-11-17-morning",
+    "title": "Tamil Nadu Politics – Morning Brief – 17 November 2026",
+    "date": "2026-11-17",
     "edition_type": "morning",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-16T06:00:00+05:30",
-    "generated_at_ist": "2026-11-16T12:15:04.314175+05:30",
-    "published_at_ist": "2026-11-16T12:15:04.314486+05:30",
-    "coverage_start_ist": "2026-11-15T18:00:00+05:30",
-    "coverage_end_ist": "2026-11-16T06:00:00+05:30",
+    "scheduled_time_ist": "2026-11-17T06:00:00+05:30",
+    "generated_at_ist": "2026-11-17T13:37:10.047922+05:30",
+    "published_at_ist": "2026-11-17T13:37:10.048210+05:30",
+    "coverage_start_ist": "2026-11-16T18:00:00+05:30",
+    "coverage_end_ist": "2026-11-17T06:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "Tamil Nadu Political Currents: High-Stakes Legal Battles, Legislative Accountability, and Opposition Interventions Dominate State Affairs",
-    "big_picture_excerpt": "- NCW Seeks Impartial DGP Inquiry Into Kallakurichi Collector Harassment Allegations Involving MLA\n- Madras High Court Restricts PMLA Powers of Enforcement Directorate in Absence of Scheduled Offences\n- Tamil Nadu Government Imposes Strict Stock Limits on Essential Commodities to Control Inflation",
+    "headline": "CM Vijay’s Strategic Delhi Outreach and Madras High Court’s 20-Year Procurement Probe Reshape State Narrative",
+    "big_picture_excerpt": "- Chief Minister Vijay’s Delhi Visit Signals Potential TVK-Congress Alignment Amid National Memoir Launch\n- Madras High Court Demands White Paper on 20 Years of Library Book Procurement Following DVAC Raids",
     "parties": [
-      "AIADMK",
-      "AMMK",
       "BJP",
       "DMK",
       "INC",
       "Left Parties",
-      "PMK",
-      "TVK",
-      "VCK"
+      "TVK"
     ],
     "topics": [
       "Agriculture & Water",
       "Assembly, Courts & Policy",
+      "Centre–State Relations",
       "Education & NEET",
-      "Government & Administration"
+      "Government & Administration",
+      "Infrastructure & Economy"
     ],
     "districts": [
       "Chennai",
-      "Kallakurichi"
+      "Coimbatore",
+      "Madurai",
+      "Thoothukudi"
     ],
-    "json_path": "archive/2026/11/2026-11-16-morning.json",
-    "md_path": "archive/2026/11/2026-11-16-morning.md",
-    "url": "edition.html?id=2026-11-16-morning"
+    "json_path": "archive/2026/11/2026-11-17-morning.json",
+    "md_path": "archive/2026/11/2026-11-17-morning.md",
+    "url": "edition.html?id=2026-11-17-morning"
   },
   "evening": {
     "edition_id": "2026-11-16-evening",
