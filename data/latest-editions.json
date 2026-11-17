@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-17T13:37:10.048210+05:30",
+  "last_updated_ist": "2026-11-18T02:38:07.576410+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-17T03:50:53.089847+05:30; Morning: 2026-11-17T13:37:10.048210+05:30.",
+  "status_message": "Last published — Evening: 2026-11-18T02:38:07.576410+05:30; Morning: 2026-11-17T13:37:10.048210+05:30.",
   "morning": {
     "edition_id": "2026-11-17-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 17 November 2026",
@@ -44,25 +44,24 @@
     "url": "edition.html?id=2026-11-17-morning"
   },
   "evening": {
-    "edition_id": "2026-11-16-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 16 November 2026",
-    "date": "2026-11-16",
+    "edition_id": "2026-11-17-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 17 November 2026",
+    "date": "2026-11-17",
     "edition_type": "evening",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-16T18:00:00+05:30",
-    "generated_at_ist": "2026-11-17T03:50:53.089538+05:30",
-    "published_at_ist": "2026-11-17T03:50:53.089847+05:30",
-    "coverage_start_ist": "2026-11-16T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-16T18:00:00+05:30",
+    "scheduled_time_ist": "2026-11-17T18:00:00+05:30",
+    "generated_at_ist": "2026-11-18T02:38:07.576130+05:30",
+    "published_at_ist": "2026-11-18T02:38:07.576410+05:30",
+    "coverage_start_ist": "2026-11-17T06:00:00+05:30",
+    "coverage_end_ist": "2026-11-17T18:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "Tamil Nadu Political Landscape Shaken by High-Profile Disciplinary Actions, Judicial Rulings, and Coalition Frictions",
-    "big_picture_excerpt": "- DVAC Raids and Suspensions Rock Coimbatore Periyar Arivulagam Project Amid Opposition Outcry",
+    "headline": "DVAC Targets Senior DMK Leadership in Rs 1,427-Crore Sand Mining Probe",
+    "big_picture_excerpt": "- DVAC Names Duraimurugan and 17 Officials in Rs 1,427-Crore Sand Mining Scam",
     "parties": [
       "BJP",
       "DMK",
-      "INC",
       "Left Parties",
       "TVK"
     ],
@@ -71,17 +70,16 @@
       "Assembly, Courts & Policy",
       "Centre–State Relations",
       "Education & NEET",
-      "Government & Administration"
+      "Government & Administration",
+      "Political Parties"
     ],
     "districts": [
       "Chennai",
-      "Coimbatore",
-      "Kallakurichi",
       "Madurai",
-      "Mayiladuthurai"
+      "Theni"
     ],
-    "json_path": "archive/2026/11/2026-11-16-evening.json",
-    "md_path": "archive/2026/11/2026-11-16-evening.md",
-    "url": "edition.html?id=2026-11-16-evening"
+    "json_path": "archive/2026/11/2026-11-17-evening.json",
+    "md_path": "archive/2026/11/2026-11-17-evening.md",
+    "url": "edition.html?id=2026-11-17-evening"
   }
 }
