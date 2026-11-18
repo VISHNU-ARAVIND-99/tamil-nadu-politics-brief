@@ -1,7 +1,47 @@
 {
-  "total_editions": 36,
-  "last_updated_ist": "2026-11-18T13:12:00.288554+05:30",
+  "total_editions": 37,
+  "last_updated_ist": "2026-11-19T02:16:54.949223+05:30",
   "editions": [
+    {
+      "edition_id": "2026-11-18-evening",
+      "title": "Tamil Nadu Politics – Evening Brief – 18 November 2026",
+      "date": "2026-11-18",
+      "edition_type": "evening",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-19T02:16:54.949223+05:30",
+      "coverage_start_ist": "2026-11-18T06:00:00+05:30",
+      "coverage_end_ist": "2026-11-18T18:00:00+05:30",
+      "coverage_window": "2026-11-18T06:00:00+05:30 to 2026-11-18T18:00:00+05:30",
+      "reading_time_minutes": 10,
+      "headline": "Political Tensions Escalate Over Governance Protocols and Social Media Conduct",
+      "summary_text": "- Opposition Leaders Condemn Unauthorized Dam Opening by TVK Cadre",
+      "parties": [
+        "AIADMK",
+        "AMMK",
+        "BJP",
+        "DMK",
+        "NTK",
+        "PMK",
+        "TVK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Assembly, Courts & Policy",
+        "Centre–State Relations",
+        "Education & NEET",
+        "Government & Administration",
+        "Political Parties"
+      ],
+      "districts": [
+        "Chennai",
+        "Cuddalore",
+        "Kallakurichi",
+        "Theni"
+      ],
+      "url": "edition.html?id=2026-11-18-evening",
+      "json_path": "archive/2026/11/2026-11-18-evening.json"
+    },
     {
       "edition_id": "2026-11-18-morning",
       "title": "Tamil Nadu Politics – Morning Brief – 18 November 2026",

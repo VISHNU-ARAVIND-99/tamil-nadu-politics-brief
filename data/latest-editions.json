@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-18T13:12:00.288554+05:30",
+  "last_updated_ist": "2026-11-19T02:16:54.949223+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-18T02:38:07.576410+05:30; Morning: 2026-11-18T13:12:00.288554+05:30.",
+  "status_message": "Last published — Evening: 2026-11-19T02:16:54.949223+05:30; Morning: 2026-11-18T13:12:00.288554+05:30.",
   "morning": {
     "edition_id": "2026-11-18-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 18 November 2026",
@@ -42,25 +42,28 @@
     "url": "edition.html?id=2026-11-18-morning"
   },
   "evening": {
-    "edition_id": "2026-11-17-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 17 November 2026",
-    "date": "2026-11-17",
+    "edition_id": "2026-11-18-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 18 November 2026",
+    "date": "2026-11-18",
     "edition_type": "evening",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-17T18:00:00+05:30",
-    "generated_at_ist": "2026-11-18T02:38:07.576130+05:30",
-    "published_at_ist": "2026-11-18T02:38:07.576410+05:30",
-    "coverage_start_ist": "2026-11-17T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-17T18:00:00+05:30",
+    "scheduled_time_ist": "2026-11-18T18:00:00+05:30",
+    "generated_at_ist": "2026-11-19T02:16:54.948917+05:30",
+    "published_at_ist": "2026-11-19T02:16:54.949223+05:30",
+    "coverage_start_ist": "2026-11-18T06:00:00+05:30",
+    "coverage_end_ist": "2026-11-18T18:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "DVAC Targets Senior DMK Leadership in Rs 1,427-Crore Sand Mining Probe",
-    "big_picture_excerpt": "- DVAC Names Duraimurugan and 17 Officials in Rs 1,427-Crore Sand Mining Scam",
+    "headline": "Political Tensions Escalate Over Governance Protocols and Social Media Conduct",
+    "big_picture_excerpt": "- Opposition Leaders Condemn Unauthorized Dam Opening by TVK Cadre",
     "parties": [
+      "AIADMK",
+      "AMMK",
       "BJP",
       "DMK",
-      "Left Parties",
+      "NTK",
+      "PMK",
       "TVK"
     ],
     "topics": [
@@ -73,11 +76,12 @@
     ],
     "districts": [
       "Chennai",
-      "Madurai",
+      "Cuddalore",
+      "Kallakurichi",
       "Theni"
     ],
-    "json_path": "archive/2026/11/2026-11-17-evening.json",
-    "md_path": "archive/2026/11/2026-11-17-evening.md",
-    "url": "edition.html?id=2026-11-17-evening"
+    "json_path": "archive/2026/11/2026-11-18-evening.json",
+    "md_path": "archive/2026/11/2026-11-18-evening.md",
+    "url": "edition.html?id=2026-11-18-evening"
   }
 }
