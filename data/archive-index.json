@@ -1,7 +1,44 @@
 {
-  "total_editions": 41,
-  "last_updated_ist": "2026-11-21T02:06:15.179774+05:30",
+  "total_editions": 42,
+  "last_updated_ist": "2026-11-21T12:52:47.556433+05:30",
   "editions": [
+    {
+      "edition_id": "2026-11-21-morning",
+      "title": "Tamil Nadu Politics – Morning Brief – 21 November 2026",
+      "date": "2026-11-21",
+      "edition_type": "morning",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-21T12:52:47.556433+05:30",
+      "coverage_start_ist": "2026-11-20T18:00:00+05:30",
+      "coverage_end_ist": "2026-11-21T06:00:00+05:30",
+      "coverage_window": "2026-11-20T18:00:00+05:30 to 2026-11-21T06:00:00+05:30",
+      "reading_time_minutes": 10,
+      "headline": "Madras High Court Issues Landmark Directives on Stray Livestock as Political Crossfire Intensifies Over Guidance TN Data Leaks",
+      "summary_text": "- Madras High Court Issues State-Wide Directions Mandating Strict Action Against Stray Livestock on Public Thoroughfares\n- Madras High Court Issues Contempt Notices to Three Senior IAS Officers Over Non-Implementation of Library Book Procurement Orders\n- Madras High Court Grants Interim Injunction Restraining Circulation of Junior Vikatan Illustration Depicting Former Minister E.V. Velu",
+      "parties": [
+        "DMK",
+        "TVK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Assembly, Courts & Policy",
+        "Centre–State Relations",
+        "Education & NEET",
+        "Elections",
+        "Government & Administration",
+        "Infrastructure & Economy",
+        "Political Parties"
+      ],
+      "districts": [
+        "Chennai",
+        "Coimbatore",
+        "Karur",
+        "Madurai"
+      ],
+      "url": "edition.html?id=2026-11-21-morning",
+      "json_path": "archive/2026/11/2026-11-21-morning.json"
+    },
     {
       "edition_id": "2026-11-20-evening",
       "title": "Tamil Nadu Politics – Evening Brief – 20 November 2026",
