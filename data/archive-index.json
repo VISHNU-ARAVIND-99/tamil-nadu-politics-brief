@@ -1,7 +1,47 @@
 {
-  "total_editions": 44,
-  "last_updated_ist": "2026-11-22T12:31:20.130672+05:30",
+  "total_editions": 45,
+  "last_updated_ist": "2026-11-23T01:20:29.083889+05:30",
   "editions": [
+    {
+      "edition_id": "2026-11-22-evening",
+      "title": "Tamil Nadu Politics – Evening Brief – 22 November 2026",
+      "date": "2026-11-22",
+      "edition_type": "evening",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-23T01:20:29.083889+05:30",
+      "coverage_start_ist": "2026-11-22T06:00:00+05:30",
+      "coverage_end_ist": "2026-11-22T18:00:00+05:30",
+      "coverage_window": "2026-11-22T06:00:00+05:30 to 2026-11-22T18:00:00+05:30",
+      "reading_time_minutes": 10,
+      "headline": "Madras High Court Flags Official Inaction in Kallakurichi Collector Harassment Case as Chief Minister Vijay Engages Coalition Allies",
+      "summary_text": "- Madras High Court Flags Cop Inaction Over TVK MLA's 'Inappropriate' Texts To Collector\n- Chief Minister Vijay Holds High-Stakes Coordination Meeting with Coalition Allies at Greenways Road",
+      "parties": [
+        "AIADMK",
+        "AMMK",
+        "BJP",
+        "DMK",
+        "INC",
+        "Left Parties",
+        "TVK",
+        "VCK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Assembly, Courts & Policy",
+        "Government & Administration",
+        "Political Parties"
+      ],
+      "districts": [
+        "Chennai",
+        "Coimbatore",
+        "Cuddalore",
+        "Kallakurichi",
+        "Krishnagiri"
+      ],
+      "url": "edition.html?id=2026-11-22-evening",
+      "json_path": "archive/2026/11/2026-11-22-evening.json"
+    },
     {
       "edition_id": "2026-11-22-morning",
       "title": "Tamil Nadu Politics – Morning Brief – 22 November 2026",
