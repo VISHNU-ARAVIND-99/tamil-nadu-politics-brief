@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-25T14:19:02.404227+05:30",
+  "last_updated_ist": "2026-11-26T03:23:03.366490+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-25T04:09:13.849928+05:30; Morning: 2026-11-25T14:19:02.404227+05:30.",
+  "status_message": "Last published — Evening: 2026-11-26T03:23:03.366490+05:30; Morning: 2026-11-25T14:19:02.404227+05:30.",
   "morning": {
     "edition_id": "2026-11-25-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 25 November 2026",
@@ -46,45 +46,43 @@
     "url": "edition.html?id=2026-11-25-morning"
   },
   "evening": {
-    "edition_id": "2026-11-24-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 24 November 2026",
-    "date": "2026-11-24",
+    "edition_id": "2026-11-25-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 25 November 2026",
+    "date": "2026-11-25",
     "edition_type": "evening",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-24T18:00:00+05:30",
-    "generated_at_ist": "2026-11-25T04:09:13.849678+05:30",
-    "published_at_ist": "2026-11-25T04:09:13.849928+05:30",
-    "coverage_start_ist": "2026-11-24T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-24T18:00:00+05:30",
+    "scheduled_time_ist": "2026-11-25T18:00:00+05:30",
+    "generated_at_ist": "2026-11-26T03:23:03.366206+05:30",
+    "published_at_ist": "2026-11-26T03:23:03.366490+05:30",
+    "coverage_start_ist": "2026-11-25T06:00:00+05:30",
+    "coverage_end_ist": "2026-11-25T18:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "Madras High Court Orders IG-Level Probe as FIR is Filed Against TVK MLA Over Alleged Harassment of Kallakurichi District Collector",
-    "big_picture_excerpt": "- Tamil Nadu Police Register FIR Against TVK MLA Arul Vignesh Under POSH Act; Madras High Court Mandates IG-Level Monitoring and Imposes Strict Media Gag",
+    "headline": "Political Turmoil Intensifies: TVK Government Faces Legal and Administrative Challenges",
+    "big_picture_excerpt": "- Supreme Court to Hear Contempt Plea Against TN Government Over Thirupparankundram Deepam\n- Kallakurichi TVK MLA Arul Vignesh Summoned in IAS Officer Harassment Case",
     "parties": [
       "AIADMK",
+      "AMMK",
       "BJP",
       "DMK",
-      "INC",
-      "NTK",
-      "TVK",
-      "VCK"
+      "TVK"
     ],
     "topics": [
+      "Agriculture & Water",
       "Assembly, Courts & Policy",
+      "Centre–State Relations",
+      "Elections",
       "Government & Administration",
+      "Political Parties",
       "Public Protests & Labour"
     ],
     "districts": [
       "Chennai",
-      "Erode",
-      "Kallakurichi",
-      "Karur",
-      "Madurai",
-      "Virudhunagar"
+      "Kallakurichi"
     ],
-    "json_path": "archive/2026/11/2026-11-24-evening.json",
-    "md_path": "archive/2026/11/2026-11-24-evening.md",
-    "url": "edition.html?id=2026-11-24-evening"
+    "json_path": "archive/2026/11/2026-11-25-evening.json",
+    "md_path": "archive/2026/11/2026-11-25-evening.md",
+    "url": "edition.html?id=2026-11-25-evening"
   }
 }
