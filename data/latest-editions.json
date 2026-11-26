@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-26T14:04:42.730805+05:30",
+  "last_updated_ist": "2026-11-27T03:17:00.298004+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-26T03:23:03.366490+05:30; Morning: 2026-11-26T14:04:42.730805+05:30.",
+  "status_message": "Last published — Evening: 2026-11-27T03:17:00.298004+05:30; Morning: 2026-11-26T14:04:42.730805+05:30.",
   "morning": {
     "edition_id": "2026-11-26-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 26 November 2026",
@@ -46,43 +46,45 @@
     "url": "edition.html?id=2026-11-26-morning"
   },
   "evening": {
-    "edition_id": "2026-11-25-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 25 November 2026",
-    "date": "2026-11-25",
+    "edition_id": "2026-11-26-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 26 November 2026",
+    "date": "2026-11-26",
     "edition_type": "evening",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-25T18:00:00+05:30",
-    "generated_at_ist": "2026-11-26T03:23:03.366206+05:30",
-    "published_at_ist": "2026-11-26T03:23:03.366490+05:30",
-    "coverage_start_ist": "2026-11-25T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-25T18:00:00+05:30",
+    "scheduled_time_ist": "2026-11-26T18:00:00+05:30",
+    "generated_at_ist": "2026-11-27T03:17:00.297673+05:30",
+    "published_at_ist": "2026-11-27T03:17:00.298004+05:30",
+    "coverage_start_ist": "2026-11-26T06:00:00+05:30",
+    "coverage_end_ist": "2026-11-26T18:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "Political Turmoil Intensifies: TVK Government Faces Legal and Administrative Challenges",
-    "big_picture_excerpt": "- Supreme Court to Hear Contempt Plea Against TN Government Over Thirupparankundram Deepam\n- Kallakurichi TVK MLA Arul Vignesh Summoned in IAS Officer Harassment Case",
+    "headline": "DMK Moves Madras High Court Demanding CBI Probe Into Kallakurichi Collector Harassment Scandal Involving TVK MLA",
+    "big_picture_excerpt": "- DMK Files Writ Petition in Madras High Court Demanding CBI Investigation Against TVK MLA Over Collector Harassment",
     "parties": [
       "AIADMK",
-      "AMMK",
       "BJP",
       "DMK",
-      "TVK"
+      "INC",
+      "Left Parties",
+      "PMK",
+      "TVK",
+      "VCK"
     ],
     "topics": [
       "Agriculture & Water",
       "Assembly, Courts & Policy",
-      "Centre–State Relations",
       "Elections",
       "Government & Administration",
-      "Political Parties",
       "Public Protests & Labour"
     ],
     "districts": [
       "Chennai",
-      "Kallakurichi"
+      "Kallakurichi",
+      "Krishnagiri"
     ],
-    "json_path": "archive/2026/11/2026-11-25-evening.json",
-    "md_path": "archive/2026/11/2026-11-25-evening.md",
-    "url": "edition.html?id=2026-11-25-evening"
+    "json_path": "archive/2026/11/2026-11-26-evening.json",
+    "md_path": "archive/2026/11/2026-11-26-evening.md",
+    "url": "edition.html?id=2026-11-26-evening"
   }
 }

@@ -1,7 +1,46 @@
 {
-  "total_editions": 52,
-  "last_updated_ist": "2026-11-26T14:04:42.730805+05:30",
+  "total_editions": 53,
+  "last_updated_ist": "2026-11-27T03:17:00.298004+05:30",
   "editions": [
+    {
+      "edition_id": "2026-11-26-evening",
+      "title": "Tamil Nadu Politics – Evening Brief – 26 November 2026",
+      "date": "2026-11-26",
+      "edition_type": "evening",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-27T03:17:00.298004+05:30",
+      "coverage_start_ist": "2026-11-26T06:00:00+05:30",
+      "coverage_end_ist": "2026-11-26T18:00:00+05:30",
+      "coverage_window": "2026-11-26T06:00:00+05:30 to 2026-11-26T18:00:00+05:30",
+      "reading_time_minutes": 10,
+      "headline": "DMK Moves Madras High Court Demanding CBI Probe Into Kallakurichi Collector Harassment Scandal Involving TVK MLA",
+      "summary_text": "- DMK Files Writ Petition in Madras High Court Demanding CBI Investigation Against TVK MLA Over Collector Harassment",
+      "parties": [
+        "AIADMK",
+        "BJP",
+        "DMK",
+        "INC",
+        "Left Parties",
+        "PMK",
+        "TVK",
+        "VCK"
+      ],
+      "topics": [
+        "Agriculture & Water",
+        "Assembly, Courts & Policy",
+        "Elections",
+        "Government & Administration",
+        "Public Protests & Labour"
+      ],
+      "districts": [
+        "Chennai",
+        "Kallakurichi",
+        "Krishnagiri"
+      ],
+      "url": "edition.html?id=2026-11-26-evening",
+      "json_path": "archive/2026/11/2026-11-26-evening.json"
+    },
     {
       "edition_id": "2026-11-26-morning",
       "title": "Tamil Nadu Politics – Morning Brief – 26 November 2026",
