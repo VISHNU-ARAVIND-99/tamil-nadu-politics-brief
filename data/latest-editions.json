@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-27T14:18:05.933759+05:30",
+  "last_updated_ist": "2026-11-28T03:01:29.012964+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-27T03:17:00.298004+05:30; Morning: 2026-11-27T14:18:05.933759+05:30.",
+  "status_message": "Last published — Evening: 2026-11-28T03:01:29.012964+05:30; Morning: 2026-11-27T14:18:05.933759+05:30.",
   "morning": {
     "edition_id": "2026-11-27-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 27 November 2026",
@@ -51,45 +51,45 @@
     "url": "edition.html?id=2026-11-27-morning"
   },
   "evening": {
-    "edition_id": "2026-11-26-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 26 November 2026",
-    "date": "2026-11-26",
+    "edition_id": "2026-11-27-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 27 November 2026",
+    "date": "2026-11-27",
     "edition_type": "evening",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-26T18:00:00+05:30",
-    "generated_at_ist": "2026-11-27T03:17:00.297673+05:30",
-    "published_at_ist": "2026-11-27T03:17:00.298004+05:30",
-    "coverage_start_ist": "2026-11-26T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-26T18:00:00+05:30",
+    "scheduled_time_ist": "2026-11-27T18:00:00+05:30",
+    "generated_at_ist": "2026-11-28T03:01:29.012683+05:30",
+    "published_at_ist": "2026-11-28T03:01:29.012964+05:30",
+    "coverage_start_ist": "2026-11-27T06:00:00+05:30",
+    "coverage_end_ist": "2026-11-27T18:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "DMK Moves Madras High Court Demanding CBI Probe Into Kallakurichi Collector Harassment Scandal Involving TVK MLA",
-    "big_picture_excerpt": "- DMK Files Writ Petition in Madras High Court Demanding CBI Investigation Against TVK MLA Over Collector Harassment",
+    "headline": "Madras High Court Refuses to Reject Nullification Plea Against CM Vijay, Deepening Legal Battles Over Perambur Disclosures",
+    "big_picture_excerpt": "- Madras High Court Clears Trial Over CM Vijay's Perambur Election Disclosures\n- Kallakurichi TVK MLA Arrested Over Sexual Harassment of Woman IAS Officer",
     "parties": [
-      "AIADMK",
       "BJP",
       "DMK",
       "INC",
       "Left Parties",
-      "PMK",
       "TVK",
       "VCK"
     ],
     "topics": [
-      "Agriculture & Water",
       "Assembly, Courts & Policy",
+      "Centre–State Relations",
       "Elections",
-      "Government & Administration",
-      "Public Protests & Labour"
+      "Government & Administration"
     ],
     "districts": [
       "Chennai",
+      "Coimbatore",
       "Kallakurichi",
-      "Krishnagiri"
+      "Tiruchirappalli",
+      "Tiruvallur",
+      "Viluppuram"
     ],
-    "json_path": "archive/2026/11/2026-11-26-evening.json",
-    "md_path": "archive/2026/11/2026-11-26-evening.md",
-    "url": "edition.html?id=2026-11-26-evening"
+    "json_path": "archive/2026/11/2026-11-27-evening.json",
+    "md_path": "archive/2026/11/2026-11-27-evening.md",
+    "url": "edition.html?id=2026-11-27-evening"
   }
 }

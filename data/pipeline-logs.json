@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "run_id": "run-2026-11-27-evening-1795814755",
+      "edition_id": "2026-11-27-evening",
+      "timestamp_ist": "2026-11-28T03:01:29.012876+05:30",
+      "status": "published_delayed",
+      "sources_checked": 14,
+      "raw_items_collected": 242,
+      "clusters_verified": 90,
+      "duration_seconds": 333.58,
+      "ai_provider": "gemini:gemini-flash-lite-latest",
+      "tokens_used": 13706,
+      "notes": "Saved to archive/2026/11/2026-11-27-evening.json"
+    },
+    {
       "run_id": "run-2026-11-27-morning-1795769072",
       "edition_id": "2026-11-27-morning",
       "timestamp_ist": "2026-11-27T14:18:05.933667+05:30",
