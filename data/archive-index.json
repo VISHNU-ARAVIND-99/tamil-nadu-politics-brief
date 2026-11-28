@@ -1,7 +1,44 @@
 {
-  "total_editions": 55,
-  "last_updated_ist": "2026-11-28T03:01:29.012964+05:30",
+  "total_editions": 56,
+  "last_updated_ist": "2026-11-28T13:31:01.853892+05:30",
   "editions": [
+    {
+      "edition_id": "2026-11-28-morning",
+      "title": "Tamil Nadu Politics – Morning Brief – 28 November 2026",
+      "date": "2026-11-28",
+      "edition_type": "morning",
+      "is_test_sample": false,
+      "status": "published_delayed",
+      "published_at_ist": "2026-11-28T13:31:01.853892+05:30",
+      "coverage_start_ist": "2026-11-27T18:00:00+05:30",
+      "coverage_end_ist": "2026-11-28T06:00:00+05:30",
+      "coverage_window": "2026-11-27T18:00:00+05:30 to 2026-11-28T06:00:00+05:30",
+      "reading_time_minutes": 10,
+      "headline": "DMK Backs Centre's Delimitation Bill While Supreme Court Slams TVK Government Over Thirupparankundram Security Order",
+      "summary_text": "- DMK Decides to Support Centre's Delimitation Bill After Securing Representation Guarantees\n- Supreme Court Rebukes TVK Government and Transfers Thirupparankundram Security to CRPF\n- Kallakurichi TVK MLA Arul Vignesh Arrested and Remanded to 14 Days Judicial Custody for IAS Officer Harassment",
+      "parties": [
+        "AIADMK",
+        "BJP",
+        "DMK",
+        "TVK",
+        "VCK"
+      ],
+      "topics": [
+        "Assembly, Courts & Policy",
+        "Centre–State Relations",
+        "Elections",
+        "Government & Administration",
+        "Political Parties"
+      ],
+      "districts": [
+        "Chennai",
+        "Coimbatore",
+        "Cuddalore",
+        "Kallakurichi"
+      ],
+      "url": "edition.html?id=2026-11-28-morning",
+      "json_path": "archive/2026/11/2026-11-28-morning.json"
+    },
     {
       "edition_id": "2026-11-27-evening",
       "title": "Tamil Nadu Politics – Evening Brief – 27 November 2026",
