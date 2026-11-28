@@ -1,7 +1,7 @@
 {
-  "last_updated_ist": "2026-11-28T13:31:01.853892+05:30",
+  "last_updated_ist": "2026-11-29T01:50:11.006421+05:30",
   "system_status": "operational",
-  "status_message": "Last published — Evening: 2026-11-28T03:01:29.012964+05:30; Morning: 2026-11-28T13:31:01.853892+05:30.",
+  "status_message": "Last published — Evening: 2026-11-29T01:50:11.006421+05:30; Morning: 2026-11-28T13:31:01.853892+05:30.",
   "morning": {
     "edition_id": "2026-11-28-morning",
     "title": "Tamil Nadu Politics – Morning Brief – 28 November 2026",
@@ -43,26 +43,27 @@
     "url": "edition.html?id=2026-11-28-morning"
   },
   "evening": {
-    "edition_id": "2026-11-27-evening",
-    "title": "Tamil Nadu Politics – Evening Brief – 27 November 2026",
-    "date": "2026-11-27",
+    "edition_id": "2026-11-28-evening",
+    "title": "Tamil Nadu Politics – Evening Brief – 28 November 2026",
+    "date": "2026-11-28",
     "edition_type": "evening",
     "is_test_sample": false,
     "status": "published_delayed",
-    "scheduled_time_ist": "2026-11-27T18:00:00+05:30",
-    "generated_at_ist": "2026-11-28T03:01:29.012683+05:30",
-    "published_at_ist": "2026-11-28T03:01:29.012964+05:30",
-    "coverage_start_ist": "2026-11-27T06:00:00+05:30",
-    "coverage_end_ist": "2026-11-27T18:00:00+05:30",
+    "scheduled_time_ist": "2026-11-28T18:00:00+05:30",
+    "generated_at_ist": "2026-11-29T01:50:11.006110+05:30",
+    "published_at_ist": "2026-11-29T01:50:11.006421+05:30",
+    "coverage_start_ist": "2026-11-28T06:00:00+05:30",
+    "coverage_end_ist": "2026-11-28T18:00:00+05:30",
     "reading_time_minutes": 10,
     "word_count": 1500,
-    "headline": "Madras High Court Refuses to Reject Nullification Plea Against CM Vijay, Deepening Legal Battles Over Perambur Disclosures",
-    "big_picture_excerpt": "- Madras High Court Clears Trial Over CM Vijay's Perambur Election Disclosures\n- Kallakurichi TVK MLA Arrested Over Sexual Harassment of Woman IAS Officer",
+    "headline": "DMK Backs Delimitation Bill While Facing Alliance Backlash; TVK MLA Arrested for IAS Officer Harassment",
+    "big_picture_excerpt": "- DMK Shifts Stand to Support Constituency Delimitation Bill, Sparking Severe Friction Within Secular Alliance\n- TVK MLA Arul Vignesh Arrested and Remanded in Judicial Custody over Senior IAS Officer Harassment Case",
     "parties": [
+      "AIADMK",
+      "AMMK",
       "BJP",
       "DMK",
       "INC",
-      "Left Parties",
       "TVK",
       "VCK"
     ],
@@ -70,18 +71,18 @@
       "Assembly, Courts & Policy",
       "Centre–State Relations",
       "Elections",
-      "Government & Administration"
+      "Government & Administration",
+      "Political Parties",
+      "Public Protests & Labour"
     ],
     "districts": [
       "Chennai",
       "Coimbatore",
-      "Kallakurichi",
-      "Tiruchirappalli",
-      "Tiruvallur",
-      "Viluppuram"
+      "Cuddalore",
+      "Kallakurichi"
     ],
-    "json_path": "archive/2026/11/2026-11-27-evening.json",
-    "md_path": "archive/2026/11/2026-11-27-evening.md",
-    "url": "edition.html?id=2026-11-27-evening"
+    "json_path": "archive/2026/11/2026-11-28-evening.json",
+    "md_path": "archive/2026/11/2026-11-28-evening.md",
+    "url": "edition.html?id=2026-11-28-evening"
   }
 }
